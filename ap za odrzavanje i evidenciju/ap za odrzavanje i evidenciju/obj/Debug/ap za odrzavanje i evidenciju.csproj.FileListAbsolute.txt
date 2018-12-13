@@ -1,0 +1,25 @@
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\ap za odrzavanje i evidenciju.exe.config
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\ap za odrzavanje i evidenciju.exe
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\ap za odrzavanje i evidenciju.pdb
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\MetroFramework.Design.dll
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\MetroFramework.dll
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.csprojAssemblyReference.cache
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.evidencija_dodaj.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.evidencija_trazi.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.Form1.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.mjesta_dodaj.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.mjesta_trazi.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.Properties.Resources.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.skladiste_dodaj.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.skladiste_trazi.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.stanje_poduzeća.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.csproj.GenerateResource.cache
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.csproj.CoreCompileInputs.cache
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.csproj.CopyComplete
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.exe
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.pdb
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.broj_odrzavanja_kroz_vrijeme_2.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.odstupanje_od_normale_2.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.potrosnja_materijala_kroz_vrijeme_2.resources
+C:\Users\Sandi\Desktop\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap_za_odrzavanje_i_evidenciju.stanje_poduzeca_2.resources
