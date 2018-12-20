@@ -62,9 +62,9 @@ namespace ap_za_odrzavanje_i_evidenciju
 
         private void metroButton7_Click(object sender, EventArgs e)
         {
-            stanje_poduzeća stanje_poduzeća = new stanje_poduzeća();
+            stanje_poduzeca_2 stanje_poduzeca_2 = new stanje_poduzeca_2();
             this.Hide();
-            stanje_poduzeća.Show();
+            stanje_poduzeca_2.Show();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

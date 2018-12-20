@@ -87,6 +87,7 @@
             this.metroButton5.TabIndex = 13;
             this.metroButton5.Text = "Stanje Poduzeća";
             this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // potrosnja_materijala_kroz_vrijeme_2
             // 
