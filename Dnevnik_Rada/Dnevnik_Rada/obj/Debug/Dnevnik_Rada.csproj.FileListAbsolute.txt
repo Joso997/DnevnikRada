@@ -23,3 +23,28 @@ C:\Users\Joso\Documents\DnevnikRada\ap za odrzavanje i evidenciju\ap za odrzavan
 C:\Users\Joso\Documents\DnevnikRada\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\Dnevnik_Rada.csproj.CopyComplete
 C:\Users\Joso\Documents\DnevnikRada\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.exe
 C:\Users\Joso\Documents\DnevnikRada\ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju\obj\Debug\ap za odrzavanje i evidenciju.pdb
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\ap za odrzavanje i evidenciju.exe.config
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\ap za odrzavanje i evidenciju.exe
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\ap za odrzavanje i evidenciju.pdb
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\MetroFramework.Design.dll
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\MetroFramework.dll
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.csprojAssemblyReference.cache
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.broj_odrzavanja_kroz_vrijeme_2.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.evidencija_dodaj.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.evidencija_trazi.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.Form1.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.mjesta_dodaj.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.mjesta_trazi.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.odstupanje_od_normale_2.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.potrosnja_materijala_kroz_vrijeme_2.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\ap_za_odrzavanje_i_evidenciju.Properties.Resources.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.Skladiste_dodaj.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.skladiste_trazi.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.stanje_poduzeca_2.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.stanje_poduzeća.resources
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.csproj.GenerateResource.cache
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.csproj.CoreCompileInputs.cache
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\Dnevnik_Rada.csproj.CopyComplete
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\ap za odrzavanje i evidenciju.exe
+C:\Users\Joso\Documents\DnevnikRada\Dnevnik_Rada\Dnevnik_Rada\obj\Debug\ap za odrzavanje i evidenciju.pdb
