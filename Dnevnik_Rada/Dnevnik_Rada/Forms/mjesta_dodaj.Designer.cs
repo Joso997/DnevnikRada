@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_dodaj));
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
+            this.adresa = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // Home
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
-            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton1.Location = new System.Drawing.Point(800, 480);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(100, 100);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // metroLabel1
             // 
@@ -104,69 +104,69 @@
             this.metroLabel5.TabIndex = 5;
             this.metroLabel5.Text = "Do";
             // 
-            // metroTextBox1
+            // naziv_mjesta
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
+            this.naziv_mjesta.CustomButton.Image = null;
+            this.naziv_mjesta.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.naziv_mjesta.CustomButton.Name = "";
+            this.naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.naziv_mjesta.CustomButton.TabIndex = 1;
+            this.naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.naziv_mjesta.CustomButton.UseSelectable = true;
+            this.naziv_mjesta.CustomButton.Visible = false;
+            this.naziv_mjesta.Lines = new string[] {
         "metroTextBox1"};
-            this.metroTextBox1.Location = new System.Drawing.Point(512, 115);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox1.TabIndex = 6;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.naziv_mjesta.Location = new System.Drawing.Point(512, 115);
+            this.naziv_mjesta.MaxLength = 32767;
+            this.naziv_mjesta.Name = "naziv_mjesta";
+            this.naziv_mjesta.PasswordChar = '\0';
+            this.naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.naziv_mjesta.SelectedText = "";
+            this.naziv_mjesta.SelectionLength = 0;
+            this.naziv_mjesta.SelectionStart = 0;
+            this.naziv_mjesta.ShortcutsEnabled = true;
+            this.naziv_mjesta.Size = new System.Drawing.Size(150, 23);
+            this.naziv_mjesta.TabIndex = 6;
+            this.naziv_mjesta.Text = "metroTextBox1";
+            this.naziv_mjesta.UseSelectable = true;
+            this.naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox2
-            // 
-            // 
+            // adresa
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[] {
+            // 
+            // 
+            this.adresa.CustomButton.Image = null;
+            this.adresa.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.adresa.CustomButton.Name = "";
+            this.adresa.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.adresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.adresa.CustomButton.TabIndex = 1;
+            this.adresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.adresa.CustomButton.UseSelectable = true;
+            this.adresa.CustomButton.Visible = false;
+            this.adresa.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox2.Location = new System.Drawing.Point(512, 159);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox2.TabIndex = 7;
-            this.metroTextBox2.Text = "metroTextBox2";
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.adresa.Location = new System.Drawing.Point(512, 159);
+            this.adresa.MaxLength = 32767;
+            this.adresa.Name = "adresa";
+            this.adresa.PasswordChar = '\0';
+            this.adresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.adresa.SelectedText = "";
+            this.adresa.SelectionLength = 0;
+            this.adresa.SelectionStart = 0;
+            this.adresa.ShortcutsEnabled = true;
+            this.adresa.Size = new System.Drawing.Size(150, 23);
+            this.adresa.TabIndex = 7;
+            this.adresa.Text = "metroTextBox2";
+            this.adresa.UseSelectable = true;
+            this.adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroTextBox3
             // 
@@ -232,14 +232,15 @@
             this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroButton2
+            // Potvrdi
             // 
-            this.metroButton2.Location = new System.Drawing.Point(463, 350);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(100, 100);
-            this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "Potvrdi";
-            this.metroButton2.UseSelectable = true;
+            this.Potvrdi.Location = new System.Drawing.Point(463, 350);
+            this.Potvrdi.Name = "Potvrdi";
+            this.Potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.Potvrdi.TabIndex = 10;
+            this.Potvrdi.Text = "Potvrdi";
+            this.Potvrdi.UseSelectable = true;
+            this.Potvrdi.Click += new System.EventHandler(this.Potvrdi_Click);
             // 
             // mjesta_dodaj
             // 
@@ -247,17 +248,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroTextBox3);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.adresa);
+            this.Controls.Add(this.naziv_mjesta);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.Home);
             this.Name = "mjesta_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";
@@ -269,16 +270,16 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox naziv_mjesta;
+        private MetroFramework.Controls.MetroTextBox adresa;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton Potvrdi;
     }
 }

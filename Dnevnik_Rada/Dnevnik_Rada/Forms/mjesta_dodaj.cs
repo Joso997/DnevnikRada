@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dnevnik_Rada.Klase;
 
 namespace Dnevnik_Rada
 {
@@ -22,11 +23,17 @@ namespace Dnevnik_Rada
             Application.Exit();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
             this.Hide();
             Form1.Show();
         }
+
+        private void Potvrdi_Click(object sender, EventArgs e)
+        {
+            Mjesta mjesta = new Mjesta(naziv_mjesta.Text, adresa.Text);
+        }
+        
     }
 }
