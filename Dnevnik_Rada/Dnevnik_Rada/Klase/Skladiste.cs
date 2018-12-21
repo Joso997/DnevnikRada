@@ -26,7 +26,6 @@ namespace Dnevnik_Rada.Klase
             Console.WriteLine(Naziv_materijala);
             Console.WriteLine(Proizvodac);
             Console.WriteLine(Mjerna_jedinica);
-            Console.WriteLine(Mjerna_jedinica);
         }
 
         public void Trazi()
