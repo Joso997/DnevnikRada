@@ -1,4 +1,4 @@
-﻿namespace ap_za_odrzavanje_i_evidenciju
+﻿namespace Dnevnik_Rada
 {
     partial class broj_odrzavanja_kroz_vrijeme_2
     {

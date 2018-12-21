@@ -1,4 +1,4 @@
-﻿namespace ap_za_odrzavanje_i_evidenciju
+﻿namespace Dnevnik_Rada
 {
     partial class evidencija_trazi
     {

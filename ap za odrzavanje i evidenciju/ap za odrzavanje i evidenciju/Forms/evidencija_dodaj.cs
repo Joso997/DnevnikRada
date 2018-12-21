@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ap_za_odrzavanje_i_evidenciju
+namespace Dnevnik_Rada
 {
     public partial class evidencija_dodaj : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace ap_za_odrzavanje_i_evidenciju
+﻿namespace Dnevnik_Rada
 {
     partial class skladiste_trazi
     {
@@ -51,7 +51,7 @@
             this.metroButton1.Size = new System.Drawing.Size(100, 100);
             this.metroButton1.TabIndex = 0;
             this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton1.Click += new System.EventHandler(this.MetroButton1_Click);
             // 
             // metroTile1
             // 
@@ -63,7 +63,7 @@
             this.metroTile1.Text = "Skladište";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.metroTile1.Click += new System.EventHandler(this.MetroTile1_Click);
             // 
             // metroTextBox1
             // 
@@ -98,7 +98,7 @@
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.metroTextBox1.Click += new System.EventHandler(this.MetroTextBox1_Click);
             // 
             // metroGrid1
             // 
@@ -169,7 +169,7 @@
             this.Name = "skladiste_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_trazi";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.skladiste_trazi_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Skladiste_trazi_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 

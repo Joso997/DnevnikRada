@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ap_za_odrzavanje_i_evidenciju
+namespace Dnevnik_Rada
 {
     public partial class Form1 : Form
     {
@@ -41,7 +41,7 @@ namespace ap_za_odrzavanje_i_evidenciju
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
-            skladiste_dodaj skladiste_dodaj = new skladiste_dodaj();
+            Skladiste_dodaj skladiste_dodaj = new Skladiste_dodaj();
             this.Hide();
             skladiste_dodaj.Show();
         }

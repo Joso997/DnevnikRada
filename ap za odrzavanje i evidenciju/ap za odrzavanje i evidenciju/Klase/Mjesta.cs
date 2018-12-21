@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ap_za_odrzavanje_i_evidenciju.Interface;
+using Dnevnik_Rada.Interface;
 
-namespace ap_za_odrzavanje_i_evidenciju.Klase
+namespace Dnevnik_Rada.Klase
 {
     class Mjesta : IUseDatabase
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ap_za_odrzavanje_i_evidenciju.Properties
+namespace Dnevnik_Rada.Properties
 {
 
 

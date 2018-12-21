@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ap_za_odrzavanje_i_evidenciju.Properties
+namespace Dnevnik_Rada.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace ap_za_odrzavanje_i_evidenciju.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ap_za_odrzavanje_i_evidenciju.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Dnevnik_Rada.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

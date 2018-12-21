@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ap_za_odrzavanje_i_evidenciju.Klase
+namespace Dnevnik_Rada.Klase
 {
     static class Program
     {

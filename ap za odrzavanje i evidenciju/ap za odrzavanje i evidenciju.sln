@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ap za odrzavanje i evidenciju", "ap za odrzavanje i evidenciju\ap za odrzavanje i evidenciju.csproj", "{7774076C-0DCF-4E40-8F2D-8D251406B976}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnevnik_Rada", "ap za odrzavanje i evidenciju\Dnevnik_Rada.csproj", "{7774076C-0DCF-4E40-8F2D-8D251406B976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
