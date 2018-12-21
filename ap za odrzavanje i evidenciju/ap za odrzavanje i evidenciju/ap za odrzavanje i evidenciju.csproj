@@ -55,102 +55,105 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="broj_odrzavanja_kroz_vrijeme_2.cs">
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="broj_odrzavanja_kroz_vrijeme_2.Designer.cs">
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.Designer.cs">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="evidencija_dodaj.cs">
+    <Compile Include="Interface\IUseDatabase.cs" />
+    <Compile Include="Klase\Mjesta.cs" />
+    <Compile Include="Klase\Skladiste.cs" />
+    <Compile Include="Forms\evidencija_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="evidencija_dodaj.Designer.cs">
+    <Compile Include="Forms\evidencija_dodaj.Designer.cs">
       <DependentUpon>evidencija_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="evidencija_trazi.cs">
+    <Compile Include="Forms\evidencija_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="evidencija_trazi.Designer.cs">
+    <Compile Include="Forms\evidencija_trazi.Designer.cs">
       <DependentUpon>evidencija_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="mjesta_dodaj.cs">
+    <Compile Include="Forms\mjesta_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mjesta_dodaj.Designer.cs">
+    <Compile Include="Forms\mjesta_dodaj.Designer.cs">
       <DependentUpon>mjesta_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="mjesta_trazi.cs">
+    <Compile Include="Forms\mjesta_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mjesta_trazi.Designer.cs">
+    <Compile Include="Forms\mjesta_trazi.Designer.cs">
       <DependentUpon>mjesta_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="odstupanje_od_normale_2.cs">
+    <Compile Include="Forms\odstupanje_od_normale_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="odstupanje_od_normale_2.Designer.cs">
+    <Compile Include="Forms\odstupanje_od_normale_2.Designer.cs">
       <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="potrosnja_materijala_kroz_vrijeme_2.cs">
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="potrosnja_materijala_kroz_vrijeme_2.Designer.cs">
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.Designer.cs">
       <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Klase\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="skladiste_dodaj.cs">
+    <Compile Include="Forms\skladiste_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="skladiste_dodaj.Designer.cs">
+    <Compile Include="Forms\skladiste_dodaj.Designer.cs">
       <DependentUpon>skladiste_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="skladiste_trazi.cs">
+    <Compile Include="Forms\skladiste_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="skladiste_trazi.Designer.cs">
+    <Compile Include="Forms\skladiste_trazi.Designer.cs">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="stanje_poduzeca_2.cs">
+    <Compile Include="Forms\stanje_poduzeca_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="stanje_poduzeca_2.Designer.cs">
+    <Compile Include="Forms\stanje_poduzeca_2.Designer.cs">
       <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="stanje_poduzeća.cs">
+    <Compile Include="Forms\stanje_poduzeća.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="stanje_poduzeća.Designer.cs">
+    <Compile Include="Forms\stanje_poduzeća.Designer.cs">
       <DependentUpon>stanje_poduzeća.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="broj_odrzavanja_kroz_vrijeme_2.resx">
+    <EmbeddedResource Include="Forms\broj_odrzavanja_kroz_vrijeme_2.resx">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="evidencija_dodaj.resx">
+    <EmbeddedResource Include="Forms\evidencija_dodaj.resx">
       <DependentUpon>evidencija_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="evidencija_trazi.resx">
+    <EmbeddedResource Include="Forms\evidencija_trazi.resx">
       <DependentUpon>evidencija_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mjesta_dodaj.resx">
+    <EmbeddedResource Include="Forms\mjesta_dodaj.resx">
       <DependentUpon>mjesta_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mjesta_trazi.resx">
+    <EmbeddedResource Include="Forms\mjesta_trazi.resx">
       <DependentUpon>mjesta_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="odstupanje_od_normale_2.resx">
+    <EmbeddedResource Include="Forms\odstupanje_od_normale_2.resx">
       <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="potrosnja_materijala_kroz_vrijeme_2.resx">
+    <EmbeddedResource Include="Forms\potrosnja_materijala_kroz_vrijeme_2.resx">
       <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,16 +165,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="skladiste_dodaj.resx">
+    <EmbeddedResource Include="Forms\skladiste_dodaj.resx">
       <DependentUpon>skladiste_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="skladiste_trazi.resx">
+    <EmbeddedResource Include="Forms\skladiste_trazi.resx">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="stanje_poduzeca_2.resx">
+    <EmbeddedResource Include="Forms\stanje_poduzeca_2.resx">
       <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="stanje_poduzeća.resx">
+    <EmbeddedResource Include="Forms\stanje_poduzeća.resx">
       <DependentUpon>stanje_poduzeća.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

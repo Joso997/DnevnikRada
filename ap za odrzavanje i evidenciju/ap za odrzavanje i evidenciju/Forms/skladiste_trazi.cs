@@ -28,5 +28,35 @@ namespace ap_za_odrzavanje_i_evidenciju
             this.Hide();
             Form1.Show();
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+
+        }
+
+        private void htmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
