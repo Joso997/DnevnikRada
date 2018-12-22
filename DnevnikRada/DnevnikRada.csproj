@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +55,119 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.Designer.cs">
+      <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\evidencija_dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\evidencija_dodaj.Designer.cs">
+      <DependentUpon>evidencija_dodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\evidencija_trazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\evidencija_trazi.Designer.cs">
+      <DependentUpon>evidencija_trazi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Forms\mjesta_dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\mjesta_dodaj.Designer.cs">
+      <DependentUpon>mjesta_dodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\mjesta_trazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\mjesta_trazi.Designer.cs">
+      <DependentUpon>mjesta_trazi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\odstupanje_od_normale_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\odstupanje_od_normale_2.Designer.cs">
+      <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.Designer.cs">
+      <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\skladiste_dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\skladiste_dodaj.Designer.cs">
+      <DependentUpon>skladiste_dodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\skladiste_trazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\skladiste_trazi.Designer.cs">
+      <DependentUpon>skladiste_trazi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\stanje_poduzeca_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\stanje_poduzeca_2.Designer.cs">
+      <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\stanje_poduzeća.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\stanje_poduzeća.Designer.cs">
+      <DependentUpon>stanje_poduzeća.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\IUseDatabase.cs" />
+    <Compile Include="Klase\Mjesta.cs" />
+    <Compile Include="Klase\Program.cs" />
+    <Compile Include="Klase\Skladiste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\broj_odrzavanja_kroz_vrijeme_2.resx">
+      <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\evidencija_dodaj.resx">
+      <DependentUpon>evidencija_dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\evidencija_trazi.resx">
+      <DependentUpon>evidencija_trazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\mjesta_dodaj.resx">
+      <DependentUpon>mjesta_dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\mjesta_trazi.resx">
+      <DependentUpon>mjesta_trazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\odstupanje_od_normale_2.resx">
+      <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\potrosnja_materijala_kroz_vrijeme_2.resx">
+      <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\skladiste_dodaj.resx">
+      <DependentUpon>skladiste_dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\skladiste_trazi.resx">
+      <DependentUpon>skladiste_trazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stanje_poduzeca_2.resx">
+      <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stanje_poduzeća.resx">
+      <DependentUpon>stanje_poduzeća.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +177,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
