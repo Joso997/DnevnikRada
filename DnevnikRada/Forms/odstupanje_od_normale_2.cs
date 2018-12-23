@@ -77,7 +77,7 @@ namespace DnevnikRada
         {
             odstupanje_od_normale_2 odstupanje_od_normale_2 = new odstupanje_od_normale_2();
             this.Hide();
-            odstupanje_od_normale_2.Show();
+            odstupanje_od_normale_2.Show(); //bezvezni komentar
         }
     }
 }
