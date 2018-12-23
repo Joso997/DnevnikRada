@@ -9,23 +9,27 @@ namespace DnevnikRada.Klase
 {
     class Skladiste : IUseDatabase
     {
-        public string Naziv_materijala { get; private set; }
+        public string Naziv_materijala{ get; private set;}
         public string Proizvodac { get; private set; }
         public string Mjerna_jedinica { get; private set; }
+        public int Kolicina { get; set; }
 
-        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica)
+
+        // mozda bi trebalo u konstruktor stavit samo ono sto je obavezno? recimo d su 
+        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica, int _kolicina)
         {
             Naziv_materijala = _naziv_materijala;
             Proizvodac = _proizvodac;
             Mjerna_jedinica = _mjerna_jedinica;
+            Kolicina = _kolicina;
             Dodaj();
         }
 
         public void Dodaj()
         {
-            Console.WriteLine(Naziv_materijala);
-            Console.WriteLine(Proizvodac);
-            Console.WriteLine(Mjerna_jedinica);
+            Baza_Testing.DB baza = new Baza_Testing.DB();
+            string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
+            baza.Query(insert);
         }
 
         public void Trazi()

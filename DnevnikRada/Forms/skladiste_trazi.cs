@@ -12,14 +12,23 @@ namespace DnevnikRada
 {
     public partial class skladiste_trazi : Form
     {
+        Baza_Testing.DB baza;
         public skladiste_trazi()
         {
             InitializeComponent();
+            baza = new Baza_Testing.DB();
+            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
         }
 
         private void Skladiste_trazi_FormClosed(object sender, FormClosedEventArgs e)
         {
+            baza.connection.Close();
             Application.Exit();
+        }
+
+        private void Reload()
+        {
+            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
         }
 
         private void MetroButton1_Click(object sender, EventArgs e)
@@ -29,32 +38,7 @@ namespace DnevnikRada
             Form1.Show();
         }
 
-        private void MetroTile1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FontDialog1_Apply(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
         }

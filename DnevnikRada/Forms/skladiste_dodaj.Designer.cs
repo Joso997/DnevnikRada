@@ -37,6 +37,8 @@
             this.proizvodac = new MetroFramework.Controls.MetroTextBox();
             this.mjerna_jedinica = new MetroFramework.Controls.MetroTextBox();
             this.potvrdi = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.kolicina = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // home
@@ -179,7 +181,7 @@
             // 
             // potvrdi
             // 
-            this.potvrdi.Location = new System.Drawing.Point(545, 258);
+            this.potvrdi.Location = new System.Drawing.Point(545, 310);
             this.potvrdi.Name = "potvrdi";
             this.potvrdi.Size = new System.Drawing.Size(100, 100);
             this.potvrdi.TabIndex = 8;
@@ -187,12 +189,56 @@
             this.potvrdi.UseSelectable = true;
             this.potvrdi.Click += new System.EventHandler(this.Potvrdi_Click);
             // 
-            // skladiste_dodaj
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(236, 257);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(70, 25);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Kolicina";
+            // 
+            // kolicina
+            // 
+            // 
+            // 
+            // 
+            this.kolicina.CustomButton.Image = null;
+            this.kolicina.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.kolicina.CustomButton.Name = "";
+            this.kolicina.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.kolicina.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.kolicina.CustomButton.TabIndex = 1;
+            this.kolicina.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.kolicina.CustomButton.UseSelectable = true;
+            this.kolicina.CustomButton.Visible = false;
+            this.kolicina.Lines = new string[] {
+        "metroTextBox3"};
+            this.kolicina.Location = new System.Drawing.Point(445, 257);
+            this.kolicina.MaxLength = 32767;
+            this.kolicina.Name = "kolicina";
+            this.kolicina.PasswordChar = '\0';
+            this.kolicina.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.kolicina.SelectedText = "";
+            this.kolicina.SelectionLength = 0;
+            this.kolicina.SelectionStart = 0;
+            this.kolicina.ShortcutsEnabled = true;
+            this.kolicina.Size = new System.Drawing.Size(200, 23);
+            this.kolicina.TabIndex = 10;
+            this.kolicina.Text = "metroTextBox3";
+            this.kolicina.UseSelectable = true;
+            this.kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Skladiste_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.kolicina);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.potvrdi);
             this.Controls.Add(this.mjerna_jedinica);
             this.Controls.Add(this.proizvodac);
@@ -201,7 +247,7 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.home);
-            this.Name = "skladiste_dodaj";
+            this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Skladiste_dodaj_FormClosed);
@@ -220,5 +266,7 @@
         private MetroFramework.Controls.MetroTextBox proizvodac;
         private MetroFramework.Controls.MetroTextBox mjerna_jedinica;
         private MetroFramework.Controls.MetroButton potvrdi;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox kolicina;
     }
 }

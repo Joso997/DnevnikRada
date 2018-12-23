@@ -13,13 +13,16 @@ namespace DnevnikRada
 {
     public partial class Skladiste_dodaj : Form
     {
+        
         public Skladiste_dodaj()
         {
             InitializeComponent();
+            
         }
 
         private void Skladiste_dodaj_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
             Application.Exit();
         }
 
@@ -32,9 +35,11 @@ namespace DnevnikRada
 
         private void Potvrdi_Click(object sender, EventArgs e)
         {
-            Skladiste skladiste = new Skladiste(naziv_materijala.Text, proizvodac.Text, mjerna_jedinica.Text);
+            int kol;
+            string lol = kolicina.Text.ToString();
+            kol = Int32.Parse(lol);
+            Skladiste skladiste = new Skladiste(naziv_materijala.Text, proizvodac.Text, mjerna_jedinica.Text, kol);
+            
         }
-
-        
     }
 }
