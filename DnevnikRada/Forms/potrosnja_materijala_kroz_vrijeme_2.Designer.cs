@@ -57,6 +57,7 @@
             this.metroButton4.TabIndex = 16;
             this.metroButton4.Text = "Odstupanje Od Normale";
             this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click_1);
             // 
             // metroButton3
             // 
@@ -67,6 +68,7 @@
             this.metroButton3.TabIndex = 15;
             this.metroButton3.Text = "Broj Održavanja Kroz Vrijeme";
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click_1);
             // 
             // metroButton2
             // 
@@ -77,6 +79,7 @@
             this.metroButton2.TabIndex = 14;
             this.metroButton2.Text = "Potrošnja Materijala Kroz Vrijeme";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
             // metroButton5
             // 

@@ -22,12 +22,7 @@ namespace DnevnikRada
             Application.Exit();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            stanje_poduzeća stanje_poduzeća = new stanje_poduzeća();
-            this.Hide();
-            stanje_poduzeća.Show();
-        }
+        
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
@@ -55,6 +50,13 @@ namespace DnevnikRada
             odstupanje_od_normale_2 odstupanje_od_normale_2 = new odstupanje_od_normale_2();
             this.Hide();
             odstupanje_od_normale_2.Show();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Form1 Form1 = new Form1();
+            this.Hide();
+            Form1.Show();
         }
     }
 }
