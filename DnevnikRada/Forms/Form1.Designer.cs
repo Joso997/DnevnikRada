@@ -29,177 +29,177 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroPanel1.SuspendLayout();
+            this.btn_evidencija_trazi = new MetroFramework.Controls.MetroButton();
+            this.btn_evidencija_dodaj = new MetroFramework.Controls.MetroButton();
+            this.btn_skladiste_trazi = new MetroFramework.Controls.MetroButton();
+            this.btn_skladiste_dodaj = new MetroFramework.Controls.MetroButton();
+            this.btn_mjesta_trazi = new MetroFramework.Controls.MetroButton();
+            this.btn_mjesta_dodaj = new MetroFramework.Controls.MetroButton();
+            this.btn_stanje_poduzeca = new MetroFramework.Controls.MetroButton();
+            this.lbl_evidencija = new System.Windows.Forms.Label();
+            this.lbl_skladiste = new System.Windows.Forms.Label();
+            this.lbl_stanje_poduzeca = new System.Windows.Forms.Label();
+            this.lbl_mjesta = new System.Windows.Forms.Label();
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti = new MetroFramework.Controls.MetroPanel();
+            this.kalendar = new MetroFramework.Controls.MetroDateTime();
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btn_evidencija_trazi
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
-            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton1.Location = new System.Drawing.Point(0, 40);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(150, 250);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btn_evidencija_trazi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_evidencija_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_evidencija_trazi.BackgroundImage")));
+            this.btn_evidencija_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_evidencija_trazi.Location = new System.Drawing.Point(0, 40);
+            this.btn_evidencija_trazi.Name = "btn_evidencija_trazi";
+            this.btn_evidencija_trazi.Size = new System.Drawing.Size(150, 250);
+            this.btn_evidencija_trazi.TabIndex = 0;
+            this.btn_evidencija_trazi.UseSelectable = true;
+            this.btn_evidencija_trazi.Click += new System.EventHandler(this.btn_evidencija_trazi_Click);
             // 
-            // metroButton2
+            // btn_evidencija_dodaj
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton2.BackgroundImage")));
-            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton2.Location = new System.Drawing.Point(150, 40);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(150, 250);
-            this.metroButton2.TabIndex = 0;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.btn_evidencija_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_evidencija_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_evidencija_dodaj.BackgroundImage")));
+            this.btn_evidencija_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_evidencija_dodaj.Location = new System.Drawing.Point(150, 40);
+            this.btn_evidencija_dodaj.Name = "btn_evidencija_dodaj";
+            this.btn_evidencija_dodaj.Size = new System.Drawing.Size(150, 250);
+            this.btn_evidencija_dodaj.TabIndex = 0;
+            this.btn_evidencija_dodaj.UseSelectable = true;
+            this.btn_evidencija_dodaj.Click += new System.EventHandler(this.btn_evidencija_dodaj_Click);
             // 
-            // metroButton3
+            // btn_skladiste_trazi
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton3.Location = new System.Drawing.Point(0, 330);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(150, 250);
-            this.metroButton3.TabIndex = 0;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            this.btn_skladiste_trazi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_skladiste_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_skladiste_trazi.BackgroundImage")));
+            this.btn_skladiste_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_skladiste_trazi.Location = new System.Drawing.Point(0, 330);
+            this.btn_skladiste_trazi.Name = "btn_skladiste_trazi";
+            this.btn_skladiste_trazi.Size = new System.Drawing.Size(150, 250);
+            this.btn_skladiste_trazi.TabIndex = 0;
+            this.btn_skladiste_trazi.UseSelectable = true;
+            this.btn_skladiste_trazi.Click += new System.EventHandler(this.btn_skladiste_trazi_Click);
             // 
-            // metroButton4
+            // btn_skladiste_dodaj
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton4.BackgroundImage")));
-            this.metroButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton4.Location = new System.Drawing.Point(150, 330);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(150, 250);
-            this.metroButton4.TabIndex = 0;
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
+            this.btn_skladiste_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_skladiste_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_skladiste_dodaj.BackgroundImage")));
+            this.btn_skladiste_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_skladiste_dodaj.Location = new System.Drawing.Point(150, 330);
+            this.btn_skladiste_dodaj.Name = "btn_skladiste_dodaj";
+            this.btn_skladiste_dodaj.Size = new System.Drawing.Size(150, 250);
+            this.btn_skladiste_dodaj.TabIndex = 0;
+            this.btn_skladiste_dodaj.UseSelectable = true;
+            this.btn_skladiste_dodaj.Click += new System.EventHandler(this.btn_skladiste_dodaj_Click);
             // 
-            // metroButton5
+            // btn_mjesta_trazi
             // 
-            this.metroButton5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton5.BackgroundImage")));
-            this.metroButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton5.Location = new System.Drawing.Point(300, 330);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(150, 250);
-            this.metroButton5.TabIndex = 0;
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
+            this.btn_mjesta_trazi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_mjesta_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mjesta_trazi.BackgroundImage")));
+            this.btn_mjesta_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_mjesta_trazi.Location = new System.Drawing.Point(300, 330);
+            this.btn_mjesta_trazi.Name = "btn_mjesta_trazi";
+            this.btn_mjesta_trazi.Size = new System.Drawing.Size(150, 250);
+            this.btn_mjesta_trazi.TabIndex = 0;
+            this.btn_mjesta_trazi.UseSelectable = true;
+            this.btn_mjesta_trazi.Click += new System.EventHandler(this.btn_mjesta_trazi_Click);
             // 
-            // metroButton6
+            // btn_mjesta_dodaj
             // 
-            this.metroButton6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton6.BackgroundImage")));
-            this.metroButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton6.Location = new System.Drawing.Point(450, 331);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(150, 250);
-            this.metroButton6.TabIndex = 0;
-            this.metroButton6.UseSelectable = true;
-            this.metroButton6.Click += new System.EventHandler(this.metroButton6_Click);
+            this.btn_mjesta_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_mjesta_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mjesta_dodaj.BackgroundImage")));
+            this.btn_mjesta_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_mjesta_dodaj.Location = new System.Drawing.Point(450, 331);
+            this.btn_mjesta_dodaj.Name = "btn_mjesta_dodaj";
+            this.btn_mjesta_dodaj.Size = new System.Drawing.Size(150, 250);
+            this.btn_mjesta_dodaj.TabIndex = 0;
+            this.btn_mjesta_dodaj.UseSelectable = true;
+            this.btn_mjesta_dodaj.Click += new System.EventHandler(this.btn_mjesta_dodaj_Click);
             // 
-            // metroButton7
+            // btn_stanje_poduzeca
             // 
-            this.metroButton7.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton7.BackgroundImage")));
-            this.metroButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton7.Location = new System.Drawing.Point(300, 40);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(300, 250);
-            this.metroButton7.TabIndex = 0;
-            this.metroButton7.UseSelectable = true;
-            this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
+            this.btn_stanje_poduzeca.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_stanje_poduzeca.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_stanje_poduzeca.BackgroundImage")));
+            this.btn_stanje_poduzeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_stanje_poduzeca.Location = new System.Drawing.Point(300, 40);
+            this.btn_stanje_poduzeca.Name = "btn_stanje_poduzeca";
+            this.btn_stanje_poduzeca.Size = new System.Drawing.Size(300, 250);
+            this.btn_stanje_poduzeca.TabIndex = 0;
+            this.btn_stanje_poduzeca.UseSelectable = true;
+            this.btn_stanje_poduzeca.Click += new System.EventHandler(this.btn_stanje_poduzeca_Click);
             // 
-            // label1
+            // lbl_evidencija
             // 
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 40);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Evidencija";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_evidencija.BackColor = System.Drawing.Color.Black;
+            this.lbl_evidencija.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_evidencija.ForeColor = System.Drawing.Color.Aqua;
+            this.lbl_evidencija.Location = new System.Drawing.Point(-1, 0);
+            this.lbl_evidencija.Name = "lbl_evidencija";
+            this.lbl_evidencija.Size = new System.Drawing.Size(300, 40);
+            this.lbl_evidencija.TabIndex = 3;
+            this.lbl_evidencija.Text = "Evidencija";
+            this.lbl_evidencija.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbl_skladiste
             // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Aqua;
-            this.label2.Location = new System.Drawing.Point(-1, 290);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 40);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Skladište";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_skladiste.BackColor = System.Drawing.Color.Black;
+            this.lbl_skladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_skladiste.ForeColor = System.Drawing.Color.Aqua;
+            this.lbl_skladiste.Location = new System.Drawing.Point(-1, 290);
+            this.lbl_skladiste.Name = "lbl_skladiste";
+            this.lbl_skladiste.Size = new System.Drawing.Size(300, 40);
+            this.lbl_skladiste.TabIndex = 4;
+            this.lbl_skladiste.Text = "Skladište";
+            this.lbl_skladiste.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbl_stanje_poduzeca
             // 
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.Aqua;
-            this.label3.Location = new System.Drawing.Point(300, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 40);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Stanje Poduzeća";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_stanje_poduzeca.BackColor = System.Drawing.Color.Black;
+            this.lbl_stanje_poduzeca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_stanje_poduzeca.ForeColor = System.Drawing.Color.Aqua;
+            this.lbl_stanje_poduzeca.Location = new System.Drawing.Point(300, 0);
+            this.lbl_stanje_poduzeca.Name = "lbl_stanje_poduzeca";
+            this.lbl_stanje_poduzeca.Size = new System.Drawing.Size(300, 40);
+            this.lbl_stanje_poduzeca.TabIndex = 6;
+            this.lbl_stanje_poduzeca.Text = "Stanje Poduzeća";
+            this.lbl_stanje_poduzeca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbl_mjesta
             // 
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.Aqua;
-            this.label4.Location = new System.Drawing.Point(300, 290);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 40);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Mjesta";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_mjesta.BackColor = System.Drawing.Color.Black;
+            this.lbl_mjesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_mjesta.ForeColor = System.Drawing.Color.Aqua;
+            this.lbl_mjesta.Location = new System.Drawing.Point(300, 290);
+            this.lbl_mjesta.Name = "lbl_mjesta";
+            this.lbl_mjesta.Size = new System.Drawing.Size(300, 40);
+            this.lbl_mjesta.TabIndex = 7;
+            this.lbl_mjesta.Text = "Mjesta";
+            this.lbl_mjesta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroPanel1
+            // panel_zadaci_aktivnog_tjedna_i_obavijesti
             // 
-            this.metroPanel1.Controls.Add(this.metroDateTime1);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(600, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(300, 580);
-            this.metroPanel1.TabIndex = 5;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Controls.Add(this.kalendar);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarBarColor = true;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarSize = 10;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Location = new System.Drawing.Point(600, 0);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Name = "panel_zadaci_aktivnog_tjedna_i_obavijesti";
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Size = new System.Drawing.Size(300, 580);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.TabIndex = 5;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarBarColor = true;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarHighlightOnWheel = false;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarSize = 10;
             // 
-            // metroDateTime1
+            // kalendar
             // 
-            this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Tall;
-            this.metroDateTime1.Location = new System.Drawing.Point(5, 5);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(291, 35);
-            this.metroDateTime1.TabIndex = 2;
-            this.metroDateTime1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.kalendar.FontSize = MetroFramework.MetroDateTimeSize.Tall;
+            this.kalendar.Location = new System.Drawing.Point(5, 5);
+            this.kalendar.MinimumSize = new System.Drawing.Size(0, 35);
+            this.kalendar.Name = "kalendar";
+            this.kalendar.Size = new System.Drawing.Size(291, 35);
+            this.kalendar.TabIndex = 2;
+            this.kalendar.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Form1
             // 
@@ -207,42 +207,42 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.metroPanel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroButton6);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton5);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton7);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.lbl_mjesta);
+            this.Controls.Add(this.lbl_stanje_poduzeca);
+            this.Controls.Add(this.panel_zadaci_aktivnog_tjedna_i_obavijesti);
+            this.Controls.Add(this.lbl_skladiste);
+            this.Controls.Add(this.lbl_evidencija);
+            this.Controls.Add(this.btn_mjesta_dodaj);
+            this.Controls.Add(this.btn_skladiste_dodaj);
+            this.Controls.Add(this.btn_mjesta_trazi);
+            this.Controls.Add(this.btn_skladiste_trazi);
+            this.Controls.Add(this.btn_stanje_poduzeca);
+            this.Controls.Add(this.btn_evidencija_dodaj);
+            this.Controls.Add(this.btn_evidencija_trazi);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.metroPanel1.ResumeLayout(false);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroButton btn_evidencija_trazi;
+        private MetroFramework.Controls.MetroButton btn_evidencija_dodaj;
+        private MetroFramework.Controls.MetroButton btn_skladiste_trazi;
+        private MetroFramework.Controls.MetroButton btn_skladiste_dodaj;
+        private MetroFramework.Controls.MetroButton btn_mjesta_trazi;
+        private MetroFramework.Controls.MetroButton btn_mjesta_dodaj;
+        private MetroFramework.Controls.MetroButton btn_stanje_poduzeca;
+        private System.Windows.Forms.Label lbl_evidencija;
+        private System.Windows.Forms.Label lbl_skladiste;
+        private System.Windows.Forms.Label lbl_stanje_poduzeca;
+        private System.Windows.Forms.Label lbl_mjesta;
+        private MetroFramework.Controls.MetroPanel panel_zadaci_aktivnog_tjedna_i_obavijesti;
+        private MetroFramework.Controls.MetroDateTime kalendar;
     }
 }
 

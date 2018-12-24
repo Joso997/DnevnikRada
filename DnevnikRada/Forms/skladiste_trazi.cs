@@ -20,7 +20,10 @@ namespace DnevnikRada
             skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
         }
 
-        private void Skladiste_trazi_FormClosed(object sender, FormClosedEventArgs e)
+        private void Skladiste_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
+                                                                                      //..NE nastavi izvrsavati u pozadini nakon.. 
+                                                                                      //..sto se aplikacija u potpunosti zatvori
+
         {
             baza.connection.Close();
             Application.Exit();
@@ -28,10 +31,15 @@ namespace DnevnikRada
 
         private void Reload()
         {
-            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
+            string lol;
+            skladisteGrid.DataSource = baza.LoadDataBase(lol = string.Format(
+                "select * from Skladiste " +
+                "WHERE NazivMaterijala like '%{0}%' or " +
+                "Prodavac like '%{0}%'", search.Text));
         }
 
-        private void MetroButton1_Click(object sender, EventArgs e)
+        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
+
         {
             Form1 Form1 = new Form1();
             this.Hide();
@@ -41,6 +49,16 @@ namespace DnevnikRada
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void skladiste_trazi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KlickMe_Click(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }

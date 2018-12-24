@@ -20,25 +20,28 @@ namespace DnevnikRada
             
         }
 
-        private void Skladiste_dodaj_FormClosed(object sender, FormClosedEventArgs e)
+        private void Skladiste_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
+                                                                                      //..NE nastavi izvrsavati u pozadini nakon.. 
+                                                                                      //..sto se aplikacija u potpunosti zatvori
+
         {
-            
+
             Application.Exit();
         }
 
-        private void Home_Click(object sender, EventArgs e)
+        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
         {
             Form1 Form1 = new Form1();
             this.Hide();
             Form1.Show();
         }
 
-        private void Potvrdi_Click(object sender, EventArgs e)
+        private void btn_potvrdi_Click(object sender, EventArgs e)
         {
             int kol;
-            string lol = kolicina.Text.ToString();
+            string lol = tb_kolicina.Text.ToString();
             kol = Int32.Parse(lol);
-            Skladiste skladiste = new Skladiste(naziv_materijala.Text, proizvodac.Text, mjerna_jedinica.Text, kol);
+            Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, kol);
             
         }
     }
