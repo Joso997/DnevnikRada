@@ -27,7 +27,7 @@ namespace DnevnikRada.Klase
 
         public void Dodaj()
         {
-            Baza_Testing.DB baza = new Baza_Testing.DB();
+            Baza.DB baza = new Baza.DB();
             string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
             baza.Query(insert);
         }

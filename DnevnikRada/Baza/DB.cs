@@ -7,7 +7,7 @@ using System.Data.SQLite;
 using System.Windows.Forms;
 using System.Data;
 
-namespace DnevnikRada.Baza_Testing
+namespace DnevnikRada.Baza
 {
     class DB
     {

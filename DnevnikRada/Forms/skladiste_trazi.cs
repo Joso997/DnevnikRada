@@ -12,11 +12,11 @@ namespace DnevnikRada
 {
     public partial class skladiste_trazi : Form
     {
-        Baza_Testing.DB baza;
+        Baza.DB baza;
         public skladiste_trazi()
         {
             InitializeComponent();
-            baza = new Baza_Testing.DB();
+            baza = new Baza.DB();
             skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
         }
 

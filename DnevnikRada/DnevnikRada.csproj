@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Baza Testing\DB.cs" />
+    <Compile Include="Baza\DB.cs" />
     <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.cs">
       <SubType>Form</SubType>
     </Compile>
