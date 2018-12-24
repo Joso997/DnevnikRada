@@ -31,7 +31,11 @@ namespace DnevnikRada
 
         private void Reload()
         {
-            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
+            string lol;
+            skladisteGrid.DataSource = baza.LoadDataBase(lol = string.Format(
+                "select * from Skladiste " +
+                "WHERE NazivMaterijala like '%{0}%' or " +
+                "Prodavac like '%{0}%'", search.Text));
         }
 
         private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
@@ -45,6 +49,16 @@ namespace DnevnikRada
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void skladiste_trazi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KlickMe_Click(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }
