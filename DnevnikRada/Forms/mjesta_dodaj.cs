@@ -18,29 +18,22 @@ namespace DnevnikRada
             InitializeComponent();
         }
 
-        private void mjesta_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                   //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                   //..sto se aplikacija u potpunosti zatvori
-
+        private void mjesta_dodaj_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
+        private void Home_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
             this.Hide();
             Form1.Show();
         }
 
-        private void btn_potvrdi_Click(object sender, EventArgs e) 
+        private void Potvrdi_Click(object sender, EventArgs e)
         {
-            Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+            Mjesta mjesta = new Mjesta(naziv_mjesta.Text, adresa.Text);
         }
-
-        private void tb_naziv_mjesta_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_evidencija_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         8QAABPEBykqAKwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAaxSURBVHhe7Zr7
@@ -153,7 +153,7 @@
         YCZDDOCN0BDi89Om/zqpZEb03ifjxv0Hl+AGkUEfJ38AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_evidencija_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAACitJREFUeF7tXGtsFNcVhlZVpbZq+6tSf1Zq1f6rWqSqUqtG8e6Cvbvg2jsLCQaa
@@ -202,7 +202,7 @@
         GabP4dffGd9pu/V7gtoc/OaWff2dCxcuXLhw4cKFi3HGlCn/B90AbR2GKv+uAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_skladiste_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         8QAABPEBykqAKwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAaxSURBVHhe7Zr7
@@ -237,7 +237,7 @@
         YCZDDOCN0BDi89Om/zqpZEb03ifjxv0Hl+AGkUEfJ38AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_skladiste_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAACitJREFUeF7tXGtsFNcVhlZVpbZq+6tSf1Zq1f6rWqSqUqtG8e6Cvbvg2jsLCQaa
@@ -286,7 +286,7 @@
         GabP4dffGd9pu/V7gtoc/OaWff2dCxcuXLhw4cKFi3HGlCn/B90AbR2GKv+uAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_mjesta_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         8QAABPEBykqAKwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAaxSURBVHhe7Zr7
@@ -321,7 +321,7 @@
         YCZDDOCN0BDi89Om/zqpZEb03ifjxv0Hl+AGkUEfJ38AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_mjesta_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAACitJREFUeF7tXGtsFNcVhlZVpbZq+6tSf1Zq1f6rWqSqUqtG8e6Cvbvg2jsLCQaa
@@ -370,7 +370,7 @@
         GabP4dffGd9pu/V7gtoc/OaWff2dCxcuXLhw4cKFi3HGlCn/B90AbR2GKv+uAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_stanje_poduzeca.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="metroButton7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAB6JJREFUeF7tnVtsFFUYx7eigkAEJSRe0AfhAR80GpQ73bLbEhGCW6gCosATAWLi

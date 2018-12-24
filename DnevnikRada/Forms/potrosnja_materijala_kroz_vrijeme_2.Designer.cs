@@ -29,68 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(potrosnja_materijala_kroz_vrijeme_2));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
-            this.btn_odstupanje_od_normale = new MetroFramework.Controls.MetroButton();
-            this.btn_broj_odrzavanja_kroz_vrijeme = new MetroFramework.Controls.MetroButton();
-            this.btn_potrosnja_materijala_kroz_vrijeme = new MetroFramework.Controls.MetroButton();
-            this.btn_stanje_poduzeca = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // btn_home
+            // metroButton1
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.metroButton1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroButton1.Location = new System.Drawing.Point(800, 480);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(100, 100);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // btn_odstupanje_od_normale
+            // metroButton4
             // 
-            this.btn_odstupanje_od_normale.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_odstupanje_od_normale.Location = new System.Drawing.Point(1, 362);
-            this.btn_odstupanje_od_normale.Name = "btn_odstupanje_od_normale";
-            this.btn_odstupanje_od_normale.Size = new System.Drawing.Size(230, 100);
-            this.btn_odstupanje_od_normale.TabIndex = 16;
-            this.btn_odstupanje_od_normale.Text = "Odstupanje Od Normale";
-            this.btn_odstupanje_od_normale.UseSelectable = true;
-            this.btn_odstupanje_od_normale.Click += new System.EventHandler(this.btn_odstupanje_od_normale_Click_1);
+            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton4.Location = new System.Drawing.Point(1, 362);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(230, 100);
+            this.metroButton4.TabIndex = 16;
+            this.metroButton4.Text = "Odstupanje Od Normale";
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click_1);
             // 
-            // btn_broj_odrzavanja_kroz_vrijeme
+            // metroButton3
             // 
-            this.btn_broj_odrzavanja_kroz_vrijeme.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_broj_odrzavanja_kroz_vrijeme.Location = new System.Drawing.Point(1, 242);
-            this.btn_broj_odrzavanja_kroz_vrijeme.Name = "btn_broj_odrzavanja_kroz_vrijeme";
-            this.btn_broj_odrzavanja_kroz_vrijeme.Size = new System.Drawing.Size(230, 100);
-            this.btn_broj_odrzavanja_kroz_vrijeme.TabIndex = 15;
-            this.btn_broj_odrzavanja_kroz_vrijeme.Text = "Broj Održavanja Kroz Vrijeme";
-            this.btn_broj_odrzavanja_kroz_vrijeme.UseSelectable = true;
-            this.btn_broj_odrzavanja_kroz_vrijeme.Click += new System.EventHandler(this.btn_broj_odrzavanja_kroz_vrijeme_Click_1);
+            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton3.Location = new System.Drawing.Point(1, 242);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(230, 100);
+            this.metroButton3.TabIndex = 15;
+            this.metroButton3.Text = "Broj Održavanja Kroz Vrijeme";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click_1);
             // 
-            // btn_potrosnja_materijala_kroz_vrijeme
+            // metroButton2
             // 
-            this.btn_potrosnja_materijala_kroz_vrijeme.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_potrosnja_materijala_kroz_vrijeme.Location = new System.Drawing.Point(1, 121);
-            this.btn_potrosnja_materijala_kroz_vrijeme.Name = "btn_potrosnja_materijala_kroz_vrijeme";
-            this.btn_potrosnja_materijala_kroz_vrijeme.Size = new System.Drawing.Size(230, 100);
-            this.btn_potrosnja_materijala_kroz_vrijeme.TabIndex = 14;
-            this.btn_potrosnja_materijala_kroz_vrijeme.Text = "Potrošnja Materijala Kroz Vrijeme";
-            this.btn_potrosnja_materijala_kroz_vrijeme.UseSelectable = true;
-            this.btn_potrosnja_materijala_kroz_vrijeme.Click += new System.EventHandler(this.btn_potrosnja_materijala_kroz_vrijeme_Click_1);
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton2.Location = new System.Drawing.Point(1, 121);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(230, 100);
+            this.metroButton2.TabIndex = 14;
+            this.metroButton2.Text = "Potrošnja Materijala Kroz Vrijeme";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
-            // btn_stanje_poduzeca
+            // metroButton5
             // 
-            this.btn_stanje_poduzeca.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_stanje_poduzeca.Location = new System.Drawing.Point(1, 1);
-            this.btn_stanje_poduzeca.Name = "btn_stanje_poduzeca";
-            this.btn_stanje_poduzeca.Size = new System.Drawing.Size(230, 100);
-            this.btn_stanje_poduzeca.TabIndex = 13;
-            this.btn_stanje_poduzeca.Text = "Stanje Poduzeća";
-            this.btn_stanje_poduzeca.UseSelectable = true;
-            this.btn_stanje_poduzeca.Click += new System.EventHandler(this.btn_stanje_poduzeca_Click);
+            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton5.Location = new System.Drawing.Point(1, 1);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(230, 100);
+            this.metroButton5.TabIndex = 13;
+            this.metroButton5.Text = "Stanje Poduzeća";
+            this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
             // potrosnja_materijala_kroz_vrijeme_2
             // 
@@ -98,11 +98,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.btn_odstupanje_od_normale);
-            this.Controls.Add(this.btn_broj_odrzavanja_kroz_vrijeme);
-            this.Controls.Add(this.btn_potrosnja_materijala_kroz_vrijeme);
-            this.Controls.Add(this.btn_stanje_poduzeca);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.metroButton4);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton5);
+            this.Controls.Add(this.metroButton1);
             this.Name = "potrosnja_materijala_kroz_vrijeme_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "potrosnja_materijala_kroz_vrijeme_2";
@@ -113,10 +113,10 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
-        private MetroFramework.Controls.MetroButton btn_odstupanje_od_normale;
-        private MetroFramework.Controls.MetroButton btn_broj_odrzavanja_kroz_vrijeme;
-        private MetroFramework.Controls.MetroButton btn_potrosnja_materijala_kroz_vrijeme;
-        private MetroFramework.Controls.MetroButton btn_stanje_poduzeca;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton5;
     }
 }

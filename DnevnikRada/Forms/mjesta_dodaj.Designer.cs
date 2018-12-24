@@ -29,211 +29,218 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_dodaj));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
-            this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
-            this.lbl_adresa = new MetroFramework.Controls.MetroLabel();
-            this.lbl_vrijeme_rada = new MetroFramework.Controls.MetroLabel();
-            this.lbl_od = new MetroFramework.Controls.MetroLabel();
-            this.lbl_do = new MetroFramework.Controls.MetroLabel();
-            this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
-            this.tb_adresa = new MetroFramework.Controls.MetroTextBox();
-            this.tb_od = new MetroFramework.Controls.MetroTextBox();
-            this.tb_do = new MetroFramework.Controls.MetroTextBox();
-            this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
+            this.adresa = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // lbl_naziv_mjesta
+            // metroLabel1
             // 
-            this.lbl_naziv_mjesta.AutoSize = true;
-            this.lbl_naziv_mjesta.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_naziv_mjesta.Location = new System.Drawing.Point(302, 113);
-            this.lbl_naziv_mjesta.Name = "lbl_naziv_mjesta";
-            this.lbl_naziv_mjesta.Size = new System.Drawing.Size(108, 25);
-            this.lbl_naziv_mjesta.TabIndex = 1;
-            this.lbl_naziv_mjesta.Text = "Naziv Mjesta";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(302, 113);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(108, 25);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Naziv Mjesta";
             // 
-            // lbl_adresa
+            // metroLabel2
             // 
-            this.lbl_adresa.AutoSize = true;
-            this.lbl_adresa.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_adresa.Location = new System.Drawing.Point(302, 157);
-            this.lbl_adresa.Name = "lbl_adresa";
-            this.lbl_adresa.Size = new System.Drawing.Size(64, 25);
-            this.lbl_adresa.TabIndex = 2;
-            this.lbl_adresa.Text = "Adresa";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(302, 157);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(64, 25);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "Adresa";
             // 
-            // lbl_vrijeme_rada
+            // metroLabel3
             // 
-            this.lbl_vrijeme_rada.AutoSize = true;
-            this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
-            this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
-            this.lbl_vrijeme_rada.TabIndex = 3;
-            this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(373, 228);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(216, 25);
+            this.metroLabel3.TabIndex = 3;
+            this.metroLabel3.Text = "Vrijeme Rada (Opcionalno)";
             // 
-            // lbl_od
+            // metroLabel4
             // 
-            this.lbl_od.AutoSize = true;
-            this.lbl_od.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_od.Location = new System.Drawing.Point(373, 265);
-            this.lbl_od.Name = "lbl_od";
-            this.lbl_od.Size = new System.Drawing.Size(36, 25);
-            this.lbl_od.TabIndex = 4;
-            this.lbl_od.Text = "Od";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Location = new System.Drawing.Point(373, 265);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(36, 25);
+            this.metroLabel4.TabIndex = 4;
+            this.metroLabel4.Text = "Od";
             // 
-            // lbl_do
+            // metroLabel5
             // 
-            this.lbl_do.AutoSize = true;
-            this.lbl_do.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_do.Location = new System.Drawing.Point(373, 302);
-            this.lbl_do.Name = "lbl_do";
-            this.lbl_do.Size = new System.Drawing.Size(34, 25);
-            this.lbl_do.TabIndex = 5;
-            this.lbl_do.Text = "Do";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.Location = new System.Drawing.Point(373, 302);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(34, 25);
+            this.metroLabel5.TabIndex = 5;
+            this.metroLabel5.Text = "Do";
             // 
-            // tb_naziv_mjesta
-            // 
-            // 
-            // 
-            // 
-            this.tb_naziv_mjesta.CustomButton.Image = null;
-            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_naziv_mjesta.CustomButton.Name = "";
-            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_naziv_mjesta.CustomButton.TabIndex = 1;
-            this.tb_naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_naziv_mjesta.CustomButton.UseSelectable = true;
-            this.tb_naziv_mjesta.CustomButton.Visible = false;
-            this.tb_naziv_mjesta.Lines = new string[0];
-            this.tb_naziv_mjesta.Location = new System.Drawing.Point(512, 115);
-            this.tb_naziv_mjesta.MaxLength = 32767;
-            this.tb_naziv_mjesta.Name = "tb_naziv_mjesta";
-            this.tb_naziv_mjesta.PasswordChar = '\0';
-            this.tb_naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_naziv_mjesta.SelectedText = "";
-            this.tb_naziv_mjesta.SelectionLength = 0;
-            this.tb_naziv_mjesta.SelectionStart = 0;
-            this.tb_naziv_mjesta.ShortcutsEnabled = true;
-            this.tb_naziv_mjesta.Size = new System.Drawing.Size(150, 23);
-            this.tb_naziv_mjesta.TabIndex = 6;
-            this.tb_naziv_mjesta.UseSelectable = true;
-            this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_naziv_mjesta.Click += new System.EventHandler(this.tb_naziv_mjesta_Click);
-            // 
-            // tb_adresa
+            // naziv_mjesta
             // 
             // 
             // 
             // 
-            this.tb_adresa.CustomButton.Image = null;
-            this.tb_adresa.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_adresa.CustomButton.Name = "";
-            this.tb_adresa.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_adresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_adresa.CustomButton.TabIndex = 1;
-            this.tb_adresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_adresa.CustomButton.UseSelectable = true;
-            this.tb_adresa.CustomButton.Visible = false;
-            this.tb_adresa.Lines = new string[0];
-            this.tb_adresa.Location = new System.Drawing.Point(512, 159);
-            this.tb_adresa.MaxLength = 32767;
-            this.tb_adresa.Name = "tb_adresa";
-            this.tb_adresa.PasswordChar = '\0';
-            this.tb_adresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_adresa.SelectedText = "";
-            this.tb_adresa.SelectionLength = 0;
-            this.tb_adresa.SelectionStart = 0;
-            this.tb_adresa.ShortcutsEnabled = true;
-            this.tb_adresa.Size = new System.Drawing.Size(150, 23);
-            this.tb_adresa.TabIndex = 7;
-            this.tb_adresa.UseSelectable = true;
-            this.tb_adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.naziv_mjesta.CustomButton.Image = null;
+            this.naziv_mjesta.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.naziv_mjesta.CustomButton.Name = "";
+            this.naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.naziv_mjesta.CustomButton.TabIndex = 1;
+            this.naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.naziv_mjesta.CustomButton.UseSelectable = true;
+            this.naziv_mjesta.CustomButton.Visible = false;
+            this.naziv_mjesta.Lines = new string[] {
+        "metroTextBox1"};
+            this.naziv_mjesta.Location = new System.Drawing.Point(512, 115);
+            this.naziv_mjesta.MaxLength = 32767;
+            this.naziv_mjesta.Name = "naziv_mjesta";
+            this.naziv_mjesta.PasswordChar = '\0';
+            this.naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.naziv_mjesta.SelectedText = "";
+            this.naziv_mjesta.SelectionLength = 0;
+            this.naziv_mjesta.SelectionStart = 0;
+            this.naziv_mjesta.ShortcutsEnabled = true;
+            this.naziv_mjesta.Size = new System.Drawing.Size(150, 23);
+            this.naziv_mjesta.TabIndex = 6;
+            this.naziv_mjesta.Text = "metroTextBox1";
+            this.naziv_mjesta.UseSelectable = true;
+            this.naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tb_od
-            // 
-            // 
-            // 
-            // 
-            this.tb_od.CustomButton.Image = null;
-            this.tb_od.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_od.CustomButton.Name = "";
-            this.tb_od.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_od.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_od.CustomButton.TabIndex = 1;
-            this.tb_od.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_od.CustomButton.UseSelectable = true;
-            this.tb_od.CustomButton.Visible = false;
-            this.tb_od.Lines = new string[0];
-            this.tb_od.Location = new System.Drawing.Point(415, 267);
-            this.tb_od.MaxLength = 32767;
-            this.tb_od.Name = "tb_od";
-            this.tb_od.PasswordChar = '\0';
-            this.tb_od.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_od.SelectedText = "";
-            this.tb_od.SelectionLength = 0;
-            this.tb_od.SelectionStart = 0;
-            this.tb_od.ShortcutsEnabled = true;
-            this.tb_od.Size = new System.Drawing.Size(150, 23);
-            this.tb_od.TabIndex = 8;
-            this.tb_od.UseSelectable = true;
-            this.tb_od.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_od.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // tb_do
+            // adresa
             // 
             // 
             // 
             // 
-            this.tb_do.CustomButton.Image = null;
-            this.tb_do.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_do.CustomButton.Name = "";
-            this.tb_do.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_do.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_do.CustomButton.TabIndex = 1;
-            this.tb_do.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_do.CustomButton.UseSelectable = true;
-            this.tb_do.CustomButton.Visible = false;
-            this.tb_do.Lines = new string[0];
-            this.tb_do.Location = new System.Drawing.Point(415, 304);
-            this.tb_do.MaxLength = 32767;
-            this.tb_do.Name = "tb_do";
-            this.tb_do.PasswordChar = '\0';
-            this.tb_do.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_do.SelectedText = "";
-            this.tb_do.SelectionLength = 0;
-            this.tb_do.SelectionStart = 0;
-            this.tb_do.ShortcutsEnabled = true;
-            this.tb_do.Size = new System.Drawing.Size(150, 23);
-            this.tb_do.TabIndex = 9;
-            this.tb_do.UseSelectable = true;
-            this.tb_do.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_do.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.adresa.CustomButton.Image = null;
+            this.adresa.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.adresa.CustomButton.Name = "";
+            this.adresa.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.adresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.adresa.CustomButton.TabIndex = 1;
+            this.adresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.adresa.CustomButton.UseSelectable = true;
+            this.adresa.CustomButton.Visible = false;
+            this.adresa.Lines = new string[] {
+        "metroTextBox2"};
+            this.adresa.Location = new System.Drawing.Point(512, 159);
+            this.adresa.MaxLength = 32767;
+            this.adresa.Name = "adresa";
+            this.adresa.PasswordChar = '\0';
+            this.adresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.adresa.SelectedText = "";
+            this.adresa.SelectionLength = 0;
+            this.adresa.SelectionStart = 0;
+            this.adresa.ShortcutsEnabled = true;
+            this.adresa.Size = new System.Drawing.Size(150, 23);
+            this.adresa.TabIndex = 7;
+            this.adresa.Text = "metroTextBox2";
+            this.adresa.UseSelectable = true;
+            this.adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btn_potvrdi
+            // metroTextBox3
             // 
-            this.btn_potvrdi.Location = new System.Drawing.Point(463, 350);
-            this.btn_potvrdi.Name = "btn_potvrdi";
-            this.btn_potvrdi.Size = new System.Drawing.Size(100, 100);
-            this.btn_potvrdi.TabIndex = 10;
-            this.btn_potvrdi.Text = "Potvrdi";
-            this.btn_potvrdi.UseSelectable = true;
-            this.btn_potvrdi.Click += new System.EventHandler(this.btn_potvrdi_Click);
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Lines = new string[] {
+        "metroTextBox3"};
+            this.metroTextBox3.Location = new System.Drawing.Point(415, 267);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(150, 23);
+            this.metroTextBox3.TabIndex = 8;
+            this.metroTextBox3.Text = "metroTextBox3";
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroTextBox4
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox4.CustomButton.Image = null;
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.metroTextBox4.CustomButton.Name = "";
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox4.CustomButton.TabIndex = 1;
+            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox4.CustomButton.UseSelectable = true;
+            this.metroTextBox4.CustomButton.Visible = false;
+            this.metroTextBox4.Lines = new string[] {
+        "metroTextBox4"};
+            this.metroTextBox4.Location = new System.Drawing.Point(415, 304);
+            this.metroTextBox4.MaxLength = 32767;
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '\0';
+            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox4.SelectedText = "";
+            this.metroTextBox4.SelectionLength = 0;
+            this.metroTextBox4.SelectionStart = 0;
+            this.metroTextBox4.ShortcutsEnabled = true;
+            this.metroTextBox4.Size = new System.Drawing.Size(150, 23);
+            this.metroTextBox4.TabIndex = 9;
+            this.metroTextBox4.Text = "metroTextBox4";
+            this.metroTextBox4.UseSelectable = true;
+            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Potvrdi
+            // 
+            this.Potvrdi.Location = new System.Drawing.Point(463, 350);
+            this.Potvrdi.Name = "Potvrdi";
+            this.Potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.Potvrdi.TabIndex = 10;
+            this.Potvrdi.Text = "Potvrdi";
+            this.Potvrdi.UseSelectable = true;
+            this.Potvrdi.Click += new System.EventHandler(this.Potvrdi_Click);
             // 
             // mjesta_dodaj
             // 
@@ -241,17 +248,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.btn_potvrdi);
-            this.Controls.Add(this.tb_do);
-            this.Controls.Add(this.tb_od);
-            this.Controls.Add(this.tb_adresa);
-            this.Controls.Add(this.tb_naziv_mjesta);
-            this.Controls.Add(this.lbl_do);
-            this.Controls.Add(this.lbl_od);
-            this.Controls.Add(this.lbl_vrijeme_rada);
-            this.Controls.Add(this.lbl_adresa);
-            this.Controls.Add(this.lbl_naziv_mjesta);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Potvrdi);
+            this.Controls.Add(this.metroTextBox4);
+            this.Controls.Add(this.metroTextBox3);
+            this.Controls.Add(this.adresa);
+            this.Controls.Add(this.naziv_mjesta);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.Home);
             this.Name = "mjesta_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";
@@ -263,16 +270,16 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
-        private MetroFramework.Controls.MetroLabel lbl_naziv_mjesta;
-        private MetroFramework.Controls.MetroLabel lbl_adresa;
-        private MetroFramework.Controls.MetroLabel lbl_vrijeme_rada;
-        private MetroFramework.Controls.MetroLabel lbl_od;
-        private MetroFramework.Controls.MetroLabel lbl_do;
-        private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
-        private MetroFramework.Controls.MetroTextBox tb_adresa;
-        private MetroFramework.Controls.MetroTextBox tb_od;
-        private MetroFramework.Controls.MetroTextBox tb_do;
-        private MetroFramework.Controls.MetroButton btn_potvrdi;
+        private MetroFramework.Controls.MetroButton Home;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroTextBox naziv_mjesta;
+        private MetroFramework.Controls.MetroTextBox adresa;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroButton Potvrdi;
     }
 }

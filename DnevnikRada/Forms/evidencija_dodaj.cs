@@ -17,14 +17,12 @@ namespace DnevnikRada
             InitializeComponent();
         }
 
-        private void evidencija_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                       //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                       //..sto se aplikacija u potpunosti zatvori
+        private void evidencija_dodaj_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
+        private void metroButton1_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();
             this.Hide();

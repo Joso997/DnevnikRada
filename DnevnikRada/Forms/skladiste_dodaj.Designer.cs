@@ -29,199 +29,207 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Skladiste_dodaj));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
-            this.lbl_naziv_materijala = new MetroFramework.Controls.MetroLabel();
-            this.lbl_proizvodac = new MetroFramework.Controls.MetroLabel();
-            this.lbl_mjerna_jedinica = new MetroFramework.Controls.MetroLabel();
-            this.tb_naziv_materijala = new MetroFramework.Controls.MetroTextBox();
-            this.tb_proizvodac = new MetroFramework.Controls.MetroTextBox();
-            this.tb_mjerna_jedinica = new MetroFramework.Controls.MetroTextBox();
-            this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
-            this.lbl_kolicina = new MetroFramework.Controls.MetroLabel();
-            this.tb_kolicina = new MetroFramework.Controls.MetroTextBox();
+            this.home = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.naziv_materijala = new MetroFramework.Controls.MetroTextBox();
+            this.proizvodac = new MetroFramework.Controls.MetroTextBox();
+            this.mjerna_jedinica = new MetroFramework.Controls.MetroTextBox();
+            this.potvrdi = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.kolicina = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // btn_home
+            // home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home.BackgroundImage")));
+            this.home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.home.Location = new System.Drawing.Point(800, 480);
+            this.home.Name = "home";
+            this.home.Size = new System.Drawing.Size(100, 100);
+            this.home.TabIndex = 0;
+            this.home.UseSelectable = true;
+            this.home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // lbl_naziv_materijala
+            // metroLabel2
             // 
-            this.lbl_naziv_materijala.AutoSize = true;
-            this.lbl_naziv_materijala.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_naziv_materijala.Location = new System.Drawing.Point(236, 128);
-            this.lbl_naziv_materijala.Name = "lbl_naziv_materijala";
-            this.lbl_naziv_materijala.Size = new System.Drawing.Size(133, 25);
-            this.lbl_naziv_materijala.TabIndex = 2;
-            this.lbl_naziv_materijala.Text = "Naziv Materijala";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(236, 128);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(133, 25);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "Naziv Materijala";
             // 
-            // lbl_proizvodac
+            // metroLabel3
             // 
-            this.lbl_proizvodac.AutoSize = true;
-            this.lbl_proizvodac.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_proizvodac.Location = new System.Drawing.Point(236, 170);
-            this.lbl_proizvodac.Name = "lbl_proizvodac";
-            this.lbl_proizvodac.Size = new System.Drawing.Size(95, 25);
-            this.lbl_proizvodac.TabIndex = 3;
-            this.lbl_proizvodac.Text = "Proizvođač";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(236, 170);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(95, 25);
+            this.metroLabel3.TabIndex = 3;
+            this.metroLabel3.Text = "Proizvođač";
             // 
-            // lbl_mjerna_jedinica
+            // metroLabel4
             // 
-            this.lbl_mjerna_jedinica.AutoSize = true;
-            this.lbl_mjerna_jedinica.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_mjerna_jedinica.Location = new System.Drawing.Point(236, 213);
-            this.lbl_mjerna_jedinica.Name = "lbl_mjerna_jedinica";
-            this.lbl_mjerna_jedinica.Size = new System.Drawing.Size(130, 25);
-            this.lbl_mjerna_jedinica.TabIndex = 4;
-            this.lbl_mjerna_jedinica.Text = "Mjerna Jedinica";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Location = new System.Drawing.Point(236, 213);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(130, 25);
+            this.metroLabel4.TabIndex = 4;
+            this.metroLabel4.Text = "Mjerna Jedinica";
             // 
-            // tb_naziv_materijala
-            // 
-            // 
-            // 
-            // 
-            this.tb_naziv_materijala.CustomButton.Image = null;
-            this.tb_naziv_materijala.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_naziv_materijala.CustomButton.Name = "";
-            this.tb_naziv_materijala.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_naziv_materijala.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_naziv_materijala.CustomButton.TabIndex = 1;
-            this.tb_naziv_materijala.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_naziv_materijala.CustomButton.UseSelectable = true;
-            this.tb_naziv_materijala.CustomButton.Visible = false;
-            this.tb_naziv_materijala.Lines = new string[0];
-            this.tb_naziv_materijala.Location = new System.Drawing.Point(445, 130);
-            this.tb_naziv_materijala.MaxLength = 32767;
-            this.tb_naziv_materijala.Name = "tb_naziv_materijala";
-            this.tb_naziv_materijala.PasswordChar = '\0';
-            this.tb_naziv_materijala.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_naziv_materijala.SelectedText = "";
-            this.tb_naziv_materijala.SelectionLength = 0;
-            this.tb_naziv_materijala.SelectionStart = 0;
-            this.tb_naziv_materijala.ShortcutsEnabled = true;
-            this.tb_naziv_materijala.Size = new System.Drawing.Size(200, 23);
-            this.tb_naziv_materijala.TabIndex = 5;
-            this.tb_naziv_materijala.UseSelectable = true;
-            this.tb_naziv_materijala.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_naziv_materijala.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // tb_proizvodac
+            // naziv_materijala
             // 
             // 
             // 
             // 
-            this.tb_proizvodac.CustomButton.Image = null;
-            this.tb_proizvodac.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_proizvodac.CustomButton.Name = "";
-            this.tb_proizvodac.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_proizvodac.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_proizvodac.CustomButton.TabIndex = 1;
-            this.tb_proizvodac.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_proizvodac.CustomButton.UseSelectable = true;
-            this.tb_proizvodac.CustomButton.Visible = false;
-            this.tb_proizvodac.Lines = new string[0];
-            this.tb_proizvodac.Location = new System.Drawing.Point(445, 172);
-            this.tb_proizvodac.MaxLength = 32767;
-            this.tb_proizvodac.Name = "tb_proizvodac";
-            this.tb_proizvodac.PasswordChar = '\0';
-            this.tb_proizvodac.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_proizvodac.SelectedText = "";
-            this.tb_proizvodac.SelectionLength = 0;
-            this.tb_proizvodac.SelectionStart = 0;
-            this.tb_proizvodac.ShortcutsEnabled = true;
-            this.tb_proizvodac.Size = new System.Drawing.Size(200, 23);
-            this.tb_proizvodac.TabIndex = 6;
-            this.tb_proizvodac.UseSelectable = true;
-            this.tb_proizvodac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_proizvodac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.naziv_materijala.CustomButton.Image = null;
+            this.naziv_materijala.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.naziv_materijala.CustomButton.Name = "";
+            this.naziv_materijala.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.naziv_materijala.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.naziv_materijala.CustomButton.TabIndex = 1;
+            this.naziv_materijala.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.naziv_materijala.CustomButton.UseSelectable = true;
+            this.naziv_materijala.CustomButton.Visible = false;
+            this.naziv_materijala.Lines = new string[] {
+        "naziv_materijala"};
+            this.naziv_materijala.Location = new System.Drawing.Point(445, 130);
+            this.naziv_materijala.MaxLength = 32767;
+            this.naziv_materijala.Name = "naziv_materijala";
+            this.naziv_materijala.PasswordChar = '\0';
+            this.naziv_materijala.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.naziv_materijala.SelectedText = "";
+            this.naziv_materijala.SelectionLength = 0;
+            this.naziv_materijala.SelectionStart = 0;
+            this.naziv_materijala.ShortcutsEnabled = true;
+            this.naziv_materijala.Size = new System.Drawing.Size(200, 23);
+            this.naziv_materijala.TabIndex = 5;
+            this.naziv_materijala.Text = "naziv_materijala";
+            this.naziv_materijala.UseSelectable = true;
+            this.naziv_materijala.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.naziv_materijala.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tb_mjerna_jedinica
-            // 
-            // 
-            // 
-            // 
-            this.tb_mjerna_jedinica.CustomButton.Image = null;
-            this.tb_mjerna_jedinica.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_mjerna_jedinica.CustomButton.Name = "";
-            this.tb_mjerna_jedinica.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_mjerna_jedinica.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_mjerna_jedinica.CustomButton.TabIndex = 1;
-            this.tb_mjerna_jedinica.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_mjerna_jedinica.CustomButton.UseSelectable = true;
-            this.tb_mjerna_jedinica.CustomButton.Visible = false;
-            this.tb_mjerna_jedinica.Lines = new string[0];
-            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(445, 215);
-            this.tb_mjerna_jedinica.MaxLength = 32767;
-            this.tb_mjerna_jedinica.Name = "tb_mjerna_jedinica";
-            this.tb_mjerna_jedinica.PasswordChar = '\0';
-            this.tb_mjerna_jedinica.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_mjerna_jedinica.SelectedText = "";
-            this.tb_mjerna_jedinica.SelectionLength = 0;
-            this.tb_mjerna_jedinica.SelectionStart = 0;
-            this.tb_mjerna_jedinica.ShortcutsEnabled = true;
-            this.tb_mjerna_jedinica.Size = new System.Drawing.Size(200, 23);
-            this.tb_mjerna_jedinica.TabIndex = 7;
-            this.tb_mjerna_jedinica.UseSelectable = true;
-            this.tb_mjerna_jedinica.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_mjerna_jedinica.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btn_potvrdi
-            // 
-            this.btn_potvrdi.Location = new System.Drawing.Point(545, 310);
-            this.btn_potvrdi.Name = "btn_potvrdi";
-            this.btn_potvrdi.Size = new System.Drawing.Size(100, 100);
-            this.btn_potvrdi.TabIndex = 8;
-            this.btn_potvrdi.Text = "Potvrdi";
-            this.btn_potvrdi.UseSelectable = true;
-            this.btn_potvrdi.Click += new System.EventHandler(this.btn_potvrdi_Click);
-            // 
-            // lbl_kolicina
-            // 
-            this.lbl_kolicina.AutoSize = true;
-            this.lbl_kolicina.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_kolicina.Location = new System.Drawing.Point(236, 257);
-            this.lbl_kolicina.Name = "lbl_kolicina";
-            this.lbl_kolicina.Size = new System.Drawing.Size(70, 25);
-            this.lbl_kolicina.TabIndex = 9;
-            this.lbl_kolicina.Text = "Kolicina";
-            // 
-            // tb_kolicina
+            // proizvodac
             // 
             // 
             // 
             // 
-            this.tb_kolicina.CustomButton.Image = null;
-            this.tb_kolicina.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_kolicina.CustomButton.Name = "";
-            this.tb_kolicina.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_kolicina.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_kolicina.CustomButton.TabIndex = 1;
-            this.tb_kolicina.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_kolicina.CustomButton.UseSelectable = true;
-            this.tb_kolicina.CustomButton.Visible = false;
-            this.tb_kolicina.Lines = new string[0];
-            this.tb_kolicina.Location = new System.Drawing.Point(445, 257);
-            this.tb_kolicina.MaxLength = 32767;
-            this.tb_kolicina.Name = "tb_kolicina";
-            this.tb_kolicina.PasswordChar = '\0';
-            this.tb_kolicina.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_kolicina.SelectedText = "";
-            this.tb_kolicina.SelectionLength = 0;
-            this.tb_kolicina.SelectionStart = 0;
-            this.tb_kolicina.ShortcutsEnabled = true;
-            this.tb_kolicina.Size = new System.Drawing.Size(200, 23);
-            this.tb_kolicina.TabIndex = 10;
-            this.tb_kolicina.UseSelectable = true;
-            this.tb_kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.proizvodac.CustomButton.Image = null;
+            this.proizvodac.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.proizvodac.CustomButton.Name = "";
+            this.proizvodac.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.proizvodac.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.proizvodac.CustomButton.TabIndex = 1;
+            this.proizvodac.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.proizvodac.CustomButton.UseSelectable = true;
+            this.proizvodac.CustomButton.Visible = false;
+            this.proizvodac.Lines = new string[] {
+        "metroTextBox2"};
+            this.proizvodac.Location = new System.Drawing.Point(445, 172);
+            this.proizvodac.MaxLength = 32767;
+            this.proizvodac.Name = "proizvodac";
+            this.proizvodac.PasswordChar = '\0';
+            this.proizvodac.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.proizvodac.SelectedText = "";
+            this.proizvodac.SelectionLength = 0;
+            this.proizvodac.SelectionStart = 0;
+            this.proizvodac.ShortcutsEnabled = true;
+            this.proizvodac.Size = new System.Drawing.Size(200, 23);
+            this.proizvodac.TabIndex = 6;
+            this.proizvodac.Text = "metroTextBox2";
+            this.proizvodac.UseSelectable = true;
+            this.proizvodac.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.proizvodac.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mjerna_jedinica
+            // 
+            // 
+            // 
+            // 
+            this.mjerna_jedinica.CustomButton.Image = null;
+            this.mjerna_jedinica.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.mjerna_jedinica.CustomButton.Name = "";
+            this.mjerna_jedinica.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mjerna_jedinica.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mjerna_jedinica.CustomButton.TabIndex = 1;
+            this.mjerna_jedinica.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mjerna_jedinica.CustomButton.UseSelectable = true;
+            this.mjerna_jedinica.CustomButton.Visible = false;
+            this.mjerna_jedinica.Lines = new string[] {
+        "metroTextBox3"};
+            this.mjerna_jedinica.Location = new System.Drawing.Point(445, 215);
+            this.mjerna_jedinica.MaxLength = 32767;
+            this.mjerna_jedinica.Name = "mjerna_jedinica";
+            this.mjerna_jedinica.PasswordChar = '\0';
+            this.mjerna_jedinica.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mjerna_jedinica.SelectedText = "";
+            this.mjerna_jedinica.SelectionLength = 0;
+            this.mjerna_jedinica.SelectionStart = 0;
+            this.mjerna_jedinica.ShortcutsEnabled = true;
+            this.mjerna_jedinica.Size = new System.Drawing.Size(200, 23);
+            this.mjerna_jedinica.TabIndex = 7;
+            this.mjerna_jedinica.Text = "metroTextBox3";
+            this.mjerna_jedinica.UseSelectable = true;
+            this.mjerna_jedinica.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mjerna_jedinica.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // potvrdi
+            // 
+            this.potvrdi.Location = new System.Drawing.Point(545, 310);
+            this.potvrdi.Name = "potvrdi";
+            this.potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.potvrdi.TabIndex = 8;
+            this.potvrdi.Text = "Potvrdi";
+            this.potvrdi.UseSelectable = true;
+            this.potvrdi.Click += new System.EventHandler(this.Potvrdi_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(236, 257);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(70, 25);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Kolicina";
+            // 
+            // kolicina
+            // 
+            // 
+            // 
+            // 
+            this.kolicina.CustomButton.Image = null;
+            this.kolicina.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.kolicina.CustomButton.Name = "";
+            this.kolicina.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.kolicina.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.kolicina.CustomButton.TabIndex = 1;
+            this.kolicina.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.kolicina.CustomButton.UseSelectable = true;
+            this.kolicina.CustomButton.Visible = false;
+            this.kolicina.Lines = new string[] {
+        "metroTextBox3"};
+            this.kolicina.Location = new System.Drawing.Point(445, 257);
+            this.kolicina.MaxLength = 32767;
+            this.kolicina.Name = "kolicina";
+            this.kolicina.PasswordChar = '\0';
+            this.kolicina.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.kolicina.SelectedText = "";
+            this.kolicina.SelectionLength = 0;
+            this.kolicina.SelectionStart = 0;
+            this.kolicina.ShortcutsEnabled = true;
+            this.kolicina.Size = new System.Drawing.Size(200, 23);
+            this.kolicina.TabIndex = 10;
+            this.kolicina.Text = "metroTextBox3";
+            this.kolicina.UseSelectable = true;
+            this.kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Skladiste_dodaj
             // 
@@ -229,16 +237,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.tb_kolicina);
-            this.Controls.Add(this.lbl_kolicina);
-            this.Controls.Add(this.btn_potvrdi);
-            this.Controls.Add(this.tb_mjerna_jedinica);
-            this.Controls.Add(this.tb_proizvodac);
-            this.Controls.Add(this.tb_naziv_materijala);
-            this.Controls.Add(this.lbl_mjerna_jedinica);
-            this.Controls.Add(this.lbl_proizvodac);
-            this.Controls.Add(this.lbl_naziv_materijala);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.kolicina);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.potvrdi);
+            this.Controls.Add(this.mjerna_jedinica);
+            this.Controls.Add(this.proizvodac);
+            this.Controls.Add(this.naziv_materijala);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.home);
             this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
@@ -250,15 +258,15 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
-        private MetroFramework.Controls.MetroLabel lbl_naziv_materijala;
-        private MetroFramework.Controls.MetroLabel lbl_proizvodac;
-        private MetroFramework.Controls.MetroLabel lbl_mjerna_jedinica;
-        private MetroFramework.Controls.MetroTextBox tb_naziv_materijala;
-        private MetroFramework.Controls.MetroTextBox tb_proizvodac;
-        private MetroFramework.Controls.MetroTextBox tb_mjerna_jedinica;
-        private MetroFramework.Controls.MetroButton btn_potvrdi;
-        private MetroFramework.Controls.MetroLabel lbl_kolicina;
-        private MetroFramework.Controls.MetroTextBox tb_kolicina;
+        private MetroFramework.Controls.MetroButton home;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroTextBox naziv_materijala;
+        private MetroFramework.Controls.MetroTextBox proizvodac;
+        private MetroFramework.Controls.MetroTextBox mjerna_jedinica;
+        private MetroFramework.Controls.MetroButton potvrdi;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox kolicina;
     }
 }
