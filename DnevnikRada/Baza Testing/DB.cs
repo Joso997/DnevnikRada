@@ -24,7 +24,7 @@ namespace DnevnikRada.Baza_Testing
             connection = new SQLiteConnection("Data Source = DB.db");
 
             connection.Open();
-            if (connection.State == ConnectionState.Open )
+            if (connection.State == System.Data.ConnectionState.Open)
             {
                 MessageBox.Show("BAZA JE OTVORENA! YEY");
             }else MessageBox.Show("Error 404 NIGGA NOT FOUND");

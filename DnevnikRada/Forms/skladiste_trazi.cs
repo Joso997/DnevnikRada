@@ -28,11 +28,7 @@ namespace DnevnikRada
 
         private void Reload()
         {
-            string lol;
-            skladisteGrid.DataSource = baza.LoadDataBase(lol=string.Format(
-                "select * from Skladiste " +
-                "WHERE NazivMaterijala like '%{0}%' or " +
-                "Prodavac like '%{0}%'", search.Text));
+            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
         }
 
         private void MetroButton1_Click(object sender, EventArgs e)
@@ -42,9 +38,9 @@ namespace DnevnikRada
             Form1.Show();
         }
 
-        private void startSearch_Click(object sender, EventArgs e)
+        private void metroTextBox1_Click(object sender, EventArgs e)
         {
-            Reload();
+
         }
     }
 }
