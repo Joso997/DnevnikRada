@@ -8,6 +8,7 @@ namespace DnevnikRada.Interface
 {
     interface IUseDatabase
     {
+
         void Dodaj();
         void Trazi();      
     }
