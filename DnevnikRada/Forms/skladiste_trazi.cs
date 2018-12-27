@@ -12,10 +12,10 @@ namespace DnevnikRada
 {
     public partial class skladiste_trazi : Form
     {
-        
+        Klase.Skladiste skladiste = new Klase.Skladiste();
         public skladiste_trazi()
         {
-            Klase.Skladiste skladiste = new Klase.Skladiste();
+            
             InitializeComponent();
             skladisteGrid.DataSource = skladiste.Ucitaj();
         }
@@ -50,7 +50,6 @@ namespace DnevnikRada
 
         private void KlickMe_Click(object sender, EventArgs e)
         {
-            Klase.Skladiste skladiste = new Klase.Skladiste();
             string lol = string.Format(search.Text);
             skladisteGrid.DataSource = skladiste.Ucitaj(lol);
         }

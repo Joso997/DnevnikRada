@@ -34,20 +34,20 @@ namespace DnevnikRada.Klase
 
         ~Skladiste()
         {
-            baza.connection.Close();
+            //this.connection.Close();
             Console.WriteLine("Destructor");
         }
 
         public void Dodaj()
         {
             string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
-            baza.Query(insert);
+            this.Query(insert);
         }
 
         public DataTable Ucitaj()
         {
             string command = string.Format("select * from Skladiste");
-            return baza.LoadDataBase(command);
+            return this.LoadDataBase(command);
         }
 
         public DataTable Ucitaj(string trazi)
@@ -55,7 +55,7 @@ namespace DnevnikRada.Klase
             string command = string.Format("select * from Skladiste " +
                 "WHERE NazivMaterijala like '%{0}%' or " +
                 "Prodavac like '%{0}%'", trazi);
-            return baza.LoadDataBase(command);
+            return this.LoadDataBase(command);
         }
     }
 }
