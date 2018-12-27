@@ -223,7 +223,7 @@
             this.Controls.Add(this.btn_evidencija_trazi);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "/";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.ResumeLayout(false);
             this.ResumeLayout(false);

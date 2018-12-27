@@ -12,12 +12,12 @@ namespace DnevnikRada
 {
     public partial class skladiste_trazi : Form
     {
-        Baza.DB baza;
+        
         public skladiste_trazi()
         {
+            Klase.Skladiste skladiste = new Klase.Skladiste();
             InitializeComponent();
-            baza = new Baza.DB();
-            skladisteGrid.DataSource = baza.LoadDataBase("select * from Skladiste");
+            skladisteGrid.DataSource = skladiste.Ucitaj();
         }
 
         private void Skladiste_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
@@ -25,7 +25,7 @@ namespace DnevnikRada
                                                                                       //..sto se aplikacija u potpunosti zatvori
 
         {
-            baza.connection.Close();
+            
             Application.Exit();
         }
 
@@ -34,7 +34,7 @@ namespace DnevnikRada
 
         {
             Form1 Form1 = new Form1();
-            this.Hide();
+            this.Dispose();
             Form1.Show();
         }
 
@@ -50,10 +50,9 @@ namespace DnevnikRada
 
         private void KlickMe_Click(object sender, EventArgs e)
         {
-            string lol = string.Format(search.Text);
-
             Klase.Skladiste skladiste = new Klase.Skladiste();
-            skladisteGrid.DataSource = skladiste.Trazi(lol);
+            string lol = string.Format(search.Text);
+            skladisteGrid.DataSource = skladiste.Ucitaj(lol);
         }
     }
 }

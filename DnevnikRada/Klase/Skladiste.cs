@@ -8,12 +8,13 @@ using System.Data;
 
 namespace DnevnikRada.Klase
 {
-    class Skladiste : IUseDatabase
+    class Skladiste : Baza.DB, IUseDatabase
     {
         public string Naziv_materijala{ get; private set;}
         public string Proizvodac { get; private set; }
         public string Mjerna_jedinica { get; private set; }
         public int Kolicina { get; set; }
+        //private Baza.DB baza = new Baza.DB();
 
 
         // mozda bi trebalo u konstruktor stavit samo ono sto je obavezno? recimo d su 
@@ -31,19 +32,29 @@ namespace DnevnikRada.Klase
 
         }
 
+        ~Skladiste()
+        {
+            baza.connection.Close();
+            Console.WriteLine("Destructor");
+        }
+
         public void Dodaj()
         {
-            Baza.DB baza = new Baza.DB();
             string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
             baza.Query(insert);
         }
 
-        public DataTable Trazi(string trazi)
+        public DataTable Ucitaj()
+        {
+            string command = string.Format("select * from Skladiste");
+            return baza.LoadDataBase(command);
+        }
+
+        public DataTable Ucitaj(string trazi)
         {
             string command = string.Format("select * from Skladiste " +
                 "WHERE NazivMaterijala like '%{0}%' or " +
                 "Prodavac like '%{0}%'", trazi);
-            Baza.DB baza = new Baza.DB();
             return baza.LoadDataBase(command);
         }
     }

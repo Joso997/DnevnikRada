@@ -16,6 +16,7 @@ namespace DnevnikRada.Baza
         private SQLiteDataAdapter db;
         private DataSet ds = new DataSet();
         private DataTable table = new DataTable();
+        protected static Baza.DB baza = new Baza.DB();
 
         //OTVARA KONEKCIJU PREMA BAZI
         public DB()
@@ -29,6 +30,12 @@ namespace DnevnikRada.Baza
                 MessageBox.Show("BAZA JE OTVORENA! YEY");
             }else MessageBox.Show("Error 404 NIGGA NOT FOUND");
 
+        }
+
+        ~DB()
+        {
+            //
+            Console.WriteLine("Database Destructor");
         }
 
         //kod za izvođenje pod bazoom BILO KOJI al mora bit sql
