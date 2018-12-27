@@ -29,14 +29,6 @@ namespace DnevnikRada
             Application.Exit();
         }
 
-        private void Reload()
-        {
-            string lol;
-            skladisteGrid.DataSource = baza.LoadDataBase(lol = string.Format(
-                "select * from Skladiste " +
-                "WHERE NazivMaterijala like '%{0}%' or " +
-                "Prodavac like '%{0}%'", search.Text));
-        }
 
         private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
 
@@ -58,7 +50,10 @@ namespace DnevnikRada
 
         private void KlickMe_Click(object sender, EventArgs e)
         {
-            Reload();
+            string lol = string.Format(search.Text);
+
+            Klase.Skladiste skladiste = new Klase.Skladiste();
+            skladisteGrid.DataSource = skladiste.Trazi(lol);
         }
     }
 }

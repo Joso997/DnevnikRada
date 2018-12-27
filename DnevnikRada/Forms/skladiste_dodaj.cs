@@ -44,5 +44,10 @@ namespace DnevnikRada
             Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, kol);
             
         }
+
+        private void Skladiste_dodaj_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

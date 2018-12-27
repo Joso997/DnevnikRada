@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DnevnikRada.Interface;
+using System.Data;
 
 namespace DnevnikRada.Klase
 {
@@ -25,6 +26,11 @@ namespace DnevnikRada.Klase
             Dodaj();
         }
 
+        public Skladiste()
+        {
+
+        }
+
         public void Dodaj()
         {
             Baza.DB baza = new Baza.DB();
@@ -32,9 +38,13 @@ namespace DnevnikRada.Klase
             baza.Query(insert);
         }
 
-        public void Trazi()
+        public DataTable Trazi(string trazi)
         {
-
+            string command = string.Format("select * from Skladiste " +
+                "WHERE NazivMaterijala like '%{0}%' or " +
+                "Prodavac like '%{0}%'", trazi);
+            Baza.DB baza = new Baza.DB();
+            return baza.LoadDataBase(command);
         }
     }
 }

@@ -243,6 +243,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Skladiste_dodaj_FormClosed);
+            this.Load += new System.EventHandler(this.Skladiste_dodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

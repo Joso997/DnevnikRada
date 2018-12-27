@@ -15,6 +15,8 @@ namespace DnevnikRada
         public mjesta_trazi()
         {
             InitializeComponent();
+            Baza.DB baza = new Baza.DB();
+            dataGrid.DataSource = baza.LoadDataBase("select * from Mjesta");
         }
 
         private void mjesta_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
@@ -30,6 +32,14 @@ namespace DnevnikRada
             Form1 Form1 = new Form1();
             this.Hide();
             Form1.Show();
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            string lol = string.Format(searchText.Text);
+
+            Klase.Mjesta skladiste = new Klase.Mjesta();
+            dataGrid.DataSource = skladiste.Trazi(lol);
         }
     }
 }
