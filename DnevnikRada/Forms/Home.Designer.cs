@@ -50,6 +50,7 @@
             this.btn_evidencija_trazi.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_evidencija_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_evidencija_trazi.BackgroundImage")));
             this.btn_evidencija_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_evidencija_trazi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_evidencija_trazi.Location = new System.Drawing.Point(0, 40);
             this.btn_evidencija_trazi.Name = "btn_evidencija_trazi";
             this.btn_evidencija_trazi.Size = new System.Drawing.Size(150, 250);
@@ -62,6 +63,7 @@
             this.btn_evidencija_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_evidencija_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_evidencija_dodaj.BackgroundImage")));
             this.btn_evidencija_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_evidencija_dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_evidencija_dodaj.Location = new System.Drawing.Point(150, 40);
             this.btn_evidencija_dodaj.Name = "btn_evidencija_dodaj";
             this.btn_evidencija_dodaj.Size = new System.Drawing.Size(150, 250);
@@ -74,6 +76,7 @@
             this.btn_skladiste_trazi.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_skladiste_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_skladiste_trazi.BackgroundImage")));
             this.btn_skladiste_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_skladiste_trazi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_skladiste_trazi.Location = new System.Drawing.Point(0, 330);
             this.btn_skladiste_trazi.Name = "btn_skladiste_trazi";
             this.btn_skladiste_trazi.Size = new System.Drawing.Size(150, 250);
@@ -86,6 +89,7 @@
             this.btn_skladiste_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_skladiste_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_skladiste_dodaj.BackgroundImage")));
             this.btn_skladiste_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_skladiste_dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_skladiste_dodaj.Location = new System.Drawing.Point(150, 330);
             this.btn_skladiste_dodaj.Name = "btn_skladiste_dodaj";
             this.btn_skladiste_dodaj.Size = new System.Drawing.Size(150, 250);
@@ -98,6 +102,7 @@
             this.btn_mjesta_trazi.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_mjesta_trazi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mjesta_trazi.BackgroundImage")));
             this.btn_mjesta_trazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_mjesta_trazi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mjesta_trazi.Location = new System.Drawing.Point(300, 330);
             this.btn_mjesta_trazi.Name = "btn_mjesta_trazi";
             this.btn_mjesta_trazi.Size = new System.Drawing.Size(150, 250);
@@ -110,6 +115,7 @@
             this.btn_mjesta_dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_mjesta_dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_mjesta_dodaj.BackgroundImage")));
             this.btn_mjesta_dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_mjesta_dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_mjesta_dodaj.Location = new System.Drawing.Point(450, 331);
             this.btn_mjesta_dodaj.Name = "btn_mjesta_dodaj";
             this.btn_mjesta_dodaj.Size = new System.Drawing.Size(150, 250);
@@ -122,6 +128,7 @@
             this.btn_stanje_poduzeca.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_stanje_poduzeca.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_stanje_poduzeca.BackgroundImage")));
             this.btn_stanje_poduzeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_stanje_poduzeca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_stanje_poduzeca.Location = new System.Drawing.Point(300, 40);
             this.btn_stanje_poduzeca.Name = "btn_stanje_poduzeca";
             this.btn_stanje_poduzeca.Size = new System.Drawing.Size(300, 250);
@@ -179,7 +186,6 @@
             // 
             // panel_zadaci_aktivnog_tjedna_i_obavijesti
             // 
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_zadaci_aktivnog_tjedna_i_obavijesti.BackgroundImage")));
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Controls.Add(this.kalendar);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarBarColor = true;
