@@ -42,5 +42,14 @@ namespace DnevnikRada
             Klase.Mjesta skladiste = new Klase.Mjesta();
             dataGrid.DataSource = skladiste.Trazi(lol);
         }
+
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGrid.Rows[e.RowIndex];
+                
+            }
+        }
     }
 }

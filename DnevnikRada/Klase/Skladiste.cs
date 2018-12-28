@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using DnevnikRada.Interface;
 using System.Data;
+using System.Windows.Forms;
 
 namespace DnevnikRada.Klase
 {
     class Skladiste : Baza.DB, IUseDatabase
     {
+        
         public string Naziv_materijala{ get; private set;}
         public string Proizvodac { get; private set; }
         public string Mjerna_jedinica { get; private set; }
@@ -55,6 +57,16 @@ namespace DnevnikRada.Klase
         public void UgasiBazu()
         {
             this.connection.Close();
+        }
+
+        public void Edit(string naziv,string prodavac, string mjernaJedinica, int kolicina, int id)
+        {
+            string update = string.Format("update Skladiste " +
+                "set NazivMaterijala = '{0}' , Prodavac='{1}', Kolicina='{2}',MjernaJedinica='{3}'" +
+                "where Id={4}", naziv, prodavac, kolicina, mjernaJedinica, id);
+            this.Query(update);
+            
+
         }
     }
 }

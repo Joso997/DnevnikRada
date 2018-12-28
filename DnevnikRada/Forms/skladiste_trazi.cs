@@ -13,6 +13,7 @@ namespace DnevnikRada
 {
     public partial class skladiste_trazi : Form
     {
+        int index;
         Klase.Skladiste skladiste = new Klase.Skladiste();
         public skladiste_trazi()
         {          
@@ -62,6 +63,61 @@ namespace DnevnikRada
         {
             skladiste.UgasiBazu();
             Dispose();
+        }
+
+        private void skladisteGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = skladisteGrid.Rows[e.RowIndex];
+                if (row.Cells["NazivMaterijala"].Value == null)
+                {
+                    nazivBox.Text = null;
+                }
+                else
+                {
+                    nazivBox.Text = row.Cells["NazivMaterijala"].Value.ToString();
+
+                }
+                if (row.Cells["Prodavac"].Value == null)
+                {
+                    prodavacBox.Text = null;
+                }
+                else
+                {
+                    prodavacBox.Text = row.Cells["Prodavac"].Value.ToString();
+                }
+                if (row.Cells["Kolicina"].Value == null)
+                {
+                    kolicinaBox.Text = null;
+                }
+                else
+                {
+                    kolicinaBox.Text = row.Cells["Kolicina"].Value.ToString();
+                }
+
+                if (row.Cells["MjernaJedinica"].Value == null)
+                {
+                    mjBox.Text = null;
+                }
+                else
+                {
+                    mjBox.Text = row.Cells["MjernaJedinica"].Value.ToString();
+                }
+                string index2= row.Cells["Id"].Value.ToString();
+                index = Int32.Parse(index2);
+
+                MessageBox.Show(e.RowIndex.ToString());
+            }
+        }
+
+        private void finishEdit_Click(object sender, EventArgs e)
+        {
+            if (index >= 0)
+            {
+                skladiste.Edit(nazivBox.Text, prodavacBox.Text, mjBox.Text,Int32.Parse( kolicinaBox.Text), index);
+                skladisteGrid.DataSource =skladiste.Ucitaj();
+            }
         }
     }
 }
