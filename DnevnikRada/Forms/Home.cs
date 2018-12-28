@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Interface;
 
 namespace DnevnikRada
 {
-    public partial class Home : Form
+    public partial class Home : Form, IFormReq
     {
         private bool UserClosing { get; set; }
         public Home()
@@ -19,7 +20,7 @@ namespace DnevnikRada
             Show();
         }
 
-        private void Click_Gumb(object sender, EventArgs e)
+        public void Click_Gumb(object sender, EventArgs e)
         {
             var button = (Button)sender;
             switch (button.Name)
@@ -49,14 +50,14 @@ namespace DnevnikRada
             Unload();
         }
 
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        public void This_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 if (!UserClosing)
                     Application.Exit();
         }
 
-        private void Unload()
+        public void Unload()
         {
             Hide();
             UserClosing = true;
