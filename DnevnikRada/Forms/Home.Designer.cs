@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.btn_evidencija_trazi = new MetroFramework.Controls.MetroButton();
             this.btn_evidencija_dodaj = new MetroFramework.Controls.MetroButton();
             this.btn_skladiste_trazi = new MetroFramework.Controls.MetroButton();
@@ -203,7 +203,7 @@
             this.kalendar.TabIndex = 2;
             this.kalendar.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // Form1
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,10 +221,11 @@
             this.Controls.Add(this.btn_stanje_poduzeca);
             this.Controls.Add(this.btn_evidencija_dodaj);
             this.Controls.Add(this.btn_evidencija_trazi);
-            this.Name = "Form1";
+            this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.ResumeLayout(false);
             this.ResumeLayout(false);
 

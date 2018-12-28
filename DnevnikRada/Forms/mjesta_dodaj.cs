@@ -23,14 +23,15 @@ namespace DnevnikRada
                                                                                    //..sto se aplikacija u potpunosti zatvori
 
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
         {
-            Form1 Form1 = new Form1();
-            this.Hide();
-            Form1.Show();
+            Home Home = new Home();
+            Hide();
+            Home.Show();
+            Close();
         }
 
         private void btn_potvrdi_Click(object sender, EventArgs e) 

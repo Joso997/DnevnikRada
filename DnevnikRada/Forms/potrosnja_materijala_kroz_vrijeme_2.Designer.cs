@@ -57,7 +57,7 @@
             this.btn_odstupanje_od_normale.TabIndex = 16;
             this.btn_odstupanje_od_normale.Text = "Odstupanje Od Normale";
             this.btn_odstupanje_od_normale.UseSelectable = true;
-            this.btn_odstupanje_od_normale.Click += new System.EventHandler(this.btn_odstupanje_od_normale_Click_1);
+            this.btn_odstupanje_od_normale.Click += new System.EventHandler(this.btn_odstupanje_od_normale_Click);
             // 
             // btn_broj_odrzavanja_kroz_vrijeme
             // 
@@ -68,7 +68,7 @@
             this.btn_broj_odrzavanja_kroz_vrijeme.TabIndex = 15;
             this.btn_broj_odrzavanja_kroz_vrijeme.Text = "Broj Održavanja Kroz Vrijeme";
             this.btn_broj_odrzavanja_kroz_vrijeme.UseSelectable = true;
-            this.btn_broj_odrzavanja_kroz_vrijeme.Click += new System.EventHandler(this.btn_broj_odrzavanja_kroz_vrijeme_Click_1);
+            this.btn_broj_odrzavanja_kroz_vrijeme.Click += new System.EventHandler(this.btn_broj_odrzavanja_kroz_vrijeme_Click);
             // 
             // btn_potrosnja_materijala_kroz_vrijeme
             // 
@@ -79,7 +79,7 @@
             this.btn_potrosnja_materijala_kroz_vrijeme.TabIndex = 14;
             this.btn_potrosnja_materijala_kroz_vrijeme.Text = "Potrošnja Materijala Kroz Vrijeme";
             this.btn_potrosnja_materijala_kroz_vrijeme.UseSelectable = true;
-            this.btn_potrosnja_materijala_kroz_vrijeme.Click += new System.EventHandler(this.btn_potrosnja_materijala_kroz_vrijeme_Click_1);
+            this.btn_potrosnja_materijala_kroz_vrijeme.Click += new System.EventHandler(this.btn_potrosnja_materijala_kroz_vrijeme_Click);
             // 
             // btn_stanje_poduzeca
             // 

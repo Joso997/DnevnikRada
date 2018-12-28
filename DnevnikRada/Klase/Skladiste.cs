@@ -32,12 +32,6 @@ namespace DnevnikRada.Klase
 
         }
 
-        ~Skladiste()
-        {
-            //this.connection.Close();
-            Console.WriteLine("Destructor");
-        }
-
         public void Dodaj()
         {
             string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
@@ -56,6 +50,11 @@ namespace DnevnikRada.Klase
                 "WHERE NazivMaterijala like '%{0}%' or " +
                 "Prodavac like '%{0}%'", trazi);
             return this.LoadDataBase(command);
+        }
+
+        public void UgasiBazu()
+        {
+            this.connection.Close();
         }
     }
 }

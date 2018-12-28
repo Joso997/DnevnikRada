@@ -27,7 +27,7 @@ namespace DnevnikRada
 
         private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
         {
-            Form1 Form1 = new Form1();
+            Home Form1 = new Home();
             this.Hide();
             Form1.Show();
         }
