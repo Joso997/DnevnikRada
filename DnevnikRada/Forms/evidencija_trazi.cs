@@ -12,9 +12,11 @@ namespace DnevnikRada
 {
     public partial class evidencija_trazi : Form
     {
+        private bool UserClosing { get; set; }
         public evidencija_trazi()
         {
             InitializeComponent();
+            Show();
         }
 
         private void evidencija_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  

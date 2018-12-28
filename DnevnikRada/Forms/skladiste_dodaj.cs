@@ -13,11 +13,11 @@ namespace DnevnikRada
 {
     public partial class Skladiste_dodaj : Form
     {
-        
+        private bool UserClosing { get; set; }
         public Skladiste_dodaj()
         {
             InitializeComponent();
-            
+            Show();
         }
 
         private void Skladiste_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  

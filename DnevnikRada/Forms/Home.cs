@@ -12,89 +12,55 @@ namespace DnevnikRada
 {
     public partial class Home : Form
     {
+        private bool UserClosing { get; set; }
         public Home()
         {
             InitializeComponent();
-        }
-        ~Home()
-        {
-            MessageBox.Show("BAZA JE OTVORENA! YEY");
+            Show();
         }
 
-        private void btn_evidencija_trazi_Click(object sender, EventArgs e) //kliknem button, otvora formu: evidencija_trazi
+        private void Click_Gumb(object sender, EventArgs e)
         {
-            evidencija_trazi evidencija_trazi = new evidencija_trazi();
+            var button = (Button)sender;
+            switch (button.Name)
+            { 
+                case "EvidencijaTrazi":
+                    evidencija_trazi et = new evidencija_trazi();
+                    break;
+                case "EvidencijaDodaj":
+                    evidencija_dodaj ed = new evidencija_dodaj();
+                    break;
+                case "StanjePoduzeca":
+                    StanjePoduzeca sp = new StanjePoduzeca();
+                    break;
+                case "SkladisteTrazi":
+                    skladiste_trazi st = new skladiste_trazi();
+                    break;
+                case "SkladisteDodaj":
+                    Skladiste_dodaj sd = new Skladiste_dodaj();
+                    break;
+                case "MjestaTrazi":
+                    mjesta_trazi mt = new mjesta_trazi();
+                    break;
+                case "MjestaDodaj":
+                    mjesta_dodaj md = new mjesta_dodaj();
+                    break;
+            }
+            Unload();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                if (!UserClosing)
+                    Application.Exit();
+        }
+
+        private void Unload()
+        {
             Hide();
-            evidencija_trazi.Show();
+            UserClosing = true;
             Close();
-
-        }
-
-        private void btn_evidencija_dodaj_Click(object sender, EventArgs e) //kliknem button, otvora formu: evidencija_dodaj
-        {
-            evidencija_dodaj evidencija_dodaj = new evidencija_dodaj();
-            Hide();
-            evidencija_dodaj.Show();
-            Close();
-        }
-
-        private void btn_skladiste_trazi_Click(object sender, EventArgs e) //kliknem button, otvora formu: skladiste_trazi
-        {
-            skladiste_trazi skladiste_trazi = new skladiste_trazi();
-            Hide();
-            skladiste_trazi.Show();
-            Close();
-        }
-
-        private void btn_skladiste_dodaj_Click(object sender, EventArgs e) //kliknem button, otvora formu: skladiste_dodaj
-        {
-            Skladiste_dodaj skladiste_dodaj = new Skladiste_dodaj();
-            Hide();
-            skladiste_dodaj.Show();
-            Close();
-        }
-
-        private void btn_mjesta_trazi_Click(object sender, EventArgs e) //kliknem button, otvora formu: mjesta_trazi
-        {
-            mjesta_trazi mjesta_trazi = new mjesta_trazi();
-            Hide();
-            mjesta_trazi.Show();
-            Close();
-        }
-
-        private void btn_mjesta_dodaj_Click(object sender, EventArgs e) //kliknem button, otvora formu: mjesta_dodaj
-        {
-            mjesta_dodaj mjesta_dodaj = new mjesta_dodaj();
-            Hide();
-            mjesta_dodaj.Show();
-            Close();
-        }
-
-        private void btn_stanje_poduzeca_Click(object sender, EventArgs e) //kliknem button, otvora formu: stanje_poduzeca
-        {
-            stanje_poduzeca_2 stanje_poduzeca_2 = new stanje_poduzeca_2();
-            Hide();
-            stanje_poduzeca_2.Show();
-            Close();
-
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                            //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                            //..sto se aplikacija u potpunosti zatvori
-
-        {
-            //MainForm.MainFormInstance.Close();
-        }
-
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-           
         }
     }
 }

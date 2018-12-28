@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace DnevnikRada
 {
-    public partial class potrosnja_materijala_kroz_vrijeme_2 : Form
+    public partial class StanjePoduzeca : Form
     {
-        public potrosnja_materijala_kroz_vrijeme_2()
+        public StanjePoduzeca()
         {
             InitializeComponent();
+            Show();
         }
 
-        private void potrosnja_materijala_kroz_vrijeme_2_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                                          //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                                          //..sto se aplikacija u potpunosti zatvori
+        private void stanje_poduzeca_2_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
+                                                                                        //..NE nastavi izvrsavati u pozadini nakon.. 
+                                                                                        //..sto se aplikacija u potpunosti zatvori
         {
             //Application.Exit();
         }
 
         private void btn_stanje_poduzeca_Click(object sender, EventArgs e) //kliknem button, otvora formu: stanje_poduzeca_2
         {
-            stanje_poduzeca_2 stanje_poduzeca_2 = new stanje_poduzeca_2();
+            StanjePoduzeca stanje_poduzeca_2 = new StanjePoduzeca();
             Hide();
             stanje_poduzeca_2.Show();
             Close();
@@ -34,7 +35,7 @@ namespace DnevnikRada
 
         private void btn_potrosnja_materijala_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvara formu: potrosnja_materijala_kroz_vrijeme_2
         {
-            potrosnja_materijala_kroz_vrijeme_2 potrosnja_materijala_kroz_vrijeme_2 = new potrosnja_materijala_kroz_vrijeme_2();
+            Pmkv potrosnja_materijala_kroz_vrijeme_2 = new Pmkv();
             Hide();
             potrosnja_materijala_kroz_vrijeme_2.Show();
             Close();
@@ -42,7 +43,7 @@ namespace DnevnikRada
 
         private void btn_broj_odrzavanja_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvora formu: broj_odrzavanja_kroz_vrijeme_2
         {
-            broj_odrzavanja_kroz_vrijeme_2 broj_odrzavanja_kroz_vrijeme_2 = new broj_odrzavanja_kroz_vrijeme_2();
+            Bokv broj_odrzavanja_kroz_vrijeme_2 = new Bokv();
             Hide();
             broj_odrzavanja_kroz_vrijeme_2.Show();
             Close();
@@ -50,7 +51,7 @@ namespace DnevnikRada
 
         private void btn_odstupanje_od_normale_Click(object sender, EventArgs e) //kliknem button, otvora formu: odstupanje_od_normale_2
         {
-            odstupanje_od_normale_2 odstupanje_od_normale_2 = new odstupanje_od_normale_2();
+            Oon odstupanje_od_normale_2 = new Oon();
             Hide();
             odstupanje_od_normale_2.Show();
             Close();

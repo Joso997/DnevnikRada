@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_evidencija_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EvidencijaTrazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         8QAABPEBykqAKwAAAAd0SU1FB+IMGQ4fIIMT5mEAAAYXSURBVHhe7Zn7U5RVHMYZLn9KU79k0b1GaRyg
@@ -150,7 +150,7 @@
         CYHXbRheLaZi5iItEFPNPAbvQs0YU8pTKBSKpUNCwn8x4hG3BM2zZwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_evidencija_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EvidencijaDodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         8QAABPEBykqAKwAAAAd0SU1FB+IMGQ4iMhpC35cAAAMtSURBVHhe7ZfPaxNBFIBD0/wpgpcKIohUD94U
@@ -170,7 +170,7 @@
         GPfg8fwDVFYZi6bVC5UAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_skladiste_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SkladisteTrazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAAd0SU1FB+IMGQ0HEVKQwFsAAAWLSURBVHhe7ZxLbFRVHMZn4cKN0cTEhSbGuFB3
@@ -200,7 +200,7 @@
         ZWVlZWVlZUVSIPAfUhPATHYJUysAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_skladiste_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SkladisteDodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAAd0SU1FB+IMGQ0POjb1sxMAAAK8SURBVHhe7Zyxa9VQHIXzP/l3ODmLoquCziKC
@@ -218,7 +218,7 @@
         NZ4xxhhjjDHGiKiqX6r79+3v9ehSAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_mjesta_trazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MjestaTrazi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAAd0SU1FB+IMGQ4EMUCVDQkAAAiUSURBVHhe7VsLbBTXFZ2EpGkpqFJVpVXVNv0r
@@ -261,7 +261,7 @@
         wIEDBwmGpv0P6RhazwZ9FyAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_mjesta_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MjestaDodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAAd0SU1FB+IMGQ4GJWh5u/YAAAbxSURBVHhe7VtrbBRVGL2IiiDExBj1h4ovDGCi
@@ -297,7 +297,7 @@
         Pnz48OHDZSj1H7b6m4oY179MAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_stanje_poduzeca.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="StanjePoduzeca.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAARtJREFUeF7t0DFqw1AQRVHtzVtKkT24cJcqqwkBbyU7SKkg+FhTGKPRKwLSufDK

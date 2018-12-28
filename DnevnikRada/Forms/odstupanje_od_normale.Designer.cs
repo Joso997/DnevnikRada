@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class potrosnja_materijala_kroz_vrijeme_2
+    partial class Oon
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(potrosnja_materijala_kroz_vrijeme_2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oon));
             this.btn_home = new MetroFramework.Controls.MetroButton();
             this.btn_odstupanje_od_normale = new MetroFramework.Controls.MetroButton();
             this.btn_broj_odrzavanja_kroz_vrijeme = new MetroFramework.Controls.MetroButton();
@@ -92,7 +92,7 @@
             this.btn_stanje_poduzeca.UseSelectable = true;
             this.btn_stanje_poduzeca.Click += new System.EventHandler(this.btn_stanje_poduzeca_Click);
             // 
-            // potrosnja_materijala_kroz_vrijeme_2
+            // odstupanje_od_normale_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,10 +103,10 @@
             this.Controls.Add(this.btn_potrosnja_materijala_kroz_vrijeme);
             this.Controls.Add(this.btn_stanje_poduzeca);
             this.Controls.Add(this.btn_home);
-            this.Name = "potrosnja_materijala_kroz_vrijeme_2";
+            this.Name = "odstupanje_od_normale_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "potrosnja_materijala_kroz_vrijeme_2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.potrosnja_materijala_kroz_vrijeme_2_FormClosed);
+            this.Text = "odstupanje_od_normale_2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.odstupanje_od_normale_2_FormClosed);
             this.ResumeLayout(false);
 
         }

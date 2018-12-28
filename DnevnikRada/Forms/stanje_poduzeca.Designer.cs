@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class stanje_poduzeca_2
+    partial class StanjePoduzeca
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(stanje_poduzeca_2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StanjePoduzeca));
             this.btn_home = new MetroFramework.Controls.MetroButton();
             this.lbl_randi_sati = new MetroFramework.Controls.MetroLabel();
             this.lbl_ukupna_vrijednost_materijala = new MetroFramework.Controls.MetroLabel();

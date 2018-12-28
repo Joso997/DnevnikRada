@@ -17,6 +17,7 @@ namespace DnevnikRada
             InitializeComponent();
             Baza.DB baza = new Baza.DB();
             dataGrid.DataSource = baza.LoadDataBase("select * from Mjesta");
+            Show();
         }
 
         private void mjesta_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  

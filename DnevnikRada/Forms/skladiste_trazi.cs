@@ -19,6 +19,7 @@ namespace DnevnikRada
         {          
             InitializeComponent();
             skladisteGrid.DataSource = skladiste.Ucitaj();
+            Show();
         }
         ~skladiste_trazi()
         {

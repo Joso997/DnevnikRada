@@ -16,6 +16,7 @@ namespace DnevnikRada
         public mjesta_dodaj()
         {
             InitializeComponent();
+            Show();
         }
 
         private void mjesta_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  

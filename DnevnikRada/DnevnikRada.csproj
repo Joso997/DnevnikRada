@@ -61,11 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Baza\DB.cs" />
-    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.cs">
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme_2.Designer.cs">
-      <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
+    <Compile Include="Forms\broj_odrzavanja_kroz_vrijeme.Designer.cs">
+      <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\evidencija_dodaj.cs">
       <SubType>Form</SubType>
@@ -103,17 +103,17 @@
     <Compile Include="Forms\mjesta_trazi.Designer.cs">
       <DependentUpon>mjesta_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\odstupanje_od_normale_2.cs">
+    <Compile Include="Forms\odstupanje_od_normale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\odstupanje_od_normale_2.Designer.cs">
-      <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
+    <Compile Include="Forms\odstupanje_od_normale.Designer.cs">
+      <DependentUpon>odstupanje_od_normale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.cs">
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme_2.Designer.cs">
-      <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
+    <Compile Include="Forms\potrosnja_materijala_kroz_vrijeme.Designer.cs">
+      <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\skladiste_dodaj.cs">
       <SubType>Form</SubType>
@@ -127,19 +127,19 @@
     <Compile Include="Forms\skladiste_trazi.Designer.cs">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\stanje_poduzeca_2.cs">
+    <Compile Include="Forms\stanje_poduzeca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\stanje_poduzeca_2.Designer.cs">
-      <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
+    <Compile Include="Forms\stanje_poduzeca.Designer.cs">
+      <DependentUpon>stanje_poduzeca.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\IUseDatabase.cs" />
     <Compile Include="Klase\Mjesta.cs" />
     <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Skladiste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\broj_odrzavanja_kroz_vrijeme_2.resx">
-      <DependentUpon>broj_odrzavanja_kroz_vrijeme_2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\broj_odrzavanja_kroz_vrijeme.resx">
+      <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\evidencija_dodaj.resx">
       <DependentUpon>evidencija_dodaj.cs</DependentUpon>
@@ -150,17 +150,20 @@
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\mjesta_dodaj.resx">
       <DependentUpon>mjesta_dodaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\mjesta_trazi.resx">
       <DependentUpon>mjesta_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\odstupanje_od_normale_2.resx">
-      <DependentUpon>odstupanje_od_normale_2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\odstupanje_od_normale.resx">
+      <DependentUpon>odstupanje_od_normale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\potrosnja_materijala_kroz_vrijeme_2.resx">
-      <DependentUpon>potrosnja_materijala_kroz_vrijeme_2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\potrosnja_materijala_kroz_vrijeme.resx">
+      <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\skladiste_dodaj.resx">
       <DependentUpon>skladiste_dodaj.cs</DependentUpon>
@@ -168,8 +171,8 @@
     <EmbeddedResource Include="Forms\skladiste_trazi.resx">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\stanje_poduzeca_2.resx">
-      <DependentUpon>stanje_poduzeca_2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\stanje_poduzeca.resx">
+      <DependentUpon>stanje_poduzeca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

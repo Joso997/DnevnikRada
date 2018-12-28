@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class broj_odrzavanja_kroz_vrijeme_2
+    partial class Bokv
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(broj_odrzavanja_kroz_vrijeme_2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bokv));
             this.btn_home = new MetroFramework.Controls.MetroButton();
             this.btn_odstupanje_od_normale = new MetroFramework.Controls.MetroButton();
             this.btn_broj_odrzavanja_kroz_vrijeme = new MetroFramework.Controls.MetroButton();
@@ -106,7 +106,6 @@
             this.Name = "broj_odrzavanja_kroz_vrijeme_2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "broj_odrzavanja_kroz_vrijeme_2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.broj_odrzavanja_kroz_vrijeme_2_FormClosed);
             this.ResumeLayout(false);
 
         }
