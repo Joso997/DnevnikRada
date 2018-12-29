@@ -44,10 +44,6 @@ namespace DnevnikRada
             Close();
         }
 
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void skladiste_trazi_Load(object sender, EventArgs e)
         {

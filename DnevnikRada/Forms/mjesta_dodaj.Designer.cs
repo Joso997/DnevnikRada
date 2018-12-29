@@ -40,6 +40,7 @@
             this.tb_od = new MetroFramework.Controls.MetroTextBox();
             this.tb_do = new MetroFramework.Controls.MetroTextBox();
             this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // btn_home
@@ -80,7 +81,7 @@
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
+            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(217, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
             this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
             // 
@@ -179,7 +180,8 @@
             this.tb_od.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_od.CustomButton.UseSelectable = true;
             this.tb_od.CustomButton.Visible = false;
-            this.tb_od.Lines = new string[0];
+            this.tb_od.Lines = new string[] {
+        "trenutno nista neradi"};
             this.tb_od.Location = new System.Drawing.Point(415, 267);
             this.tb_od.MaxLength = 32767;
             this.tb_od.Name = "tb_od";
@@ -191,6 +193,7 @@
             this.tb_od.ShortcutsEnabled = true;
             this.tb_od.Size = new System.Drawing.Size(150, 23);
             this.tb_od.TabIndex = 8;
+            this.tb_od.Text = "trenutno nista neradi";
             this.tb_od.UseSelectable = true;
             this.tb_od.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_od.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -209,7 +212,8 @@
             this.tb_do.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_do.CustomButton.UseSelectable = true;
             this.tb_do.CustomButton.Visible = false;
-            this.tb_do.Lines = new string[0];
+            this.tb_do.Lines = new string[] {
+        "trenutno nista neradi"};
             this.tb_do.Location = new System.Drawing.Point(415, 304);
             this.tb_do.MaxLength = 32767;
             this.tb_do.Name = "tb_do";
@@ -221,6 +225,7 @@
             this.tb_do.ShortcutsEnabled = true;
             this.tb_do.Size = new System.Drawing.Size(150, 23);
             this.tb_do.TabIndex = 9;
+            this.tb_do.Text = "trenutno nista neradi";
             this.tb_do.UseSelectable = true;
             this.tb_do.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_do.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -235,12 +240,22 @@
             this.btn_potvrdi.UseSelectable = true;
             this.btn_potvrdi.Click += new System.EventHandler(this.btn_potvrdi_Click);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(581, 287);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(244, 19);
+            this.metroLabel1.TabIndex = 11;
+            this.metroLabel1.Text = "<-- koji tip podatka u bzi ovo mora bit?";
+            // 
             // mjesta_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btn_potvrdi);
             this.Controls.Add(this.tb_do);
             this.Controls.Add(this.tb_od);
@@ -256,6 +271,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mjesta_dodaj_FormClosed);
+            this.Load += new System.EventHandler(this.mjesta_dodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +290,6 @@
         private MetroFramework.Controls.MetroTextBox tb_od;
         private MetroFramework.Controls.MetroTextBox tb_do;
         private MetroFramework.Controls.MetroButton btn_potvrdi;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

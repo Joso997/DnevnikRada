@@ -11,7 +11,7 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class mjesta_dodaj : Form
+    public partial class mjesta_dodaj : Form 
     {
         public mjesta_dodaj()
         {
@@ -41,6 +41,11 @@ namespace DnevnikRada
         }
 
         private void tb_naziv_mjesta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mjesta_dodaj_Load(object sender, EventArgs e)
         {
 
         }

@@ -8,11 +8,13 @@ using System.Data;
 
 namespace DnevnikRada.Klase
 {
-    class Mjesta : IUseDatabase
+    class Mjesta : Baza.DB, IUseDatabase 
     {
         
         public string Naziv_mjesta { get; private set; }
         public string Adresa { get; private set; }
+
+        //vrijeme rada od do sta to tocno mora bit u bazi tj koji tip podatka
 
         public Mjesta(string _naziv_mjesta, string _adresa)
         {
@@ -33,6 +35,13 @@ namespace DnevnikRada.Klase
             baza.Query(insert);
         }
 
+        public DataTable Ucitaj()
+        {
+            string command = string.Format("select * from Mjesta");
+            Baza.DB baza = new Baza.DB();
+            return baza.LoadDataBase(command);
+        }
+
         public DataTable Trazi(string trazi)
         {
             string command = string.Format("select * from Mjesta " +
@@ -40,6 +49,20 @@ namespace DnevnikRada.Klase
                 "Adresa like '%{0}%'", trazi);
             Baza.DB baza = new Baza.DB();
             return baza.LoadDataBase(command);
+        }
+
+        public void UgasiBazu()
+        {
+            this.connection.Close();
+        }
+
+        public void Edit(string naziv, string adresa, int id)
+        {
+            string update = string.Format("update Mjesta " +
+                "set NazivMjesta = '{0}' , Adresa='{1}'" +
+                "where Id={2}", naziv, adresa, id);
+            //fali jos od do vrijeme rada
+            this.Query(update);
         }
     }
 }
