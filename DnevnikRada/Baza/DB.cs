@@ -21,12 +21,14 @@ namespace DnevnikRada.Baza
         public DB()
         {
             
+
+
             connection = new SQLiteConnection("Data Source = DB.db");
 
             connection.Open();
             if (connection.State == ConnectionState.Open)
             {
-                //MessageBox.Show("BAZA JE OTVORENA! YEY");
+                MessageBox.Show("BAZA JE OTVORENA! YEY");
             }else MessageBox.Show("Error 404 NIGGA NOT FOUND");
 
         }
@@ -34,6 +36,7 @@ namespace DnevnikRada.Baza
         //kod za izvođenje pod bazoom BILO KOJI al mora bit sql
         public void Query(string sqlCode)
         {
+            
             command = connection.CreateCommand();
             command.CommandText = sqlCode;
             MessageBox.Show(sqlCode);

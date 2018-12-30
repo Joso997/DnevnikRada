@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
+    <Compile Include="Klase\Evidencija.cs" />
     <Compile Include="Klase\Mjesta.cs" />
     <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Skladiste.cs" />
