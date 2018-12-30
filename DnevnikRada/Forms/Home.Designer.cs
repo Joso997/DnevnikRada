@@ -57,6 +57,8 @@
             this.EvidencijaTrazi.TabIndex = 0;
             this.EvidencijaTrazi.UseSelectable = true;
             this.EvidencijaTrazi.Click += new System.EventHandler(this.Click_Gumb);
+            this.EvidencijaTrazi.MouseEnter += new System.EventHandler(this.EvidencijaTrazi_MouseEnter);
+            this.EvidencijaTrazi.MouseLeave += new System.EventHandler(this.EvidencijaTrazi_MouseLeave);
             // 
             // EvidencijaDodaj
             // 
@@ -70,6 +72,8 @@
             this.EvidencijaDodaj.TabIndex = 0;
             this.EvidencijaDodaj.UseSelectable = true;
             this.EvidencijaDodaj.Click += new System.EventHandler(this.Click_Gumb);
+            this.EvidencijaDodaj.MouseEnter += new System.EventHandler(this.EvidencijaDodaj_MouseEnter);
+            this.EvidencijaDodaj.MouseLeave += new System.EventHandler(this.EvidencijaDodaj_MouseLeave);
             // 
             // SkladisteTrazi
             // 
@@ -83,6 +87,8 @@
             this.SkladisteTrazi.TabIndex = 0;
             this.SkladisteTrazi.UseSelectable = true;
             this.SkladisteTrazi.Click += new System.EventHandler(this.Click_Gumb);
+            this.SkladisteTrazi.MouseEnter += new System.EventHandler(this.SkladisteTrazi_MouseEnter);
+            this.SkladisteTrazi.MouseLeave += new System.EventHandler(this.SkladisteTrazi_MouseLeave);
             // 
             // SkladisteDodaj
             // 
@@ -96,6 +102,8 @@
             this.SkladisteDodaj.TabIndex = 0;
             this.SkladisteDodaj.UseSelectable = true;
             this.SkladisteDodaj.Click += new System.EventHandler(this.Click_Gumb);
+            this.SkladisteDodaj.MouseEnter += new System.EventHandler(this.SkladisteDodaj_MouseEnter);
+            this.SkladisteDodaj.MouseLeave += new System.EventHandler(this.SkladisteDodaj_MouseLeave);
             // 
             // MjestaTrazi
             // 
@@ -109,6 +117,8 @@
             this.MjestaTrazi.TabIndex = 0;
             this.MjestaTrazi.UseSelectable = true;
             this.MjestaTrazi.Click += new System.EventHandler(this.Click_Gumb);
+            this.MjestaTrazi.MouseEnter += new System.EventHandler(this.MjestaTrazi_MouseEnter);
+            this.MjestaTrazi.MouseLeave += new System.EventHandler(this.MjestaTrazi_MouseLeave);
             // 
             // MjestaDodaj
             // 
@@ -122,6 +132,8 @@
             this.MjestaDodaj.TabIndex = 0;
             this.MjestaDodaj.UseSelectable = true;
             this.MjestaDodaj.Click += new System.EventHandler(this.Click_Gumb);
+            this.MjestaDodaj.MouseEnter += new System.EventHandler(this.MjestaDodaj_MouseEnter);
+            this.MjestaDodaj.MouseLeave += new System.EventHandler(this.MjestaDodaj_MouseLeave);
             // 
             // StanjePoduzeca
             // 
@@ -135,6 +147,8 @@
             this.StanjePoduzeca.TabIndex = 0;
             this.StanjePoduzeca.UseSelectable = true;
             this.StanjePoduzeca.Click += new System.EventHandler(this.Click_Gumb);
+            this.StanjePoduzeca.MouseEnter += new System.EventHandler(this.StanjePoduzeca_MouseEnter);
+            this.StanjePoduzeca.MouseLeave += new System.EventHandler(this.StanjePoduzeca_MouseLeave);
             // 
             // lbl_evidencija
             // 
