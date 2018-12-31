@@ -199,7 +199,7 @@
             this.materijalBox.UseSelectable = true;
             this.materijalBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.materijalBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.materijalBox.Click += new System.EventHandler(this.metroTextBox1_Click);
+            //this.materijalBox.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // cijenaBox
             // 

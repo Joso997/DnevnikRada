@@ -54,21 +54,23 @@ namespace DnevnikRada
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 if (!UserClosing)
-                    Application.Exit();
+                {
+                    //Application.Exit();
 
-            DialogResult Result = MessageBox.Show("An error has occurred in the program during closing the " +
-                "application. The program can't close because d3dx7_46.dll is missing from your computer. " +
-                "Try reinstalling windows to fix this problem. Please contact sandi for more information. " +
-                "Error code: 0x80068c01. Do you really want to restart your computer now ?", 
-                "Error Closing Application", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-            if (Result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+                    DialogResult Result = MessageBox.Show("An error has occurred in the program during closing the " +
+                        "application. The program can't close because d3dx7_46.dll is missing from your computer. " +
+                        "Try reinstalling windows to fix this problem. Please contact sandi for more information. " +
+                        "Error code: 0x80068c01. Do you really want to restart your computer now ?",
+                        "Error Closing Application", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (Result == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }  
         }
 
         public void Unload()
