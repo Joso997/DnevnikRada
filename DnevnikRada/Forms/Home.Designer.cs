@@ -57,8 +57,8 @@
             this.EvidencijaTrazi.TabIndex = 0;
             this.EvidencijaTrazi.UseSelectable = true;
             this.EvidencijaTrazi.Click += new System.EventHandler(this.Click_Gumb);
-            this.EvidencijaTrazi.MouseEnter += new System.EventHandler(this.EvidencijaTrazi_MouseEnter);
-            this.EvidencijaTrazi.MouseLeave += new System.EventHandler(this.EvidencijaTrazi_MouseLeave);
+            this.EvidencijaTrazi.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.EvidencijaTrazi.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // EvidencijaDodaj
             // 
@@ -72,8 +72,8 @@
             this.EvidencijaDodaj.TabIndex = 0;
             this.EvidencijaDodaj.UseSelectable = true;
             this.EvidencijaDodaj.Click += new System.EventHandler(this.Click_Gumb);
-            this.EvidencijaDodaj.MouseEnter += new System.EventHandler(this.EvidencijaDodaj_MouseEnter);
-            this.EvidencijaDodaj.MouseLeave += new System.EventHandler(this.EvidencijaDodaj_MouseLeave);
+            this.EvidencijaDodaj.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.EvidencijaDodaj.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // SkladisteTrazi
             // 
@@ -87,8 +87,8 @@
             this.SkladisteTrazi.TabIndex = 0;
             this.SkladisteTrazi.UseSelectable = true;
             this.SkladisteTrazi.Click += new System.EventHandler(this.Click_Gumb);
-            this.SkladisteTrazi.MouseEnter += new System.EventHandler(this.SkladisteTrazi_MouseEnter);
-            this.SkladisteTrazi.MouseLeave += new System.EventHandler(this.SkladisteTrazi_MouseLeave);
+            this.SkladisteTrazi.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.SkladisteTrazi.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // SkladisteDodaj
             // 
@@ -102,8 +102,8 @@
             this.SkladisteDodaj.TabIndex = 0;
             this.SkladisteDodaj.UseSelectable = true;
             this.SkladisteDodaj.Click += new System.EventHandler(this.Click_Gumb);
-            this.SkladisteDodaj.MouseEnter += new System.EventHandler(this.SkladisteDodaj_MouseEnter);
-            this.SkladisteDodaj.MouseLeave += new System.EventHandler(this.SkladisteDodaj_MouseLeave);
+            this.SkladisteDodaj.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.SkladisteDodaj.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // MjestaTrazi
             // 
@@ -117,8 +117,8 @@
             this.MjestaTrazi.TabIndex = 0;
             this.MjestaTrazi.UseSelectable = true;
             this.MjestaTrazi.Click += new System.EventHandler(this.Click_Gumb);
-            this.MjestaTrazi.MouseEnter += new System.EventHandler(this.MjestaTrazi_MouseEnter);
-            this.MjestaTrazi.MouseLeave += new System.EventHandler(this.MjestaTrazi_MouseLeave);
+            this.MjestaTrazi.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.MjestaTrazi.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // MjestaDodaj
             // 
@@ -132,11 +132,12 @@
             this.MjestaDodaj.TabIndex = 0;
             this.MjestaDodaj.UseSelectable = true;
             this.MjestaDodaj.Click += new System.EventHandler(this.Click_Gumb);
-            this.MjestaDodaj.MouseEnter += new System.EventHandler(this.MjestaDodaj_MouseEnter);
-            this.MjestaDodaj.MouseLeave += new System.EventHandler(this.MjestaDodaj_MouseLeave);
+            this.MjestaDodaj.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.MjestaDodaj.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // StanjePoduzeca
             // 
+            this.StanjePoduzeca.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.StanjePoduzeca.BackColor = System.Drawing.Color.RoyalBlue;
             this.StanjePoduzeca.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StanjePoduzeca.BackgroundImage")));
             this.StanjePoduzeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -147,8 +148,8 @@
             this.StanjePoduzeca.TabIndex = 0;
             this.StanjePoduzeca.UseSelectable = true;
             this.StanjePoduzeca.Click += new System.EventHandler(this.Click_Gumb);
-            this.StanjePoduzeca.MouseEnter += new System.EventHandler(this.StanjePoduzeca_MouseEnter);
-            this.StanjePoduzeca.MouseLeave += new System.EventHandler(this.StanjePoduzeca_MouseLeave);
+            this.StanjePoduzeca.MouseEnter += new System.EventHandler(this.MouseEnter_Mouse);
+            this.StanjePoduzeca.MouseLeave += new System.EventHandler(this.MouseLeave_Mouse);
             // 
             // lbl_evidencija
             // 
@@ -200,6 +201,8 @@
             // 
             // panel_zadaci_aktivnog_tjedna_i_obavijesti
             // 
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.AutoSize = true;
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Controls.Add(this.kalendar);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarBarColor = true;
@@ -207,7 +210,7 @@
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarSize = 10;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Location = new System.Drawing.Point(600, 0);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Name = "panel_zadaci_aktivnog_tjedna_i_obavijesti";
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Size = new System.Drawing.Size(300, 580);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Size = new System.Drawing.Size(299, 43);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.TabIndex = 5;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarBarColor = true;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarHighlightOnWheel = false;
@@ -247,6 +250,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

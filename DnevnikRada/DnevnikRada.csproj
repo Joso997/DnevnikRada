@@ -139,6 +139,9 @@
     <Compile Include="Klase\Mjesta.cs" />
     <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Skladiste.cs" />
+    <Compile Include="Klase\UIController.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\broj_odrzavanja_kroz_vrijeme.resx">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
