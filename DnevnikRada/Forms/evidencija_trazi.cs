@@ -12,11 +12,13 @@ namespace DnevnikRada
 {
     public partial class evidencija_trazi : Form
     {
+        Klase.Evidencija evidencija = new Klase.Evidencija();
         private bool UserClosing { get; set; }
         public evidencija_trazi()
         {
             InitializeComponent();
             Show();
+            evidencijaInfo.DataSource = evidencija.Ucitaj();
         }
 
         private void evidencija_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  

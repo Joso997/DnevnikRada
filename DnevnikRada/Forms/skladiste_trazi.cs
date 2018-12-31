@@ -116,5 +116,10 @@ namespace DnevnikRada
                 skladisteGrid.DataSource =skladiste.Ucitaj();
             }
         }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

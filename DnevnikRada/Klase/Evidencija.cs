@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Windows.Forms;
 
 namespace DnevnikRada.Klase
 {
@@ -27,6 +29,16 @@ namespace DnevnikRada.Klase
             Materijal = materijal;
             Kolicina = kolicina;
             Cijena = cijena;
+        }
+        public Evidencija()
+        {
+
+        }
+
+        public DataTable Ucitaj()
+        {
+            string command = "select id,nazivmjesta,datum,utrosenovrijeme from Evidencija";
+            return this.LoadDataBase(command);
         }
     }
 }
