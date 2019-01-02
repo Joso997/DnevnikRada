@@ -10,6 +10,6 @@ namespace DnevnikRada.Interface
     interface IFormReq
     {
         //void This_FormClosing(object sender, FormClosingEventArgs e);
-        void Click_Gumb(object sender, EventArgs e);
+        //void Click_Gumb(object sender, EventArgs e);
     }
 }

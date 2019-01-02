@@ -7,33 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class evidencija_trazi : Form
+    public partial class evidencija_trazi : UIController
     {
-        Klase.Evidencija evidencija = new Klase.Evidencija();
-        private bool UserClosing { get; set; }
+        Evidencija evidencija = new Evidencija();
         public evidencija_trazi()
         {
             InitializeComponent();
+            evidencijaGrid.DataSource = evidencija.Get();
+            selectButton = SelectButton;
             Show();
-            evidencijaInfo.DataSource = evidencija.Ucitaj();
         }
 
-        private void evidencija_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                       //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                       //..sto se aplikacija u potpunosti zatvori
-
+        public bool SelectButton(object sender)
         {
-            Application.Exit();
+            var button = (Button)sender;
+            switch (button.Name)
+            {
+                case "Trazi":
+                    string lol = textTrazi.Text;
+                    evidencijaGrid.DataSource = evidencija.Get(lol);
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    return true;
+            }
+            return false;
         }
 
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Home Form1 = new Home();
-            this.Hide();
-            Form1.Show();
+            base.This_FormClosing(sender, e);
+        }
+        protected override void Click_Gumb(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
         }
     }
 }

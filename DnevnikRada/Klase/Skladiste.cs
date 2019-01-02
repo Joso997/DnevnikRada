@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DnevnikRada.Klase
 {
-    class Skladiste : Baza.DB, IUseDatabase
+    class Skladiste : Baza.DB
     {
         
         public string Naziv_materijala{ get; private set;}
@@ -34,29 +34,31 @@ namespace DnevnikRada.Klase
 
         }
 
-        public void Dodaj()
+        private void Dodaj()
         {
             string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
-            this.Query(insert);
+            Query(insert);
         }
 
-        public DataTable Ucitaj()
+        public DataTable Get()
         {
             string command = string.Format("select * from Skladiste");
-            return this.LoadDataBase(command);
+            return LoadDataBase(command);
         }
 
-        public DataTable Ucitaj(string trazi)
+        public DataTable Get(string trazi)
         {
             string command = string.Format("select * from Skladiste " +
                 "WHERE NazivMaterijala like '%{0}%' or " +
                 "Prodavac like '%{0}%'", trazi);
-            return this.LoadDataBase(command);
+            return LoadDataBase(command);
         }
 
-        public void UgasiBazu()
+        public DataTable Get(int id)
         {
-            this.connection.Close();
+            string command = string.Format("select * from Skladiste " +
+                "WHERE ID = '{0}'", id);
+            return LoadDataBase(command);
         }
 
         public void Edit(string naziv,string prodavac, string mjernaJedinica, int kolicina, int id)
@@ -64,9 +66,7 @@ namespace DnevnikRada.Klase
             string update = string.Format("update Skladiste " +
                 "set NazivMaterijala = '{0}' , Prodavac='{1}', Kolicina='{2}',MjernaJedinica='{3}'" +
                 "where Id={4}", naziv, prodavac, kolicina, mjernaJedinica, id);
-            this.Query(update);
-            
-
+            Query(update);
         }
     }
 }

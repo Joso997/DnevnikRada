@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_trazi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_home = new MetroFramework.Controls.MetroButton();
-            this.search = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Home = new MetroFramework.Controls.MetroButton();
+            this.Trazi = new MetroFramework.Controls.MetroButton();
             this.searchText = new MetroFramework.Controls.MetroTextBox();
-            this.dataGrid = new MetroFramework.Controls.MetroGrid();
+            this.mjestoGrid = new MetroFramework.Controls.MetroGrid();
             this.nazivBox = new MetroFramework.Controls.MetroTextBox();
             this.adresaBox = new MetroFramework.Controls.MetroTextBox();
             this.radOdbox = new MetroFramework.Controls.MetroTextBox();
@@ -44,31 +44,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.finishEdit = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            this.Edit = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // search
+            // Trazi
             // 
-            this.search.Location = new System.Drawing.Point(519, 48);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(180, 23);
-            this.search.TabIndex = 1;
-            this.search.Text = "Search";
-            this.search.UseSelectable = true;
-            this.search.Click += new System.EventHandler(this.search_Click);
+            this.Trazi.Location = new System.Drawing.Point(519, 48);
+            this.Trazi.Name = "Trazi";
+            this.Trazi.Size = new System.Drawing.Size(180, 23);
+            this.Trazi.TabIndex = 1;
+            this.Trazi.Text = "Search";
+            this.Trazi.UseSelectable = true;
+            this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // searchText
             // 
@@ -102,52 +102,52 @@
             this.searchText.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.searchText.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // dataGrid
+            // mjestoGrid
             // 
-            this.dataGrid.AllowUserToAddRows = false;
-            this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.AllowUserToResizeRows = false;
-            this.dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGrid.EnableHeadersVisualStyles = false;
-            this.dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGrid.Location = new System.Drawing.Point(176, 104);
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.ReadOnly = true;
-            this.dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(586, 241);
-            this.dataGrid.TabIndex = 3;
-            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            this.mjestoGrid.AllowUserToAddRows = false;
+            this.mjestoGrid.AllowUserToDeleteRows = false;
+            this.mjestoGrid.AllowUserToResizeRows = false;
+            this.mjestoGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mjestoGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mjestoGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.mjestoGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mjestoGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.mjestoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mjestoGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.mjestoGrid.EnableHeadersVisualStyles = false;
+            this.mjestoGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mjestoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mjestoGrid.Location = new System.Drawing.Point(176, 104);
+            this.mjestoGrid.Name = "mjestoGrid";
+            this.mjestoGrid.ReadOnly = true;
+            this.mjestoGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mjestoGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.mjestoGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.mjestoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mjestoGrid.Size = new System.Drawing.Size(586, 241);
+            this.mjestoGrid.TabIndex = 3;
+            this.mjestoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
             // nazivBox
             // 
@@ -305,15 +305,15 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Vrijeme rada do";
             // 
-            // finishEdit
+            // Edit
             // 
-            this.finishEdit.Location = new System.Drawing.Point(460, 440);
-            this.finishEdit.Name = "finishEdit";
-            this.finishEdit.Size = new System.Drawing.Size(114, 39);
-            this.finishEdit.TabIndex = 12;
-            this.finishEdit.Text = "edit";
-            this.finishEdit.UseSelectable = true;
-            this.finishEdit.Click += new System.EventHandler(this.finishEdit_Click);
+            this.Edit.Location = new System.Drawing.Point(460, 440);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(114, 39);
+            this.Edit.TabIndex = 12;
+            this.Edit.Text = "edit";
+            this.Edit.UseSelectable = true;
+            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // mjesta_trazi
             // 
@@ -321,7 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.finishEdit);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -330,15 +330,15 @@
             this.Controls.Add(this.radOdbox);
             this.Controls.Add(this.adresaBox);
             this.Controls.Add(this.nazivBox);
-            this.Controls.Add(this.dataGrid);
+            this.Controls.Add(this.mjestoGrid);
             this.Controls.Add(this.searchText);
-            this.Controls.Add(this.search);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Trazi);
+            this.Controls.Add(this.Home);
             this.Name = "mjesta_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_trazi";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mjesta_trazi_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,10 +346,10 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
-        private MetroFramework.Controls.MetroButton search;
+        private MetroFramework.Controls.MetroButton Home;
+        private MetroFramework.Controls.MetroButton Trazi;
         private MetroFramework.Controls.MetroTextBox searchText;
-        private MetroFramework.Controls.MetroGrid dataGrid;
+        private MetroFramework.Controls.MetroGrid mjestoGrid;
         private MetroFramework.Controls.MetroTextBox nazivBox;
         private MetroFramework.Controls.MetroTextBox adresaBox;
         private MetroFramework.Controls.MetroTextBox radOdbox;
@@ -358,6 +358,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroButton finishEdit;
+        private MetroFramework.Controls.MetroButton Edit;
     }
 }

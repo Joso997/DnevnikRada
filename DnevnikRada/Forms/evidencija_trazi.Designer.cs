@@ -32,32 +32,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_home = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.opisPosla = new System.Windows.Forms.RichTextBox();
             this.lbl_opis_posla = new MetroFramework.Controls.MetroLabel();
-            this.evidencijaInfo = new MetroFramework.Controls.MetroGrid();
-            this.searchBtn = new MetroFramework.Controls.MetroButton();
-            this.searchText = new MetroFramework.Controls.MetroTextBox();
+            this.evidencijaGrid = new MetroFramework.Controls.MetroGrid();
+            this.Trazi = new MetroFramework.Controls.MetroButton();
+            this.textTrazi = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.materijalBox = new MetroFramework.Controls.MetroTextBox();
             this.cijenaBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.kolicinaBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.evidencijaInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // opisPosla
             // 
@@ -76,15 +76,15 @@
             this.lbl_opis_posla.TabIndex = 2;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
-            // evidencijaInfo
+            // evidencijaGrid
             // 
-            this.evidencijaInfo.AllowUserToAddRows = false;
-            this.evidencijaInfo.AllowUserToDeleteRows = false;
-            this.evidencijaInfo.AllowUserToResizeRows = false;
-            this.evidencijaInfo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.evidencijaInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.evidencijaInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.evidencijaInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.evidencijaGrid.AllowUserToAddRows = false;
+            this.evidencijaGrid.AllowUserToDeleteRows = false;
+            this.evidencijaGrid.AllowUserToResizeRows = false;
+            this.evidencijaGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.evidencijaGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.evidencijaGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.evidencijaGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -92,8 +92,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.evidencijaInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.evidencijaInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.evidencijaGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.evidencijaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -101,14 +101,14 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.evidencijaInfo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.evidencijaInfo.EnableHeadersVisualStyles = false;
-            this.evidencijaInfo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.evidencijaInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.evidencijaInfo.Location = new System.Drawing.Point(21, 83);
-            this.evidencijaInfo.Name = "evidencijaInfo";
-            this.evidencijaInfo.ReadOnly = true;
-            this.evidencijaInfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.evidencijaGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.evidencijaGrid.EnableHeadersVisualStyles = false;
+            this.evidencijaGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.evidencijaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.evidencijaGrid.Location = new System.Drawing.Point(21, 83);
+            this.evidencijaGrid.Name = "evidencijaGrid";
+            this.evidencijaGrid.ReadOnly = true;
+            this.evidencijaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -116,50 +116,51 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.evidencijaInfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.evidencijaInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.evidencijaInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.evidencijaInfo.Size = new System.Drawing.Size(760, 176);
-            this.evidencijaInfo.TabIndex = 3;
+            this.evidencijaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.evidencijaGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.evidencijaGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.evidencijaGrid.Size = new System.Drawing.Size(760, 176);
+            this.evidencijaGrid.TabIndex = 3;
             // 
-            // searchBtn
+            // Trazi
             // 
-            this.searchBtn.Location = new System.Drawing.Point(432, 32);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(150, 23);
-            this.searchBtn.TabIndex = 4;
-            this.searchBtn.Text = "Search";
-            this.searchBtn.UseSelectable = true;
+            this.Trazi.Location = new System.Drawing.Point(432, 32);
+            this.Trazi.Name = "Trazi";
+            this.Trazi.Size = new System.Drawing.Size(150, 23);
+            this.Trazi.TabIndex = 4;
+            this.Trazi.Text = "Search";
+            this.Trazi.UseSelectable = true;
+            this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // searchText
+            // textTrazi
             // 
             // 
             // 
             // 
-            this.searchText.CustomButton.Image = null;
-            this.searchText.CustomButton.Location = new System.Drawing.Point(155, 1);
-            this.searchText.CustomButton.Name = "";
-            this.searchText.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.searchText.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.searchText.CustomButton.TabIndex = 1;
-            this.searchText.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.searchText.CustomButton.UseSelectable = true;
-            this.searchText.CustomButton.Visible = false;
-            this.searchText.Lines = new string[0];
-            this.searchText.Location = new System.Drawing.Point(243, 32);
-            this.searchText.MaxLength = 32767;
-            this.searchText.Name = "searchText";
-            this.searchText.PasswordChar = '\0';
-            this.searchText.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchText.SelectedText = "";
-            this.searchText.SelectionLength = 0;
-            this.searchText.SelectionStart = 0;
-            this.searchText.ShortcutsEnabled = true;
-            this.searchText.Size = new System.Drawing.Size(177, 23);
-            this.searchText.TabIndex = 5;
-            this.searchText.UseSelectable = true;
-            this.searchText.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.searchText.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.textTrazi.CustomButton.Image = null;
+            this.textTrazi.CustomButton.Location = new System.Drawing.Point(155, 1);
+            this.textTrazi.CustomButton.Name = "";
+            this.textTrazi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textTrazi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textTrazi.CustomButton.TabIndex = 1;
+            this.textTrazi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textTrazi.CustomButton.UseSelectable = true;
+            this.textTrazi.CustomButton.Visible = false;
+            this.textTrazi.Lines = new string[0];
+            this.textTrazi.Location = new System.Drawing.Point(243, 32);
+            this.textTrazi.MaxLength = 32767;
+            this.textTrazi.Name = "textTrazi";
+            this.textTrazi.PasswordChar = '\0';
+            this.textTrazi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textTrazi.SelectedText = "";
+            this.textTrazi.SelectionLength = 0;
+            this.textTrazi.SelectionStart = 0;
+            this.textTrazi.ShortcutsEnabled = true;
+            this.textTrazi.Size = new System.Drawing.Size(177, 23);
+            this.textTrazi.TabIndex = 5;
+            this.textTrazi.UseSelectable = true;
+            this.textTrazi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textTrazi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel1
             // 
@@ -199,7 +200,6 @@
             this.materijalBox.UseSelectable = true;
             this.materijalBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.materijalBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            //this.materijalBox.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // cijenaBox
             // 
@@ -291,17 +291,17 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.materijalBox);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.searchText);
-            this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.evidencijaInfo);
+            this.Controls.Add(this.textTrazi);
+            this.Controls.Add(this.Trazi);
+            this.Controls.Add(this.evidencijaGrid);
             this.Controls.Add(this.lbl_opis_posla);
             this.Controls.Add(this.opisPosla);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Home);
             this.Name = "evidencija_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_trazi";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.evidencija_trazi_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.evidencijaInfo)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,12 +309,12 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
+        private MetroFramework.Controls.MetroButton Home;
         private System.Windows.Forms.RichTextBox opisPosla;
         private MetroFramework.Controls.MetroLabel lbl_opis_posla;
-        private MetroFramework.Controls.MetroGrid evidencijaInfo;
-        private MetroFramework.Controls.MetroButton searchBtn;
-        private MetroFramework.Controls.MetroTextBox searchText;
+        private MetroFramework.Controls.MetroGrid evidencijaGrid;
+        private MetroFramework.Controls.MetroButton Trazi;
+        private MetroFramework.Controls.MetroTextBox textTrazi;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox materijalBox;
         private MetroFramework.Controls.MetroTextBox cijenaBox;

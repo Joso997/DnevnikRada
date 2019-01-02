@@ -11,48 +11,47 @@ namespace DnevnikRada.Baza
 {
     class DB
     {
-        public SQLiteConnection connection;
+        protected SQLiteConnection connection;
         private SQLiteCommand command;
         private SQLiteDataAdapter db;
-        private DataSet ds = new DataSet();
+        private DataSet ds;
         private DataTable table = new DataTable();
 
         //OTVARA KONEKCIJU PREMA BAZI
         public DB()
         {
-            
-
-
             connection = new SQLiteConnection("Data Source = DB.db");
-
             connection.Open();
             if (connection.State == ConnectionState.Open)
-            {
                 MessageBox.Show("BAZA JE OTVORENA! YEY");
-            }else MessageBox.Show("Error 404 NIGGA NOT FOUND");
-
+            else
+                MessageBox.Show("Error 404 NIGGA NOT FOUND");
         }
 
         //kod za izvođenje pod bazoom BILO KOJI al mora bit sql
         public void Query(string sqlCode)
         {
-            
             command = connection.CreateCommand();
             command.CommandText = sqlCode;
             MessageBox.Show(sqlCode);
-            command.ExecuteNonQuery();
-            
-        }
+            command.ExecuteNonQuery(); 
+        } 
 
         //loudanje baze u formsima tj u tablici i vraca tu tablicu za grid view
         public DataTable LoadDataBase(string load)
         {
             command = connection.CreateCommand();
             db = new SQLiteDataAdapter(load, connection);
-            ds.Reset();
+            ds = new DataSet();
             db.Fill(ds);
             table = ds.Tables[0]; 
             return table;
+        }
+
+
+        public void UgasiBazu()
+        {
+            this.connection.Close();
         }
     }
 }

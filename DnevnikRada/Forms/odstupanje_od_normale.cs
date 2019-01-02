@@ -27,7 +27,7 @@ namespace DnevnikRada
         }
         private void btn_stanje_poduzeca_Click(object sender, EventArgs e) //kliknem button, otvora formu: stanje_poduzeca_2
         {
-            StanjePoduzeca stanje_poduzeca_2 = new StanjePoduzeca();
+            Statistika stanje_poduzeca_2 = new Statistika();
             Hide();
             stanje_poduzeca_2.Show();
             Close();

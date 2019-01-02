@@ -7,60 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class Pmkv : Form
+    public partial class Pmkv : UIController
     {
-        private bool UserClosing { get; set; }
         public Pmkv()
         {
             InitializeComponent();
             Show();
+            selectButton = SelectButton;
+        }
+        public bool SelectButton(object sender)
+        {
+            var button = (Button)sender;
+            switch (button.Name)
+            {
+                case "Oon":
+                    Oon odstupanje_od_normale = new Oon();
+                    break;
+                case "Bokv":
+                    Bokv broj_odrzavanja_kroz_vrijeme = new Bokv();
+                    break;
+                case "Sp":
+                    Statistika stanje_poduzeca = new Statistika();
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    break;
+            }
+            return true;
         }
 
-        private void btn_stanje_poduzeca_Click(object sender, EventArgs e) //kliknem button, otvora formu: stanje_poduzeca_2
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StanjePoduzeca stanje_poduzeca_2 = new StanjePoduzeca();
-            Unload();
+            base.This_FormClosing(sender, e);
+        }
+        protected override void Click_Gumb(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
         }
 
-        private void btn_potrosnja_materijala_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvara formu: potrosnja_materijala_kroz_vrijeme_2
-        {
-            Pmkv potrosnja_materijala_kroz_vrijeme_2 = new Pmkv();
-            Unload();
-        }
-
-        private void btn_broj_odrzavanja_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvora formu: broj_odrzavanja_kroz_vrijeme_2
-        {
-            Bokv broj_odrzavanja_kroz_vrijeme_2 = new Bokv();
-            Unload();
-        }
-
-        private void btn_odstupanje_od_normale_Click(object sender, EventArgs e) //kliknem button, otvora formu: odstupanje_od_normale_2
-        {
-            Oon odstupanje_od_normale_2 = new Oon();
-            Unload();
-        }
-
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
-        {
-            Home Home = new Home();
-            Unload();
-        }
-
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-                if (!UserClosing)
-                    Application.Exit();
-        }
-
-        private void Unload()
-        {
-            Hide();
-            UserClosing = true;
-            Close();
-        }
     }
 }

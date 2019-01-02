@@ -11,43 +11,37 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class mjesta_dodaj : Form 
+    public partial class mjesta_dodaj : UIController 
     {
         public mjesta_dodaj()
         {
             InitializeComponent();
             Show();
+            selectButton = SelectButton;
         }
 
-        private void mjesta_dodaj_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                   //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                   //..sto se aplikacija u potpunosti zatvori
-
+        public bool SelectButton(object sender)
         {
-            //Application.Exit();
+            var button = (Button)sender;
+            switch (button.Name)
+            {
+                case "Potvrdi":
+                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    return true;
+            }
+            return false;
         }
 
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Home Home = new Home();
-            Hide();
-            Home.Show();
-            Close();
+            base.This_FormClosing(sender, e);
         }
-
-        private void btn_potvrdi_Click(object sender, EventArgs e) 
+        protected override void Click_Gumb(object sender, EventArgs e)
         {
-            Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
-        }
-
-        private void tb_naziv_mjesta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mjesta_dodaj_Load(object sender, EventArgs e)
-        {
-
+            base.Click_Gumb(sender, e);
         }
     }
 }

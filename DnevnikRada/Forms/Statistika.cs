@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +11,9 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class evidencija_dodaj : UIController
+    public partial class Statistika : UIController
     {
-        private bool UserClosing { get; set; }
-        public evidencija_dodaj()
+        public Statistika()
         {
             InitializeComponent();
             Show();
@@ -26,14 +24,20 @@ namespace DnevnikRada
             var button = (Button)sender;
             switch (button.Name)
             {
-                case "Potvrdi":
-                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", Int32.Parse(tb_utroseno_vrijeme.Text), "", 10, 10f);
+                case "Oon":
+                    Oon odstupanje_od_normale = new Oon();
+                    break;
+                case "Bokv":
+                    Bokv broj_odrzavanja_kroz_vrijeme = new Bokv();
+                    break;
+                case "Pmkv":
+                    Pmkv potrosnja_materijala_kroz_vrijeme = new Pmkv();
                     break;
                 case "Home":
                     Home Home = new Home();
-                    return true;
+                    break;
             }
-            return false;
+            return true;
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)

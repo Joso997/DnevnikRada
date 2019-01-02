@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Skladiste_dodaj));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_materijala = new MetroFramework.Controls.MetroLabel();
             this.lbl_proizvodac = new MetroFramework.Controls.MetroLabel();
             this.lbl_mjerna_jedinica = new MetroFramework.Controls.MetroLabel();
             this.tb_naziv_materijala = new MetroFramework.Controls.MetroTextBox();
             this.tb_proizvodac = new MetroFramework.Controls.MetroTextBox();
             this.tb_mjerna_jedinica = new MetroFramework.Controls.MetroTextBox();
-            this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
+            this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.lbl_kolicina = new MetroFramework.Controls.MetroLabel();
             this.tb_kolicina = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // lbl_naziv_materijala
             // 
@@ -173,15 +173,15 @@
             this.tb_mjerna_jedinica.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_mjerna_jedinica.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btn_potvrdi
+            // Potvrdi
             // 
-            this.btn_potvrdi.Location = new System.Drawing.Point(545, 310);
-            this.btn_potvrdi.Name = "btn_potvrdi";
-            this.btn_potvrdi.Size = new System.Drawing.Size(100, 100);
-            this.btn_potvrdi.TabIndex = 8;
-            this.btn_potvrdi.Text = "Potvrdi";
-            this.btn_potvrdi.UseSelectable = true;
-            this.btn_potvrdi.Click += new System.EventHandler(this.btn_potvrdi_Click);
+            this.Potvrdi.Location = new System.Drawing.Point(545, 310);
+            this.Potvrdi.Name = "Potvrdi";
+            this.Potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.Potvrdi.TabIndex = 8;
+            this.Potvrdi.Text = "Potvrdi";
+            this.Potvrdi.UseSelectable = true;
+            this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // lbl_kolicina
             // 
@@ -231,19 +231,18 @@
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.tb_kolicina);
             this.Controls.Add(this.lbl_kolicina);
-            this.Controls.Add(this.btn_potvrdi);
+            this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.tb_mjerna_jedinica);
             this.Controls.Add(this.tb_proizvodac);
             this.Controls.Add(this.tb_naziv_materijala);
             this.Controls.Add(this.lbl_mjerna_jedinica);
             this.Controls.Add(this.lbl_proizvodac);
             this.Controls.Add(this.lbl_naziv_materijala);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Home);
             this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Skladiste_dodaj_FormClosed);
-            this.Load += new System.EventHandler(this.Skladiste_dodaj_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,14 +250,14 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
+        private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel lbl_naziv_materijala;
         private MetroFramework.Controls.MetroLabel lbl_proizvodac;
         private MetroFramework.Controls.MetroLabel lbl_mjerna_jedinica;
         private MetroFramework.Controls.MetroTextBox tb_naziv_materijala;
         private MetroFramework.Controls.MetroTextBox tb_proizvodac;
         private MetroFramework.Controls.MetroTextBox tb_mjerna_jedinica;
-        private MetroFramework.Controls.MetroButton btn_potvrdi;
+        private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroLabel lbl_kolicina;
         private MetroFramework.Controls.MetroTextBox tb_kolicina;
     }

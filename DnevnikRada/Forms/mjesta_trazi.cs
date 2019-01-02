@@ -7,99 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class mjesta_trazi : Form
+    public partial class mjesta_trazi : UIController
     {
         int index;
-        Klase.Mjesta mjesto = new Klase.Mjesta();
+        Mjesta mjesto = new Mjesta();
         public mjesta_trazi()
         {
             InitializeComponent();
-            Baza.DB baza = new Baza.DB();
-            dataGrid.DataSource = baza.LoadDataBase("select * from Mjesta");
+            mjestoGrid.DataSource = mjesto.Get();
+            selectButton = SelectButton;
             Show();
         }
 
-        private void mjesta_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                   //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                   //..sto se aplikacija u potpunosti zatvori
-
+        public bool SelectButton(object sender)
         {
-            //Application.Exit();
-        }
-
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
-        {
-            Home Home = new Home();
-            Hide();
-            Home.Show();
-            Close();
-        }
-
-        private void search_Click(object sender, EventArgs e)
-        {
-            string lol = string.Format(searchText.Text);
-
-            Klase.Mjesta skladiste = new Klase.Mjesta();
-            dataGrid.DataSource = skladiste.Trazi(lol);
-        }
-
-        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            if (e.RowIndex >= 0)
+            var button = (Button)sender;
+            switch (button.Name)
             {
-                DataGridViewRow row = dataGrid.Rows[e.RowIndex];
-                if (row.Cells["NazivMjesta"].Value == null)
-                {
-                    nazivBox.Text = null;
-                }
-                else
-                {
-                    nazivBox.Text = row.Cells["NazivMjesta"].Value.ToString();
-                }
-                ////////////
-                if (row.Cells["Adresa"].Value == null)
-                {
-                    adresaBox.Text = null;
-                }
-                else
-                {
-                    adresaBox.Text = row.Cells["Adresa"].Value.ToString();
-                }
-                ////////////
-                if (row.Cells["VrijemeRadaOD"].Value == null)
-                {
-                    radOdbox.Text = null;
-                }
-                else
-                {
-                    radOdbox.Text = row.Cells["VrijemeRadaOD"].Value.ToString();
-                }
-                ////////////
-                if (row.Cells["VrijemeRadaDO"].Value == null)
-                {
-                    radDoBox.Text = null;
-                }
-                else
-                {
-                    radDoBox.Text = row.Cells["VrijemeRadaDO"].Value.ToString();
-                }
-                string index2 = row.Cells["Id"].Value.ToString();
-                index = Int32.Parse(index2);
+                case "Trazi":
+                    string lol = string.Format(searchText.Text);
+                    mjestoGrid.DataSource = mjesto.Get(lol);
+                    break;
+                case "Edit":
+                    mjesto.Edit(nazivBox.Text, adresaBox.Text, index);
+                    mjestoGrid.DataSource = mjesto.Get();
+                    Edit.Enabled = false;
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    return true;
             }
-            
+            return false;
         }
 
-        private void finishEdit_Click(object sender, EventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (index >= 0)
-            {
-                mjesto.Edit(nazivBox.Text, adresaBox.Text, index);
-                dataGrid.DataSource = mjesto.Ucitaj();
-            }
+            DataTable dT = new DataTable();
+            dT = mjesto.Get(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+            nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
+            adresaBox.Text = dT.Rows[0].ItemArray[2].ToString();
+            radOdbox.Text = dT.Rows[0].ItemArray[3].ToString();
+            radDoBox.Text = dT.Rows[0].ItemArray[4].ToString();
+            index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
+            Edit.Enabled = true;
+        }
+
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            base.This_FormClosing(sender, e);
+        }
+        protected override void Click_Gumb(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
         }
     }
 }

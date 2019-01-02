@@ -7,62 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Klase;
 
-namespace DnevnikRada
+namespace DnevnikRada.Forms
 {
-    public partial class StanjePoduzeca : Form
+    public partial class Stanje_Poduzeca : UIController
     {
-        public StanjePoduzeca()
+        public Stanje_Poduzeca()
         {
             InitializeComponent();
             Show();
+            selectButton = SelectButton;
+        }
+        public bool SelectButton(object sender)
+        {
+            var button = (Button)sender;
+            switch (button.Name)
+            {
+                case "St":
+                    Statistika statistika = new Statistika();
+                    statistika.MdiParent = this;
+                    break;
+                case "Oon":
+                    Oon odstupanje_od_normale = new Oon();
+                    odstupanje_od_normale.MdiParent = this;
+                    break;
+                case "Bokv":
+                    Bokv broj_odrzavanja_kroz_vrijeme = new Bokv();
+                    broj_odrzavanja_kroz_vrijeme.MdiParent = this;
+                    break;
+                case "Pmkv":
+                    Pmkv potrosnja_materijala_kroz_vrijeme = new Pmkv();
+                    potrosnja_materijala_kroz_vrijeme.MdiParent = this;
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    return true;
+            }
+            return false;
         }
 
-        private void stanje_poduzeca_2_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                        //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                        //..sto se aplikacija u potpunosti zatvori
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Application.Exit();
+            base.This_FormClosing(sender, e);
         }
-
-        private void btn_stanje_poduzeca_Click(object sender, EventArgs e) //kliknem button, otvora formu: stanje_poduzeca_2
+        protected override void Click_Gumb(object sender, EventArgs e)
         {
-            StanjePoduzeca stanje_poduzeca_2 = new StanjePoduzeca();
-            Hide();
-            stanje_poduzeca_2.Show();
-            Close();
-        }
-
-        private void btn_potrosnja_materijala_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvara formu: potrosnja_materijala_kroz_vrijeme_2
-        {
-            Pmkv potrosnja_materijala_kroz_vrijeme_2 = new Pmkv();
-            Hide();
-            potrosnja_materijala_kroz_vrijeme_2.Show();
-            Close();
-        }
-
-        private void btn_broj_odrzavanja_kroz_vrijeme_Click(object sender, EventArgs e) //kliknem button, otvora formu: broj_odrzavanja_kroz_vrijeme_2
-        {
-            Bokv broj_odrzavanja_kroz_vrijeme_2 = new Bokv();
-            Hide();
-            broj_odrzavanja_kroz_vrijeme_2.Show();
-            Close();
-        }
-
-        private void btn_odstupanje_od_normale_Click(object sender, EventArgs e) //kliknem button, otvora formu: odstupanje_od_normale_2
-        {
-            Oon odstupanje_od_normale_2 = new Oon();
-            Hide();
-            odstupanje_od_normale_2.Show();
-            Close();
-        }
-
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
-        {
-            Home Home = new Home();
-            Hide();
-            Home.Show();
-            Close();
+            base.Click_Gumb(sender, e);
         }
     }
 }

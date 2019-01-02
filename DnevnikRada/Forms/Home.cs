@@ -7,22 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DnevnikRada.Forms;
 using DnevnikRada.Interface;
 using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class Home : UIController//, //IFormReq
+    public partial class Home : UIController
     {
 
         public Home()
         {
             InitializeComponent();
             Show();
-            selectButton = new SelectButtonDelagate(SelectButton);
+            selectButton = SelectButton;
         }
 
-        public void SelectButton(object sender)
+        public bool SelectButton(object sender)
         {
             var button = (Button)sender;
             switch (button.Name)
@@ -34,7 +35,7 @@ namespace DnevnikRada
                     evidencija_dodaj ed = new evidencija_dodaj();
                     break;
                 case "StanjePoduzeca":
-                    StanjePoduzeca sp = new StanjePoduzeca();
+                    Stanje_Poduzeca sp = new Stanje_Poduzeca();
                     break;
                 case "SkladisteTrazi":
                     skladiste_trazi st = new skladiste_trazi();
@@ -49,6 +50,7 @@ namespace DnevnikRada
                     mjesta_dodaj md = new mjesta_dodaj();
                     break;
             }
+            return true;
         }
 
         private void MouseEnter_Mouse(object sender, EventArgs e)
@@ -69,6 +71,16 @@ namespace DnevnikRada
                 StanjePoduzeca.Size = new Size(300, 250);
             else
                 button.Size = new Size(150, 250);
+        }
+
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            base.This_FormClosing(sender, e);
+        }
+
+        protected override void Click_Gumb(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
         }
     }
 }

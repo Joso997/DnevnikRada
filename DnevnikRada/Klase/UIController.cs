@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,21 +10,23 @@ using System.Windows.Forms;
 
 namespace DnevnikRada.Klase
 {
-    public partial class UIController : Form
+    public class UIController : Form
     {
         private bool UserClosing { get; set; }
-        protected delegate void SelectButtonDelagate(object sender);
+        protected delegate bool SelectButtonDelagate(object sender);
         protected SelectButtonDelagate selectButton;
 
-        public void Click_Gumb(object sender, EventArgs e)
+        protected virtual void Click_Gumb(object sender, EventArgs e)
         {
-            selectButton(sender);
-            Hide();
-            UserClosing = true;
-            Close();
+            if (selectButton(sender))
+            {
+                Hide();
+                UserClosing = true;
+                Close();
+            }
         }
 
-        protected void This_FormClosing(object sender, FormClosingEventArgs e)
+        protected virtual void This_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 if (!UserClosing)
@@ -31,6 +36,7 @@ namespace DnevnikRada.Klase
                         Application.Exit();
                     else
                         e.Cancel = true;
+                    Console.WriteLine("Here");
                 }
         }
     }

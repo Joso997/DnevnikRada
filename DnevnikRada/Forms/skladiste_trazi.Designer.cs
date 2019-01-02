@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_home = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.skladisteGrid = new MetroFramework.Controls.MetroGrid();
-            this.KlickMe = new MetroFramework.Controls.MetroButton();
+            this.Trazi = new MetroFramework.Controls.MetroButton();
             this.search = new MetroFramework.Controls.MetroTextBox();
             this.prodavacBox = new MetroFramework.Controls.MetroTextBox();
             this.nazivBox = new MetroFramework.Controls.MetroTextBox();
@@ -46,22 +46,22 @@
             this.prodavacLabel = new MetroFramework.Controls.MetroLabel();
             this.mjLabel = new MetroFramework.Controls.MetroLabel();
             this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
-            this.finishEdit = new MetroFramework.Controls.MetroButton();
+            this.Edit = new MetroFramework.Controls.MetroButton();
             this.editLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroTile1
             // 
@@ -138,6 +138,7 @@
             this.skladisteGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.skladisteGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.skladisteGrid.Location = new System.Drawing.Point(12, 180);
+            this.skladisteGrid.MultiSelect = false;
             this.skladisteGrid.Name = "skladisteGrid";
             this.skladisteGrid.ReadOnly = true;
             this.skladisteGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -153,17 +154,17 @@
             this.skladisteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.skladisteGrid.Size = new System.Drawing.Size(814, 200);
             this.skladisteGrid.TabIndex = 3;
-            this.skladisteGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.skladisteGrid_CellClick);
+            this.skladisteGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
-            // KlickMe
+            // Trazi
             // 
-            this.KlickMe.Location = new System.Drawing.Point(678, 81);
-            this.KlickMe.Name = "KlickMe";
-            this.KlickMe.Size = new System.Drawing.Size(148, 23);
-            this.KlickMe.TabIndex = 4;
-            this.KlickMe.Text = "Click me and find out";
-            this.KlickMe.UseSelectable = true;
-            this.KlickMe.Click += new System.EventHandler(this.KlickMe_Click);
+            this.Trazi.Location = new System.Drawing.Point(678, 81);
+            this.Trazi.Name = "Trazi";
+            this.Trazi.Size = new System.Drawing.Size(148, 23);
+            this.Trazi.TabIndex = 4;
+            this.Trazi.Text = "Click me and find out";
+            this.Trazi.UseSelectable = true;
+            this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // search
             // 
@@ -196,7 +197,6 @@
             this.search.UseSelectable = true;
             this.search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // prodavacBox
             // 
@@ -354,15 +354,16 @@
             this.kolicinaLabel.TabIndex = 13;
             this.kolicinaLabel.Text = "Kolicina";
             // 
-            // finishEdit
+            // Edit
             // 
-            this.finishEdit.Location = new System.Drawing.Point(394, 465);
-            this.finishEdit.Name = "finishEdit";
-            this.finishEdit.Size = new System.Drawing.Size(148, 42);
-            this.finishEdit.TabIndex = 14;
-            this.finishEdit.Text = "Edit";
-            this.finishEdit.UseSelectable = true;
-            this.finishEdit.Click += new System.EventHandler(this.finishEdit_Click);
+            this.Edit.Enabled = false;
+            this.Edit.Location = new System.Drawing.Point(394, 465);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(148, 42);
+            this.Edit.TabIndex = 14;
+            this.Edit.Text = "Edit";
+            this.Edit.UseSelectable = true;
+            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // editLabel
             // 
@@ -380,7 +381,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.editLabel);
-            this.Controls.Add(this.finishEdit);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.kolicinaLabel);
             this.Controls.Add(this.mjLabel);
             this.Controls.Add(this.prodavacLabel);
@@ -390,17 +391,15 @@
             this.Controls.Add(this.nazivBox);
             this.Controls.Add(this.prodavacBox);
             this.Controls.Add(this.search);
-            this.Controls.Add(this.KlickMe);
+            this.Controls.Add(this.Trazi);
             this.Controls.Add(this.skladisteGrid);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Home);
             this.Name = "skladiste_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_trazi";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.skladiste_trazi_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Skladiste_trazi_FormClosed);
-            this.Load += new System.EventHandler(this.skladiste_trazi_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -409,11 +408,11 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
+        private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroGrid skladisteGrid;
-        private MetroFramework.Controls.MetroButton KlickMe;
+        private MetroFramework.Controls.MetroButton Trazi;
         private MetroFramework.Controls.MetroTextBox search;
         private MetroFramework.Controls.MetroTextBox prodavacBox;
         private MetroFramework.Controls.MetroTextBox nazivBox;
@@ -423,7 +422,7 @@
         private MetroFramework.Controls.MetroLabel prodavacLabel;
         private MetroFramework.Controls.MetroLabel mjLabel;
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
-        private MetroFramework.Controls.MetroButton finishEdit;
+        private MetroFramework.Controls.MetroButton Edit;
         private MetroFramework.Controls.MetroLabel editLabel;
     }
 }

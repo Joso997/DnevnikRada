@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_dodaj));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_adresa = new MetroFramework.Controls.MetroLabel();
             this.lbl_vrijeme_rada = new MetroFramework.Controls.MetroLabel();
@@ -39,21 +39,21 @@
             this.tb_adresa = new MetroFramework.Controls.MetroTextBox();
             this.tb_od = new MetroFramework.Controls.MetroTextBox();
             this.tb_do = new MetroFramework.Controls.MetroTextBox();
-            this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
+            this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // lbl_naziv_mjesta
             // 
@@ -81,7 +81,7 @@
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(217, 25);
+            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
             this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
             // 
@@ -134,7 +134,6 @@
             this.tb_naziv_mjesta.UseSelectable = true;
             this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_naziv_mjesta.Click += new System.EventHandler(this.tb_naziv_mjesta_Click);
             // 
             // tb_adresa
             // 
@@ -230,22 +229,22 @@
             this.tb_do.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_do.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btn_potvrdi
+            // Potvrdi
             // 
-            this.btn_potvrdi.Location = new System.Drawing.Point(463, 350);
-            this.btn_potvrdi.Name = "btn_potvrdi";
-            this.btn_potvrdi.Size = new System.Drawing.Size(100, 100);
-            this.btn_potvrdi.TabIndex = 10;
-            this.btn_potvrdi.Text = "Potvrdi";
-            this.btn_potvrdi.UseSelectable = true;
-            this.btn_potvrdi.Click += new System.EventHandler(this.btn_potvrdi_Click);
+            this.Potvrdi.Location = new System.Drawing.Point(463, 350);
+            this.Potvrdi.Name = "Potvrdi";
+            this.Potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.Potvrdi.TabIndex = 10;
+            this.Potvrdi.Text = "Potvrdi";
+            this.Potvrdi.UseSelectable = true;
+            this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(581, 287);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(244, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(243, 19);
             this.metroLabel1.TabIndex = 11;
             this.metroLabel1.Text = "<-- koji tip podatka u bzi ovo mora bit?";
             // 
@@ -256,7 +255,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.btn_potvrdi);
+            this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.tb_do);
             this.Controls.Add(this.tb_od);
             this.Controls.Add(this.tb_adresa);
@@ -266,12 +265,11 @@
             this.Controls.Add(this.lbl_vrijeme_rada);
             this.Controls.Add(this.lbl_adresa);
             this.Controls.Add(this.lbl_naziv_mjesta);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Home);
             this.Name = "mjesta_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mjesta_dodaj_FormClosed);
-            this.Load += new System.EventHandler(this.mjesta_dodaj_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,7 +277,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
+        private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel lbl_naziv_mjesta;
         private MetroFramework.Controls.MetroLabel lbl_adresa;
         private MetroFramework.Controls.MetroLabel lbl_vrijeme_rada;
@@ -289,7 +287,7 @@
         private MetroFramework.Controls.MetroTextBox tb_adresa;
         private MetroFramework.Controls.MetroTextBox tb_od;
         private MetroFramework.Controls.MetroTextBox tb_do;
-        private MetroFramework.Controls.MetroButton btn_potvrdi;
+        private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

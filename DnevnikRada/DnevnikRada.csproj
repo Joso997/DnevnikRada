@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -127,11 +128,17 @@
     <Compile Include="Forms\skladiste_trazi.Designer.cs">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\stanje_poduzeca.cs">
+    <Compile Include="Forms\Stanje_Poduzeca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\stanje_poduzeca.Designer.cs">
-      <DependentUpon>stanje_poduzeca.cs</DependentUpon>
+    <Compile Include="Forms\Stanje_Poduzeca.Designer.cs">
+      <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
@@ -176,8 +183,11 @@
     <EmbeddedResource Include="Forms\skladiste_trazi.resx">
       <DependentUpon>skladiste_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\stanje_poduzeca.resx">
-      <DependentUpon>stanje_poduzeca.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Stanje_Poduzeca.resx">
+      <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistika.resx">
+      <DependentUpon>Statistika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="bin\Debug\DB.db" />
     <None Include="packages.config" />

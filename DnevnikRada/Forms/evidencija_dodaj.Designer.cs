@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(evidencija_dodaj));
-            this.btn_home = new MetroFramework.Controls.MetroButton();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_utroseno_vrijeme = new MetroFramework.Controls.MetroLabel();
             this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
             this.tb_utroseno_vrijeme = new MetroFramework.Controls.MetroTextBox();
-            this.rtb_opis_posla = new System.Windows.Forms.RichTextBox();
+            this.tb_opis_posla = new System.Windows.Forms.RichTextBox();
             this.lbl_opis_posla = new MetroFramework.Controls.MetroLabel();
-            this.btn_potvrdi = new MetroFramework.Controls.MetroButton();
+            this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.btn_trash = new MetroFramework.Controls.MetroButton();
             this.btn_dodaj = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // btn_home
+            // Home
             // 
-            this.btn_home.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_home.BackgroundImage")));
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_home.Location = new System.Drawing.Point(800, 480);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(100, 100);
-            this.btn_home.TabIndex = 0;
-            this.btn_home.UseSelectable = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 0;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // lbl_naziv_mjesta
             // 
@@ -133,13 +133,13 @@
             this.tb_utroseno_vrijeme.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_utroseno_vrijeme.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // rtb_opis_posla
+            // tb_opis_posla
             // 
-            this.rtb_opis_posla.Location = new System.Drawing.Point(12, 235);
-            this.rtb_opis_posla.Name = "rtb_opis_posla";
-            this.rtb_opis_posla.Size = new System.Drawing.Size(356, 333);
-            this.rtb_opis_posla.TabIndex = 5;
-            this.rtb_opis_posla.Text = "";
+            this.tb_opis_posla.Location = new System.Drawing.Point(12, 235);
+            this.tb_opis_posla.Name = "tb_opis_posla";
+            this.tb_opis_posla.Size = new System.Drawing.Size(356, 333);
+            this.tb_opis_posla.TabIndex = 5;
+            this.tb_opis_posla.Text = "";
             // 
             // lbl_opis_posla
             // 
@@ -151,14 +151,15 @@
             this.lbl_opis_posla.TabIndex = 6;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
-            // btn_potvrdi
+            // Potvrdi
             // 
-            this.btn_potvrdi.Location = new System.Drawing.Point(701, 480);
-            this.btn_potvrdi.Name = "btn_potvrdi";
-            this.btn_potvrdi.Size = new System.Drawing.Size(100, 100);
-            this.btn_potvrdi.TabIndex = 7;
-            this.btn_potvrdi.Text = "Potvrdi";
-            this.btn_potvrdi.UseSelectable = true;
+            this.Potvrdi.Location = new System.Drawing.Point(701, 480);
+            this.Potvrdi.Name = "Potvrdi";
+            this.Potvrdi.Size = new System.Drawing.Size(100, 100);
+            this.Potvrdi.TabIndex = 7;
+            this.Potvrdi.Text = "Potvrdi";
+            this.Potvrdi.UseSelectable = true;
+            this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // btn_trash
             // 
@@ -187,18 +188,18 @@
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.btn_dodaj);
             this.Controls.Add(this.btn_trash);
-            this.Controls.Add(this.btn_potvrdi);
+            this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.lbl_opis_posla);
-            this.Controls.Add(this.rtb_opis_posla);
+            this.Controls.Add(this.tb_opis_posla);
             this.Controls.Add(this.tb_utroseno_vrijeme);
             this.Controls.Add(this.tb_naziv_mjesta);
             this.Controls.Add(this.lbl_utroseno_vrijeme);
             this.Controls.Add(this.lbl_naziv_mjesta);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.Home);
             this.Name = "evidencija_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_dodaj";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.evidencija_dodaj_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,14 +207,14 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton btn_home;
+        private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel lbl_naziv_mjesta;
         private MetroFramework.Controls.MetroLabel lbl_utroseno_vrijeme;
         private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
         private MetroFramework.Controls.MetroTextBox tb_utroseno_vrijeme;
-        private System.Windows.Forms.RichTextBox rtb_opis_posla;
+        private System.Windows.Forms.RichTextBox tb_opis_posla;
         private MetroFramework.Controls.MetroLabel lbl_opis_posla;
-        private MetroFramework.Controls.MetroButton btn_potvrdi;
+        private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroButton btn_trash;
         private MetroFramework.Controls.MetroButton btn_dodaj;
     }

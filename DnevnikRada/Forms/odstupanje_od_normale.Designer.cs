@@ -92,7 +92,7 @@
             this.btn_stanje_poduzeca.UseSelectable = true;
             this.btn_stanje_poduzeca.Click += new System.EventHandler(this.btn_stanje_poduzeca_Click);
             // 
-            // odstupanje_od_normale_2
+            // Oon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +103,7 @@
             this.Controls.Add(this.btn_potrosnja_materijala_kroz_vrijeme);
             this.Controls.Add(this.btn_stanje_poduzeca);
             this.Controls.Add(this.btn_home);
-            this.Name = "odstupanje_od_normale_2";
+            this.Name = "Oon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "odstupanje_od_normale_2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.odstupanje_od_normale_2_FormClosed);

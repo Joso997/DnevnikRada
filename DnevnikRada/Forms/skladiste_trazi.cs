@@ -1,125 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DnevnikRada.Forms;
+using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class skladiste_trazi : Form
+    public partial class skladiste_trazi : UIController
     {
         int index;
-        Klase.Skladiste skladiste = new Klase.Skladiste();
+        Skladiste skladiste = new Skladiste();
         public skladiste_trazi()
         {          
             InitializeComponent();
-            skladisteGrid.DataSource = skladiste.Ucitaj();
+            skladisteGrid.DataSource = skladiste.Get();
+            selectButton = SelectButton;
             Show();
         }
-        ~skladiste_trazi()
+
+        public bool SelectButton(object sender)
         {
-            Console.WriteLine("Form Destructor");
-        }
-        private void Skladiste_trazi_FormClosed(object sender, FormClosedEventArgs e) //event koji omogucuje da se aplikacija..  
-                                                                                      //..NE nastavi izvrsavati u pozadini nakon.. 
-                                                                                      //..sto se aplikacija u potpunosti zatvori
-
-        {
-            
-            //Application.Exit();
-        }
-
-
-        private void btn_home_Click(object sender, EventArgs e) //kliknem home button, vraca na pocetnu formu
-
-        {
-            Home Home = new Home();
-            Hide();
-            Home.Show();
-            Close();
-        }
-
-
-        private void skladiste_trazi_Load(object sender, EventArgs e)
-        {
-            //MessageBox.Show("BAZA JE OTVORENA! YEY");
-        }
-
-        private void KlickMe_Click(object sender, EventArgs e)
-        {
-            string lol = string.Format(search.Text);
-            skladisteGrid.DataSource = skladiste.Ucitaj(lol);
-        }
-
-        private void skladiste_trazi_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            skladiste.UgasiBazu();
-            Dispose();
-        }
-
-        private void skladisteGrid_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            var button = (Button)sender;
+            switch (button.Name)
             {
-                DataGridViewRow row = skladisteGrid.Rows[e.RowIndex];
-                if (row.Cells["NazivMaterijala"].Value == null)
-                {
-                    nazivBox.Text = null;
-                }
-                else
-                {
-                    nazivBox.Text = row.Cells["NazivMaterijala"].Value.ToString();
-
-                }
-                if (row.Cells["Prodavac"].Value == null)
-                {
-                    prodavacBox.Text = null;
-                }
-                else
-                {
-                    prodavacBox.Text = row.Cells["Prodavac"].Value.ToString();
-                }
-                if (row.Cells["Kolicina"].Value == null)
-                {
-                    kolicinaBox.Text = null;
-                }
-                else
-                {
-                    kolicinaBox.Text = row.Cells["Kolicina"].Value.ToString();
-                }
-
-                if (row.Cells["MjernaJedinica"].Value == null)
-                {
-                    mjBox.Text = null;
-                }
-                else
-                {
-                    mjBox.Text = row.Cells["MjernaJedinica"].Value.ToString();
-                }
-                string index2= row.Cells["Id"].Value.ToString();
-                index = Int32.Parse(index2);
-
-                MessageBox.Show(e.RowIndex.ToString());
+                case "Trazi":
+                    string lol = search.Text;
+                    skladisteGrid.DataSource = skladiste.Get(lol);
+                    break;
+                case "Edit":
+                    skladiste.Edit(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text), index);
+                    skladisteGrid.DataSource = skladiste.Get();
+                    Edit.Enabled = false;
+                    break;
+                case "Home":
+                    Home Home = new Home();
+                    return true;
             }
+            return false;
         }
 
-        private void finishEdit_Click(object sender, EventArgs e)
+        private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (index >= 0)
-            {
-                skladiste.Edit(nazivBox.Text, prodavacBox.Text, mjBox.Text,Int32.Parse( kolicinaBox.Text), index);
-                skladisteGrid.DataSource =skladiste.Ucitaj();
-            }
+            DataTable dT = new DataTable();
+            dT = skladiste.Get(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+            nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
+            prodavacBox.Text = dT.Rows[0].ItemArray[2].ToString();
+            kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
+            mjBox.Text = dT.Rows[0].ItemArray[4].ToString();
+            index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
+            Edit.Enabled = true;
         }
 
-        private void search_Click(object sender, EventArgs e)
+        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            base.This_FormClosing(sender, e);
+        }
+        protected override void Click_Gumb(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
         }
     }
 }

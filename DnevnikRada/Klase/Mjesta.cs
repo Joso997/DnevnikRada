@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DnevnikRada.Klase
 {
-    class Mjesta : Baza.DB, IUseDatabase 
+    class Mjesta : Baza.DB 
     {
         
         public string Naziv_mjesta { get; private set; }
@@ -30,30 +30,29 @@ namespace DnevnikRada.Klase
 
         public void Dodaj()
         {
-            Baza.DB baza = new Baza.DB();
             string insert = string.Format("insert into Mjesta (NazivMjesta,Adresa) values ('{0}','{1}')", this.Naziv_mjesta,this.Adresa);
-            baza.Query(insert);
+            Query(insert);
         }
 
-        public DataTable Ucitaj()
+        public DataTable Get()
         {
             string command = string.Format("select * from Mjesta");
-            Baza.DB baza = new Baza.DB();
-            return baza.LoadDataBase(command);
+            return LoadDataBase(command);
         }
 
-        public DataTable Trazi(string trazi)
+        public DataTable Get(string trazi)
         {
             string command = string.Format("select * from Mjesta " +
                 "WHERE NazivMjesta like '%{0}%' or " +
                 "Adresa like '%{0}%'", trazi);
-            Baza.DB baza = new Baza.DB();
-            return baza.LoadDataBase(command);
+            return LoadDataBase(command);
         }
 
-        public void UgasiBazu()
+        public DataTable Get(int id)
         {
-            this.connection.Close();
+            string command = string.Format("select * from Mjesta " +
+                "WHERE ID = '{0}'", id);
+            return LoadDataBase(command);
         }
 
         public void Edit(string naziv, string adresa, int id)
@@ -62,7 +61,7 @@ namespace DnevnikRada.Klase
                 "set NazivMjesta = '{0}' , Adresa='{1}'" +
                 "where Id={2}", naziv, adresa, id);
             //fali jos od do vrijeme rada
-            this.Query(update);
+            Query(update);
         }
     }
 }

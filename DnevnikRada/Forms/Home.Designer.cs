@@ -1,6 +1,8 @@
-﻿namespace DnevnikRada
+﻿using DnevnikRada.Klase;
+
+namespace DnevnikRada
 {
-    partial class Home
+    partial class Home : UIController
     {
         /// <summary>
         /// Required designer variable.
