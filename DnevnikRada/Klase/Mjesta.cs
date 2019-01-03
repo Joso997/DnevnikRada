@@ -30,9 +30,11 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
-            dictionary_stupci.Add("NazivMjesta", Naziv_mjesta);
-            dictionary_stupci.Add("Adresa", Adresa);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
+            {
+                {"NazivMjesta", Naziv_mjesta },
+                {"Adresa", Adresa }
+            };
             Set("Mjesta", dictionary_stupci);
         }
 

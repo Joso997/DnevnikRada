@@ -36,11 +36,13 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
-            dictionary_stupci.Add("NazivMaterijala", Naziv_materijala);
-            dictionary_stupci.Add("Prodavac", Proizvodac);
-            dictionary_stupci.Add("Kolicina", Mjerna_jedinica);
-            dictionary_stupci.Add("MjernaJedinica", Kolicina);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
+            {
+                {"NazivMaterijala", Naziv_materijala },
+                {"Prodavac", Proizvodac },
+                {"Kolicina", Mjerna_jedinica },
+                {"MjernaJedinica", Kolicina },
+            };
             Set("Skladiste", dictionary_stupci);
         }
 

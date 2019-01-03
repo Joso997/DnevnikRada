@@ -38,14 +38,16 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
-            dictionary_stupci.Add("NazivMjesta", Naziv_Mjesta);
-            dictionary_stupci.Add("Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss"));
-            dictionary_stupci.Add("Materijal", Materijal);
-            dictionary_stupci.Add("Kolicina", Kolicina);
-            dictionary_stupci.Add("Cijena", Cijena);
-            dictionary_stupci.Add("OpisPosla", Opis_Posla);
-            dictionary_stupci.Add("UtrosenoVrijeme", Utroseno_Vrijeme);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
+            {
+                {"NazivMjesta", Naziv_Mjesta },
+                {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
+                {"Materijal", Materijal },
+                {"Kolicina", Kolicina },
+                {"Cijena", Cijena },
+                {"OpisPosla", Opis_Posla },
+                {"UtrosenoVrijeme", Utroseno_Vrijeme }
+            };
             Set("Evidencija", dictionary_stupci);
         }
 
