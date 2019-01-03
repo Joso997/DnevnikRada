@@ -12,7 +12,7 @@ namespace DnevnikRada
         public skladiste_trazi()
         {          
             InitializeComponent();
-            skladisteGrid.DataSource = skladiste.Get();
+            skladisteGrid.DataSource = skladiste.Ucitaj();
             selectButton = SelectButton;
             Show();
         }
@@ -23,12 +23,12 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Trazi":
-                    string lol = search.Text;
-                    skladisteGrid.DataSource = skladiste.Get(lol);
+                    string trazi = search.Text;
+                    skladisteGrid.DataSource = skladiste.Ucitaj("NazivMaterijala", trazi);
                     break;
                 case "Edit":
-                    skladiste.Edit(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text), index);
-                    skladisteGrid.DataSource = skladiste.Get();
+                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text));
+                    skladisteGrid.DataSource = skladiste.Ucitaj();
                     Edit.Enabled = false;
                     break;
                 case "Home":
@@ -41,7 +41,7 @@ namespace DnevnikRada
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dT = new DataTable();
-            dT = skladiste.Get(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+            dT = skladiste.Ucitaj(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
             nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
             prodavacBox.Text = dT.Rows[0].ItemArray[2].ToString();
             kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();

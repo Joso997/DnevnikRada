@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
+using DnevnikRada.Interface;
 
 namespace DnevnikRada.Klase
 {
-    class Evidencija : Baza.DB
+    class Evidencija : Baza.DB, IUseDatabase
     {
         public string Naziv_Mjesta { get; set; }
         public DateTime Datum { get; set; }
@@ -37,37 +38,30 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-            string insert = string.Format("insert into Evidencija (NazivMjesta,Datum,Materijal,Kolicina,Cijena,OpisPosla,UtrosenoVrijeme) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", Naziv_Mjesta, Datum.ToString("yyyy-MM-dd HH:mm:ss"), Materijal, Kolicina, Cijena, Opis_Posla, Utroseno_Vrijeme);
-            Query(insert);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
+            dictionary_stupci.Add("NazivMjesta", Naziv_Mjesta);
+            dictionary_stupci.Add("Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss"));
+            dictionary_stupci.Add("Materijal", Materijal);
+            dictionary_stupci.Add("Kolicina", Kolicina);
+            dictionary_stupci.Add("Cijena", Cijena);
+            dictionary_stupci.Add("OpisPosla", Opis_Posla);
+            dictionary_stupci.Add("UtrosenoVrijeme", Utroseno_Vrijeme);
+            Set("Evidencija", dictionary_stupci);
         }
 
-        public DataTable Get()
+        public DataTable Ucitaj()
         {
-            string command = "select * from Evidencija";
-            return this.LoadDataBase(command);
+            return Get("Evidencija");
         }
 
-        public DataTable Get(string trazi)
+        public DataTable Ucitaj(string naziv_stupca, string trazi)
         {
-            string command = string.Format("select * from Evidencija " +
-                "WHERE NazivMjesta like '%{0}%' or " +
-                "Datum like '%{0}%'", trazi);
-            return LoadDataBase(command);
+            return Get("Evidencija", naziv_stupca, trazi);
         }
 
-        public DataTable Get(int id)
+        public DataTable Ucitaj(int trazi)
         {
-            string command = string.Format("select * from Evidencija " +
-                "WHERE ID = '{0}'", id);
-            return LoadDataBase(command);
-        }
-
-        public void Edit(string naziv, string prodavac, string mjernaJedinica, int kolicina, int id)
-        {
-            string update = string.Format("update Skladiste " +
-                "set NazivMaterijala = '{0}' , Prodavac='{1}', Kolicina='{2}',MjernaJedinica='{3}'" +
-                "where Id={4}", naziv, prodavac, kolicina, mjernaJedinica, id);
-            Query(update);
+            return Get("Evidencija", trazi);
         }
     }
 }

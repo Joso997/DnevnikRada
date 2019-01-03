@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DnevnikRada.Klase
 {
-    class Mjesta : Baza.DB 
+    class Mjesta : Baza.DB, IUseDatabase
     {
         
         public string Naziv_mjesta { get; private set; }
@@ -28,40 +28,27 @@ namespace DnevnikRada.Klase
 
         }
 
-        public void Dodaj()
+        private void Dodaj()
         {
-            string insert = string.Format("insert into Mjesta (NazivMjesta,Adresa) values ('{0}','{1}')", this.Naziv_mjesta,this.Adresa);
-            Query(insert);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
+            dictionary_stupci.Add("NazivMjesta", Naziv_mjesta);
+            dictionary_stupci.Add("Adresa", Adresa);
+            Set("Mjesta", dictionary_stupci);
         }
 
-        public DataTable Get()
+        public DataTable Ucitaj()
         {
-            string command = string.Format("select * from Mjesta");
-            return LoadDataBase(command);
+            return Get("Mjesta");
         }
 
-        public DataTable Get(string trazi)
+        public DataTable Ucitaj(string naziv_stupca, string trazi)
         {
-            string command = string.Format("select * from Mjesta " +
-                "WHERE NazivMjesta like '%{0}%' or " +
-                "Adresa like '%{0}%'", trazi);
-            return LoadDataBase(command);
+            return Get("Mjesta", naziv_stupca, trazi);
         }
 
-        public DataTable Get(int id)
+        public DataTable Ucitaj(int trazi)
         {
-            string command = string.Format("select * from Mjesta " +
-                "WHERE ID = '{0}'", id);
-            return LoadDataBase(command);
-        }
-
-        public void Edit(string naziv, string adresa, int id)
-        {
-            string update = string.Format("update Mjesta " +
-                "set NazivMjesta = '{0}' , Adresa='{1}'" +
-                "where Id={2}", naziv, adresa, id);
-            //fali jos od do vrijeme rada
-            Query(update);
+            return Get("Mjesta", trazi);
         }
     }
 }

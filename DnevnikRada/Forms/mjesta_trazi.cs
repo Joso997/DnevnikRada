@@ -18,7 +18,7 @@ namespace DnevnikRada
         public mjesta_trazi()
         {
             InitializeComponent();
-            mjestoGrid.DataSource = mjesto.Get();
+            mjestoGrid.DataSource = mjesto.Ucitaj();
             selectButton = SelectButton;
             Show();
         }
@@ -29,12 +29,12 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Trazi":
-                    string lol = string.Format(searchText.Text);
-                    mjestoGrid.DataSource = mjesto.Get(lol);
+                    string trazi = string.Format(searchText.Text);
+                    mjestoGrid.DataSource = mjesto.Ucitaj("Adresa",trazi);
                     break;
                 case "Edit":
-                    mjesto.Edit(nazivBox.Text, adresaBox.Text, index);
-                    mjestoGrid.DataSource = mjesto.Get();
+                    Mjesta _mjesto = new Mjesta(nazivBox.Text, adresaBox.Text);
+                    mjestoGrid.DataSource = mjesto.Ucitaj();
                     Edit.Enabled = false;
                     break;
                 case "Home":
@@ -47,7 +47,7 @@ namespace DnevnikRada
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dT = new DataTable();
-            dT = mjesto.Get(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+            dT = mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
             nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
             adresaBox.Text = dT.Rows[0].ItemArray[2].ToString();
             radOdbox.Text = dT.Rows[0].ItemArray[3].ToString();

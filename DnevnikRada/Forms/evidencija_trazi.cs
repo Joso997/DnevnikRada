@@ -17,7 +17,7 @@ namespace DnevnikRada
         public evidencija_trazi()
         {
             InitializeComponent();
-            evidencijaGrid.DataSource = evidencija.Get();
+            evidencijaGrid.DataSource = evidencija.Ucitaj();
             selectButton = SelectButton;
             Show();
         }
@@ -28,8 +28,8 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Trazi":
-                    string lol = textTrazi.Text;
-                    evidencijaGrid.DataSource = evidencija.Get(lol);
+                    string trazi = textTrazi.Text;
+                    evidencijaGrid.DataSource = evidencija.Ucitaj("NazivMjesta", trazi);
                     break;
                 case "Home":
                     Home Home = new Home();

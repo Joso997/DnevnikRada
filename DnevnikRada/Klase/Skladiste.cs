@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DnevnikRada.Klase
 {
-    class Skladiste : Baza.DB
+    class Skladiste : Baza.DB, IUseDatabase
     {
         
         public string Naziv_materijala{ get; private set;}
@@ -36,37 +36,27 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-            string insert = string.Format("insert into Skladiste (NazivMaterijala,Prodavac,Kolicina,MjernaJedinica) values('{0}','{1}','{2}','{3}')", this.Naziv_materijala,this.Proizvodac,this.Kolicina,this.Mjerna_jedinica);
-            Query(insert);
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>();
+            dictionary_stupci.Add("NazivMaterijala", Naziv_materijala);
+            dictionary_stupci.Add("Prodavac", Proizvodac);
+            dictionary_stupci.Add("Kolicina", Mjerna_jedinica);
+            dictionary_stupci.Add("MjernaJedinica", Kolicina);
+            Set("Skladiste", dictionary_stupci);
         }
 
-        public DataTable Get()
+        public DataTable Ucitaj()
         {
-            string command = string.Format("select * from Skladiste");
-            return LoadDataBase(command);
+            return Get("Skladiste");
         }
 
-        public DataTable Get(string trazi)
+        public DataTable Ucitaj(string naziv_stupca, string trazi)
         {
-            string command = string.Format("select * from Skladiste " +
-                "WHERE NazivMaterijala like '%{0}%' or " +
-                "Prodavac like '%{0}%'", trazi);
-            return LoadDataBase(command);
+            return Get("Skladiste", naziv_stupca, trazi);
         }
 
-        public DataTable Get(int id)
+        public DataTable Ucitaj(int trazi)
         {
-            string command = string.Format("select * from Skladiste " +
-                "WHERE ID = '{0}'", id);
-            return LoadDataBase(command);
-        }
-
-        public void Edit(string naziv,string prodavac, string mjernaJedinica, int kolicina, int id)
-        {
-            string update = string.Format("update Skladiste " +
-                "set NazivMaterijala = '{0}' , Prodavac='{1}', Kolicina='{2}',MjernaJedinica='{3}'" +
-                "where Id={4}", naziv, prodavac, kolicina, mjernaJedinica, id);
-            Query(update);
+            return Get("Skladiste", trazi);
         }
     }
 }

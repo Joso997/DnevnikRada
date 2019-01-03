@@ -27,7 +27,7 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", Int32.Parse(tb_utroseno_vrijeme.Text), "", 10, 10f);
+                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), "", 10, 10f);
                     break;
                 case "Home":
                     Home Home = new Home();
