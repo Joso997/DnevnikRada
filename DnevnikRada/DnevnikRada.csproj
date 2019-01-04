@@ -152,6 +152,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="bin\Debug\DB.db" />
     <EmbeddedResource Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.resx">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,9 +205,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Content Include="bin\Debug\DB.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
