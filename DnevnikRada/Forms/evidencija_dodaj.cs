@@ -32,7 +32,7 @@ namespace DnevnikRada
                     List<int> kolicina_list = new List<int>();
                     materijal_list.Add(metroComboBox1.Text);
                     kolicina_list.Add(int.Parse(metroTextBox1.Text));
-                    Evidencija evidencija = new Evidencija(metroComboBox9.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
+                    Evidencija evidencija = new Evidencija(metroComboBox9.Text, DateTime.Now, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":
                     Home Home = new Home();
