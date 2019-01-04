@@ -20,6 +20,7 @@ namespace DnevnikRada
             InitializeComponent();
             Show();
             selectButton = SelectButton;
+            Fill();
         }
         public bool SelectButton(object sender)
         {
@@ -27,7 +28,7 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), "", 10, 10f);
+                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), 10f);
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -43,6 +44,28 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void evidencija_dodaj_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void Fill()
+        {
+            EVTrazi_TEST_ moj3 = new EVTrazi_TEST_(null);
+            List<string> moj2 = new List<string>();
+            
+            moj2 = moj3.Radil();
+            int f = 0;
+            foreach (var s in moj2)
+            {
+                metroComboBox1.Items.Add(moj2[f]);
+                metroComboBox2.Items.Add(moj2[f]);
+                metroComboBox3.Items.Add(moj2[f]);
+                metroComboBox4.Items.Add(moj2[f]);
+                f++;
+            }
         }
     }
 }

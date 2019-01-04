@@ -48,6 +48,27 @@ namespace DnevnikRada.Baza
             return table;
         }
 
+        public List<string> Radil()
+        {
+            
+            string query = "select NazivMaterijala from Skladiste";
+            List<string> test = new List<string>();
+            command = new SQLiteCommand(query, connection);
+            
+
+            SQLiteDataReader reader=command.ExecuteReader();
+            test.Add("null");
+            while (reader.Read())
+            {
+                string name = reader.GetString(0);
+                
+                test.Add(name);
+                MessageBox.Show(name);
+            }
+
+            return test;
+        }
+
         protected void Set(string naziv_tablice, Dictionary<string, object> stupci_vrijednost)
         {
             string prviStupac = stupci_vrijednost.First().Key;
@@ -76,6 +97,14 @@ namespace DnevnikRada.Baza
         {
             string command = string.Format("select * from {0} " +
                 "WHERE ID = '{1}'", naziv_tablice, id);
+            return LoadDataBase(command);
+        }
+
+        protected DataTable Get2(string nazivTablice, string nazivKomponente, int id)
+        {
+            string command = string.Format("select * from {0} " +
+                "where {1}='{2}'", nazivTablice, nazivKomponente, id);
+            MessageBox.Show(command);
             return LoadDataBase(command);
         }
 

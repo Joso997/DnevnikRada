@@ -13,19 +13,17 @@ namespace DnevnikRada.Klase
     {
         public string Naziv_Mjesta { get; set; }
         public DateTime Datum { get; set; }
-        public string Materijal { get; set; }
-        public int Kolicina { get; set; }
         public double Cijena { get; set; }
         public string Opis_Posla { get; set; }
         public int Utroseno_Vrijeme { get; set; }
 
         //ono sto je potrebno u evidenciji <<datum, opis posla, utroseno vrijeme>> ostalo moze bit null
-        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, string _materijal, int _kolicina, double _cijena)
+        //materijal i kolicina prebacena u poveznicu jer nije potrebno ovdje
+        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, double _cijena)
         {
             Naziv_Mjesta = _nazivMjesta;
             Datum = _datum; ;
-            Materijal = _materijal;
-            Kolicina = _kolicina;
+
             Cijena = _cijena;
             Opis_Posla = _opisPosla;
             Utroseno_Vrijeme = _utrosenoVrijeme;
@@ -42,8 +40,6 @@ namespace DnevnikRada.Klase
             {
                 {"NazivMjesta", Naziv_Mjesta },
                 {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
-                {"Materijal", Materijal },
-                {"Kolicina", Kolicina },
                 {"Cijena", Cijena },
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme }
@@ -65,5 +61,7 @@ namespace DnevnikRada.Klase
         {
             return Get("Evidencija", trazi);
         }
+
+        
     }
 }

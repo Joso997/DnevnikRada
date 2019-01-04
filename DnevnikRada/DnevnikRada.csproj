@@ -143,7 +143,9 @@
     <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
     <Compile Include="Klase\Evidencija.cs" />
+    <Compile Include="Klase\EVTrazi%28TEST%29.cs" />
     <Compile Include="Klase\Mjesta.cs" />
+    <Compile Include="Klase\PoveznicaEvidencija-Skladiste.cs" />
     <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Skladiste.cs" />
     <Compile Include="Klase\UIController.cs">
@@ -188,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StanjePoduzeća\Statistika.resx">
       <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klase\UIController.resx">
+      <DependentUpon>UIController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

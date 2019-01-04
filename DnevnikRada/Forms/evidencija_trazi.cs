@@ -13,11 +13,13 @@ namespace DnevnikRada
 {
     public partial class evidencija_trazi : UIController
     {
+        PoveznicaEvidencija_Skladiste test = new PoveznicaEvidencija_Skladiste();
         Evidencija evidencija = new Evidencija();
         public evidencija_trazi()
         {
             InitializeComponent();
             evidencijaGrid.DataSource = evidencija.Ucitaj();
+            evidencijaGrid.Columns["id"].Visible = false;
             selectButton = SelectButton;
             Show();
         }
@@ -30,6 +32,7 @@ namespace DnevnikRada
                 case "Trazi":
                     string trazi = textTrazi.Text;
                     evidencijaGrid.DataSource = evidencija.Ucitaj("NazivMjesta", trazi);
+
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -45,6 +48,20 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void evidencijaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            materijalGrid.DataSource = test.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
+            opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
+
+            materijalGrid.Columns[0].Visible = false;
         }
     }
 }
