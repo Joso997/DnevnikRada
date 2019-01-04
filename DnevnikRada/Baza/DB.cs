@@ -22,19 +22,18 @@ namespace DnevnikRada.Baza
         {
             connection = new SQLiteConnection("Data Source = DB.db");
             connection.Open();
-            if (connection.State == ConnectionState.Open)
-                MessageBox.Show("BAZA JE OTVORENA! YEY");
-            else
+            if (connection.State != ConnectionState.Open)
                 MessageBox.Show("Error 404 NIGGA NOT FOUND");
         }
 
         //kod za izvođenje pod bazoom BILO KOJI al mora bit sql
-        private void Query(string sqlCode)
+        private long Query(string sqlCode)
         {
             command = connection.CreateCommand();
             command.CommandText = sqlCode;
             MessageBox.Show(sqlCode);
-            command.ExecuteNonQuery(); 
+            command.ExecuteNonQuery();
+            return connection.LastInsertRowId;
         } 
 
         //loudanje baze u formsima tj u tablici i vraca tu tablicu za grid view
@@ -48,36 +47,14 @@ namespace DnevnikRada.Baza
             return table;
         }
 
-        public List<string> Radil(string komponenta,  string tablica)
-        {
-            
-            string query = string.Format( "select {0} from {1}", komponenta, tablica);
-            List<string> test = new List<string>();
-            command = new SQLiteCommand(query, connection);
-            
-
-            SQLiteDataReader reader=command.ExecuteReader();
-            test.Add("null");
-            while (reader.Read())
-            {
-                string name = reader.GetString(0);
-                
-                test.Add(name);
-                MessageBox.Show(name);
-            }
-
-            return test;
-        }
-
-        protected void Set(string naziv_tablice, Dictionary<string, object> stupci_vrijednost)
+        protected object Set(string naziv_tablice, Dictionary<string, object> stupci_vrijednost, bool IncludeUpdate)
         {
             string prviStupac = stupci_vrijednost.First().Key;
             List<string> stupci = SetStupciVrij(stupci_vrijednost);
             string insert = string.Format("insert into {3}"+
-                "({0}) values({1})" +
-            " ON CONFLICT({4}) do update set {2} ",
+                "({0}) values({1})" + (IncludeUpdate?" ON CONFLICT({4}) do update set {2} ": ""),
              stupci[0], stupci[1], stupci[2], naziv_tablice, prviStupac);
-            Query(insert);
+            return Query(insert);
         }
 
         protected DataTable Get(string naziv_tablice)
@@ -100,17 +77,10 @@ namespace DnevnikRada.Baza
             return LoadDataBase(command);
         }
 
-        protected DataTable Get2(string nazivTablice, string nazivKomponente, int id)
+        protected DataTable Get(string naziv_tablice, string naziv_stupca, int strani_id)
         {
             string command = string.Format("select * from {0} " +
-                "where {1}='{2}'", nazivTablice, nazivKomponente, id);
-            MessageBox.Show(command);
-            return LoadDataBase(command);
-        }
-        
-        protected DataTable Get2(string nazivKomponente, string nazivTablice)
-        {
-            string command = string.Format("select {0} from {1}", nazivKomponente, nazivTablice);
+                "WHERE {1} = '{2}'", naziv_tablice, naziv_stupca, strani_id);
             return LoadDataBase(command);
         }
 

@@ -13,7 +13,6 @@ namespace DnevnikRada
 {
     public partial class evidencija_trazi : UIController
     {
-        PoveznicaEvidencija_Skladiste test = new PoveznicaEvidencija_Skladiste();
         Evidencija evidencija = new Evidencija();
         public evidencija_trazi()
         {
@@ -57,8 +56,8 @@ namespace DnevnikRada
 
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            materijalGrid.DataSource = test.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
+            Poveznica poveznica = new Poveznica();
+            materijalGrid.DataSource = poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
 
             materijalGrid.Columns[0].Visible = false;

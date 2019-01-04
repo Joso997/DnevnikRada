@@ -28,8 +28,11 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), 10f);
-
+                    List<string> materijal_list = new List<string>();
+                    List<int> kolicina_list = new List<int>();
+                    materijal_list.Add(metroComboBox1.Text);
+                    kolicina_list.Add(int.Parse(metroTextBox1.Text));
+                    Evidencija evidencija = new Evidencija(metroComboBox9.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -54,31 +57,18 @@ namespace DnevnikRada
 
         void Fill()
         {
-            EVTrazi_TEST_ moj3 = new EVTrazi_TEST_(null);
-            List<string> moj2 = new List<string>();
-            DataSet ds = new DataSet();
-            moj2 = moj3.Radil("NazivMaterijala", "Skladiste");
-            int f = 0;
-            foreach (var s in moj2)
-            {
-                metroComboBox1.Items.Add(moj2[f]);
-                metroComboBox2.Items.Add(moj2[f]);
-                metroComboBox3.Items.Add(moj2[f]);
-                metroComboBox4.Items.Add(moj2[f]);
-                f++;
-                
-            }
-            /*Mjesta mj = new Mjesta();
-            List<string> mj2 = new List<string>();
-            mj2 = mj.Radil("NazivMjesta", "Mjesta");
-            
-            
-            f = 0;
-            foreach (var c in mj2)
-            {
-                tb_naziv_mjesta.Items.Add(mj2[f]);
-                f++;
-            }*/
+            Skladiste skladiste = new Skladiste();
+            DataTable dT_skladiste = new DataTable();
+            dT_skladiste = skladiste.Ucitaj("NazivMaterijala", "");
+            var _temp = dT_skladiste.AsEnumerable().Select(r => r.Field<string>("NazivMaterijala")).ToArray();
+            metroComboBox1.Items.AddRange(_temp);
+            metroComboBox2.Items.AddRange(_temp);
+            metroComboBox3.Items.AddRange(_temp);
+            metroComboBox4.Items.AddRange(_temp);
+            Mjesta mjesta = new Mjesta();
+            DataTable dT_mjesta = new DataTable();
+            dT_mjesta = mjesta.Ucitaj("NazivMjesta", "");
+            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
             metroComboBox5.Items.Add("+");
             metroComboBox6.Items.Add("+");
             metroComboBox7.Items.Add("+");

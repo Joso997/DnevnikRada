@@ -35,7 +35,7 @@ namespace DnevnikRada.Klase
                 {"NazivMjesta", Naziv_mjesta },
                 {"Adresa", Adresa }
             };
-            Set("Mjesta", dictionary_stupci);
+            Set("Mjesta", dictionary_stupci, true);
         }
 
         public DataTable Ucitaj()

@@ -43,7 +43,7 @@ namespace DnevnikRada.Klase
                 {"Kolicina", Mjerna_jedinica },
                 {"MjernaJedinica", Kolicina },
             };
-            Set("Skladiste", dictionary_stupci);
+            Set("Skladiste", dictionary_stupci, true);
         }
 
         public DataTable Ucitaj()

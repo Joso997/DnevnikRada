@@ -55,8 +55,8 @@
             this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
-            this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
             // 
             // Home
@@ -87,7 +87,7 @@
             this.lbl_utroseno_vrijeme.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 137);
             this.lbl_utroseno_vrijeme.Name = "lbl_utroseno_vrijeme";
-            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(144, 25);
+            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(143, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
             this.lbl_utroseno_vrijeme.Text = "Utrošeno Vrijeme";
             // 
@@ -135,7 +135,7 @@
             this.lbl_opis_posla.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_opis_posla.Location = new System.Drawing.Point(140, 207);
             this.lbl_opis_posla.Name = "lbl_opis_posla";
-            this.lbl_opis_posla.Size = new System.Drawing.Size(92, 25);
+            this.lbl_opis_posla.Size = new System.Drawing.Size(91, 25);
             this.lbl_opis_posla.TabIndex = 6;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
@@ -204,7 +204,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(426, 90);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(155, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(152, 25);
             this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Utrosen Materijal 1";
             // 
@@ -324,7 +324,7 @@
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(426, 233);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(155, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(156, 25);
             this.metroLabel4.TabIndex = 16;
             this.metroLabel4.Text = "Utrosen Materijal 4";
             // 
@@ -418,36 +418,6 @@
             this.metroComboBox8.TabIndex = 26;
             this.metroComboBox8.UseSelectable = true;
             // 
-            // tb_naziv_mjesta
-            // 
-            // 
-            // 
-            // 
-            this.tb_naziv_mjesta.CustomButton.Image = null;
-            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_naziv_mjesta.CustomButton.Name = "";
-            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_naziv_mjesta.CustomButton.TabIndex = 1;
-            this.tb_naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_naziv_mjesta.CustomButton.UseSelectable = true;
-            this.tb_naziv_mjesta.CustomButton.Visible = false;
-            this.tb_naziv_mjesta.Lines = new string[0];
-            this.tb_naziv_mjesta.Location = new System.Drawing.Point(168, 98);
-            this.tb_naziv_mjesta.MaxLength = 32767;
-            this.tb_naziv_mjesta.Name = "tb_naziv_mjesta";
-            this.tb_naziv_mjesta.PasswordChar = '\0';
-            this.tb_naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_naziv_mjesta.SelectedText = "";
-            this.tb_naziv_mjesta.SelectionLength = 0;
-            this.tb_naziv_mjesta.SelectionStart = 0;
-            this.tb_naziv_mjesta.ShortcutsEnabled = true;
-            this.tb_naziv_mjesta.Size = new System.Drawing.Size(200, 23);
-            this.tb_naziv_mjesta.TabIndex = 28;
-            this.tb_naziv_mjesta.UseSelectable = true;
-            this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
@@ -458,14 +428,24 @@
             this.metroLabel6.TabIndex = 29;
             this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click);
             // 
+            // metroComboBox9
+            // 
+            this.metroComboBox9.FormattingEnabled = true;
+            this.metroComboBox9.ItemHeight = 23;
+            this.metroComboBox9.Location = new System.Drawing.Point(168, 92);
+            this.metroComboBox9.Name = "metroComboBox9";
+            this.metroComboBox9.Size = new System.Drawing.Size(200, 29);
+            this.metroComboBox9.TabIndex = 30;
+            this.metroComboBox9.UseSelectable = true;
+            // 
             // evidencija_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroComboBox9);
             this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.tb_naziv_mjesta);
             this.Controls.Add(this.metroComboBox8);
             this.Controls.Add(this.metroComboBox7);
             this.Controls.Add(this.metroComboBox6);
@@ -530,7 +510,7 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox6;
         private MetroFramework.Controls.MetroComboBox metroComboBox7;
         private MetroFramework.Controls.MetroComboBox metroComboBox8;
-        private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroComboBox metroComboBox9;
     }
 }

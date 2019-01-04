@@ -16,17 +16,19 @@ namespace DnevnikRada.Klase
         public double Cijena { get; set; }
         public string Opis_Posla { get; set; }
         public int Utroseno_Vrijeme { get; set; }
+        private Poveznica poveznica = new Poveznica();
 
         //ono sto je potrebno u evidenciji <<datum, opis posla, utroseno vrijeme>> ostalo moze bit null
         //materijal i kolicina prebacena u poveznicu jer nije potrebno ovdje
-        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, double _cijena)
+        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, double _cijena, List<string> _naziv_Materijala, List<int> _kolicina)
         {
             Naziv_Mjesta = _nazivMjesta;
             Datum = _datum;
-
             Cijena = _cijena;
             Opis_Posla = _opisPosla;
             Utroseno_Vrijeme = _utrosenoVrijeme;
+            poveznica.Naziv_materijala = _naziv_Materijala;
+            poveznica.Kolicina = _kolicina;
             Dodaj();
         }
         public Evidencija()
@@ -44,7 +46,8 @@ namespace DnevnikRada.Klase
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme }
             };
-            Set("Evidencija", dictionary_stupci);
+            poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
+            new Poveznica(poveznica.Id_evidencija, poveznica.Naziv_materijala, poveznica.Kolicina);
         }
 
         public DataTable Ucitaj()
