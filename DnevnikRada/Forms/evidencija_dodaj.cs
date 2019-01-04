@@ -29,6 +29,7 @@ namespace DnevnikRada
             {
                 case "Potvrdi":
                     Evidencija evidencija = new Evidencija(tb_naziv_mjesta.Text, DateTime.Now, "", int.Parse(tb_utroseno_vrijeme.Text), 10f);
+
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -55,8 +56,8 @@ namespace DnevnikRada
         {
             EVTrazi_TEST_ moj3 = new EVTrazi_TEST_(null);
             List<string> moj2 = new List<string>();
-            
-            moj2 = moj3.Radil();
+            DataSet ds = new DataSet();
+            moj2 = moj3.Radil("NazivMaterijala", "Skladiste");
             int f = 0;
             foreach (var s in moj2)
             {
@@ -65,7 +66,34 @@ namespace DnevnikRada
                 metroComboBox3.Items.Add(moj2[f]);
                 metroComboBox4.Items.Add(moj2[f]);
                 f++;
+                
             }
+            /*Mjesta mj = new Mjesta();
+            List<string> mj2 = new List<string>();
+            mj2 = mj.Radil("NazivMjesta", "Mjesta");
+            
+            
+            f = 0;
+            foreach (var c in mj2)
+            {
+                tb_naziv_mjesta.Items.Add(mj2[f]);
+                f++;
+            }*/
+            metroComboBox5.Items.Add("+");
+            metroComboBox6.Items.Add("+");
+            metroComboBox7.Items.Add("+");
+            metroComboBox8.Items.Add("+");
+            metroComboBox5.Items.Add("-");
+            metroComboBox6.Items.Add("-");
+            metroComboBox7.Items.Add("-");
+            metroComboBox8.Items.Add("-");
+
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

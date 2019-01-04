@@ -48,10 +48,10 @@ namespace DnevnikRada.Baza
             return table;
         }
 
-        public List<string> Radil()
+        public List<string> Radil(string komponenta,  string tablica)
         {
             
-            string query = "select NazivMaterijala from Skladiste";
+            string query = string.Format( "select {0} from {1}", komponenta, tablica);
             List<string> test = new List<string>();
             command = new SQLiteCommand(query, connection);
             
@@ -105,6 +105,12 @@ namespace DnevnikRada.Baza
             string command = string.Format("select * from {0} " +
                 "where {1}='{2}'", nazivTablice, nazivKomponente, id);
             MessageBox.Show(command);
+            return LoadDataBase(command);
+        }
+        
+        protected DataTable Get2(string nazivKomponente, string nazivTablice)
+        {
+            string command = string.Format("select {0} from {1}", nazivKomponente, nazivTablice);
             return LoadDataBase(command);
         }
 

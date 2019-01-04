@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
 
 namespace DnevnikRada.Klase
 {
@@ -14,10 +16,9 @@ namespace DnevnikRada.Klase
             Name = ime;
         }
 
-        public List<string> Lista()
+        public DataTable Test(string nazivKomp, string nazivTablice)
         {
-
-            return Radil();
+            return Get2(nazivKomp,nazivTablice);
         }
 
 

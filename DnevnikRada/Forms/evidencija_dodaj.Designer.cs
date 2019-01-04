@@ -32,7 +32,6 @@
             this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_utroseno_vrijeme = new MetroFramework.Controls.MetroLabel();
-            this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
             this.tb_utroseno_vrijeme = new MetroFramework.Controls.MetroTextBox();
             this.tb_opis_posla = new System.Windows.Forms.RichTextBox();
             this.lbl_opis_posla = new MetroFramework.Controls.MetroLabel();
@@ -52,6 +51,12 @@
             this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
+            this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // Home
@@ -85,36 +90,6 @@
             this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(144, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
             this.lbl_utroseno_vrijeme.Text = "Utrošeno Vrijeme";
-            // 
-            // tb_naziv_mjesta
-            // 
-            // 
-            // 
-            // 
-            this.tb_naziv_mjesta.CustomButton.Image = null;
-            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.tb_naziv_mjesta.CustomButton.Name = "";
-            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_naziv_mjesta.CustomButton.TabIndex = 1;
-            this.tb_naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_naziv_mjesta.CustomButton.UseSelectable = true;
-            this.tb_naziv_mjesta.CustomButton.Visible = false;
-            this.tb_naziv_mjesta.Lines = new string[0];
-            this.tb_naziv_mjesta.Location = new System.Drawing.Point(168, 92);
-            this.tb_naziv_mjesta.MaxLength = 32767;
-            this.tb_naziv_mjesta.Name = "tb_naziv_mjesta";
-            this.tb_naziv_mjesta.PasswordChar = '\0';
-            this.tb_naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_naziv_mjesta.SelectedText = "";
-            this.tb_naziv_mjesta.SelectionLength = 0;
-            this.tb_naziv_mjesta.SelectionStart = 0;
-            this.tb_naziv_mjesta.ShortcutsEnabled = true;
-            this.tb_naziv_mjesta.Size = new System.Drawing.Size(200, 23);
-            this.tb_naziv_mjesta.TabIndex = 3;
-            this.tb_naziv_mjesta.UseSelectable = true;
-            this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tb_utroseno_vrijeme
             // 
@@ -152,7 +127,7 @@
             this.tb_opis_posla.Name = "tb_opis_posla";
             this.tb_opis_posla.Size = new System.Drawing.Size(356, 333);
             this.tb_opis_posla.TabIndex = 5;
-            this.tb_opis_posla.Text = "";
+            this.tb_opis_posla.Text = resources.GetString("tb_opis_posla.Text");
             // 
             // lbl_opis_posla
             // 
@@ -199,7 +174,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(59, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(37, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -208,7 +183,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(778, 92);
+            this.metroTextBox1.Location = new System.Drawing.Point(819, 92);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -217,7 +192,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(81, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(59, 23);
             this.metroTextBox1.TabIndex = 11;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -239,7 +214,7 @@
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(59, 1);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(37, 1);
             this.metroTextBox2.CustomButton.Name = "";
             this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -248,7 +223,7 @@
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(778, 139);
+            this.metroTextBox2.Location = new System.Drawing.Point(819, 139);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -257,7 +232,7 @@
             this.metroTextBox2.SelectionLength = 0;
             this.metroTextBox2.SelectionStart = 0;
             this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(81, 23);
+            this.metroTextBox2.Size = new System.Drawing.Size(59, 23);
             this.metroTextBox2.TabIndex = 13;
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -279,7 +254,7 @@
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(59, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(37, 1);
             this.metroTextBox3.CustomButton.Name = "";
             this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -288,7 +263,7 @@
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(778, 188);
+            this.metroTextBox3.Location = new System.Drawing.Point(819, 188);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -297,7 +272,7 @@
             this.metroTextBox3.SelectionLength = 0;
             this.metroTextBox3.SelectionStart = 0;
             this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(81, 23);
+            this.metroTextBox3.Size = new System.Drawing.Size(59, 23);
             this.metroTextBox3.TabIndex = 15;
             this.metroTextBox3.UseSelectable = true;
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -319,7 +294,7 @@
             // 
             // 
             this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(59, 1);
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(37, 1);
             this.metroTextBox4.CustomButton.Name = "";
             this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -328,7 +303,7 @@
             this.metroTextBox4.CustomButton.UseSelectable = true;
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(778, 235);
+            this.metroTextBox4.Location = new System.Drawing.Point(819, 235);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -337,7 +312,7 @@
             this.metroTextBox4.SelectionLength = 0;
             this.metroTextBox4.SelectionStart = 0;
             this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(81, 23);
+            this.metroTextBox4.Size = new System.Drawing.Size(59, 23);
             this.metroTextBox4.TabIndex = 17;
             this.metroTextBox4.UseSelectable = true;
             this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -403,12 +378,98 @@
             this.metroLabel5.TabIndex = 22;
             this.metroLabel5.Text = "Utrosen Kolicina";
             // 
+            // metroComboBox5
+            // 
+            this.metroComboBox5.FormattingEnabled = true;
+            this.metroComboBox5.ItemHeight = 23;
+            this.metroComboBox5.Location = new System.Drawing.Point(767, 92);
+            this.metroComboBox5.Name = "metroComboBox5";
+            this.metroComboBox5.Size = new System.Drawing.Size(46, 29);
+            this.metroComboBox5.TabIndex = 23;
+            this.metroComboBox5.UseSelectable = true;
+            // 
+            // metroComboBox6
+            // 
+            this.metroComboBox6.FormattingEnabled = true;
+            this.metroComboBox6.ItemHeight = 23;
+            this.metroComboBox6.Location = new System.Drawing.Point(767, 137);
+            this.metroComboBox6.Name = "metroComboBox6";
+            this.metroComboBox6.Size = new System.Drawing.Size(46, 29);
+            this.metroComboBox6.TabIndex = 24;
+            this.metroComboBox6.UseSelectable = true;
+            // 
+            // metroComboBox7
+            // 
+            this.metroComboBox7.FormattingEnabled = true;
+            this.metroComboBox7.ItemHeight = 23;
+            this.metroComboBox7.Location = new System.Drawing.Point(767, 186);
+            this.metroComboBox7.Name = "metroComboBox7";
+            this.metroComboBox7.Size = new System.Drawing.Size(46, 29);
+            this.metroComboBox7.TabIndex = 25;
+            this.metroComboBox7.UseSelectable = true;
+            // 
+            // metroComboBox8
+            // 
+            this.metroComboBox8.FormattingEnabled = true;
+            this.metroComboBox8.ItemHeight = 23;
+            this.metroComboBox8.Location = new System.Drawing.Point(767, 235);
+            this.metroComboBox8.Name = "metroComboBox8";
+            this.metroComboBox8.Size = new System.Drawing.Size(46, 29);
+            this.metroComboBox8.TabIndex = 26;
+            this.metroComboBox8.UseSelectable = true;
+            // 
+            // tb_naziv_mjesta
+            // 
+            // 
+            // 
+            // 
+            this.tb_naziv_mjesta.CustomButton.Image = null;
+            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.tb_naziv_mjesta.CustomButton.Name = "";
+            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_naziv_mjesta.CustomButton.TabIndex = 1;
+            this.tb_naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_naziv_mjesta.CustomButton.UseSelectable = true;
+            this.tb_naziv_mjesta.CustomButton.Visible = false;
+            this.tb_naziv_mjesta.Lines = new string[0];
+            this.tb_naziv_mjesta.Location = new System.Drawing.Point(168, 98);
+            this.tb_naziv_mjesta.MaxLength = 32767;
+            this.tb_naziv_mjesta.Name = "tb_naziv_mjesta";
+            this.tb_naziv_mjesta.PasswordChar = '\0';
+            this.tb_naziv_mjesta.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_naziv_mjesta.SelectedText = "";
+            this.tb_naziv_mjesta.SelectionLength = 0;
+            this.tb_naziv_mjesta.SelectionStart = 0;
+            this.tb_naziv_mjesta.ShortcutsEnabled = true;
+            this.tb_naziv_mjesta.Size = new System.Drawing.Size(200, 23);
+            this.tb_naziv_mjesta.TabIndex = 28;
+            this.tb_naziv_mjesta.UseSelectable = true;
+            this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.Location = new System.Drawing.Point(12, 315);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(0, 0);
+            this.metroLabel6.TabIndex = 29;
+            this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click);
+            // 
             // evidencija_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.tb_naziv_mjesta);
+            this.Controls.Add(this.metroComboBox8);
+            this.Controls.Add(this.metroComboBox7);
+            this.Controls.Add(this.metroComboBox6);
+            this.Controls.Add(this.metroComboBox5);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroComboBox4);
             this.Controls.Add(this.metroComboBox3);
@@ -428,7 +489,6 @@
             this.Controls.Add(this.lbl_opis_posla);
             this.Controls.Add(this.tb_opis_posla);
             this.Controls.Add(this.tb_utroseno_vrijeme);
-            this.Controls.Add(this.tb_naziv_mjesta);
             this.Controls.Add(this.lbl_utroseno_vrijeme);
             this.Controls.Add(this.lbl_naziv_mjesta);
             this.Controls.Add(this.Home);
@@ -447,7 +507,6 @@
         private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel lbl_naziv_mjesta;
         private MetroFramework.Controls.MetroLabel lbl_utroseno_vrijeme;
-        private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
         private MetroFramework.Controls.MetroTextBox tb_utroseno_vrijeme;
         private System.Windows.Forms.RichTextBox tb_opis_posla;
         private MetroFramework.Controls.MetroLabel lbl_opis_posla;
@@ -467,5 +526,11 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox3;
         private MetroFramework.Controls.MetroComboBox metroComboBox4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox6;
+        private MetroFramework.Controls.MetroComboBox metroComboBox7;
+        private MetroFramework.Controls.MetroComboBox metroComboBox8;
+        private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
     }
 }

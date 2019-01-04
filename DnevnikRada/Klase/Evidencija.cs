@@ -22,7 +22,7 @@ namespace DnevnikRada.Klase
         public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, double _cijena)
         {
             Naziv_Mjesta = _nazivMjesta;
-            Datum = _datum; ;
+            Datum = _datum;
 
             Cijena = _cijena;
             Opis_Posla = _opisPosla;

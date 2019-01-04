@@ -52,5 +52,7 @@ namespace DnevnikRada.Klase
         {
             return Get("Mjesta", trazi);
         }
+
+
     }
 }

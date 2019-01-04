@@ -121,7 +121,7 @@
   <data name="Home.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAy9JREFUeF7t3MurTWEYx/HtLpeQlFxTJANiwoBcBpIMlKJQyh9ggIlEKSEDAylF
+        vgAADr4B6kKxwAAAAy9JREFUeF7t3MurTWEYx/HtLpeQlFxTJANiwoBcBpIMlKJQyh9ggIlEKSEDAylF
         MlNkpFxKKQOnXKMkpVwKERK5330fWb37LM923vPstc5ea6/nV5/BWR5rv/vXqb32e9beNU/7pj+WYtyf
         nzzdyiTcxC+8xxp4IrMMryHl1duPfvA0SG/swA+ky0tcwhh4UhmJs9BKS3uG+fD8zSw8gFZWI9+wEZXP
         enyCVlKM4xiCrjKigcEoZQbgMLRSuusOpkKLXAJ19dt9BKXKBFyF9mSs3mIF0tkAbT6tNL+Ji/ES2pNo
@@ -138,10 +138,13 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="tb_opis_posla.Text" xml:space="preserve">
+    <value>piraj ako te sto zanima joso i vidite dal vam se baza uplouda kada skinete updejt ako ne da znam jer vam je onda moram poslat mislim ona baza sta je na kompu ne ovdje jer ovdje umetanje neradi trenutno lol al ZATO TRAZILICA RADI VALJDA HAHAHAHAHAHAHAHAHAHAHAHAHAHA</value>
+  </data>
   <data name="btn_dodaj.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAACitJREFUeF7tXGtsFNcVhlZVpbZq+6tSf1Zq1f6rWqSqUqtG8e6Cvbvg2jsLCQaa
+        vgAADr4B6kKxwAAACitJREFUeF7tXGtsFNcVhlZVpbZq+6tSf1Zq1f6rWqSqUqtG8e6Cvbvg2jsLCQaa
         B49QDLgUiqFJKA4JkCiEVk3zkmhKAkTkQQJJU5KIhoaAARtjbAhxcEhscCB4/VobP3bt2/PN3LXPzN4F
         e3dmvTbzSZ92tJ695zvHd+7z3JniwoULFy5cuHDhwsV4IBwOfzUvWPRzrz90p9evVdDnS96AdsgTCFV5
         /FqDTrrGd/gbXW/EvZ780M/wW1nMrYUZM4q+7/GHVlBQDlBAOulTpEP8lgK8n7jc5yv6nix+cmLDhg1f
