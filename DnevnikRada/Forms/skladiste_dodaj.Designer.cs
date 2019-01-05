@@ -231,9 +231,9 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(407, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 24);
+            this.label1.Size = new System.Drawing.Size(236, 24);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Dodavanje Skladišta";
+            this.label1.Text = "Dodavanje U Skladište";
             // 
             // Skladiste_dodaj
             // 
