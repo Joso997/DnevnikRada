@@ -58,5 +58,65 @@ namespace DnevnikRada
         {
             base.Click_Gumb(sender, e);
         }
+
+        private void skladiste_trazi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kolicinaBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mjBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prodavacBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nazivBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nazivLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prodavacLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mjLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kolicinaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skladisteGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
