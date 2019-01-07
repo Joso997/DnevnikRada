@@ -46,5 +46,10 @@ namespace DnevnikRada
         {
             base.Click_Gumb(sender, e);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

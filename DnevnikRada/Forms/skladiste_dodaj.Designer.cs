@@ -192,7 +192,7 @@
             this.lbl_kolicina.Name = "lbl_kolicina";
             this.lbl_kolicina.Size = new System.Drawing.Size(70, 25);
             this.lbl_kolicina.TabIndex = 9;
-            this.lbl_kolicina.Text = "Kolicina";
+            this.lbl_kolicina.Text = "Količina";
             // 
             // tb_kolicina
             // 
@@ -229,11 +229,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(407, 134);
+            this.label1.Location = new System.Drawing.Point(407, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 24);
             this.label1.TabIndex = 16;
             this.label1.Text = "Dodavanje U Skladište";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Skladiste_dodaj
             // 

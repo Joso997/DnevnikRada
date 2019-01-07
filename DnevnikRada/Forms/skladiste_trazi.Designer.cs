@@ -90,7 +90,7 @@
             this.skladisteGrid.EnableHeadersVisualStyles = false;
             this.skladisteGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.skladisteGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skladisteGrid.Location = new System.Drawing.Point(175, 170);
+            this.skladisteGrid.Location = new System.Drawing.Point(169, 157);
             this.skladisteGrid.MultiSelect = false;
             this.skladisteGrid.Name = "skladisteGrid";
             this.skladisteGrid.ReadOnly = true;
@@ -105,7 +105,7 @@
             this.skladisteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.skladisteGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.skladisteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.skladisteGrid.Size = new System.Drawing.Size(550, 200);
+            this.skladisteGrid.Size = new System.Drawing.Size(562, 200);
             this.skladisteGrid.TabIndex = 3;
             this.skladisteGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             this.skladisteGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.skladisteGrid_CellContentClick);
@@ -113,7 +113,7 @@
             // Trazi
             // 
             this.Trazi.BackColor = System.Drawing.Color.Aqua;
-            this.Trazi.Location = new System.Drawing.Point(625, 100);
+            this.Trazi.Location = new System.Drawing.Point(631, 87);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(100, 50);
             this.Trazi.TabIndex = 4;
@@ -136,7 +136,7 @@
             this.search.CustomButton.UseSelectable = true;
             this.search.CustomButton.Visible = false;
             this.search.Lines = new string[0];
-            this.search.Location = new System.Drawing.Point(290, 115);
+            this.search.Location = new System.Drawing.Point(296, 102);
             this.search.MaxLength = 32767;
             this.search.Name = "search";
             this.search.PasswordChar = '\0';
@@ -167,7 +167,7 @@
             this.prodavacBox.CustomButton.UseSelectable = true;
             this.prodavacBox.CustomButton.Visible = false;
             this.prodavacBox.Lines = new string[0];
-            this.prodavacBox.Location = new System.Drawing.Point(290, 419);
+            this.prodavacBox.Location = new System.Drawing.Point(296, 419);
             this.prodavacBox.MaxLength = 32767;
             this.prodavacBox.Name = "prodavacBox";
             this.prodavacBox.PasswordChar = '\0';
@@ -198,7 +198,7 @@
             this.nazivBox.CustomButton.UseSelectable = true;
             this.nazivBox.CustomButton.Visible = false;
             this.nazivBox.Lines = new string[0];
-            this.nazivBox.Location = new System.Drawing.Point(290, 390);
+            this.nazivBox.Location = new System.Drawing.Point(296, 377);
             this.nazivBox.MaxLength = 32767;
             this.nazivBox.Name = "nazivBox";
             this.nazivBox.PasswordChar = '\0';
@@ -229,7 +229,7 @@
             this.kolicinaBox.CustomButton.UseSelectable = true;
             this.kolicinaBox.CustomButton.Visible = false;
             this.kolicinaBox.Lines = new string[0];
-            this.kolicinaBox.Location = new System.Drawing.Point(290, 477);
+            this.kolicinaBox.Location = new System.Drawing.Point(296, 503);
             this.kolicinaBox.MaxLength = 32767;
             this.kolicinaBox.Name = "kolicinaBox";
             this.kolicinaBox.PasswordChar = '\0';
@@ -260,7 +260,7 @@
             this.mjBox.CustomButton.UseSelectable = true;
             this.mjBox.CustomButton.Visible = false;
             this.mjBox.Lines = new string[0];
-            this.mjBox.Location = new System.Drawing.Point(290, 448);
+            this.mjBox.Location = new System.Drawing.Point(296, 461);
             this.mjBox.MaxLength = 32767;
             this.mjBox.Name = "mjBox";
             this.mjBox.PasswordChar = '\0';
@@ -279,9 +279,10 @@
             // nazivLabel
             // 
             this.nazivLabel.AutoSize = true;
-            this.nazivLabel.Location = new System.Drawing.Point(175, 394);
+            this.nazivLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.nazivLabel.Location = new System.Drawing.Point(160, 375);
             this.nazivLabel.Name = "nazivLabel";
-            this.nazivLabel.Size = new System.Drawing.Size(41, 19);
+            this.nazivLabel.Size = new System.Drawing.Size(54, 25);
             this.nazivLabel.TabIndex = 10;
             this.nazivLabel.Text = "Naziv";
             this.nazivLabel.Click += new System.EventHandler(this.nazivLabel_Click);
@@ -289,19 +290,21 @@
             // prodavacLabel
             // 
             this.prodavacLabel.AutoSize = true;
-            this.prodavacLabel.Location = new System.Drawing.Point(175, 423);
+            this.prodavacLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.prodavacLabel.Location = new System.Drawing.Point(160, 417);
             this.prodavacLabel.Name = "prodavacLabel";
-            this.prodavacLabel.Size = new System.Drawing.Size(64, 19);
+            this.prodavacLabel.Size = new System.Drawing.Size(82, 25);
             this.prodavacLabel.TabIndex = 11;
-            this.prodavacLabel.Text = "Prodavac";
+            this.prodavacLabel.Text = "Prodavač";
             this.prodavacLabel.Click += new System.EventHandler(this.prodavacLabel_Click);
             // 
             // mjLabel
             // 
             this.mjLabel.AutoSize = true;
-            this.mjLabel.Location = new System.Drawing.Point(175, 452);
+            this.mjLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.mjLabel.Location = new System.Drawing.Point(160, 459);
             this.mjLabel.Name = "mjLabel";
-            this.mjLabel.Size = new System.Drawing.Size(100, 19);
+            this.mjLabel.Size = new System.Drawing.Size(130, 25);
             this.mjLabel.TabIndex = 12;
             this.mjLabel.Text = "Mjerna Jedinica";
             this.mjLabel.Click += new System.EventHandler(this.mjLabel_Click);
@@ -309,18 +312,19 @@
             // kolicinaLabel
             // 
             this.kolicinaLabel.AutoSize = true;
-            this.kolicinaLabel.Location = new System.Drawing.Point(175, 481);
+            this.kolicinaLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.kolicinaLabel.Location = new System.Drawing.Point(160, 501);
             this.kolicinaLabel.Name = "kolicinaLabel";
-            this.kolicinaLabel.Size = new System.Drawing.Size(53, 19);
+            this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
             this.kolicinaLabel.TabIndex = 13;
-            this.kolicinaLabel.Text = "Kolicina";
+            this.kolicinaLabel.Text = "Količina";
             this.kolicinaLabel.Click += new System.EventHandler(this.kolicinaLabel_Click);
             // 
             // Edit
             // 
             this.Edit.BackColor = System.Drawing.Color.Aqua;
             this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(625, 419);
+            this.Edit.Location = new System.Drawing.Point(631, 377);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(100, 50);
             this.Edit.TabIndex = 14;
@@ -333,7 +337,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(333, 70);
+            this.label1.Location = new System.Drawing.Point(339, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 24);
             this.label1.TabIndex = 15;
