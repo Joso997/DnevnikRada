@@ -12,14 +12,14 @@ namespace DnevnikRada.Klase
     {
         
         public string Naziv_mjesta { get; private set; }
-        public string Adresa { get; private set; }
+
 
         //vrijeme rada od do sta to tocno mora bit u bazi tj koji tip podatka
 
-        public Mjesta(string _naziv_mjesta, string _adresa)
+        public Mjesta(string _naziv_mjesta)
         {
             Naziv_mjesta = _naziv_mjesta;
-            Adresa = _adresa;
+
             Dodaj();
         }
 
@@ -30,10 +30,13 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
+            // ps vrijeme rada od i do su stringovi tako da i to mozes ubacit ovdje 
             Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
             {
-                {"NazivMjesta", Naziv_mjesta },
-                {"Adresa", Adresa }
+                {"Naziv_AdresaMjesta", Naziv_mjesta },
+                
+
+                
             };
             Set("Mjesta", dictionary_stupci, true);
         }

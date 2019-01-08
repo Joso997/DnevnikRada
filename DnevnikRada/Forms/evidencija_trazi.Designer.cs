@@ -67,6 +67,7 @@
             this.opisPosla.Size = new System.Drawing.Size(399, 262);
             this.opisPosla.TabIndex = 1;
             this.opisPosla.Text = "";
+            this.opisPosla.TextChanged += new System.EventHandler(this.opisPosla_TextChanged);
             // 
             // lbl_opis_posla
             // 

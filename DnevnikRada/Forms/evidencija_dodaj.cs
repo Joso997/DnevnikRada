@@ -67,8 +67,8 @@ namespace DnevnikRada
             metroComboBox4.Items.AddRange(_temp);
             Mjesta mjesta = new Mjesta();
             DataTable dT_mjesta = new DataTable();
-            dT_mjesta = mjesta.Ucitaj("NazivMjesta", "");
-            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
+            dT_mjesta = mjesta.Ucitaj("Naziv_AdresaMjesta", "");
+            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("Naziv_AdresaMjesta")).ToArray());
             metroComboBox5.Items.Add("+");
             metroComboBox6.Items.Add("+");
             metroComboBox7.Items.Add("+");
@@ -82,6 +82,11 @@ namespace DnevnikRada
         }
 
         private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox9_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

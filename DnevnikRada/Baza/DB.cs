@@ -51,10 +51,19 @@ namespace DnevnikRada.Baza
         {
             string prviStupac = stupci_vrijednost.First().Key;
             List<string> stupci = SetStupciVrij(stupci_vrijednost);
+                string insert = string.Format("insert into {3}" +
+                "({0}) values({1})" + (IncludeUpdate ? " ON CONFLICT({4}) do update set {2} " : ""),
+             stupci[0], stupci[1], stupci[2], naziv_tablice, prviStupac);
+                return Query(insert);
+
+
+
+            /*
             string insert = string.Format("insert into {3}"+
                 "({0}) values({1})" + (IncludeUpdate?" ON CONFLICT({4}) do update set {2} ": ""),
              stupci[0], stupci[1], stupci[2], naziv_tablice, prviStupac);
             return Query(insert);
+            */
         }
 
         protected DataTable Get(string naziv_tablice)

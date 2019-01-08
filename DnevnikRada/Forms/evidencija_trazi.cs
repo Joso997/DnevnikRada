@@ -62,5 +62,10 @@ namespace DnevnikRada
 
             materijalGrid.Columns[0].Visible = false;
         }
+
+        private void opisPosla_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

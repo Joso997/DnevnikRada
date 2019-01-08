@@ -42,7 +42,7 @@ namespace DnevnikRada
         {
             DataTable dT = new DataTable();
             dT = skladiste.Ucitaj(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
-            nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
+            nazivBox.Text = dT.Rows[e.RowIndex].ItemArray[1].ToString();
             prodavacBox.Text = dT.Rows[0].ItemArray[2].ToString();
             kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
             mjBox.Text = dT.Rows[0].ItemArray[4].ToString();

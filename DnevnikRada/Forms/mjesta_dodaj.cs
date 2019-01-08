@@ -26,7 +26,7 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text);
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -42,6 +42,11 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void tb_naziv_mjesta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
