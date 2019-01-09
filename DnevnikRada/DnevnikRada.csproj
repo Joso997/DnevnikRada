@@ -68,17 +68,17 @@
     <Compile Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.Designer.cs">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\evidencija_dodaj.cs">
+    <Compile Include="Forms\Evidencija_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\evidencija_dodaj.Designer.cs">
-      <DependentUpon>evidencija_dodaj.cs</DependentUpon>
+    <Compile Include="Forms\Evidencija_dodaj.Designer.cs">
+      <DependentUpon>Evidencija_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\evidencija_trazi.cs">
+    <Compile Include="Forms\Evidencija_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\evidencija_trazi.Designer.cs">
-      <DependentUpon>evidencija_trazi.cs</DependentUpon>
+    <Compile Include="Forms\Evidencija_trazi.Designer.cs">
+      <DependentUpon>Evidencija_trazi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -92,17 +92,17 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\mjesta_dodaj.cs">
+    <Compile Include="Forms\Mjesta_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\mjesta_dodaj.Designer.cs">
-      <DependentUpon>mjesta_dodaj.cs</DependentUpon>
+    <Compile Include="Forms\Mjesta_dodaj.Designer.cs">
+      <DependentUpon>Mjesta_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\mjesta_trazi.cs">
+    <Compile Include="Forms\Mjesta_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\mjesta_trazi.Designer.cs">
-      <DependentUpon>mjesta_trazi.cs</DependentUpon>
+    <Compile Include="Forms\Mjesta_trazi.Designer.cs">
+      <DependentUpon>Mjesta_trazi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StanjePoduzeća\odstupanje_od_normale.cs">
       <SubType>Form</SubType>
@@ -116,17 +116,17 @@
     <Compile Include="Forms\StanjePoduzeća\potrosnja_materijala_kroz_vrijeme.Designer.cs">
       <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\skladiste_dodaj.cs">
+    <Compile Include="Forms\Skladiste_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\skladiste_dodaj.Designer.cs">
-      <DependentUpon>skladiste_dodaj.cs</DependentUpon>
+    <Compile Include="Forms\Skladiste_dodaj.Designer.cs">
+      <DependentUpon>Skladiste_dodaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\skladiste_trazi.cs">
+    <Compile Include="Forms\Skladiste_trazi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\skladiste_trazi.Designer.cs">
-      <DependentUpon>skladiste_trazi.cs</DependentUpon>
+    <Compile Include="Forms\Skladiste_trazi.Designer.cs">
+      <DependentUpon>Skladiste_trazi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Stanje_Poduzeca.cs">
       <SubType>Form</SubType>
@@ -150,16 +150,22 @@
     <Compile Include="Klase\UIController.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Kontrole\AddMaterijal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrole\AddMaterijal.Designer.cs">
+      <DependentUpon>AddMaterijal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="bin\Debug\DB.db" />
     <EmbeddedResource Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.resx">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\evidencija_dodaj.resx">
-      <DependentUpon>evidencija_dodaj.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Evidencija_dodaj.resx">
+      <DependentUpon>Evidencija_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\evidencija_trazi.resx">
-      <DependentUpon>evidencija_trazi.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Evidencija_trazi.resx">
+      <DependentUpon>Evidencija_trazi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -167,11 +173,11 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\mjesta_dodaj.resx">
-      <DependentUpon>mjesta_dodaj.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Mjesta_dodaj.resx">
+      <DependentUpon>Mjesta_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\mjesta_trazi.resx">
-      <DependentUpon>mjesta_trazi.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Mjesta_trazi.resx">
+      <DependentUpon>Mjesta_trazi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StanjePoduzeća\odstupanje_od_normale.resx">
       <DependentUpon>odstupanje_od_normale.cs</DependentUpon>
@@ -179,11 +185,11 @@
     <EmbeddedResource Include="Forms\StanjePoduzeća\potrosnja_materijala_kroz_vrijeme.resx">
       <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\skladiste_dodaj.resx">
-      <DependentUpon>skladiste_dodaj.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Skladiste_dodaj.resx">
+      <DependentUpon>Skladiste_dodaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\skladiste_trazi.resx">
-      <DependentUpon>skladiste_trazi.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Skladiste_trazi.resx">
+      <DependentUpon>Skladiste_trazi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stanje_Poduzeca.resx">
       <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klase\UIController.resx">
       <DependentUpon>UIController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrole\AddMaterijal.resx">
+      <DependentUpon>AddMaterijal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

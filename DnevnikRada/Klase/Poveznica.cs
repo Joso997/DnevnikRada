@@ -29,13 +29,17 @@ namespace DnevnikRada.Klase
 
         private void Dodaj()
         {
-                   Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
+            foreach (var pair in Naziv_materijala.Zip(Kolicina, (naziv, kolicina) => (Naziv: naziv, Kol: kolicina)))
+            {
+                Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
                 {
                     {"Id_evidencija", Id_evidencija },
-                    {"NazivMaterijala", Naziv_materijala[0] },
-                    {"Kolicina", Kolicina[0] }
+                    {"NazivMaterijala", pair.Naziv },
+                    {"Kolicina", pair.Kol }
                 };
                 Set("Poveznica", dictionary_stupci, false);
+            }
+                   
         }
 
         public DataTable Ucitaj()

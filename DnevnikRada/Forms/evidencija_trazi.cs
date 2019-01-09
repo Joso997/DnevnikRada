@@ -49,11 +49,6 @@ namespace DnevnikRada
             base.Click_Gumb(sender, e);
         }
 
-        private void evidencijaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Poveznica poveznica = new Poveznica();
@@ -61,11 +56,6 @@ namespace DnevnikRada
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
 
             materijalGrid.Columns[0].Visible = false;
-        }
-
-        private void opisPosla_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

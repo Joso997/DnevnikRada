@@ -14,24 +14,37 @@ namespace DnevnikRada
 {
     public partial class Evidencija_dodaj : UIController
     {
-        private bool UserClosing { get; set; }
+        DataTable dT = new DataTable();
         public Evidencija_dodaj()
         {
             InitializeComponent();
             Show();
             selectButton = SelectButton;
             Fill();
+            dT.Columns.Add("NazivMaterijala").Unique = true;
+            dT.Columns.Add("Kolicina", typeof(Int32));
         }
         public bool SelectButton(object sender)
         {
             var button = (Button)sender;
             switch (button.Name)
             {
+                case "Dodaj":
+                    object[] marks = new object[] { metroComboBox1.Text, int.Parse(metroTextBox1.Text) };
+                    var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", metroComboBox1.Text));
+                    if(rows.Length == 0)
+                        dT.LoadDataRow(marks, true);
+                    else
+                        rows[0]["Kolicina"] = int.Parse(metroTextBox1.Text);
+                    materijalGrid.DataSource = dT;
+                    break;
                 case "Potvrdi":
                     List<string> materijal_list = new List<string>();
                     List<int> kolicina_list = new List<int>();
-                    materijal_list.Add(metroComboBox1.Text);
-                    kolicina_list.Add(int.Parse(metroTextBox1.Text));
+                    var n_temp = dT.AsEnumerable().Select(r => r.Field<string>(0)).ToArray();
+                    materijal_list.AddRange(n_temp);
+                    var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToArray();
+                    kolicina_list.AddRange(_temp);
                     Evidencija evidencija = new Evidencija(metroComboBox9.Text, DateTime.Now, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":
@@ -54,26 +67,21 @@ namespace DnevnikRada
         {
             Skladiste skladiste = new Skladiste();
             DataTable dT_skladiste = new DataTable();
-            dT_skladiste = skladiste.Ucitaj("NazivMaterijala", "");
+            dT_skladiste = skladiste.Ucitaj("NazivMaterijala", null);
             var _temp = dT_skladiste.AsEnumerable().Select(r => r.Field<string>("NazivMaterijala")).ToArray();
             metroComboBox1.Items.AddRange(_temp);
-            metroComboBox2.Items.AddRange(_temp);
-            metroComboBox3.Items.AddRange(_temp);
-            metroComboBox4.Items.AddRange(_temp);
             Mjesta mjesta = new Mjesta();
             DataTable dT_mjesta = new DataTable();
-            dT_mjesta = mjesta.Ucitaj("Naziv_AdresaMjesta", "");
-            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("Naziv_AdresaMjesta")).ToArray());
-            metroComboBox5.Items.Add("+");
-            metroComboBox6.Items.Add("+");
-            metroComboBox7.Items.Add("+");
-            metroComboBox8.Items.Add("+");
+            dT_mjesta = mjesta.Ucitaj("NazivMjesta", null);
+            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
+            metroComboBox5.Items.Add("+");;
             metroComboBox5.Items.Add("-");
-            metroComboBox6.Items.Add("-");
-            metroComboBox7.Items.Add("-");
-            metroComboBox8.Items.Add("-");
+        }
 
-
+        private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            metroComboBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
+            metroTextBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
         }
     }
 }

@@ -67,7 +67,6 @@
             this.opisPosla.Size = new System.Drawing.Size(399, 262);
             this.opisPosla.TabIndex = 1;
             this.opisPosla.Text = "";
-            this.opisPosla.TextChanged += new System.EventHandler(this.opisPosla_TextChanged);
             // 
             // lbl_opis_posla
             // 
@@ -124,7 +123,6 @@
             this.evidencijaGrid.Size = new System.Drawing.Size(760, 176);
             this.evidencijaGrid.TabIndex = 3;
             this.evidencijaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellClick);
-            this.evidencijaGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellContentClick);
             // 
             // Trazi
             // 
