@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class evidencija_dodaj
+    partial class Evidencija_dodaj
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(evidencija_dodaj));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evidencija_dodaj));
             this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_utroseno_vrijeme = new MetroFramework.Controls.MetroLabel();
@@ -426,7 +426,6 @@
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(0, 0);
             this.metroLabel6.TabIndex = 29;
-            this.metroLabel6.Click += new System.EventHandler(this.metroLabel6_Click);
             // 
             // metroComboBox9
             // 
@@ -437,7 +436,6 @@
             this.metroComboBox9.Size = new System.Drawing.Size(200, 29);
             this.metroComboBox9.TabIndex = 30;
             this.metroComboBox9.UseSelectable = true;
-            this.metroComboBox9.SelectedIndexChanged += new System.EventHandler(this.metroComboBox9_SelectedIndexChanged);
             // 
             // evidencija_dodaj
             // 
@@ -477,7 +475,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_dodaj";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
-            this.Load += new System.EventHandler(this.evidencija_dodaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

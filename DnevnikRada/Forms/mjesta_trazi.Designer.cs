@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class mjesta_trazi
+    partial class Mjesta_trazi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_trazi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mjesta_trazi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Edit = new MetroFramework.Controls.MetroButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.adresaBox = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,7 +194,7 @@
             this.radOdbox.CustomButton.UseSelectable = true;
             this.radOdbox.CustomButton.Visible = false;
             this.radOdbox.Lines = new string[0];
-            this.radOdbox.Location = new System.Drawing.Point(176, 440);
+            this.radOdbox.Location = new System.Drawing.Point(176, 467);
             this.radOdbox.MaxLength = 32767;
             this.radOdbox.Name = "radOdbox";
             this.radOdbox.PasswordChar = '\0';
@@ -222,7 +224,7 @@
             this.radDoBox.CustomButton.UseSelectable = true;
             this.radDoBox.CustomButton.Visible = false;
             this.radDoBox.Lines = new string[0];
-            this.radDoBox.Location = new System.Drawing.Point(176, 483);
+            this.radDoBox.Location = new System.Drawing.Point(176, 510);
             this.radDoBox.MaxLength = 32767;
             this.radDoBox.Name = "radDoBox";
             this.radDoBox.PasswordChar = '\0';
@@ -242,14 +244,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(68, 398);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Naziv i Adresa";
+            this.label1.Text = "Naziv";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 450);
+            this.label3.Location = new System.Drawing.Point(68, 477);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 10;
@@ -258,7 +260,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 493);
+            this.label4.Location = new System.Drawing.Point(68, 520);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 11;
@@ -274,12 +276,53 @@
             this.Edit.UseSelectable = true;
             this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(68, 438);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Adresa";
+            // 
+            // adresaBox
+            // 
+            // 
+            // 
+            // 
+            this.adresaBox.CustomButton.Image = null;
+            this.adresaBox.CustomButton.Location = new System.Drawing.Point(192, 1);
+            this.adresaBox.CustomButton.Name = "";
+            this.adresaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.adresaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.adresaBox.CustomButton.TabIndex = 1;
+            this.adresaBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.adresaBox.CustomButton.UseSelectable = true;
+            this.adresaBox.CustomButton.Visible = false;
+            this.adresaBox.Lines = new string[0];
+            this.adresaBox.Location = new System.Drawing.Point(176, 428);
+            this.adresaBox.MaxLength = 32767;
+            this.adresaBox.Name = "adresaBox";
+            this.adresaBox.PasswordChar = '\0';
+            this.adresaBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.adresaBox.SelectedText = "";
+            this.adresaBox.SelectionLength = 0;
+            this.adresaBox.SelectionStart = 0;
+            this.adresaBox.ShortcutsEnabled = true;
+            this.adresaBox.Size = new System.Drawing.Size(214, 23);
+            this.adresaBox.TabIndex = 13;
+            this.adresaBox.UseSelectable = true;
+            this.adresaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.adresaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // mjesta_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.adresaBox);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -314,5 +357,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private MetroFramework.Controls.MetroButton Edit;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroTextBox adresaBox;
     }
 }

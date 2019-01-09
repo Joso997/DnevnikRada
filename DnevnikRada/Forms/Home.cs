@@ -32,7 +32,7 @@ namespace DnevnikRada
                     evidencija_trazi et = new evidencija_trazi();
                     break;
                 case "EvidencijaDodaj":
-                    evidencija_dodaj ed = new evidencija_dodaj();
+                    Evidencija_dodaj ed = new Evidencija_dodaj();
                     break;
                 case "StanjePoduzeca":
                     Stanje_Poduzeca sp = new Stanje_Poduzeca();
@@ -44,7 +44,7 @@ namespace DnevnikRada
                     Skladiste_dodaj sd = new Skladiste_dodaj();
                     break;
                 case "MjestaTrazi":
-                    mjesta_trazi mt = new mjesta_trazi();
+                    Mjesta_trazi mt = new Mjesta_trazi();
                     break;
                 case "MjestaDodaj":
                     mjesta_dodaj md = new mjesta_dodaj();

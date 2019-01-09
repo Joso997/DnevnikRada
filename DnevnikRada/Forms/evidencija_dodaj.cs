@@ -12,10 +12,10 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class evidencija_dodaj : UIController
+    public partial class Evidencija_dodaj : UIController
     {
         private bool UserClosing { get; set; }
-        public evidencija_dodaj()
+        public Evidencija_dodaj()
         {
             InitializeComponent();
             Show();
@@ -50,11 +50,6 @@ namespace DnevnikRada
             base.Click_Gumb(sender, e);
         }
 
-        private void evidencija_dodaj_Load(object sender, EventArgs e)
-        {
-
-        }
-
         void Fill()
         {
             Skladiste skladiste = new Skladiste();
@@ -78,16 +73,6 @@ namespace DnevnikRada
             metroComboBox7.Items.Add("-");
             metroComboBox8.Items.Add("-");
 
-
-        }
-
-        private void metroLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroComboBox9_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

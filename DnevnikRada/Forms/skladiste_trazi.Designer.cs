@@ -108,7 +108,6 @@
             this.skladisteGrid.Size = new System.Drawing.Size(562, 200);
             this.skladisteGrid.TabIndex = 3;
             this.skladisteGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
-            this.skladisteGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.skladisteGrid_CellContentClick);
             // 
             // Trazi
             // 
@@ -150,7 +149,6 @@
             this.search.UseSelectable = true;
             this.search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // prodavacBox
             // 
@@ -181,7 +179,6 @@
             this.prodavacBox.UseSelectable = true;
             this.prodavacBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.prodavacBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.prodavacBox.Click += new System.EventHandler(this.prodavacBox_Click);
             // 
             // nazivBox
             // 
@@ -212,7 +209,6 @@
             this.nazivBox.UseSelectable = true;
             this.nazivBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.nazivBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.nazivBox.Click += new System.EventHandler(this.nazivBox_Click);
             // 
             // kolicinaBox
             // 
@@ -243,7 +239,6 @@
             this.kolicinaBox.UseSelectable = true;
             this.kolicinaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.kolicinaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.kolicinaBox.Click += new System.EventHandler(this.kolicinaBox_Click);
             // 
             // mjBox
             // 
@@ -274,7 +269,6 @@
             this.mjBox.UseSelectable = true;
             this.mjBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mjBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.mjBox.Click += new System.EventHandler(this.mjBox_Click);
             // 
             // nazivLabel
             // 
@@ -285,7 +279,6 @@
             this.nazivLabel.Size = new System.Drawing.Size(54, 25);
             this.nazivLabel.TabIndex = 10;
             this.nazivLabel.Text = "Naziv";
-            this.nazivLabel.Click += new System.EventHandler(this.nazivLabel_Click);
             // 
             // prodavacLabel
             // 
@@ -296,7 +289,6 @@
             this.prodavacLabel.Size = new System.Drawing.Size(82, 25);
             this.prodavacLabel.TabIndex = 11;
             this.prodavacLabel.Text = "Prodavač";
-            this.prodavacLabel.Click += new System.EventHandler(this.prodavacLabel_Click);
             // 
             // mjLabel
             // 
@@ -307,7 +299,6 @@
             this.mjLabel.Size = new System.Drawing.Size(130, 25);
             this.mjLabel.TabIndex = 12;
             this.mjLabel.Text = "Mjerna Jedinica";
-            this.mjLabel.Click += new System.EventHandler(this.mjLabel_Click);
             // 
             // kolicinaLabel
             // 
@@ -318,7 +309,6 @@
             this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
             this.kolicinaLabel.TabIndex = 13;
             this.kolicinaLabel.Text = "Količina";
-            this.kolicinaLabel.Click += new System.EventHandler(this.kolicinaLabel_Click);
             // 
             // Edit
             // 
@@ -342,7 +332,6 @@
             this.label1.Size = new System.Drawing.Size(230, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Pretraživanje Skladišta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // skladiste_trazi
             // 
@@ -368,7 +357,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_trazi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
-            this.Load += new System.EventHandler(this.skladiste_trazi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

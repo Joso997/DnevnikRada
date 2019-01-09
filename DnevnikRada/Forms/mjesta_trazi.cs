@@ -11,11 +11,11 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class mjesta_trazi : UIController
+    public partial class Mjesta_trazi : UIController
     {
         int index;
         Mjesta mjesto = new Mjesta();
-        public mjesta_trazi()
+        public Mjesta_trazi()
         {
             InitializeComponent();
             mjestoGrid.DataSource = mjesto.Ucitaj();
@@ -30,10 +30,10 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     string trazi = string.Format(searchText.Text);
-                    mjestoGrid.DataSource = mjesto.Ucitaj("Adresa",trazi);
+                    mjestoGrid.DataSource = mjesto.Ucitaj("Adresa", trazi);
                     break;
                 case "Edit":
-                    Mjesta _mjesto = new Mjesta(nazivBox.Text);
+                    Mjesta _mjesto = new Mjesta(nazivBox.Text, adresaBox.Text);
                     mjestoGrid.DataSource = mjesto.Ucitaj();
                     Edit.Enabled = false;
                     break;
@@ -46,17 +46,14 @@ namespace DnevnikRada
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             DataTable dT = new DataTable();
             dT = mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
             nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
-            
-            radOdbox.Text = dT.Rows[0].ItemArray[2].ToString();
-            radDoBox.Text = dT.Rows[0].ItemArray[3].ToString();
+            adresaBox.Text = dT.Rows[0].ItemArray[2].ToString();
+            radOdbox.Text = dT.Rows[0].ItemArray[3].ToString();
+            radDoBox.Text = dT.Rows[0].ItemArray[4].ToString();
             index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
             Edit.Enabled = true;
-            
-
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)

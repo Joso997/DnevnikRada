@@ -39,6 +39,8 @@
             this.tb_do = new MetroFramework.Controls.MetroTextBox();
             this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.tb_adresa = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // Home
@@ -59,9 +61,9 @@
             this.lbl_naziv_mjesta.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_naziv_mjesta.Location = new System.Drawing.Point(302, 113);
             this.lbl_naziv_mjesta.Name = "lbl_naziv_mjesta";
-            this.lbl_naziv_mjesta.Size = new System.Drawing.Size(174, 25);
+            this.lbl_naziv_mjesta.Size = new System.Drawing.Size(108, 25);
             this.lbl_naziv_mjesta.TabIndex = 1;
-            this.lbl_naziv_mjesta.Text = "Naziv i Adresa Mjesta";
+            this.lbl_naziv_mjesta.Text = "Naziv Mjesta";
             // 
             // lbl_vrijeme_rada
             // 
@@ -69,7 +71,7 @@
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(217, 25);
+            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
             this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
             // 
@@ -122,7 +124,6 @@
             this.tb_naziv_mjesta.UseSelectable = true;
             this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_naziv_mjesta.Click += new System.EventHandler(this.tb_naziv_mjesta_Click);
             // 
             // tb_od
             // 
@@ -203,9 +204,49 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(581, 287);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(244, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(243, 19);
             this.metroLabel1.TabIndex = 11;
             this.metroLabel1.Text = "<-- koji tip podatka u bzi ovo mora bit?";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(302, 153);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(118, 25);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "Adresa Mjesta";
+            // 
+            // tb_adresa
+            // 
+            // 
+            // 
+            // 
+            this.tb_adresa.CustomButton.Image = null;
+            this.tb_adresa.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tb_adresa.CustomButton.Name = "";
+            this.tb_adresa.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_adresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_adresa.CustomButton.TabIndex = 1;
+            this.tb_adresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_adresa.CustomButton.UseSelectable = true;
+            this.tb_adresa.CustomButton.Visible = false;
+            this.tb_adresa.Lines = new string[0];
+            this.tb_adresa.Location = new System.Drawing.Point(512, 155);
+            this.tb_adresa.MaxLength = 32767;
+            this.tb_adresa.Name = "tb_adresa";
+            this.tb_adresa.PasswordChar = '\0';
+            this.tb_adresa.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_adresa.SelectedText = "";
+            this.tb_adresa.SelectionLength = 0;
+            this.tb_adresa.SelectionStart = 0;
+            this.tb_adresa.ShortcutsEnabled = true;
+            this.tb_adresa.Size = new System.Drawing.Size(150, 23);
+            this.tb_adresa.TabIndex = 13;
+            this.tb_adresa.UseSelectable = true;
+            this.tb_adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // mjesta_dodaj
             // 
@@ -213,6 +254,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.tb_adresa);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.tb_do);
@@ -244,5 +287,7 @@
         private MetroFramework.Controls.MetroTextBox tb_do;
         private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox tb_adresa;
     }
 }
