@@ -26,6 +26,11 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
+                    if (tb_adresa.Text == "" || tb_naziv_mjesta.Text == "")
+                    {
+                        MessageBox.Show("Adresa i Naziv mjesta ne mogu biti prazni");
+                        break;
+                    }
                     Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
                     break;
                 case "Home":

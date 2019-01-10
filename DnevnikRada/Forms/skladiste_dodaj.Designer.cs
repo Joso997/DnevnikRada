@@ -159,7 +159,7 @@
             this.tb_mjerna_jedinica.CustomButton.UseSelectable = true;
             this.tb_mjerna_jedinica.CustomButton.Visible = false;
             this.tb_mjerna_jedinica.Lines = new string[0];
-            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(362, 265);
+            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(361, 265);
             this.tb_mjerna_jedinica.MaxLength = 32767;
             this.tb_mjerna_jedinica.Name = "tb_mjerna_jedinica";
             this.tb_mjerna_jedinica.PasswordChar = '\0';

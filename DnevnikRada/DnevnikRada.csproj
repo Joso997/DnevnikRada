@@ -157,7 +157,6 @@
       <DependentUpon>AddMaterijal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="bin\Debug\DB.db" />
     <EmbeddedResource Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.resx">
       <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />

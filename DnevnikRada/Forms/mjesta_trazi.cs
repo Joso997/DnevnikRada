@@ -33,6 +33,11 @@ namespace DnevnikRada
                     mjestoGrid.DataSource = mjesto.Ucitaj("Adresa", trazi);
                     break;
                 case "Edit":
+                    if (nazivBox.Text == "" || adresaBox.Text == "")
+                    {
+                        MessageBox.Show("Adresa i Naziv mjesta ne mogu biti prazni");
+                        break;
+                    }
                     Mjesta _mjesto = new Mjesta(nazivBox.Text, adresaBox.Text);
                     mjestoGrid.DataSource = mjesto.Ucitaj();
                     Edit.Enabled = false;
