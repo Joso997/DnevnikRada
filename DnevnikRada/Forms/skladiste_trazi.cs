@@ -71,10 +71,5 @@ namespace DnevnikRada
                 e.Handled = true;
             }
         }
-
-        private void kolicinaBox_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
