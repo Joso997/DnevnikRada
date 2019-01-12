@@ -37,9 +37,9 @@
             // 
             // btnStanjePoduzeca
             // 
-            this.btnStanjePoduzeca.Location = new System.Drawing.Point(555, 35);
+            this.btnStanjePoduzeca.Location = new System.Drawing.Point(595, 16);
             this.btnStanjePoduzeca.Name = "btnStanjePoduzeca";
-            this.btnStanjePoduzeca.Size = new System.Drawing.Size(212, 66);
+            this.btnStanjePoduzeca.Size = new System.Drawing.Size(266, 100);
             this.btnStanjePoduzeca.TabIndex = 18;
             this.btnStanjePoduzeca.Text = "Stanje Poduzeća";
             this.btnStanjePoduzeca.UseSelectable = true;
@@ -47,9 +47,9 @@
             // 
             // btnPotrosnjaMaterijalaKrozVrijeme
             // 
-            this.btnPotrosnjaMaterijalaKrozVrijeme.Location = new System.Drawing.Point(563, 122);
+            this.btnPotrosnjaMaterijalaKrozVrijeme.Location = new System.Drawing.Point(595, 131);
             this.btnPotrosnjaMaterijalaKrozVrijeme.Name = "btnPotrosnjaMaterijalaKrozVrijeme";
-            this.btnPotrosnjaMaterijalaKrozVrijeme.Size = new System.Drawing.Size(187, 55);
+            this.btnPotrosnjaMaterijalaKrozVrijeme.Size = new System.Drawing.Size(266, 100);
             this.btnPotrosnjaMaterijalaKrozVrijeme.TabIndex = 19;
             this.btnPotrosnjaMaterijalaKrozVrijeme.Text = "Potrošnja Materijala Kroz Vrijeme";
             this.btnPotrosnjaMaterijalaKrozVrijeme.UseSelectable = true;
@@ -57,9 +57,9 @@
             // 
             // btnBrojOdrzavanjaKrozVrijeme
             // 
-            this.btnBrojOdrzavanjaKrozVrijeme.Location = new System.Drawing.Point(580, 183);
+            this.btnBrojOdrzavanjaKrozVrijeme.Location = new System.Drawing.Point(595, 256);
             this.btnBrojOdrzavanjaKrozVrijeme.Name = "btnBrojOdrzavanjaKrozVrijeme";
-            this.btnBrojOdrzavanjaKrozVrijeme.Size = new System.Drawing.Size(170, 69);
+            this.btnBrojOdrzavanjaKrozVrijeme.Size = new System.Drawing.Size(266, 100);
             this.btnBrojOdrzavanjaKrozVrijeme.TabIndex = 20;
             this.btnBrojOdrzavanjaKrozVrijeme.Text = "Broj Održavanja Kroz Vrijeme";
             this.btnBrojOdrzavanjaKrozVrijeme.UseSelectable = true;
@@ -67,9 +67,9 @@
             // 
             // btnOdstupanjeOdNormale
             // 
-            this.btnOdstupanjeOdNormale.Location = new System.Drawing.Point(580, 280);
+            this.btnOdstupanjeOdNormale.Location = new System.Drawing.Point(595, 385);
             this.btnOdstupanjeOdNormale.Name = "btnOdstupanjeOdNormale";
-            this.btnOdstupanjeOdNormale.Size = new System.Drawing.Size(187, 69);
+            this.btnOdstupanjeOdNormale.Size = new System.Drawing.Size(266, 100);
             this.btnOdstupanjeOdNormale.TabIndex = 21;
             this.btnOdstupanjeOdNormale.Text = "Odstupanje Od Normale";
             this.btnOdstupanjeOdNormale.UseSelectable = true;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnOdstupanjeOdNormale);
             this.Controls.Add(this.btnBrojOdrzavanjaKrozVrijeme);
@@ -100,6 +100,7 @@
             this.Controls.Add(this.btnStanjePoduzeca);
             this.IsMdiContainer = true;
             this.Name = "Stanje_Poduzeca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StanjePoduzecaBase";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.ResumeLayout(false);
