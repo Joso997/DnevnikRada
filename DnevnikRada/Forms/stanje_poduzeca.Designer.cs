@@ -43,7 +43,7 @@
             this.btnStanjePoduzeca.TabIndex = 18;
             this.btnStanjePoduzeca.Text = "Stanje Poduzeća";
             this.btnStanjePoduzeca.UseSelectable = true;
-            this.btnStanjePoduzeca.Click += new System.EventHandler(this.btnStanjePoduzeca_Click);
+            this.btnStanjePoduzeca.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // btnPotrosnjaMaterijalaKrozVrijeme
             // 
@@ -53,7 +53,7 @@
             this.btnPotrosnjaMaterijalaKrozVrijeme.TabIndex = 19;
             this.btnPotrosnjaMaterijalaKrozVrijeme.Text = "Potrošnja Materijala Kroz Vrijeme";
             this.btnPotrosnjaMaterijalaKrozVrijeme.UseSelectable = true;
-            this.btnPotrosnjaMaterijalaKrozVrijeme.Click += new System.EventHandler(this.btnPotrosnjaMaterijalaKrozVrijeme_Click);
+            this.btnPotrosnjaMaterijalaKrozVrijeme.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // btnBrojOdrzavanjaKrozVrijeme
             // 
@@ -63,7 +63,7 @@
             this.btnBrojOdrzavanjaKrozVrijeme.TabIndex = 20;
             this.btnBrojOdrzavanjaKrozVrijeme.Text = "Broj Održavanja Kroz Vrijeme";
             this.btnBrojOdrzavanjaKrozVrijeme.UseSelectable = true;
-            this.btnBrojOdrzavanjaKrozVrijeme.Click += new System.EventHandler(this.btnBrojOdrzavanjaKrozVrijeme_Click);
+            this.btnBrojOdrzavanjaKrozVrijeme.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // btnOdstupanjeOdNormale
             // 
@@ -73,7 +73,7 @@
             this.btnOdstupanjeOdNormale.TabIndex = 21;
             this.btnOdstupanjeOdNormale.Text = "Odstupanje Od Normale";
             this.btnOdstupanjeOdNormale.UseSelectable = true;
-            this.btnOdstupanjeOdNormale.Click += new System.EventHandler(this.btnOdstupanjeOdNormale_Click);
+            this.btnOdstupanjeOdNormale.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroPanel1
             // 

@@ -18,6 +18,7 @@ namespace DnevnikRada.Klase
 
         protected virtual void Click_Gumb(object sender, EventArgs e)
         {
+            Console.WriteLine("sender je: " + (Button)sender);
             if (selectButton(sender))
             {
                 Hide();
