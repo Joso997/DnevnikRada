@@ -83,5 +83,13 @@ namespace DnevnikRada
             metroComboBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
             metroTextBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
         }
+
+        private void tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

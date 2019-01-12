@@ -223,6 +223,7 @@
             this.tb_kolicina.UseSelectable = true;
             this.tb_kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_kolicina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_kolicina_KeyPress);
             // 
             // label1
             // 

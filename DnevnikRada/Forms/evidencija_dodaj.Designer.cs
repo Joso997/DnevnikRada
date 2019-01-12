@@ -80,7 +80,7 @@
             this.lbl_utroseno_vrijeme.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 137);
             this.lbl_utroseno_vrijeme.Name = "lbl_utroseno_vrijeme";
-            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(143, 25);
+            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(144, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
             this.lbl_utroseno_vrijeme.Text = "Utrošeno Vrijeme";
             // 
@@ -113,6 +113,7 @@
             this.tb_utroseno_vrijeme.UseSelectable = true;
             this.tb_utroseno_vrijeme.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_utroseno_vrijeme.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_utroseno_vrijeme.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_utroseno_vrijeme_KeyPress);
             // 
             // tb_opis_posla
             // 
@@ -128,7 +129,7 @@
             this.lbl_opis_posla.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_opis_posla.Location = new System.Drawing.Point(140, 207);
             this.lbl_opis_posla.Name = "lbl_opis_posla";
-            this.lbl_opis_posla.Size = new System.Drawing.Size(91, 25);
+            this.lbl_opis_posla.Size = new System.Drawing.Size(92, 25);
             this.lbl_opis_posla.TabIndex = 6;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
@@ -198,7 +199,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(426, 90);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(152, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(155, 25);
             this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Utrosen Materijal 1";
             // 
