@@ -194,6 +194,7 @@
             this.nazivBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.nazivBox.CustomButton.UseSelectable = true;
             this.nazivBox.CustomButton.Visible = false;
+            this.nazivBox.Enabled = false;
             this.nazivBox.Lines = new string[0];
             this.nazivBox.Location = new System.Drawing.Point(296, 377);
             this.nazivBox.MaxLength = 32767;

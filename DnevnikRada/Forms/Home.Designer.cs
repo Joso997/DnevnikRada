@@ -227,6 +227,8 @@ namespace DnevnikRada
             this.kalendar.Size = new System.Drawing.Size(291, 35);
             this.kalendar.TabIndex = 2;
             this.kalendar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.kalendar.UseStyleColors = true;
+            this.kalendar.DropDown += new System.EventHandler(this.kalendar_DropDown);
             // 
             // Home
             // 

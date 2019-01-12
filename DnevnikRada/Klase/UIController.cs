@@ -39,23 +39,5 @@ namespace DnevnikRada.Klase
                     Console.WriteLine("Here");
                 }
         }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // UIController
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "UIController";
-            this.Load += new System.EventHandler(this.UIController_Load);
-            this.ResumeLayout(false);
-
-        }
-
-        private void UIController_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

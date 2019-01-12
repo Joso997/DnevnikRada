@@ -42,7 +42,6 @@ namespace DnevnikRada.Klase
             {
                 {"NazivMjesta", Naziv_Mjesta },
                 {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
-                {"Cijena", Cijena },
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme }
             };

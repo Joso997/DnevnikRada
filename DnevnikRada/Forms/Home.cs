@@ -82,5 +82,11 @@ namespace DnevnikRada
         {
             base.Click_Gumb(sender, e);
         }
+
+        private void kalendar_DropDown(object sender, EventArgs e)
+        {
+            Mjesta mjesta = new Mjesta();
+            DataTable dT = mjesta.Ucitaj();
+        }
     }
 }

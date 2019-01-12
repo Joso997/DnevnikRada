@@ -13,7 +13,6 @@ namespace DnevnikRada
 {
     public partial class Mjesta_trazi : UIController
     {
-        int index;
         Mjesta mjesto = new Mjesta();
         public Mjesta_trazi()
         {
@@ -33,7 +32,7 @@ namespace DnevnikRada
                     mjestoGrid.DataSource = mjesto.Ucitaj("Adresa", trazi);
                     break;
                 case "Edit":
-                    Mjesta _mjesto = new Mjesta(nazivBox.Text, adresaBox.Text);
+                    Mjesta _mjesto = new Mjesta(nazivBox.Text, adresaBox.Text, metroDateTime1.Checked ? metroDateTime1.Value : DateTime.MinValue, metroDateTime2.Checked ? metroDateTime2.Value : DateTime.MinValue);
                     mjestoGrid.DataSource = mjesto.Ucitaj();
                     Edit.Enabled = false;
                     break;
@@ -50,9 +49,8 @@ namespace DnevnikRada
             dT = mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
             nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
             adresaBox.Text = dT.Rows[0].ItemArray[2].ToString();
-            radOdbox.Text = dT.Rows[0].ItemArray[3].ToString();
-            radDoBox.Text = dT.Rows[0].ItemArray[4].ToString();
-            index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
+            metroDateTime1.Value = dT.Rows[0].ItemArray[3].Equals(DBNull.Value) ? DateTime.Today : (DateTime)dT.Rows[0].ItemArray[3];
+            metroDateTime2.Value = dT.Rows[0].ItemArray[4].Equals(DBNull.Value) ? DateTime.Today : (DateTime)dT.Rows[0].ItemArray[4];
             Edit.Enabled = true;
         }
 

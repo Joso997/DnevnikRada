@@ -35,12 +35,11 @@
             this.lbl_od = new MetroFramework.Controls.MetroLabel();
             this.lbl_do = new MetroFramework.Controls.MetroLabel();
             this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
-            this.tb_od = new MetroFramework.Controls.MetroTextBox();
-            this.tb_do = new MetroFramework.Controls.MetroTextBox();
             this.Potvrdi = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.tb_adresa = new MetroFramework.Controls.MetroTextBox();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
             this.SuspendLayout();
             // 
             // Home
@@ -125,70 +124,6 @@
             this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tb_od
-            // 
-            // 
-            // 
-            // 
-            this.tb_od.CustomButton.Image = null;
-            this.tb_od.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_od.CustomButton.Name = "";
-            this.tb_od.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_od.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_od.CustomButton.TabIndex = 1;
-            this.tb_od.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_od.CustomButton.UseSelectable = true;
-            this.tb_od.CustomButton.Visible = false;
-            this.tb_od.Lines = new string[] {
-        "trenutno nista neradi"};
-            this.tb_od.Location = new System.Drawing.Point(415, 267);
-            this.tb_od.MaxLength = 32767;
-            this.tb_od.Name = "tb_od";
-            this.tb_od.PasswordChar = '\0';
-            this.tb_od.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_od.SelectedText = "";
-            this.tb_od.SelectionLength = 0;
-            this.tb_od.SelectionStart = 0;
-            this.tb_od.ShortcutsEnabled = true;
-            this.tb_od.Size = new System.Drawing.Size(150, 23);
-            this.tb_od.TabIndex = 8;
-            this.tb_od.Text = "trenutno nista neradi";
-            this.tb_od.UseSelectable = true;
-            this.tb_od.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_od.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // tb_do
-            // 
-            // 
-            // 
-            // 
-            this.tb_do.CustomButton.Image = null;
-            this.tb_do.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.tb_do.CustomButton.Name = "";
-            this.tb_do.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_do.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_do.CustomButton.TabIndex = 1;
-            this.tb_do.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_do.CustomButton.UseSelectable = true;
-            this.tb_do.CustomButton.Visible = false;
-            this.tb_do.Lines = new string[] {
-        "trenutno nista neradi"};
-            this.tb_do.Location = new System.Drawing.Point(415, 304);
-            this.tb_do.MaxLength = 32767;
-            this.tb_do.Name = "tb_do";
-            this.tb_do.PasswordChar = '\0';
-            this.tb_do.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_do.SelectedText = "";
-            this.tb_do.SelectionLength = 0;
-            this.tb_do.SelectionStart = 0;
-            this.tb_do.ShortcutsEnabled = true;
-            this.tb_do.Size = new System.Drawing.Size(150, 23);
-            this.tb_do.TabIndex = 9;
-            this.tb_do.Text = "trenutno nista neradi";
-            this.tb_do.UseSelectable = true;
-            this.tb_do.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_do.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // Potvrdi
             // 
             this.Potvrdi.Location = new System.Drawing.Point(463, 350);
@@ -198,15 +133,6 @@
             this.Potvrdi.Text = "Potvrdi";
             this.Potvrdi.UseSelectable = true;
             this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(581, 287);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(243, 19);
-            this.metroLabel1.TabIndex = 11;
-            this.metroLabel1.Text = "<-- koji tip podatka u bzi ovo mora bit?";
             // 
             // metroLabel2
             // 
@@ -248,18 +174,35 @@
             this.tb_adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Checked = false;
+            this.metroDateTime1.Location = new System.Drawing.Point(415, 265);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 14;
+            // 
+            // metroDateTime2
+            // 
+            this.metroDateTime2.Checked = false;
+            this.metroDateTime2.Location = new System.Drawing.Point(415, 302);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime2.Name = "metroDateTime2";
+            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime2.TabIndex = 15;
+            // 
             // mjesta_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroDateTime2);
+            this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.tb_adresa);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Potvrdi);
-            this.Controls.Add(this.tb_do);
-            this.Controls.Add(this.tb_od);
             this.Controls.Add(this.tb_naziv_mjesta);
             this.Controls.Add(this.lbl_do);
             this.Controls.Add(this.lbl_od);
@@ -283,11 +226,10 @@
         private MetroFramework.Controls.MetroLabel lbl_od;
         private MetroFramework.Controls.MetroLabel lbl_do;
         private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
-        private MetroFramework.Controls.MetroTextBox tb_od;
-        private MetroFramework.Controls.MetroTextBox tb_do;
         private MetroFramework.Controls.MetroButton Potvrdi;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox tb_adresa;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime metroDateTime2;
     }
 }

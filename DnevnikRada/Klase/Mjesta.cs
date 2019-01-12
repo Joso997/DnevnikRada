@@ -10,16 +10,17 @@ namespace DnevnikRada.Klase
 {
     class Mjesta : Baza.DB, IUseDatabase
     {
-
         public string Naziv_mjesta { get; private set; }
         public string Adresa { get; private set; }
+        public DateTime Od_VrijemeRada { get; private set; }
+        public DateTime Do_VrijemeRada { get; private set; }
 
-        //vrijeme rada od do sta to tocno mora bit u bazi tj koji tip podatka
-
-        public Mjesta(string _naziv_mjesta, string _adresa)
+        public Mjesta(string _naziv_mjesta, string _adresa, DateTime _od_vrijemeRada, DateTime _do_vrijemeRada)
         {
             Naziv_mjesta = _naziv_mjesta;
             Adresa = _adresa;
+            Od_VrijemeRada = _od_vrijemeRada;
+            Do_VrijemeRada = _do_vrijemeRada;
             Dodaj();
         }
 
@@ -33,7 +34,9 @@ namespace DnevnikRada.Klase
             Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
             {
                 {"NazivMjesta", Naziv_mjesta },
-                {"Adresa", Adresa }
+                {"Adresa", Adresa },
+                {"VrijemeRadaOD", Od_VrijemeRada != DateTime.MinValue ? Od_VrijemeRada.ToString("yyyy-MM-dd HH:mm:ss"): null },
+                {"VrijemeRadaDO", Do_VrijemeRada != DateTime.MinValue ? Do_VrijemeRada.ToString("yyyy-MM-dd HH:mm:ss"): null }
             };
             Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
         }

@@ -26,7 +26,8 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+                    Console.WriteLine(metroDateTime1.Value);
+                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, metroDateTime1.Checked?metroDateTime1.Value:DateTime.MinValue, metroDateTime2.Checked ? metroDateTime2.Value:DateTime.MinValue);
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -42,6 +43,21 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            /*if (metroDateTime1.Enabled)
+            {
+                metroDateTime1.Enabled = false;
+                metroDateTime2.Enabled = false;
+            }
+            else
+            {
+                metroDateTime1.Enabled = true;
+                metroDateTime2.Enabled = true;
+            }*/
+
         }
     }
 }
