@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `Skladiste` (
 CREATE TABLE IF NOT EXISTS `Mjesta` (
 	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`NazivMjesta`	TEXT NOT NULL,
-	`Adresa`	TEXT,
+	`Adresa`	TEXT NOT NULL,
 	`VrijemeRadaOD`	DATETIME,
 	`VrijemeRadaDO`	DATETIME,
 	CONSTRAINT `Naziv_Adresa` UNIQUE(`NazivMjesta`,`Adresa`)
