@@ -26,8 +26,12 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    Console.WriteLine(metroDateTime1.Value);
-                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, metroDateTime1.Checked?metroDateTime1.Value:DateTime.MinValue, metroDateTime2.Checked ? metroDateTime2.Value:DateTime.MinValue);
+                    if (tb_adresa.Text == "" || tb_naziv_mjesta.Text == "")
+                    {
+                        MessageBox.Show("Adresa i Naziv mjesta ne mogu biti prazni");
+                        break;
+                    }
+                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, metroDateTime1.Checked ? metroDateTime1.Value : DateTime.MinValue, metroDateTime2.Checked ? metroDateTime2.Value : DateTime.MinValue);
                     break;
                 case "Home":
                     Home Home = new Home();

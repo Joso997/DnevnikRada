@@ -27,6 +27,11 @@ namespace DnevnikRada
                     skladisteGrid.DataSource = skladiste.Ucitaj("NazivMaterijala", trazi);
                     break;
                 case "Edit":
+                    if (kolicinaBox.Text == "" || nazivBox.Text == "")
+                    {
+                        MessageBox.Show("Kolicina i Naziv ne mogu biti prazni");
+                        break;
+                    }
                     Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text));
                     skladisteGrid.DataSource = skladiste.Ucitaj();
                     Edit.Enabled = false;
@@ -57,6 +62,19 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void kolicinaBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void kolicinaBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

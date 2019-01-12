@@ -159,7 +159,7 @@
             this.tb_mjerna_jedinica.CustomButton.UseSelectable = true;
             this.tb_mjerna_jedinica.CustomButton.Visible = false;
             this.tb_mjerna_jedinica.Lines = new string[0];
-            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(362, 265);
+            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(361, 265);
             this.tb_mjerna_jedinica.MaxLength = 32767;
             this.tb_mjerna_jedinica.Name = "tb_mjerna_jedinica";
             this.tb_mjerna_jedinica.PasswordChar = '\0';
@@ -223,6 +223,7 @@
             this.tb_kolicina.UseSelectable = true;
             this.tb_kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_kolicina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_kolicina_KeyPress);
             // 
             // label1
             // 

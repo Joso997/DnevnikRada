@@ -62,12 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Baza\DB.cs" />
-    <Compile Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.Designer.cs">
-      <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Evidencija_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,18 +98,6 @@
     <Compile Include="Forms\Mjesta_trazi.Designer.cs">
       <DependentUpon>Mjesta_trazi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StanjePoduzeća\odstupanje_od_normale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\StanjePoduzeća\odstupanje_od_normale.Designer.cs">
-      <DependentUpon>odstupanje_od_normale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\StanjePoduzeća\potrosnja_materijala_kroz_vrijeme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\StanjePoduzeća\potrosnja_materijala_kroz_vrijeme.Designer.cs">
-      <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Skladiste_dodaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +116,6 @@
     <Compile Include="Forms\Stanje_Poduzeca.Designer.cs">
       <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StanjePoduzeća\Statistika.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\StanjePoduzeća\Statistika.Designer.cs">
-      <DependentUpon>Statistika.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
     <Compile Include="Klase\Evidencija.cs" />
@@ -157,10 +133,30 @@
       <DependentUpon>AddMaterijal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="bin\Debug\DB.db" />
-    <EmbeddedResource Include="Forms\StanjePoduzeća\broj_odrzavanja_kroz_vrijeme.resx">
-      <DependentUpon>broj_odrzavanja_kroz_vrijeme.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ucModule1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModule1.Designer.cs">
+      <DependentUpon>ucModule1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucModule2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModule2.Designer.cs">
+      <DependentUpon>ucModule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucModule3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModule3.Designer.cs">
+      <DependentUpon>ucModule3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucModule4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModule4.Designer.cs">
+      <DependentUpon>ucModule4.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Evidencija_dodaj.resx">
       <DependentUpon>Evidencija_dodaj.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,12 +175,6 @@
     <EmbeddedResource Include="Forms\Mjesta_trazi.resx">
       <DependentUpon>Mjesta_trazi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StanjePoduzeća\odstupanje_od_normale.resx">
-      <DependentUpon>odstupanje_od_normale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StanjePoduzeća\potrosnja_materijala_kroz_vrijeme.resx">
-      <DependentUpon>potrosnja_materijala_kroz_vrijeme.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Skladiste_dodaj.resx">
       <DependentUpon>Skladiste_dodaj.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stanje_Poduzeca.resx">
       <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StanjePoduzeća\Statistika.resx">
-      <DependentUpon>Statistika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klase\UIController.resx">
       <DependentUpon>UIController.cs</DependentUpon>
@@ -213,6 +200,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucModule1.resx">
+      <DependentUpon>ucModule1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucModule2.resx">
+      <DependentUpon>ucModule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucModule3.resx">
+      <DependentUpon>ucModule3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucModule4.resx">
+      <DependentUpon>ucModule4.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -226,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Baza\DB.db.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />

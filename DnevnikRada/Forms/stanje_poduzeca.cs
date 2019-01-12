@@ -17,35 +17,9 @@ namespace DnevnikRada.Forms
         {
             InitializeComponent();
             Show();
-            selectButton = SelectButton;
+            
         }
-        public bool SelectButton(object sender)
-        {
-            var button = (Button)sender;
-            switch (button.Name)
-            {
-                case "St":
-                    Statistika statistika = new Statistika();
-                    statistika.MdiParent = this;
-                    break;
-                case "Oon":
-                    Oon odstupanje_od_normale = new Oon();
-                    odstupanje_od_normale.MdiParent = this;
-                    break;
-                case "Bokv":
-                    Bokv broj_odrzavanja_kroz_vrijeme = new Bokv();
-                    broj_odrzavanja_kroz_vrijeme.MdiParent = this;
-                    break;
-                case "Pmkv":
-                    Pmkv potrosnja_materijala_kroz_vrijeme = new Pmkv();
-                    potrosnja_materijala_kroz_vrijeme.MdiParent = this;
-                    break;
-                case "Home":
-                    Home Home = new Home();
-                    return true;
-            }
-            return false;
-        }
+        
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -54,6 +28,63 @@ namespace DnevnikRada.Forms
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
+        }
+
+        private void btnStanjePoduzeca_Click(object sender, EventArgs e)
+        {
+            if (!metroPanel1.Controls.Contains(ucModule1.Instance))
+            {
+                metroPanel1.Controls.Add(ucModule1.Instance);
+                ucModule1.Instance.Dock = DockStyle.Fill;
+                ucModule1.Instance.BringToFront();
+
+
+            }
+            else
+                ucModule1.Instance.BringToFront();
+
+        }
+
+        private void btnPotrosnjaMaterijalaKrozVrijeme_Click(object sender, EventArgs e)
+        {
+            if (!metroPanel1.Controls.Contains(ucModule2.Instance))
+            {
+                metroPanel1.Controls.Add(ucModule2.Instance);
+                ucModule2.Instance.Dock = DockStyle.Fill;
+                ucModule2.Instance.BringToFront();
+
+
+            }
+            else
+                ucModule2.Instance.BringToFront();
+        }
+
+        private void btnBrojOdrzavanjaKrozVrijeme_Click(object sender, EventArgs e)
+        {
+            if (!metroPanel1.Controls.Contains(ucModule3.Instance))
+            {
+                metroPanel1.Controls.Add(ucModule3.Instance);
+                ucModule3.Instance.Dock = DockStyle.Fill;
+                ucModule3.Instance.BringToFront();
+
+
+            }
+            else
+                ucModule3.Instance.BringToFront();
+        }
+
+        private void btnOdstupanjeOdNormale_Click(object sender, EventArgs e)
+        {
+            if (!metroPanel1.Controls.Contains(ucModule4.Instance))
+            {
+                metroPanel1.Controls.Add(ucModule4.Instance);
+                ucModule4.Instance.Dock = DockStyle.Fill;
+                ucModule4.Instance.BringToFront();
+
+
+            }
+            else
+                ucModule4.Instance.BringToFront();
         }
     }
 }

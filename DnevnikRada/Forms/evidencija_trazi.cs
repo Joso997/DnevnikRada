@@ -48,14 +48,19 @@ namespace DnevnikRada
         {
             base.Click_Gumb(sender, e);
         }
-
+        Poveznica poveznica = new Poveznica();
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Poveznica poveznica = new Poveznica();
+            
             materijalGrid.DataSource = poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
 
             materijalGrid.Columns[0].Visible = false;
+        }
+
+        private void textTrazi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

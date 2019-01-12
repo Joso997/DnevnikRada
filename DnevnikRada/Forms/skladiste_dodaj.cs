@@ -26,6 +26,11 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
+                    if(tb_kolicina.Text=="" || tb_naziv_materijala.Text=="")
+                    {
+                        MessageBox.Show("Kolicina i naziv materijala ne mogu biti prazni");
+                        break;
+                    }
                     int kol;
                     string lol = tb_kolicina.Text.ToString();
                     kol = Int32.Parse(lol);
@@ -50,6 +55,14 @@ namespace DnevnikRada
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tb_kolicina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

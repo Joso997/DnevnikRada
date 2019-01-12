@@ -40,8 +40,8 @@ namespace DnevnikRada.Klase
             {
                 {"NazivMaterijala", Naziv_materijala },
                 {"Prodavac", Proizvodac },
-                {"Kolicina", Mjerna_jedinica },
-                {"MjernaJedinica", Kolicina },
+                {"MjernaJedinica", Mjerna_jedinica },
+                {"Kolicina", Kolicina },
             };
             Set("Skladiste", dictionary_stupci, true);
         }
