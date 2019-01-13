@@ -21,27 +21,38 @@ namespace DnevnikRada.Baza
         //OTVARA KONEKCIJU PREMA BAZI
         public DB()
         {
+            //
+            // ako izbaci ovdje error reinstalirat sqlite preko nugeta
             connection = new SQLiteConnection("URI = file:DB.db");
+            //
+            //
             string workingDirectory = Environment.CurrentDirectory;
-            string sqlDBLocation = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
+            string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
+            string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
             if (!File.Exists("DB.db"))
             {
-                MessageBox.Show("DB NOT EXIST");
+                MessageBox.Show("Baza ne postoji");
+                MessageBox.Show("Cekaj napravit cu ti je");
+                
                 connection.Open();
-                string createTablesAndItems = File.ReadAllText(sqlDBLocation);
-                Query(createTablesAndItems);
+
+                string createTables = File.ReadAllText(sqlDBTables);
+                Query(createTables);
+                DialogResult result = MessageBox.Show("Hoces li da ti popunim tablice?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                if (result == DialogResult.Yes)
+                {
+                    string insertIntoTables = File.ReadAllText(sqlDBInsert);
+                    Query(insertIntoTables);
+                    MessageBox.Show("Gotovo");
+                }
             }
             else
             {
-                //MessageBox.Show("DB EXISTS!!!");
+                MessageBox.Show("DB EXISTS!!!");
                 connection.Open();
             }
             //connection = new SQLiteConnection("URI = file:DB.db");
-            
-
-            //connection.Open();
-            if (connection.State != ConnectionState.Open)
-                MessageBox.Show("Error 404 NIGGA NOT FOUND");
+          
         }
 
         //kod za izvođenje pod bazoom BILO KOJI al mora bit sql

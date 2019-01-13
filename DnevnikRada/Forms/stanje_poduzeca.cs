@@ -80,5 +80,10 @@ namespace DnevnikRada.Forms
         {
             base.Click_Gumb(sender, e);
         }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            base.Click_Gumb(sender, e);
+        }
     }
 }

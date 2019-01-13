@@ -145,7 +145,7 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Name = "ucModule1";
-            this.Size = new System.Drawing.Size(556, 301);
+            this.Size = new System.Drawing.Size(620, 578);
             this.ResumeLayout(false);
 
         }

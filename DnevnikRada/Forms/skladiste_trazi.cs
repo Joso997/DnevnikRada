@@ -14,6 +14,7 @@ namespace DnevnikRada
             InitializeComponent();
             skladisteGrid.DataSource = skladiste.Ucitaj();
             selectButton = SelectButton;
+            skladisteGrid.Columns["id"].Visible = false;
             Show();
         }
 
