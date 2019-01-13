@@ -100,7 +100,7 @@
             this.Home.Size = new System.Drawing.Size(100, 100);
             this.Home.TabIndex = 24;
             this.Home.UseSelectable = true;
-            this.Home.Click += new System.EventHandler(this.Home_Click);
+            this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Stanje_Poduzeca
             // 

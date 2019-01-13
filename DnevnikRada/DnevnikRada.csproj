@@ -135,29 +135,29 @@
       <DependentUpon>UserKalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Kontrole\ucModule1.cs">
+    <Compile Include="Kontrole\StanjePoduzeca.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kontrole\ucModule1.Designer.cs">
-      <DependentUpon>ucModule1.cs</DependentUpon>
+    <Compile Include="Kontrole\StanjePoduzeca.Designer.cs">
+      <DependentUpon>StanjePoduzeca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kontrole\ucModule2.cs">
+    <Compile Include="Kontrole\PotrosnjaMaterijalaKrozVrijeme.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kontrole\ucModule2.Designer.cs">
-      <DependentUpon>ucModule2.cs</DependentUpon>
+    <Compile Include="Kontrole\PotrosnjaMaterijalaKrozVrijeme.Designer.cs">
+      <DependentUpon>PotrosnjaMaterijalaKrozVrijeme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kontrole\ucModule3.cs">
+    <Compile Include="Kontrole\BrojOdrzavanjaKrozVrijeme.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kontrole\ucModule3.Designer.cs">
-      <DependentUpon>ucModule3.cs</DependentUpon>
+    <Compile Include="Kontrole\BrojOdrzavanjaKrozVrijeme.Designer.cs">
+      <DependentUpon>BrojOdrzavanjaKrozVrijeme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kontrole\ucModule4.cs">
+    <Compile Include="Kontrole\OdstupanjeOdNormale.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kontrole\ucModule4.Designer.cs">
-      <DependentUpon>ucModule4.cs</DependentUpon>
+    <Compile Include="Kontrole\OdstupanjeOdNormale.Designer.cs">
+      <DependentUpon>OdstupanjeOdNormale.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Evidencija_dodaj.resx">
       <DependentUpon>Evidencija_dodaj.cs</DependentUpon>
@@ -202,17 +202,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Kontrole\ucModule1.resx">
-      <DependentUpon>ucModule1.cs</DependentUpon>
+    <EmbeddedResource Include="Kontrole\StanjePoduzeca.resx">
+      <DependentUpon>StanjePoduzeca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kontrole\ucModule2.resx">
-      <DependentUpon>ucModule2.cs</DependentUpon>
+    <EmbeddedResource Include="Kontrole\PotrosnjaMaterijalaKrozVrijeme.resx">
+      <DependentUpon>PotrosnjaMaterijalaKrozVrijeme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kontrole\ucModule3.resx">
-      <DependentUpon>ucModule3.cs</DependentUpon>
+    <EmbeddedResource Include="Kontrole\BrojOdrzavanjaKrozVrijeme.resx">
+      <DependentUpon>BrojOdrzavanjaKrozVrijeme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kontrole\ucModule4.resx">
-      <DependentUpon>ucModule4.cs</DependentUpon>
+    <EmbeddedResource Include="Kontrole\OdstupanjeOdNormale.resx">
+      <DependentUpon>OdstupanjeOdNormale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

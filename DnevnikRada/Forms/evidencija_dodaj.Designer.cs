@@ -80,7 +80,7 @@
             this.lbl_utroseno_vrijeme.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 137);
             this.lbl_utroseno_vrijeme.Name = "lbl_utroseno_vrijeme";
-            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(144, 25);
+            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(143, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
             this.lbl_utroseno_vrijeme.Text = "Utrošeno Vrijeme";
             // 
@@ -121,7 +121,7 @@
             this.tb_opis_posla.Name = "tb_opis_posla";
             this.tb_opis_posla.Size = new System.Drawing.Size(356, 333);
             this.tb_opis_posla.TabIndex = 5;
-            this.tb_opis_posla.Text = resources.GetString("tb_opis_posla.Text");
+            this.tb_opis_posla.Text = "Opis Posla";
             // 
             // lbl_opis_posla
             // 
@@ -129,7 +129,7 @@
             this.lbl_opis_posla.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_opis_posla.Location = new System.Drawing.Point(140, 207);
             this.lbl_opis_posla.Name = "lbl_opis_posla";
-            this.lbl_opis_posla.Size = new System.Drawing.Size(92, 25);
+            this.lbl_opis_posla.Size = new System.Drawing.Size(91, 25);
             this.lbl_opis_posla.TabIndex = 6;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
@@ -200,7 +200,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(426, 90);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(155, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(152, 25);
             this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Utrosen Materijal 1";
             // 
