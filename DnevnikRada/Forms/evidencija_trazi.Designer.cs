@@ -163,7 +163,6 @@
             this.textTrazi.UseSelectable = true;
             this.textTrazi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textTrazi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.textTrazi.Click += new System.EventHandler(this.textTrazi_Click);
             // 
             // metroLabel1
             // 

@@ -56,11 +56,7 @@ namespace DnevnikRada
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
 
             materijalGrid.Columns[0].Visible = false;
-        }
-
-        private void textTrazi_Click(object sender, EventArgs e)
-        {
-
+            materijalGrid.Columns["Id_Evidencija"].Visible = false;
         }
     }
 }

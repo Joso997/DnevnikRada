@@ -19,6 +19,7 @@ namespace DnevnikRada
             InitializeComponent();
             mjestoGrid.DataSource = mjesto.Ucitaj();
             selectButton = SelectButton;
+            mjestoGrid.Columns["id"].Visible = false;
             Show();
         }
 

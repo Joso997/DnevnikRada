@@ -39,6 +39,11 @@ namespace DnevnikRada
                     materijalGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
+                    if(tb_opis_posla.Text=="" || tb_utroseno_vrijeme.Text=="")
+                    {
+                        MessageBox.Show("Utroseno vrijeme i upis posla ne mogu biti prazni");
+                        break;
+                    }
                     List<string> materijal_list = new List<string>();
                     List<int> kolicina_list = new List<int>();
                     var n_temp = dT.AsEnumerable().Select(r => r.Field<string>(0)).ToArray();
@@ -85,6 +90,14 @@ namespace DnevnikRada
         }
 
         private void tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void metroTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
