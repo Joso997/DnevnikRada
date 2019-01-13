@@ -30,6 +30,11 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
+                    if(metroTextBox1.Text == "" || metroComboBox1.Text == "")
+                    {
+                        MessageBox.Show("Materijal i Kolicina ne mogu biti prazni");
+                        break;
+                    }
                     object[] marks = new object[] { metroComboBox1.Text, int.Parse(metroTextBox1.Text) };
                     var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", metroComboBox1.Text));
                     if(rows.Length == 0)

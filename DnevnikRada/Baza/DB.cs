@@ -48,11 +48,8 @@ namespace DnevnikRada.Baza
             }
             else
             {
-                if (connection.State != ConnectionState.Open)
-                {
-                    MessageBox.Show("BAZA POSTOJI!!!");
-                    connection.Open();
-                }
+                //MessageBox.Show("DB EXISTS!!!");
+                connection.Open();
             }
             //connection = new SQLiteConnection("URI = file:DB.db");
           

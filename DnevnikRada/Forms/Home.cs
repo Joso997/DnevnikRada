@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DnevnikRada.Forms;
 using DnevnikRada.Interface;
 using DnevnikRada.Klase;
+using DnevnikRada.Kontrole;
 
 namespace DnevnikRada
 {
@@ -21,6 +22,10 @@ namespace DnevnikRada
             InitializeComponent();
             Show();
             selectButton = SelectButton;
+            UserKalendar userKalendar = new UserKalendar();
+            metroUserControl1.Controls.Add(userKalendar);
+            userKalendar.Dock = DockStyle.Fill;
+            userKalendar.BringToFront();
         }
 
         public bool SelectButton(object sender)
@@ -81,12 +86,6 @@ namespace DnevnikRada
         protected override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
-        }
-
-        private void kalendar_DropDown(object sender, EventArgs e)
-        {
-            Mjesta mjesta = new Mjesta();
-            DataTable dT = mjesta.Ucitaj();
         }
     }
 }

@@ -18,6 +18,10 @@ namespace DnevnikRada.Forms
             InitializeComponent();
             Show();
             selectButton = SelectButton;
+            ucModule1 ucModule1 = new ucModule1();
+            metroPanel1.Controls.Add(ucModule1);
+            ucModule1.Dock = DockStyle.Fill;
+            ucModule1.BringToFront();
         }
 
         public bool SelectButton(object sender)
@@ -26,44 +30,28 @@ namespace DnevnikRada.Forms
             switch (button.Name)
             {
                 case "btnStanjePoduzeca":
-                    if (!metroPanel1.Controls.Contains(ucModule1.Instance))
-                    {
-                        metroPanel1.Controls.Add(ucModule1.Instance);
-                        ucModule1.Instance.Dock = DockStyle.Fill;
-                        ucModule1.Instance.BringToFront();
-                    }
-                    else
-                        ucModule1.Instance.BringToFront();
+                    ucModule1 ucModule1 = new ucModule1();
+                    metroPanel1.Controls.Add(ucModule1);
+                    ucModule1.Dock = DockStyle.Fill;
+                    ucModule1.BringToFront();
                     break;
                 case "btnPotrosnjaMaterijalaKrozVrijeme":
-                    if (!metroPanel1.Controls.Contains(ucModule2.Instance))
-                    {
-                        metroPanel1.Controls.Add(ucModule2.Instance);
-                        ucModule2.Instance.Dock = DockStyle.Fill;
-                        ucModule2.Instance.BringToFront();
-                    }
-                    else
-                        ucModule2.Instance.BringToFront();
+                    ucModule2 ucModule2 = new ucModule2();
+                    metroPanel1.Controls.Add(ucModule2);
+                    ucModule2.Dock = DockStyle.Fill;
+                    ucModule2.BringToFront();
                     break;
                 case "btnBrojOdrzavanjaKrozVrijeme":
-                    if (!metroPanel1.Controls.Contains(ucModule3.Instance))
-                    {
-                        metroPanel1.Controls.Add(ucModule3.Instance);
-                        ucModule3.Instance.Dock = DockStyle.Fill;
-                        ucModule3.Instance.BringToFront();
-                    }
-                    else
-                        ucModule3.Instance.BringToFront();
+                    ucModule3 ucModule3 = new ucModule3();
+                    metroPanel1.Controls.Add(ucModule3);
+                    ucModule3.Dock = DockStyle.Fill;
+                    ucModule3.BringToFront();
                     break;
                 case "btnOdstupanjeOdNormale":
-                    if (!metroPanel1.Controls.Contains(ucModule4.Instance))
-                    {
-                        metroPanel1.Controls.Add(ucModule4.Instance);
-                        ucModule4.Instance.Dock = DockStyle.Fill;
-                        ucModule4.Instance.BringToFront();
-                    }
-                    else
-                        ucModule4.Instance.BringToFront();
+                    ucModule4 ucModule4 = new ucModule4();
+                    metroPanel1.Controls.Add(ucModule4);
+                    ucModule4.Dock = DockStyle.Fill;
+                    ucModule4.BringToFront();
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -77,11 +65,6 @@ namespace DnevnikRada.Forms
             base.This_FormClosing(sender, e);
         }
         protected override void Click_Gumb(object sender, EventArgs e)
-        {
-            base.Click_Gumb(sender, e);
-        }
-
-        private void Home_Click(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
         }

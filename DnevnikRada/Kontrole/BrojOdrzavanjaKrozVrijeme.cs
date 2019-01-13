@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DnevnikRada.Kontrole
+namespace DnevnikRada
 {
-    public partial class AddMaterijal : UserControl
+    public partial class ucModule3 : UserControl
     {
-        public AddMaterijal()
+        public ucModule3()
         {
             InitializeComponent();
         }

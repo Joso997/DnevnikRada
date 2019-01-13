@@ -44,6 +44,7 @@ namespace DnevnikRada
             this.lbl_mjesta = new System.Windows.Forms.Label();
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti = new MetroFramework.Controls.MetroPanel();
             this.kalendar = new MetroFramework.Controls.MetroDateTime();
+            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -228,7 +229,14 @@ namespace DnevnikRada
             this.kalendar.TabIndex = 2;
             this.kalendar.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.kalendar.UseStyleColors = true;
-            this.kalendar.DropDown += new System.EventHandler(this.kalendar_DropDown);
+            // 
+            // metroUserControl1
+            // 
+            this.metroUserControl1.Location = new System.Drawing.Point(605, 40);
+            this.metroUserControl1.Name = "metroUserControl1";
+            this.metroUserControl1.Size = new System.Drawing.Size(291, 271);
+            this.metroUserControl1.TabIndex = 8;
+            this.metroUserControl1.UseSelectable = true;
             // 
             // Home
             // 
@@ -236,6 +244,7 @@ namespace DnevnikRada
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.lbl_mjesta);
             this.Controls.Add(this.lbl_stanje_poduzeca);
             this.Controls.Add(this.panel_zadaci_aktivnog_tjedna_i_obavijesti);
@@ -273,6 +282,7 @@ namespace DnevnikRada
         private System.Windows.Forms.Label lbl_mjesta;
         private MetroFramework.Controls.MetroPanel panel_zadaci_aktivnog_tjedna_i_obavijesti;
         private MetroFramework.Controls.MetroDateTime kalendar;
+        private MetroFramework.Controls.MetroUserControl metroUserControl1;
     }
 }
 
