@@ -30,7 +30,7 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     string trazi = string.Format(searchText.Text);
-                    mjestoGrid.DataSource = mjesto.Ucitaj("Adresa", trazi);
+                    mjestoGrid.DataSource = mjesto.Ucitaj("NazivMjesta", trazi);
                     break;
                 case "Edit":
                     if (nazivBox.Text == "" || adresaBox.Text == "")
