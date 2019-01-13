@@ -21,7 +21,11 @@ namespace DnevnikRada.Baza
         //OTVARA KONEKCIJU PREMA BAZI
         public DB()
         {
+            //
+            // ako izbaci ovdje error reinstalirat sqlite preko nugeta
             connection = new SQLiteConnection("URI = file:DB.db");
+            //
+            //
             string workingDirectory = Environment.CurrentDirectory;
             string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
