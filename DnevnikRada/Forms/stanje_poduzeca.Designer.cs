@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stanje_Poduzeca));
             this.btnStanjePoduzeca = new MetroFramework.Controls.MetroButton();
             this.btnPotrosnjaMaterijalaKrozVrijeme = new MetroFramework.Controls.MetroButton();
             this.btnBrojOdrzavanjaKrozVrijeme = new MetroFramework.Controls.MetroButton();
             this.btnOdstupanjeOdNormale = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.Home = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnStanjePoduzeca
             // 
-            this.btnStanjePoduzeca.Location = new System.Drawing.Point(595, 16);
+            this.btnStanjePoduzeca.Location = new System.Drawing.Point(632, 26);
             this.btnStanjePoduzeca.Name = "btnStanjePoduzeca";
             this.btnStanjePoduzeca.Size = new System.Drawing.Size(266, 100);
             this.btnStanjePoduzeca.TabIndex = 18;
@@ -47,7 +49,7 @@
             // 
             // btnPotrosnjaMaterijalaKrozVrijeme
             // 
-            this.btnPotrosnjaMaterijalaKrozVrijeme.Location = new System.Drawing.Point(595, 131);
+            this.btnPotrosnjaMaterijalaKrozVrijeme.Location = new System.Drawing.Point(632, 135);
             this.btnPotrosnjaMaterijalaKrozVrijeme.Name = "btnPotrosnjaMaterijalaKrozVrijeme";
             this.btnPotrosnjaMaterijalaKrozVrijeme.Size = new System.Drawing.Size(266, 100);
             this.btnPotrosnjaMaterijalaKrozVrijeme.TabIndex = 19;
@@ -57,7 +59,7 @@
             // 
             // btnBrojOdrzavanjaKrozVrijeme
             // 
-            this.btnBrojOdrzavanjaKrozVrijeme.Location = new System.Drawing.Point(595, 256);
+            this.btnBrojOdrzavanjaKrozVrijeme.Location = new System.Drawing.Point(632, 244);
             this.btnBrojOdrzavanjaKrozVrijeme.Name = "btnBrojOdrzavanjaKrozVrijeme";
             this.btnBrojOdrzavanjaKrozVrijeme.Size = new System.Drawing.Size(266, 100);
             this.btnBrojOdrzavanjaKrozVrijeme.TabIndex = 20;
@@ -67,7 +69,7 @@
             // 
             // btnOdstupanjeOdNormale
             // 
-            this.btnOdstupanjeOdNormale.Location = new System.Drawing.Point(595, 385);
+            this.btnOdstupanjeOdNormale.Location = new System.Drawing.Point(632, 353);
             this.btnOdstupanjeOdNormale.Name = "btnOdstupanjeOdNormale";
             this.btnOdstupanjeOdNormale.Size = new System.Drawing.Size(266, 100);
             this.btnOdstupanjeOdNormale.TabIndex = 21;
@@ -80,19 +82,34 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(12, 12);
+            this.metroPanel1.Location = new System.Drawing.Point(2, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(514, 426);
+            this.metroPanel1.Size = new System.Drawing.Size(620, 578);
             this.metroPanel1.TabIndex = 22;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Location = new System.Drawing.Point(800, 480);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(100, 100);
+            this.Home.TabIndex = 24;
+            this.Home.UseSelectable = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
+            // 
             // Stanje_Poduzeca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Home);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnOdstupanjeOdNormale);
             this.Controls.Add(this.btnBrojOdrzavanjaKrozVrijeme);
@@ -114,5 +131,6 @@
         private MetroFramework.Controls.MetroButton btnBrojOdrzavanjaKrozVrijeme;
         private MetroFramework.Controls.MetroButton btnOdstupanjeOdNormale;
         private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroButton Home;
     }
 }

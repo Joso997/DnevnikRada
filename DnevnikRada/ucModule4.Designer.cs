@@ -105,7 +105,7 @@
             this.Controls.Add(this.metroDateTime2);
             this.Controls.Add(this.metroDateTime1);
             this.Name = "ucModule4";
-            this.Size = new System.Drawing.Size(516, 262);
+            this.Size = new System.Drawing.Size(620, 578);
             this.ResumeLayout(false);
 
         }

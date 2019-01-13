@@ -83,7 +83,7 @@
             this.Controls.Add(this.metroComboBox2);
             this.Controls.Add(this.metroComboBox1);
             this.Name = "ucModule2";
-            this.Size = new System.Drawing.Size(462, 319);
+            this.Size = new System.Drawing.Size(620, 578);
             this.ResumeLayout(false);
 
         }
