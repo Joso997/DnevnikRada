@@ -33,7 +33,7 @@ namespace DnevnikRada.Baza
             }
             else
             {
-                MessageBox.Show("DB EXISTS!!!");
+                //MessageBox.Show("DB EXISTS!!!");
                 connection.Open();
             }
             //connection = new SQLiteConnection("URI = file:DB.db");

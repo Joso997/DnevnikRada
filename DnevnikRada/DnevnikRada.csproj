@@ -119,6 +119,7 @@
     <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
     <Compile Include="Klase\Evidencija.cs" />
+    <Compile Include="Klase\Kalendar.cs" />
     <Compile Include="Klase\Mjesta.cs" />
     <Compile Include="Klase\Poveznica.cs" />
     <Compile Include="Klase\Program.cs" />
@@ -126,35 +127,35 @@
     <Compile Include="Klase\UIController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kontrole\AddMaterijal.cs">
+    <Compile Include="Kontrole\UserKalendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kontrole\AddMaterijal.Designer.cs">
-      <DependentUpon>AddMaterijal.cs</DependentUpon>
+    <Compile Include="Kontrole\UserKalendar.Designer.cs">
+      <DependentUpon>UserKalendar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucModule1.cs">
+    <Compile Include="Kontrole\ucModule1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModule1.Designer.cs">
+    <Compile Include="Kontrole\ucModule1.Designer.cs">
       <DependentUpon>ucModule1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucModule2.cs">
+    <Compile Include="Kontrole\ucModule2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModule2.Designer.cs">
+    <Compile Include="Kontrole\ucModule2.Designer.cs">
       <DependentUpon>ucModule2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucModule3.cs">
+    <Compile Include="Kontrole\ucModule3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModule3.Designer.cs">
+    <Compile Include="Kontrole\ucModule3.Designer.cs">
       <DependentUpon>ucModule3.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucModule4.cs">
+    <Compile Include="Kontrole\ucModule4.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModule4.Designer.cs">
+    <Compile Include="Kontrole\ucModule4.Designer.cs">
       <DependentUpon>ucModule4.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Evidencija_dodaj.resx">
@@ -187,8 +188,8 @@
     <EmbeddedResource Include="Klase\UIController.resx">
       <DependentUpon>UIController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kontrole\AddMaterijal.resx">
-      <DependentUpon>AddMaterijal.cs</DependentUpon>
+    <EmbeddedResource Include="Kontrole\UserKalendar.resx">
+      <DependentUpon>UserKalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -200,16 +201,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucModule1.resx">
+    <EmbeddedResource Include="Kontrole\ucModule1.resx">
       <DependentUpon>ucModule1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucModule2.resx">
+    <EmbeddedResource Include="Kontrole\ucModule2.resx">
       <DependentUpon>ucModule2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucModule3.resx">
+    <EmbeddedResource Include="Kontrole\ucModule3.resx">
       <DependentUpon>ucModule3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucModule4.resx">
+    <EmbeddedResource Include="Kontrole\ucModule4.resx">
       <DependentUpon>ucModule4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
