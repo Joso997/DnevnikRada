@@ -70,7 +70,7 @@
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
+            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(217, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
             this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
             // 
@@ -119,7 +119,7 @@
             this.tb_naziv_mjesta.SelectionStart = 0;
             this.tb_naziv_mjesta.ShortcutsEnabled = true;
             this.tb_naziv_mjesta.Size = new System.Drawing.Size(150, 23);
-            this.tb_naziv_mjesta.TabIndex = 6;
+            this.tb_naziv_mjesta.TabIndex = 1;
             this.tb_naziv_mjesta.UseSelectable = true;
             this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_naziv_mjesta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -169,7 +169,7 @@
             this.tb_adresa.SelectionStart = 0;
             this.tb_adresa.ShortcutsEnabled = true;
             this.tb_adresa.Size = new System.Drawing.Size(150, 23);
-            this.tb_adresa.TabIndex = 13;
+            this.tb_adresa.TabIndex = 2;
             this.tb_adresa.UseSelectable = true;
             this.tb_adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_adresa.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

@@ -26,9 +26,9 @@ namespace DnevnikRada.Baza
             connection = new SQLiteConnection("URI = file:DB.db");
             //
             //
-            string workingDirectory = Environment.CurrentDirectory;
-            string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
-            string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
+            
+            string sqlDBTables = string.Format(@".\Baza\DB.db.sql");
+            string sqlDBInsert = string.Format(@".\Baza\DB2.db.sql");
             if (!File.Exists("DB.db"))
             {
                 MessageBox.Show("Baza ne postoji");
