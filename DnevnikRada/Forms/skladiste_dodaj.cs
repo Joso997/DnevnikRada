@@ -34,7 +34,7 @@ namespace DnevnikRada
                     int kol;
                     string lol = tb_kolicina.Text.ToString();
                     kol = Int32.Parse(lol);
-                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, kol);
+                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, kol, Convert.ToInt32 (tb_Cijena.Text));
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -58,6 +58,14 @@ namespace DnevnikRada
         }
 
         private void tb_kolicina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Skladiste_dodaj_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

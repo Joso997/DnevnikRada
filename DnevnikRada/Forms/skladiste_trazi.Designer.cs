@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skladiste_trazi));
             this.label1 = new System.Windows.Forms.Label();
             this.Edit = new MetroFramework.Controls.MetroButton();
@@ -46,6 +46,8 @@
             this.Trazi = new MetroFramework.Controls.MetroButton();
             this.skladisteGrid = new MetroFramework.Controls.MetroGrid();
             this.Home = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cijenaBox = new MetroFramework.Controls.MetroTextBox();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(339, 52);
+            this.label1.Location = new System.Drawing.Point(339, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 24);
             this.label1.TabIndex = 15;
@@ -65,7 +67,7 @@
             // 
             this.Edit.BackColor = System.Drawing.Color.Aqua;
             this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(631, 377);
+            this.Edit.Location = new System.Drawing.Point(631, 353);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(100, 50);
             this.Edit.TabIndex = 14;
@@ -77,7 +79,7 @@
             // 
             this.kolicinaLabel.AutoSize = true;
             this.kolicinaLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.kolicinaLabel.Location = new System.Drawing.Point(160, 501);
+            this.kolicinaLabel.Location = new System.Drawing.Point(160, 477);
             this.kolicinaLabel.Name = "kolicinaLabel";
             this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
             this.kolicinaLabel.TabIndex = 13;
@@ -87,7 +89,7 @@
             // 
             this.mjLabel.AutoSize = true;
             this.mjLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.mjLabel.Location = new System.Drawing.Point(160, 459);
+            this.mjLabel.Location = new System.Drawing.Point(160, 435);
             this.mjLabel.Name = "mjLabel";
             this.mjLabel.Size = new System.Drawing.Size(130, 25);
             this.mjLabel.TabIndex = 12;
@@ -97,7 +99,7 @@
             // 
             this.prodavacLabel.AutoSize = true;
             this.prodavacLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.prodavacLabel.Location = new System.Drawing.Point(160, 417);
+            this.prodavacLabel.Location = new System.Drawing.Point(160, 393);
             this.prodavacLabel.Name = "prodavacLabel";
             this.prodavacLabel.Size = new System.Drawing.Size(82, 25);
             this.prodavacLabel.TabIndex = 11;
@@ -107,7 +109,7 @@
             // 
             this.nazivLabel.AutoSize = true;
             this.nazivLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.nazivLabel.Location = new System.Drawing.Point(160, 375);
+            this.nazivLabel.Location = new System.Drawing.Point(160, 351);
             this.nazivLabel.Name = "nazivLabel";
             this.nazivLabel.Size = new System.Drawing.Size(54, 25);
             this.nazivLabel.TabIndex = 10;
@@ -128,7 +130,7 @@
             this.mjBox.CustomButton.UseSelectable = true;
             this.mjBox.CustomButton.Visible = false;
             this.mjBox.Lines = new string[0];
-            this.mjBox.Location = new System.Drawing.Point(296, 461);
+            this.mjBox.Location = new System.Drawing.Point(296, 437);
             this.mjBox.MaxLength = 32767;
             this.mjBox.Name = "mjBox";
             this.mjBox.PasswordChar = '\0';
@@ -158,7 +160,7 @@
             this.kolicinaBox.CustomButton.UseSelectable = true;
             this.kolicinaBox.CustomButton.Visible = false;
             this.kolicinaBox.Lines = new string[0];
-            this.kolicinaBox.Location = new System.Drawing.Point(296, 503);
+            this.kolicinaBox.Location = new System.Drawing.Point(296, 479);
             this.kolicinaBox.MaxLength = 32767;
             this.kolicinaBox.Name = "kolicinaBox";
             this.kolicinaBox.PasswordChar = '\0';
@@ -190,7 +192,7 @@
             this.nazivBox.CustomButton.Visible = false;
             this.nazivBox.Enabled = false;
             this.nazivBox.Lines = new string[0];
-            this.nazivBox.Location = new System.Drawing.Point(296, 377);
+            this.nazivBox.Location = new System.Drawing.Point(296, 353);
             this.nazivBox.MaxLength = 32767;
             this.nazivBox.Name = "nazivBox";
             this.nazivBox.PasswordChar = '\0';
@@ -220,7 +222,7 @@
             this.prodavacBox.CustomButton.UseSelectable = true;
             this.prodavacBox.CustomButton.Visible = false;
             this.prodavacBox.Lines = new string[0];
-            this.prodavacBox.Location = new System.Drawing.Point(296, 419);
+            this.prodavacBox.Location = new System.Drawing.Point(296, 395);
             this.prodavacBox.MaxLength = 32767;
             this.prodavacBox.Name = "prodavacBox";
             this.prodavacBox.PasswordChar = '\0';
@@ -268,7 +270,7 @@
             // Trazi
             // 
             this.Trazi.BackColor = System.Drawing.Color.Aqua;
-            this.Trazi.Location = new System.Drawing.Point(631, 87);
+            this.Trazi.Location = new System.Drawing.Point(631, 63);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(100, 50);
             this.Trazi.TabIndex = 4;
@@ -285,39 +287,39 @@
             this.skladisteGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.skladisteGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.skladisteGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skladisteGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skladisteGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.skladisteGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skladisteGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.skladisteGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.skladisteGrid.EnableHeadersVisualStyles = false;
             this.skladisteGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.skladisteGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skladisteGrid.Location = new System.Drawing.Point(169, 157);
+            this.skladisteGrid.Location = new System.Drawing.Point(169, 133);
             this.skladisteGrid.MultiSelect = false;
             this.skladisteGrid.Name = "skladisteGrid";
             this.skladisteGrid.ReadOnly = true;
             this.skladisteGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skladisteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skladisteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.skladisteGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.skladisteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.skladisteGrid.Size = new System.Drawing.Size(562, 200);
@@ -336,15 +338,46 @@
             this.Home.UseSelectable = true;
             this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // Filters
+            // metroLabel1
             // 
-            this.Filters.FormattingEnabled = true;
-            this.Filters.ItemHeight = 23;
-            this.Filters.Location = new System.Drawing.Point(486, 102);
-            this.Filters.Name = "Filters";
-            this.Filters.Size = new System.Drawing.Size(139, 29);
-            this.Filters.TabIndex = 16;
-            this.Filters.UseSelectable = true;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(160, 519);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(59, 25);
+            this.metroLabel1.TabIndex = 17;
+            this.metroLabel1.Text = "Cijena";
+            // 
+            // cijenaBox
+            // 
+            // 
+            // 
+            // 
+            this.cijenaBox.CustomButton.Image = null;
+            this.cijenaBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.cijenaBox.CustomButton.Name = "";
+            this.cijenaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.cijenaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cijenaBox.CustomButton.TabIndex = 1;
+            this.cijenaBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cijenaBox.CustomButton.UseSelectable = true;
+            this.cijenaBox.CustomButton.Visible = false;
+            this.cijenaBox.Lines = new string[0];
+            this.cijenaBox.Location = new System.Drawing.Point(296, 521);
+            this.cijenaBox.MaxLength = 32767;
+            this.cijenaBox.Name = "cijenaBox";
+            this.cijenaBox.PasswordChar = '\0';
+            this.cijenaBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cijenaBox.SelectedText = "";
+            this.cijenaBox.SelectionLength = 0;
+            this.cijenaBox.SelectionStart = 0;
+            this.cijenaBox.ShortcutsEnabled = true;
+            this.cijenaBox.Size = new System.Drawing.Size(320, 23);
+            this.cijenaBox.TabIndex = 16;
+            this.cijenaBox.UseSelectable = true;
+            this.cijenaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cijenaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cijenaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cijenaBox_KeyPress);
             // 
             // skladiste_trazi
             // 
@@ -352,7 +385,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.Filters);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.cijenaBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.kolicinaLabel);
@@ -393,6 +427,8 @@
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroButton Edit;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox cijenaBox;
         private MetroFramework.Controls.MetroComboBox Filters;
     }
 }

@@ -30,17 +30,17 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
-                    if(metroTextBox1.Text == "" || metroComboBox1.Text == "")
+                    if(Kolicina.Text == "" || OdabirMaterijala.Text == "")
                     {
                         MessageBox.Show("Materijal i Kolicina ne mogu biti prazni");
                         break;
                     }
-                    object[] marks = new object[] { metroComboBox1.Text, int.Parse(metroTextBox1.Text) };
-                    var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", metroComboBox1.Text));
+                    object[] marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) };
+                    var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", OdabirMaterijala.Text));
                     if(rows.Length == 0)
                         dT.LoadDataRow(marks, true);
                     else
-                        rows[0]["Kolicina"] = int.Parse(metroTextBox1.Text);
+                        rows[0]["Kolicina"] = int.Parse(Kolicina.Text);
                     materijalGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
@@ -79,7 +79,7 @@ namespace DnevnikRada
             DataTable dT_skladiste = new DataTable();
             dT_skladiste = skladiste.Ucitaj("NazivMaterijala", null);
             var _temp = dT_skladiste.AsEnumerable().Select(r => r.Field<string>("NazivMaterijala")).ToArray();
-            metroComboBox1.Items.AddRange(_temp);
+            OdabirMaterijala.Items.AddRange(_temp);
             Mjesta mjesta = new Mjesta();
             DataTable dT_mjesta = new DataTable();
             dT_mjesta = mjesta.Ucitaj("NazivMjesta", null);
@@ -90,8 +90,8 @@ namespace DnevnikRada
 
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            metroComboBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
-            metroTextBox1.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
+            OdabirMaterijala.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
+            Kolicina.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
         }
 
         private void tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)

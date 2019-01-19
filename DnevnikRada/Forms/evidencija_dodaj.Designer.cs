@@ -41,9 +41,9 @@
             this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.btn_trash = new MetroFramework.Controls.MetroButton();
             this.Dodaj = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.Kolicina = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.OdabirMaterijala = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -168,31 +168,31 @@
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(37, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(819, 92);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(59, 23);
-            this.metroTextBox1.TabIndex = 11;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox1_KeyPress);
+            this.Kolicina.CustomButton.Image = null;
+            this.Kolicina.CustomButton.Location = new System.Drawing.Point(37, 1);
+            this.Kolicina.CustomButton.Name = "";
+            this.Kolicina.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Kolicina.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Kolicina.CustomButton.TabIndex = 1;
+            this.Kolicina.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Kolicina.CustomButton.UseSelectable = true;
+            this.Kolicina.CustomButton.Visible = false;
+            this.Kolicina.Lines = new string[0];
+            this.Kolicina.Location = new System.Drawing.Point(819, 92);
+            this.Kolicina.MaxLength = 32767;
+            this.Kolicina.Name = "metroTextBox1";
+            this.Kolicina.PasswordChar = '\0';
+            this.Kolicina.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Kolicina.SelectedText = "";
+            this.Kolicina.SelectionLength = 0;
+            this.Kolicina.SelectionStart = 0;
+            this.Kolicina.ShortcutsEnabled = true;
+            this.Kolicina.Size = new System.Drawing.Size(59, 23);
+            this.Kolicina.TabIndex = 11;
+            this.Kolicina.UseSelectable = true;
+            this.Kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Kolicina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox1_KeyPress);
             // 
             // metroLabel1
             // 
@@ -206,13 +206,13 @@
             // 
             // metroComboBox1
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(587, 92);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(168, 29);
-            this.metroComboBox1.TabIndex = 18;
-            this.metroComboBox1.UseSelectable = true;
+            this.OdabirMaterijala.FormattingEnabled = true;
+            this.OdabirMaterijala.ItemHeight = 23;
+            this.OdabirMaterijala.Location = new System.Drawing.Point(587, 92);
+            this.OdabirMaterijala.Name = "metroComboBox1";
+            this.OdabirMaterijala.Size = new System.Drawing.Size(168, 29);
+            this.OdabirMaterijala.TabIndex = 18;
+            this.OdabirMaterijala.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -311,8 +311,8 @@
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroComboBox5);
             this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroComboBox1);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.OdabirMaterijala);
+            this.Controls.Add(this.Kolicina);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Dodaj);
             this.Controls.Add(this.btn_trash);
@@ -344,9 +344,9 @@
         private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroButton btn_trash;
         private MetroFramework.Controls.MetroButton Dodaj;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox Kolicina;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox OdabirMaterijala;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroComboBox metroComboBox5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
