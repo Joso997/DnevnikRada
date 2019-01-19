@@ -33,7 +33,7 @@ namespace DnevnikRada
                         MessageBox.Show("Kolicina i Naziv ne mogu biti prazni");
                         break;
                     }
-                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text));
+                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text), Int32.Parse(cijenaBox.Text));
                     skladisteGrid.DataSource = skladiste.Ucitaj();
                     Edit.Enabled = false;
                     break;
@@ -53,6 +53,7 @@ namespace DnevnikRada
             kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
             mjBox.Text = dT.Rows[0].ItemArray[4].ToString();
             index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
+            cijenaBox.Text = dT.Rows[0].ItemArray[5].ToString();
             Edit.Enabled = true;
         }
 
@@ -66,6 +67,14 @@ namespace DnevnikRada
         }
 
         private void kolicinaBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cijenaBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

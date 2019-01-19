@@ -26,9 +26,17 @@ namespace DnevnikRada.Baza
             connection = new SQLiteConnection("URI = file:DB.db");
             //
             //
+
+             //za testiranje tjekom rada s aplikacijom
+            string workingDirectory = Environment.CurrentDirectory;
+            string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
+            string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
             
+
+            /* // za publishanje
             string sqlDBTables = string.Format(@".\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(@".\Baza\DB2.db.sql");
+            */
             if (!File.Exists("DB.db"))
             {
                 MessageBox.Show("Baza ne postoji");
@@ -139,5 +147,55 @@ namespace DnevnikRada.Baza
             _temp.Add(stupciValue);
             return _temp;
         }
+
+        //////////////////////////////////// statistika
+        
+        public int Evidencija_C_S(bool TRUE_COUNT_____FALSE_SUM)
+        {
+            string all="";
+            if(TRUE_COUNT_____FALSE_SUM) { all = "select count (ID) from Evidencija"; }
+            else if(!TRUE_COUNT_____FALSE_SUM) { all = "SELECT SUM (UtrosenoVrijeme) FROM Evidencija"; }
+            int count=0;
+            command = new SQLiteCommand(all,connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                count = Convert.ToInt32 (reader.GetValue(0));
+            }
+            return count;
+            
+        }
+
+        public int CijenaMaterijala()
+        {
+            string potrebno = "select Kolicina, Cijena from Skladiste";
+            int cijena=0;
+            command = new SQLiteCommand(potrebno, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                int kolicina, cijena2;
+                if (reader.GetValue(0) == null)
+                {
+                    kolicina = 0;
+                }
+                else
+                {
+                    kolicina = Convert.ToInt32(reader.GetValue(0));
+                }
+                /////////
+                if (Convert.ToString (reader.GetValue(1)) == "")
+                {
+                    cijena2 = 0;
+                }
+                else
+                {
+                    cijena2 = Convert.ToInt32(reader.GetValue(1));
+                }
+                cijena += kolicina * cijena2;
+            }
+            return cijena;
+        }
+
     }
 }

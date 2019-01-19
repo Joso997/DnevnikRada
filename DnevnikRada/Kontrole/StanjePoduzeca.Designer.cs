@@ -28,139 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.metroButton8 = new MetroFramework.Controls.MetroButton();
-            this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.metroButton10 = new MetroFramework.Controls.MetroButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.RadniSati = new System.Windows.Forms.Label();
+            this.VrijednostMaterijala = new System.Windows.Forms.Label();
+            this.brojEvidencija = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // label1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(267, 83);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "metroButton1";
-            this.metroButton1.UseSelectable = true;
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(206, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Radni Sati";
             // 
-            // metroButton2
+            // label2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(64, 124);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 0;
-            this.metroButton2.Text = "metroButton1";
-            this.metroButton2.UseSelectable = true;
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(82, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(462, 41);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ukupna Vrijednost Materijala";
             // 
-            // metroButton3
+            // label3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(206, 158);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(75, 23);
-            this.metroButton3.TabIndex = 0;
-            this.metroButton3.Text = "metroButton1";
-            this.metroButton3.UseSelectable = true;
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(180, 359);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 41);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Broj Evidencija";
             // 
-            // metroButton4
+            // RadniSati
             // 
-            this.metroButton4.Location = new System.Drawing.Point(151, 83);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(75, 23);
-            this.metroButton4.TabIndex = 0;
-            this.metroButton4.Text = "metroButton1";
-            this.metroButton4.UseSelectable = true;
+            this.RadniSati.AutoSize = true;
+            this.RadniSati.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RadniSati.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadniSati.Location = new System.Drawing.Point(274, 99);
+            this.RadniSati.Name = "RadniSati";
+            this.RadniSati.Size = new System.Drawing.Size(38, 41);
+            this.RadniSati.TabIndex = 3;
+            this.RadniSati.Text = "0";
             // 
-            // metroButton5
+            // VrijednostMaterijala
             // 
-            this.metroButton5.Location = new System.Drawing.Point(376, 71);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(75, 23);
-            this.metroButton5.TabIndex = 0;
-            this.metroButton5.Text = "metroButton1";
-            this.metroButton5.UseSelectable = true;
+            this.VrijednostMaterijala.AutoSize = true;
+            this.VrijednostMaterijala.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.VrijednostMaterijala.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VrijednostMaterijala.Location = new System.Drawing.Point(274, 257);
+            this.VrijednostMaterijala.Name = "VrijednostMaterijala";
+            this.VrijednostMaterijala.Size = new System.Drawing.Size(38, 41);
+            this.VrijednostMaterijala.TabIndex = 4;
+            this.VrijednostMaterijala.Text = "0";
             // 
-            // metroButton6
+            // brojEvidencija
             // 
-            this.metroButton6.Location = new System.Drawing.Point(173, 112);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(75, 23);
-            this.metroButton6.TabIndex = 0;
-            this.metroButton6.Text = "metroButton1";
-            this.metroButton6.UseSelectable = true;
-            // 
-            // metroButton7
-            // 
-            this.metroButton7.Location = new System.Drawing.Point(315, 146);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(75, 23);
-            this.metroButton7.TabIndex = 0;
-            this.metroButton7.Text = "metroButton1";
-            this.metroButton7.UseSelectable = true;
-            // 
-            // metroButton8
-            // 
-            this.metroButton8.Location = new System.Drawing.Point(302, 117);
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.Size = new System.Drawing.Size(75, 23);
-            this.metroButton8.TabIndex = 0;
-            this.metroButton8.Text = "metroButton1";
-            this.metroButton8.UseSelectable = true;
-            // 
-            // metroButton9
-            // 
-            this.metroButton9.Location = new System.Drawing.Point(99, 158);
-            this.metroButton9.Name = "metroButton9";
-            this.metroButton9.Size = new System.Drawing.Size(75, 23);
-            this.metroButton9.TabIndex = 0;
-            this.metroButton9.Text = "metroButton1";
-            this.metroButton9.UseSelectable = true;
-            // 
-            // metroButton10
-            // 
-            this.metroButton10.Location = new System.Drawing.Point(241, 192);
-            this.metroButton10.Name = "metroButton10";
-            this.metroButton10.Size = new System.Drawing.Size(75, 23);
-            this.metroButton10.TabIndex = 0;
-            this.metroButton10.Text = "metroButton1";
-            this.metroButton10.UseSelectable = true;
+            this.brojEvidencija.AutoSize = true;
+            this.brojEvidencija.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.brojEvidencija.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojEvidencija.Location = new System.Drawing.Point(274, 422);
+            this.brojEvidencija.Name = "brojEvidencija";
+            this.brojEvidencija.Size = new System.Drawing.Size(38, 41);
+            this.brojEvidencija.TabIndex = 5;
+            this.brojEvidencija.Text = "0";
             // 
             // ucModule1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton10);
-            this.Controls.Add(this.metroButton7);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton9);
-            this.Controls.Add(this.metroButton8);
-            this.Controls.Add(this.metroButton6);
-            this.Controls.Add(this.metroButton5);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.brojEvidencija);
+            this.Controls.Add(this.VrijednostMaterijala);
+            this.Controls.Add(this.RadniSati);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "ucModule1";
             this.Size = new System.Drawing.Size(620, 578);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroButton metroButton9;
-        private MetroFramework.Controls.MetroButton metroButton10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label RadniSati;
+        private System.Windows.Forms.Label VrijednostMaterijala;
+        private System.Windows.Forms.Label brojEvidencija;
     }
 }

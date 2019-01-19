@@ -40,6 +40,8 @@
             this.lbl_kolicina = new MetroFramework.Controls.MetroLabel();
             this.tb_kolicina = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_Cijena = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // Home
@@ -176,7 +178,7 @@
             // 
             // Potvrdi
             // 
-            this.Potvrdi.Location = new System.Drawing.Point(581, 350);
+            this.Potvrdi.Location = new System.Drawing.Point(581, 416);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 50);
             this.Potvrdi.TabIndex = 8;
@@ -237,12 +239,54 @@
             this.label1.Text = "Dodavanje U Skladište";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // tb_Cijena
+            // 
+            // 
+            // 
+            // 
+            this.tb_Cijena.CustomButton.Image = null;
+            this.tb_Cijena.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.tb_Cijena.CustomButton.Name = "";
+            this.tb_Cijena.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Cijena.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Cijena.CustomButton.TabIndex = 1;
+            this.tb_Cijena.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Cijena.CustomButton.UseSelectable = true;
+            this.tb_Cijena.CustomButton.Visible = false;
+            this.tb_Cijena.Lines = new string[0];
+            this.tb_Cijena.Location = new System.Drawing.Point(362, 352);
+            this.tb_Cijena.MaxLength = 32767;
+            this.tb_Cijena.Name = "tb_Cijena";
+            this.tb_Cijena.PasswordChar = '\0';
+            this.tb_Cijena.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Cijena.SelectedText = "";
+            this.tb_Cijena.SelectionLength = 0;
+            this.tb_Cijena.SelectionStart = 0;
+            this.tb_Cijena.ShortcutsEnabled = true;
+            this.tb_Cijena.Size = new System.Drawing.Size(320, 23);
+            this.tb_Cijena.TabIndex = 18;
+            this.tb_Cijena.UseSelectable = true;
+            this.tb_Cijena.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Cijena.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(219, 350);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(59, 25);
+            this.metroLabel1.TabIndex = 17;
+            this.metroLabel1.Text = "Cijena";
+            // 
             // Skladiste_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.tb_Cijena);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_kolicina);
             this.Controls.Add(this.lbl_kolicina);
@@ -258,6 +302,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Skladiste_dodaj_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +321,7 @@
         private MetroFramework.Controls.MetroLabel lbl_kolicina;
         private MetroFramework.Controls.MetroTextBox tb_kolicina;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroTextBox tb_Cijena;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
