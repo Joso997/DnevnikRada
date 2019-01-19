@@ -14,13 +14,16 @@ namespace DnevnikRada
     public partial class evidencija_trazi : UIController
     {
         Evidencija evidencija = new Evidencija();
+        Dictionary<string, string> filter_dic;
         public evidencija_trazi()
         {
             InitializeComponent();
             evidencijaGrid.DataSource = evidencija.Ucitaj();
             evidencijaGrid.Columns["id"].Visible = false;
+            evidencijaGrid.Columns["opisposla"].Visible = false;
             selectButton = SelectButton;
             Show();
+            SetFilter();
         }
 
         public bool SelectButton(object sender)
@@ -30,7 +33,7 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     string trazi = textTrazi.Text;
-                    evidencijaGrid.DataSource = evidencija.Ucitaj("NazivMjesta", trazi);
+                    evidencijaGrid.DataSource = evidencija.Ucitaj(filter_dic[Filters.Text], trazi);
 
                     break;
                 case "Home":
@@ -38,6 +41,18 @@ namespace DnevnikRada
                     return true;
             }
             return false;
+        }
+
+        private void SetFilter()
+        {
+            filter_dic = new Dictionary<string, string>
+            {
+                {"Naziv Mjesta", "NazivMjesta" },
+                {"Opis Posla", "OpisPosla" },
+                {"Utroseno Vrijeme", "UtrosenoVrijeme" }
+            };
+            Filters.Items.AddRange(filter_dic.Keys.ToArray());
+            Filters.Text = filter_dic.Keys.First();
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,15 +63,14 @@ namespace DnevnikRada
         {
             base.Click_Gumb(sender, e);
         }
-        Poveznica poveznica = new Poveznica();
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            materijalGrid.DataSource = poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
+            materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
-
             materijalGrid.Columns[0].Visible = false;
             materijalGrid.Columns["Id_Evidencija"].Visible = false;
         }
+
     }
 }

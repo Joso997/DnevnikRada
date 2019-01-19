@@ -43,6 +43,7 @@
             this.textTrazi = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
+            this.Filters = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +127,7 @@
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(432, 32);
+            this.Trazi.Location = new System.Drawing.Point(512, 32);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(150, 23);
             this.Trazi.TabIndex = 4;
@@ -140,7 +141,7 @@
             // 
             // 
             this.textTrazi.CustomButton.Image = null;
-            this.textTrazi.CustomButton.Location = new System.Drawing.Point(155, 1);
+            this.textTrazi.CustomButton.Location = new System.Drawing.Point(223, 1);
             this.textTrazi.CustomButton.Name = "";
             this.textTrazi.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.textTrazi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -149,7 +150,7 @@
             this.textTrazi.CustomButton.UseSelectable = true;
             this.textTrazi.CustomButton.Visible = false;
             this.textTrazi.Lines = new string[0];
-            this.textTrazi.Location = new System.Drawing.Point(243, 32);
+            this.textTrazi.Location = new System.Drawing.Point(21, 32);
             this.textTrazi.MaxLength = 32767;
             this.textTrazi.Name = "textTrazi";
             this.textTrazi.PasswordChar = '\0';
@@ -158,7 +159,7 @@
             this.textTrazi.SelectionLength = 0;
             this.textTrazi.SelectionStart = 0;
             this.textTrazi.ShortcutsEnabled = true;
-            this.textTrazi.Size = new System.Drawing.Size(177, 23);
+            this.textTrazi.Size = new System.Drawing.Size(245, 23);
             this.textTrazi.TabIndex = 5;
             this.textTrazi.UseSelectable = true;
             this.textTrazi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -219,12 +220,23 @@
             this.materijalGrid.Size = new System.Drawing.Size(349, 262);
             this.materijalGrid.TabIndex = 7;
             // 
+            // Filters
+            // 
+            this.Filters.FormattingEnabled = true;
+            this.Filters.ItemHeight = 23;
+            this.Filters.Location = new System.Drawing.Point(311, 32);
+            this.Filters.Name = "Filters";
+            this.Filters.Size = new System.Drawing.Size(139, 29);
+            this.Filters.TabIndex = 18;
+            this.Filters.UseSelectable = true;
+            // 
             // evidencija_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Filters);
             this.Controls.Add(this.materijalGrid);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.textTrazi);
@@ -254,5 +266,6 @@
         private MetroFramework.Controls.MetroTextBox textTrazi;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid materijalGrid;
+        private MetroFramework.Controls.MetroComboBox Filters;
     }
 }

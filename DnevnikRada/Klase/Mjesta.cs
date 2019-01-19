@@ -10,10 +10,10 @@ namespace DnevnikRada.Klase
 {
     class Mjesta : Baza.DB, IUseDatabase
     {
-        public string Naziv_mjesta { get; private set; }
-        public string Adresa { get; private set; }
-        public DateTime Od_VrijemeRada { get; private set; }
-        public DateTime Do_VrijemeRada { get; private set; }
+        public string Naziv_mjesta { get; }
+        public string Adresa { get; }
+        public DateTime Od_VrijemeRada { get; }
+        public DateTime Do_VrijemeRada { get; }
 
         public Mjesta(string _naziv_mjesta, string _adresa, DateTime _od_vrijemeRada, DateTime _do_vrijemeRada)
         {

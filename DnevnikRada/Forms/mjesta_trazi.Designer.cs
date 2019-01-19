@@ -45,6 +45,7 @@
             this.adresaBox = new MetroFramework.Controls.MetroTextBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
+            this.Filters = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(519, 48);
+            this.Trazi.Location = new System.Drawing.Point(582, 48);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(180, 23);
             this.Trazi.TabIndex = 1;
@@ -86,7 +87,7 @@
             this.searchText.CustomButton.Visible = false;
             this.searchText.Lines = new string[] {
         "WuuwuWUWUWUwuwuWU"};
-            this.searchText.Location = new System.Drawing.Point(230, 48);
+            this.searchText.Location = new System.Drawing.Point(176, 48);
             this.searchText.MaxLength = 32767;
             this.searchText.Name = "searchText";
             this.searchText.PasswordChar = '\0';
@@ -276,12 +277,23 @@
             this.metroDateTime2.Size = new System.Drawing.Size(214, 29);
             this.metroDateTime2.TabIndex = 16;
             // 
+            // Filters
+            // 
+            this.Filters.FormattingEnabled = true;
+            this.Filters.ItemHeight = 23;
+            this.Filters.Location = new System.Drawing.Point(415, 48);
+            this.Filters.Name = "Filters";
+            this.Filters.Size = new System.Drawing.Size(139, 29);
+            this.Filters.TabIndex = 17;
+            this.Filters.UseSelectable = true;
+            // 
             // Mjesta_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Filters);
             this.Controls.Add(this.metroDateTime2);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.label2);
@@ -320,5 +332,6 @@
         private MetroFramework.Controls.MetroTextBox adresaBox;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroDateTime metroDateTime2;
+        private MetroFramework.Controls.MetroComboBox Filters;
     }
 }

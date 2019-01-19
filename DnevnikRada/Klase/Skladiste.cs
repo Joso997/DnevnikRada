@@ -12,11 +12,10 @@ namespace DnevnikRada.Klase
     class Skladiste : Baza.DB, IUseDatabase
     {
         
-        public string Naziv_materijala{ get; private set;}
-        public string Proizvodac { get; private set; }
-        public string Mjerna_jedinica { get; private set; }
-        public int Kolicina { get; set; }
-        //private Baza.DB baza = new Baza.DB();
+        public string Naziv_materijala{ get;}
+        public string Proizvodac { get; }
+        public string Mjerna_jedinica { get; }
+        public int Kolicina { get; }
 
 
         // mozda bi trebalo u konstruktor stavit samo ono sto je obavezno? recimo d su 

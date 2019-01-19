@@ -2,13 +2,15 @@
 using System.Data;
 using System.Windows.Forms;
 using DnevnikRada.Klase;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DnevnikRada
 {
     public partial class skladiste_trazi : UIController
     {
-        int index;
         Skladiste skladiste = new Skladiste();
+        Dictionary<string, string> filter_dic;
         public skladiste_trazi()
         {          
             InitializeComponent();
@@ -16,6 +18,7 @@ namespace DnevnikRada
             selectButton = SelectButton;
             skladisteGrid.Columns["id"].Visible = false;
             Show();
+            SetFilter();
         }
 
         public bool SelectButton(object sender)
@@ -25,7 +28,7 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     string trazi = search.Text;
-                    skladisteGrid.DataSource = skladiste.Ucitaj("NazivMaterijala", trazi);
+                    skladisteGrid.DataSource = skladiste.Ucitaj(filter_dic[Filters.Text], trazi);
                     break;
                 case "Edit":
                     if (kolicinaBox.Text == "" || nazivBox.Text == "")
@@ -52,8 +55,20 @@ namespace DnevnikRada
             prodavacBox.Text = dT.Rows[0].ItemArray[2].ToString();
             kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
             mjBox.Text = dT.Rows[0].ItemArray[4].ToString();
-            index = Int32.Parse(dT.Rows[0].ItemArray[0].ToString());
             Edit.Enabled = true;
+        }
+
+        private void SetFilter()
+        {
+            filter_dic = new Dictionary<string, string>
+            {
+                {"Naziv Materijala", "NazivMaterijala" },
+                {"Prodavac", "Prodavac" },
+                {"Mjerna Jedinica", "MjernaJedinica" },
+                {"Kolicina", "Kolicina" }
+            };
+            Filters.Items.AddRange(filter_dic.Keys.ToArray());
+            Filters.Text = filter_dic.Keys.First();
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)

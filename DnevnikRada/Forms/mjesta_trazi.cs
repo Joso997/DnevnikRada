@@ -14,6 +14,7 @@ namespace DnevnikRada
     public partial class Mjesta_trazi : UIController
     {
         Mjesta mjesto = new Mjesta();
+        Dictionary<string, string> filter_dic;
         public Mjesta_trazi()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace DnevnikRada
             selectButton = SelectButton;
             mjestoGrid.Columns["id"].Visible = false;
             Show();
+            SetFilter();
         }
 
         public bool SelectButton(object sender)
@@ -30,7 +32,7 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     string trazi = string.Format(searchText.Text);
-                    mjestoGrid.DataSource = mjesto.Ucitaj("Adresa", trazi);
+                    mjestoGrid.DataSource = mjesto.Ucitaj(filter_dic[Filters.Text], trazi);
                     break;
                 case "Edit":
                     if (nazivBox.Text == "" || adresaBox.Text == "")
@@ -58,6 +60,17 @@ namespace DnevnikRada
             metroDateTime1.Value = dT.Rows[0].ItemArray[3].Equals(DBNull.Value) ? DateTime.Today : (DateTime)dT.Rows[0].ItemArray[3];
             metroDateTime2.Value = dT.Rows[0].ItemArray[4].Equals(DBNull.Value) ? DateTime.Today : (DateTime)dT.Rows[0].ItemArray[4];
             Edit.Enabled = true;
+        }
+
+        private void SetFilter()
+        {
+            filter_dic = new Dictionary<string, string>
+            {
+                {"Naziv Mjesta", "NazivMjesta" },
+                {"Adresa", "Adresa" }
+            };
+            Filters.Items.AddRange(filter_dic.Keys.ToArray());
+            Filters.Text = filter_dic.Keys.First();
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)

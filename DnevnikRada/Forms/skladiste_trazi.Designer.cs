@@ -46,6 +46,7 @@
             this.Trazi = new MetroFramework.Controls.MetroButton();
             this.skladisteGrid = new MetroFramework.Controls.MetroGrid();
             this.Home = new MetroFramework.Controls.MetroButton();
+            this.Filters = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,7 +241,7 @@
             // 
             // 
             this.search.CustomButton.Image = null;
-            this.search.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.search.CustomButton.Location = new System.Drawing.Point(289, 1);
             this.search.CustomButton.Name = "";
             this.search.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -249,7 +250,7 @@
             this.search.CustomButton.UseSelectable = true;
             this.search.CustomButton.Visible = false;
             this.search.Lines = new string[0];
-            this.search.Location = new System.Drawing.Point(296, 102);
+            this.search.Location = new System.Drawing.Point(169, 102);
             this.search.MaxLength = 32767;
             this.search.Name = "search";
             this.search.PasswordChar = '\0';
@@ -258,7 +259,7 @@
             this.search.SelectionLength = 0;
             this.search.SelectionStart = 0;
             this.search.ShortcutsEnabled = true;
-            this.search.Size = new System.Drawing.Size(320, 23);
+            this.search.Size = new System.Drawing.Size(311, 23);
             this.search.TabIndex = 5;
             this.search.UseSelectable = true;
             this.search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -335,12 +336,23 @@
             this.Home.UseSelectable = true;
             this.Home.Click += new System.EventHandler(this.Click_Gumb);
             // 
+            // Filters
+            // 
+            this.Filters.FormattingEnabled = true;
+            this.Filters.ItemHeight = 23;
+            this.Filters.Location = new System.Drawing.Point(486, 102);
+            this.Filters.Name = "Filters";
+            this.Filters.Size = new System.Drawing.Size(139, 29);
+            this.Filters.TabIndex = 16;
+            this.Filters.UseSelectable = true;
+            // 
             // skladiste_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Filters);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.kolicinaLabel);
@@ -381,5 +393,6 @@
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroButton Edit;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroComboBox Filters;
     }
 }

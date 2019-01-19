@@ -11,29 +11,30 @@ namespace DnevnikRada.Klase
 {
     class Evidencija : Baza.DB, IUseDatabase
     {
-        public string Naziv_Mjesta { get; set; }
-        public DateTime Datum { get; set; }
-        public double Cijena { get; set; }
-        public string Opis_Posla { get; set; }
-        public int Utroseno_Vrijeme { get; set; }
-        private Poveznica poveznica = new Poveznica();
+        public string Naziv_Mjesta { get; }
+        public DateTime Datum { get; }
+        public double Cijena { get; }
+        public string Opis_Posla { get; }
+        public int Utroseno_Vrijeme { get; }
+        public Poveznica Poveznica { get; }
 
         //ono sto je potrebno u evidenciji <<datum, opis posla, utroseno vrijeme>> ostalo moze bit null
         //materijal i kolicina prebacena u poveznicu jer nije potrebno ovdje
         public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, double _cijena, List<string> _naziv_Materijala, List<int> _kolicina)
         {
+            Poveznica = new Poveznica();
             Naziv_Mjesta = _nazivMjesta;
             Datum = _datum;
             Cijena = _cijena;
             Opis_Posla = _opisPosla;
             Utroseno_Vrijeme = _utrosenoVrijeme;
-            poveznica.Naziv_materijala = _naziv_Materijala;
-            poveznica.Kolicina = _kolicina;
+            Poveznica.Naziv_materijala = _naziv_Materijala;
+            Poveznica.Kolicina = _kolicina;
             Dodaj();
         }
         public Evidencija()
         {
-
+            Poveznica = new Poveznica();
         }
 
         private void Dodaj()
@@ -45,8 +46,8 @@ namespace DnevnikRada.Klase
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme }
             };
-            poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
-            new Poveznica(poveznica.Id_evidencija, poveznica.Naziv_materijala, poveznica.Kolicina);
+            Poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
+            new Poveznica(Poveznica.Id_evidencija, Poveznica.Naziv_materijala, Poveznica.Kolicina);
         }
 
         public DataTable Ucitaj()
