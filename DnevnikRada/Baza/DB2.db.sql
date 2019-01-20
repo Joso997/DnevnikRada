@@ -12,7 +12,19 @@ INSERT INTO `Skladiste` (NazivMaterijala, Prodavac, MjernaJedinica, Kolicina, Ci
 INSERT INTO `Mjesta` (NazivMjesta,Adresa, VrijemeRadaOD, VrijemeRadaDO) VALUES ('Rijeka','Nojev2 36','2019-01-12 00:00:00',NULL);
 INSERT INTO `Mjesta` (NazivMjesta,Adresa, VrijemeRadaOD, VrijemeRadaDO) VALUES ('Pula','Kebab 77',NULL,NULL);
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta) VALUES ('Rijeka','2019-01-10 11:09:08','Prodano kupljeno nabavljeno nije bitno nesto sam radio',10,2);
-INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta) VALUES ('Rijek2','2019-01-10 11:15:12','Opis posla je jako bitan da bi firma radila pravilno i da se vidi potrosnja',12,1);
+INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta) VALUES ('Rijek2','2018-12-10 11:15:12','Opis posla je jako bitan da bi firma radila pravilno i da se vidi potrosnja',12,1);
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta) VALUES ('Crkvenica','2019-01-10 11:16:43','opis posla kazes a',4,1);
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta) VALUES ('Pula','2019-01-10 12:05:47','RADI VALJDA HAHAHAHAHAHAHAHAHAHAHAHAHAHA',10,1);
+
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (1, 220);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (2, 50);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (3, 1);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (4, 2);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (5, 10);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (6, 5);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (7, 10);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (8, 15);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (9, 5);
+insert into `Poveznica` (Id_Materijala,Kolicina) VALUES (10, 13);
+
 INSERT INTO `Poveznica` (NazivMaterijala, Id_Materijala,Kolicina, Cijena, Id_Evidencija) VALUES ('Drva',7,5,10.0,3);

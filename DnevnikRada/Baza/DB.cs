@@ -227,11 +227,7 @@ namespace DnevnikRada.Baza
                     count++;
                 }
             }
-
             count = count / daniUProslomMjesecu * 100f;
-
-            //return count;
-            MessageBox.Show(count+ "      mjesec "+ mjesec+"   godina " +godina+"    "+daniUProslomMjesecu  );
             return count;
         }
 

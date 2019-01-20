@@ -45,7 +45,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.OdabirMaterijala = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
+            this.addUse = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
@@ -80,7 +80,7 @@
             this.lbl_utroseno_vrijeme.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 137);
             this.lbl_utroseno_vrijeme.Name = "lbl_utroseno_vrijeme";
-            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(143, 25);
+            this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(144, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
             this.lbl_utroseno_vrijeme.Text = "Utrošeno Vrijeme";
             // 
@@ -129,7 +129,7 @@
             this.lbl_opis_posla.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbl_opis_posla.Location = new System.Drawing.Point(140, 207);
             this.lbl_opis_posla.Name = "lbl_opis_posla";
-            this.lbl_opis_posla.Size = new System.Drawing.Size(91, 25);
+            this.lbl_opis_posla.Size = new System.Drawing.Size(92, 25);
             this.lbl_opis_posla.TabIndex = 6;
             this.lbl_opis_posla.Text = "Opis Posla";
             // 
@@ -163,7 +163,7 @@
             this.Dodaj.UseSelectable = true;
             this.Dodaj.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // metroTextBox1
+            // Kolicina
             // 
             // 
             // 
@@ -180,7 +180,7 @@
             this.Kolicina.Lines = new string[0];
             this.Kolicina.Location = new System.Drawing.Point(819, 92);
             this.Kolicina.MaxLength = 32767;
-            this.Kolicina.Name = "metroTextBox1";
+            this.Kolicina.Name = "Kolicina";
             this.Kolicina.PasswordChar = '\0';
             this.Kolicina.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Kolicina.SelectedText = "";
@@ -200,16 +200,16 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(426, 90);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(152, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(155, 25);
             this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Utrosen Materijal 1";
             // 
-            // metroComboBox1
+            // OdabirMaterijala
             // 
             this.OdabirMaterijala.FormattingEnabled = true;
             this.OdabirMaterijala.ItemHeight = 23;
             this.OdabirMaterijala.Location = new System.Drawing.Point(587, 92);
-            this.OdabirMaterijala.Name = "metroComboBox1";
+            this.OdabirMaterijala.Name = "OdabirMaterijala";
             this.OdabirMaterijala.Size = new System.Drawing.Size(168, 29);
             this.OdabirMaterijala.TabIndex = 18;
             this.OdabirMaterijala.UseSelectable = true;
@@ -224,15 +224,15 @@
             this.metroLabel5.TabIndex = 22;
             this.metroLabel5.Text = "Utrosen Kolicina";
             // 
-            // metroComboBox5
+            // addUse
             // 
-            this.metroComboBox5.FormattingEnabled = true;
-            this.metroComboBox5.ItemHeight = 23;
-            this.metroComboBox5.Location = new System.Drawing.Point(767, 92);
-            this.metroComboBox5.Name = "metroComboBox5";
-            this.metroComboBox5.Size = new System.Drawing.Size(46, 29);
-            this.metroComboBox5.TabIndex = 23;
-            this.metroComboBox5.UseSelectable = true;
+            this.addUse.FormattingEnabled = true;
+            this.addUse.ItemHeight = 23;
+            this.addUse.Location = new System.Drawing.Point(767, 92);
+            this.addUse.Name = "addUse";
+            this.addUse.Size = new System.Drawing.Size(46, 29);
+            this.addUse.TabIndex = 23;
+            this.addUse.UseSelectable = true;
             // 
             // metroLabel6
             // 
@@ -309,7 +309,7 @@
             this.Controls.Add(this.materijalGrid);
             this.Controls.Add(this.metroComboBox9);
             this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroComboBox5);
+            this.Controls.Add(this.addUse);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.OdabirMaterijala);
             this.Controls.Add(this.Kolicina);
@@ -348,7 +348,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox OdabirMaterijala;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroComboBox metroComboBox5;
+        private MetroFramework.Controls.MetroComboBox addUse;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroComboBox metroComboBox9;
         private MetroFramework.Controls.MetroGrid materijalGrid;
