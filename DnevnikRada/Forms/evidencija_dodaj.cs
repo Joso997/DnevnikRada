@@ -30,17 +30,30 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
-                    if(Kolicina.Text == "" || OdabirMaterijala.Text == "")
+                    if (Kolicina.Text == "" || OdabirMaterijala.Text == "" || addUse.Text == "")
                     {
-                        MessageBox.Show("Materijal i Kolicina ne mogu biti prazni");
+                        MessageBox.Show("Materijal i Kolicina ne mogu biti prazni\n" + "I odaberi jesi li kupio ili potrosio materijala");
                         break;
                     }
-                    object[] marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) };
+                    object[] marks;
+                    if (addUse.Text == "-")
+                    {
+                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1 };
+                        MessageBox.Show("tu sam");
+                    }
+                    else
+                    {
+                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text)  };
+                    }
+                        
                     var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", OdabirMaterijala.Text));
                     if(rows.Length == 0)
                         dT.LoadDataRow(marks, true);
-                    else
+                    else 
+
                         rows[0]["Kolicina"] = int.Parse(Kolicina.Text);
+                    
+                        
                     materijalGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
@@ -84,8 +97,8 @@ namespace DnevnikRada
             DataTable dT_mjesta = new DataTable();
             dT_mjesta = mjesta.Ucitaj("NazivMjesta", null);
             metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
-            metroComboBox5.Items.Add("+");;
-            metroComboBox5.Items.Add("-");
+            addUse.Items.Add("+");;
+            addUse.Items.Add("-");
         }
 
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)

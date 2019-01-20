@@ -196,5 +196,39 @@ namespace DnevnikRada.Baza
             return cijena;
         }
 
+        public float Postotak()
+        {
+            DateTime time = DateTime.Now;
+            int mjesec, daniUProslomMjesecu, godina;
+            if(time.Month == 1)
+            {
+                mjesec = 12;
+                godina = time.Year -1 ;
+                daniUProslomMjesecu = DateTime.DaysInMonth(godina, mjesec);
+            }
+            else
+            {
+                mjesec = time.Month - 1;
+                godina = time.Year;
+                daniUProslomMjesecu = DateTime.DaysInMonth(godina, mjesec);
+            }
+            
+            string all = string.Format("select DISTINCT  date(Datum) from Evidencija  ");
+
+            float count = 0f;
+            command = new SQLiteCommand(all, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime novo = reader.GetDateTime(0);
+                if(novo.Month == mjesec && novo.Year==godina)
+                {
+                    count++;
+                }
+            }
+            count = count / daniUProslomMjesecu * 100f;
+            return count;
+        }
+
     }
 }
