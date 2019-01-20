@@ -20,6 +20,7 @@ namespace DnevnikRada
             brojEvidencija.Text = Convert.ToString(statistika.Evidencija_C_S(true));
             VrijednostMaterijala.Text = Convert.ToString(statistika.CijenaMaterijala());
             RadniSati.Text = Convert.ToString(statistika.Evidencija_C_S(false));
+            postotakZauzeca.Text = Convert.ToString(Math.Round((statistika.Postotak()),2)+"%");
         }
     }
 }
