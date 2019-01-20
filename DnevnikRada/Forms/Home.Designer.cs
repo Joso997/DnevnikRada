@@ -43,9 +43,8 @@ namespace DnevnikRada
             this.lbl_stanje_poduzeca = new System.Windows.Forms.Label();
             this.lbl_mjesta = new System.Windows.Forms.Label();
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti = new MetroFramework.Controls.MetroPanel();
-            this.kalendar = new MetroFramework.Controls.MetroDateTime();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.SuspendLayout();
+            this.metroUserControl2 = new MetroFramework.Controls.MetroUserControl();
             this.SuspendLayout();
             // 
             // EvidencijaTrazi
@@ -207,36 +206,34 @@ namespace DnevnikRada
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.AutoSize = true;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Controls.Add(this.kalendar);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarBarColor = true;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.HorizontalScrollbarSize = 10;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Location = new System.Drawing.Point(600, 0);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Name = "panel_zadaci_aktivnog_tjedna_i_obavijesti";
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Size = new System.Drawing.Size(299, 43);
+            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.Size = new System.Drawing.Size(0, 0);
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.TabIndex = 5;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarBarColor = true;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarHighlightOnWheel = false;
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti.VerticalScrollbarSize = 10;
             // 
-            // kalendar
-            // 
-            this.kalendar.FontSize = MetroFramework.MetroDateTimeSize.Tall;
-            this.kalendar.Location = new System.Drawing.Point(5, 5);
-            this.kalendar.MinimumSize = new System.Drawing.Size(0, 35);
-            this.kalendar.Name = "kalendar";
-            this.kalendar.Size = new System.Drawing.Size(291, 35);
-            this.kalendar.TabIndex = 2;
-            this.kalendar.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.kalendar.UseStyleColors = true;
-            // 
             // metroUserControl1
             // 
-            this.metroUserControl1.Location = new System.Drawing.Point(605, 40);
+            this.metroUserControl1.BackColor = System.Drawing.Color.Maroon;
+            this.metroUserControl1.Location = new System.Drawing.Point(606, 0);
             this.metroUserControl1.Name = "metroUserControl1";
             this.metroUserControl1.Size = new System.Drawing.Size(291, 271);
             this.metroUserControl1.TabIndex = 8;
             this.metroUserControl1.UseSelectable = true;
+            // 
+            // metroUserControl2
+            // 
+            this.metroUserControl2.BackColor = System.Drawing.Color.Maroon;
+            this.metroUserControl2.Location = new System.Drawing.Point(606, 277);
+            this.metroUserControl2.Name = "metroUserControl2";
+            this.metroUserControl2.Size = new System.Drawing.Size(291, 245);
+            this.metroUserControl2.TabIndex = 9;
+            this.metroUserControl2.UseSelectable = true;
             // 
             // Home
             // 
@@ -244,6 +241,7 @@ namespace DnevnikRada
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroUserControl2);
             this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.lbl_mjesta);
             this.Controls.Add(this.lbl_stanje_poduzeca);
@@ -261,7 +259,6 @@ namespace DnevnikRada
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
-            this.panel_zadaci_aktivnog_tjedna_i_obavijesti.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,8 +278,8 @@ namespace DnevnikRada
         private System.Windows.Forms.Label lbl_stanje_poduzeca;
         private System.Windows.Forms.Label lbl_mjesta;
         private MetroFramework.Controls.MetroPanel panel_zadaci_aktivnog_tjedna_i_obavijesti;
-        private MetroFramework.Controls.MetroDateTime kalendar;
         private MetroFramework.Controls.MetroUserControl metroUserControl1;
+        private MetroFramework.Controls.MetroUserControl metroUserControl2;
     }
 }
 

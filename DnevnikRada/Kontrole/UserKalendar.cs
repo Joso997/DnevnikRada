@@ -47,14 +47,16 @@ namespace DnevnikRada.Kontrole
             dT = mjesta.Ucitaj();
             for (int i = 1; i <= kalendar.GetNumOfDays(); i++)
             {
-                MetroFramework.Controls.MetroLabel label = new MetroFramework.Controls.MetroLabel();
-                label.Location = new Point(left, top);
-                label.Margin = new Padding(5, 10, 7, 0);
-                label.Name = "day"+i.ToString();
-                label.Size = new Size(30, 30);
-                label.TextAlign = ContentAlignment.MiddleCenter;
-                label.Text = i.ToString();
-                label.Visible = true;
+                MetroFramework.Controls.MetroLabel label = new MetroFramework.Controls.MetroLabel
+                {
+                    Location = new Point(left, top),
+                    Margin = new Padding(5, 10, 7, 0),
+                    Name = "day" + i.ToString(),
+                    Size = new Size(30, 30),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Text = i.ToString(),
+                    Visible = true
+                };
                 if (CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month) + " " + DateTime.Now.Year == kalendar.Mjesec_Godina() && i == DateTime.Today.Day)
                 {
                     label.UseCustomBackColor = true;

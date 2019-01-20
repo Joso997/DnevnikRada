@@ -26,8 +26,7 @@ namespace DnevnikRada.Baza
             connection = new SQLiteConnection("URI = file:DB.db");
             //
             //
-
-             //za testiranje tjekom rada s aplikacijom
+            //za testiranje tjekom rada s aplikacijom
             string workingDirectory = Environment.CurrentDirectory;
             string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");

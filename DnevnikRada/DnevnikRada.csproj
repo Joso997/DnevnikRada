@@ -61,7 +61,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -145,6 +145,12 @@
     <Compile Include="Klase\UIController.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Kontrole\Events.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kontrole\Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kontrole\UserKalendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Klase\UIController.resx">
       <DependentUpon>UIController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kontrole\Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kontrole\UserKalendar.resx">
       <DependentUpon>UserKalendar.cs</DependentUpon>
