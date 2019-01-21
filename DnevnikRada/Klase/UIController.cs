@@ -16,7 +16,7 @@ namespace DnevnikRada.Klase
         protected delegate bool SelectButtonDelagate(object sender);
         protected SelectButtonDelagate selectButton;
 
-        protected virtual void Click_Gumb(object sender, EventArgs e)
+        public virtual void Click_Gumb(object sender, EventArgs e)
         {
             if (selectButton(sender))
             {

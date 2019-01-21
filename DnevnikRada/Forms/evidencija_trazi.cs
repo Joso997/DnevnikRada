@@ -60,7 +60,7 @@ namespace DnevnikRada
         {
             base.This_FormClosing(sender, e);
         }
-        protected override void Click_Gumb(object sender, EventArgs e)
+        public override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
         }

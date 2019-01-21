@@ -49,6 +49,8 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             this.lbl_utroseno_vrijeme.AutoSize = true;
             this.lbl_utroseno_vrijeme.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 137);
+            this.lbl_utroseno_vrijeme.Location = new System.Drawing.Point(12, 182);
             this.lbl_utroseno_vrijeme.Name = "lbl_utroseno_vrijeme";
             this.lbl_utroseno_vrijeme.Size = new System.Drawing.Size(143, 25);
             this.lbl_utroseno_vrijeme.TabIndex = 2;
@@ -99,7 +101,7 @@
             this.tb_utroseno_vrijeme.CustomButton.UseSelectable = true;
             this.tb_utroseno_vrijeme.CustomButton.Visible = false;
             this.tb_utroseno_vrijeme.Lines = new string[0];
-            this.tb_utroseno_vrijeme.Location = new System.Drawing.Point(168, 139);
+            this.tb_utroseno_vrijeme.Location = new System.Drawing.Point(168, 184);
             this.tb_utroseno_vrijeme.MaxLength = 32767;
             this.tb_utroseno_vrijeme.Name = "tb_utroseno_vrijeme";
             this.tb_utroseno_vrijeme.PasswordChar = '\0';
@@ -300,12 +302,32 @@
             this.materijalGrid.TabIndex = 31;
             this.materijalGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellClick);
             // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(12, 137);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(63, 25);
+            this.metroLabel2.TabIndex = 32;
+            this.metroLabel2.Text = "Datum";
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(168, 137);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 33;
+            // 
             // Evidencija_dodaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroDateTime1);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.materijalGrid);
             this.Controls.Add(this.metroComboBox9);
             this.Controls.Add(this.metroLabel6);
@@ -354,5 +376,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroComboBox metroComboBox9;
         private MetroFramework.Controls.MetroGrid materijalGrid;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }

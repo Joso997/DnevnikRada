@@ -34,25 +34,28 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "EvidencijaTrazi":
-                    evidencija_trazi et = new evidencija_trazi();
+                    new evidencija_trazi();
                     break;
                 case "EvidencijaDodaj":
-                    Evidencija_dodaj ed = new Evidencija_dodaj();
+                    new Evidencija_dodaj();
                     break;
                 case "StanjePoduzeca":
-                    Stanje_Poduzeca sp = new Stanje_Poduzeca();
+                    new Stanje_Poduzeca();
                     break;
                 case "SkladisteTrazi":
-                    skladiste_trazi st = new skladiste_trazi();
+                    new skladiste_trazi();
                     break;
                 case "SkladisteDodaj":
-                    Skladiste_dodaj sd = new Skladiste_dodaj();
+                    new Skladiste_dodaj();
                     break;
                 case "MjestaTrazi":
-                    Mjesta_trazi mt = new Mjesta_trazi();
+                    new Mjesta_trazi();
                     break;
                 case "MjestaDodaj":
-                    mjesta_dodaj md = new mjesta_dodaj();
+                    new mjesta_dodaj();
+                    break;
+                case "obavijest_gumb":
+                    new Evidencija_dodaj((DateTime)button.Tag);
                     break;
             }
             return true;
@@ -83,7 +86,7 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        protected override void Click_Gumb(object sender, EventArgs e)
+        public override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
         }

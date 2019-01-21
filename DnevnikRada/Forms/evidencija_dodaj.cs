@@ -24,6 +24,18 @@ namespace DnevnikRada
             dT.Columns.Add("NazivMaterijala").Unique = true;
             dT.Columns.Add("Kolicina", typeof(Int32));
         }
+
+        public Evidencija_dodaj(DateTime date)
+        {
+            InitializeComponent();
+            Show();
+            selectButton = SelectButton;
+            Fill();
+            metroDateTime1.Value = date;
+            dT.Columns.Add("NazivMaterijala").Unique = true;
+            dT.Columns.Add("Kolicina", typeof(Int32));
+        }
+
         public bool SelectButton(object sender)
         {
             var button = (Button)sender;
@@ -81,7 +93,7 @@ namespace DnevnikRada
         {
             base.This_FormClosing(sender, e);
         }
-        protected override void Click_Gumb(object sender, EventArgs e)
+        public override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
         }

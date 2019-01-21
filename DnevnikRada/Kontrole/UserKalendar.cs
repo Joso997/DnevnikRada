@@ -149,16 +149,16 @@ namespace DnevnikRada.Kontrole
                         {
                             Location = new Point(left, top),
                             Margin = new Padding(1, 1, 1, 1),
-                            Name = _date.ToShortDateString(),
+                            Name = "obavijest_gumb",
                             Size = new Size(285, 32),
                             TextAlign = ContentAlignment.MiddleCenter,
                             Text = _date.ToShortDateString(),
                             TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
-                            Visible = true
+                            Visible = true,
+                            Tag = _date
                         };
                         metroObavijesti.Controls.Add(tile);
-                        tile.Click += new System.EventHandler(Home.SelectButton);
-                        
+                        tile.Click += new System.EventHandler(Home.Click_Gumb);
                         tile.BringToFront();
                         top += tile.Height + tile.Margin.Top;
                     }
