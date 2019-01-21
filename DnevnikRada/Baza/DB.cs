@@ -230,5 +230,12 @@ namespace DnevnikRada.Baza
             return count;
         }
 
+        public SQLiteDataReader GraphReaders(string read)
+        {
+            command = new SQLiteCommand(read, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            return reader;
+        }
+
     }
 }

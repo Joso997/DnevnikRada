@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace DnevnikRada
 {
@@ -14,8 +15,12 @@ namespace DnevnikRada
     {
         
         public ucModule2()
-        {
+        {/*
+            Baza.DB baza= new Baza.DB
             InitializeComponent();
+
+            sql
+            */
         }
     }
 }
