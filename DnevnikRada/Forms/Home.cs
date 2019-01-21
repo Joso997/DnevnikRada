@@ -63,9 +63,9 @@ namespace DnevnikRada
             var button = (Button)sender;
             button.BackColor = Color.MidnightBlue;
             if(button.Name == "StanjePoduzeca")
-                StanjePoduzeca.Size = new Size(305, 255);
+                StanjePoduzeca.Size = new Size(302, 252);
             else
-                button.Size = new Size(155, 255);
+                button.Size = new Size(152, 252);
         }
 
         private void MouseLeave_Mouse(object sender, EventArgs e)
