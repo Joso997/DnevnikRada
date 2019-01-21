@@ -127,7 +127,7 @@ namespace DnevnikRada
             this.MjestaDodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MjestaDodaj.BackgroundImage")));
             this.MjestaDodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.MjestaDodaj.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MjestaDodaj.Location = new System.Drawing.Point(450, 331);
+            this.MjestaDodaj.Location = new System.Drawing.Point(450, 330);
             this.MjestaDodaj.Name = "MjestaDodaj";
             this.MjestaDodaj.Size = new System.Drawing.Size(150, 250);
             this.MjestaDodaj.TabIndex = 0;
@@ -157,7 +157,7 @@ namespace DnevnikRada
             this.lbl_evidencija.BackColor = System.Drawing.Color.AliceBlue;
             this.lbl_evidencija.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl_evidencija.ForeColor = System.Drawing.Color.Black;
-            this.lbl_evidencija.Location = new System.Drawing.Point(-1, 0);
+            this.lbl_evidencija.Location = new System.Drawing.Point(0, 0);
             this.lbl_evidencija.Name = "lbl_evidencija";
             this.lbl_evidencija.Size = new System.Drawing.Size(300, 40);
             this.lbl_evidencija.TabIndex = 3;
@@ -169,7 +169,7 @@ namespace DnevnikRada
             this.lbl_skladiste.BackColor = System.Drawing.Color.AliceBlue;
             this.lbl_skladiste.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbl_skladiste.ForeColor = System.Drawing.Color.Black;
-            this.lbl_skladiste.Location = new System.Drawing.Point(-1, 290);
+            this.lbl_skladiste.Location = new System.Drawing.Point(0, 290);
             this.lbl_skladiste.Name = "lbl_skladiste";
             this.lbl_skladiste.Size = new System.Drawing.Size(300, 40);
             this.lbl_skladiste.TabIndex = 4;
