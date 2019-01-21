@@ -298,6 +298,8 @@
             this.Controls.Add(this.lbl_proizvodac);
             this.Controls.Add(this.lbl_naziv_materijala);
             this.Controls.Add(this.Home);
+            this.MaximumSize = new System.Drawing.Size(916, 619);
+            this.MinimumSize = new System.Drawing.Size(916, 619);
             this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";

@@ -166,7 +166,7 @@
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 14;
             // 
-            // materijalGrid
+            // kalendarGrid
             // 
             this.kalendarGrid.AllowUserToAddRows = false;
             this.kalendarGrid.AllowUserToDeleteRows = false;
@@ -196,7 +196,7 @@
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.kalendarGrid.Location = new System.Drawing.Point(254, 300);
-            this.kalendarGrid.Name = "materijalGrid";
+            this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -239,6 +239,8 @@
             this.Controls.Add(this.lbl_vrijeme_rada);
             this.Controls.Add(this.lbl_naziv_mjesta);
             this.Controls.Add(this.Home);
+            this.MaximumSize = new System.Drawing.Size(916, 619);
+            this.MinimumSize = new System.Drawing.Size(916, 619);
             this.Name = "mjesta_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";

@@ -244,6 +244,8 @@ namespace DnevnikRada
             this.Controls.Add(this.StanjePoduzeca);
             this.Controls.Add(this.EvidencijaDodaj);
             this.Controls.Add(this.EvidencijaTrazi);
+            this.MaximumSize = new System.Drawing.Size(916, 619);
+            this.MinimumSize = new System.Drawing.Size(916, 619);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";

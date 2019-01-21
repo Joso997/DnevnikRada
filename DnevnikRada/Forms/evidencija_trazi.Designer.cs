@@ -245,6 +245,8 @@
             this.Controls.Add(this.lbl_opis_posla);
             this.Controls.Add(this.opisPosla);
             this.Controls.Add(this.Home);
+            this.MaximumSize = new System.Drawing.Size(916, 619);
+            this.MinimumSize = new System.Drawing.Size(916, 619);
             this.Name = "evidencija_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_trazi";

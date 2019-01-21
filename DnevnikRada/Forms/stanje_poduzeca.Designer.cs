@@ -116,6 +116,8 @@
             this.Controls.Add(this.btnPotrosnjaMaterijalaKrozVrijeme);
             this.Controls.Add(this.btnStanjePoduzeca);
             this.IsMdiContainer = true;
+            this.MaximumSize = new System.Drawing.Size(916, 619);
+            this.MinimumSize = new System.Drawing.Size(916, 619);
             this.Name = "Stanje_Poduzeca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StanjePoduzecaBase";
