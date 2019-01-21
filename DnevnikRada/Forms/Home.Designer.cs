@@ -44,7 +44,6 @@ namespace DnevnikRada
             this.lbl_mjesta = new System.Windows.Forms.Label();
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti = new MetroFramework.Controls.MetroPanel();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
-            this.metroUserControl2 = new MetroFramework.Controls.MetroUserControl();
             this.SuspendLayout();
             // 
             // EvidencijaTrazi
@@ -222,18 +221,9 @@ namespace DnevnikRada
             this.metroUserControl1.BackColor = System.Drawing.Color.Maroon;
             this.metroUserControl1.Location = new System.Drawing.Point(606, 0);
             this.metroUserControl1.Name = "metroUserControl1";
-            this.metroUserControl1.Size = new System.Drawing.Size(291, 271);
+            this.metroUserControl1.Size = new System.Drawing.Size(291, 515);
             this.metroUserControl1.TabIndex = 8;
             this.metroUserControl1.UseSelectable = true;
-            // 
-            // metroUserControl2
-            // 
-            this.metroUserControl2.BackColor = System.Drawing.Color.Maroon;
-            this.metroUserControl2.Location = new System.Drawing.Point(606, 277);
-            this.metroUserControl2.Name = "metroUserControl2";
-            this.metroUserControl2.Size = new System.Drawing.Size(291, 245);
-            this.metroUserControl2.TabIndex = 9;
-            this.metroUserControl2.UseSelectable = true;
             // 
             // Home
             // 
@@ -241,7 +231,6 @@ namespace DnevnikRada
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.metroUserControl2);
             this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.lbl_mjesta);
             this.Controls.Add(this.lbl_stanje_poduzeca);
@@ -279,7 +268,6 @@ namespace DnevnikRada
         private System.Windows.Forms.Label lbl_mjesta;
         private MetroFramework.Controls.MetroPanel panel_zadaci_aktivnog_tjedna_i_obavijesti;
         private MetroFramework.Controls.MetroUserControl metroUserControl1;
-        private MetroFramework.Controls.MetroUserControl metroUserControl2;
     }
 }
 

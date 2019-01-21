@@ -62,5 +62,10 @@ namespace DnevnikRada.Klase
         {
             return Get("Skladiste", trazi);
         }
+
+        public DataTable Ucitaj(int trazi, bool jeStrani)
+        {
+            return Get("Skladiste", trazi);
+        }
     }
 }

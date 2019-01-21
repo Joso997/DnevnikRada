@@ -57,5 +57,10 @@ namespace DnevnikRada.Klase
             return null;
         }
 
+        public DataTable Ucitaj(int id, bool jeStrani)
+        {
+            return null;
+        }
+
     }
 }

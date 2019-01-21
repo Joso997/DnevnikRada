@@ -39,6 +39,9 @@
             this.Mjesec_Godina = new MetroFramework.Controls.MetroLabel();
             this.Previous = new MetroFramework.Controls.MetroButton();
             this.Next = new MetroFramework.Controls.MetroButton();
+            this.template_tile = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroEvents = new MetroFramework.Controls.MetroUserControl();
             this.SuspendLayout();
             // 
             // PON
@@ -156,10 +159,47 @@
             this.Next.UseSelectable = true;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
+            // template_tile
+            // 
+            this.template_tile.ActiveControl = null;
+            this.template_tile.Location = new System.Drawing.Point(5, 311);
+            this.template_tile.Margin = new System.Windows.Forms.Padding(1);
+            this.template_tile.Name = "template_tile";
+            this.template_tile.Size = new System.Drawing.Size(285, 32);
+            this.template_tile.TabIndex = 24;
+            this.template_tile.Text = "metroTile2";
+            this.template_tile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.template_tile.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.template_tile.UseSelectable = true;
+            this.template_tile.Visible = false;
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Location = new System.Drawing.Point(5, 274);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(1);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(285, 35);
+            this.metroTile2.TabIndex = 23;
+            this.metroTile2.Text = "Events";
+            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.UseSelectable = true;
+            // 
+            // metroEvents
+            // 
+            this.metroEvents.AutoScroll = true;
+            this.metroEvents.Location = new System.Drawing.Point(5, 311);
+            this.metroEvents.Name = "metroEvents";
+            this.metroEvents.Size = new System.Drawing.Size(285, 201);
+            this.metroEvents.TabIndex = 25;
+            this.metroEvents.UseSelectable = true;
+            // 
             // UserKalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.template_tile);
+            this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.template);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.Previous);
@@ -171,8 +211,9 @@
             this.Controls.Add(this.SRI);
             this.Controls.Add(this.UTO);
             this.Controls.Add(this.PON);
+            this.Controls.Add(this.metroEvents);
             this.Name = "UserKalendar";
-            this.Size = new System.Drawing.Size(291, 270);
+            this.Size = new System.Drawing.Size(291, 515);
             this.ResumeLayout(false);
 
         }
@@ -190,5 +231,8 @@
         private MetroFramework.Controls.MetroLabel Mjesec_Godina;
         private MetroFramework.Controls.MetroButton Previous;
         private MetroFramework.Controls.MetroButton Next;
+        private MetroFramework.Controls.MetroTile template_tile;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroUserControl metroEvents;
     }
 }

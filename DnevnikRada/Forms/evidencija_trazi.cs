@@ -49,6 +49,7 @@ namespace DnevnikRada
             {
                 {"Naziv Mjesta", "NazivMjesta" },
                 {"Opis Posla", "OpisPosla" },
+                {"Datum", "Datum" },
                 {"Utroseno Vrijeme", "UtrosenoVrijeme" }
             };
             Filters.Items.AddRange(filter_dic.Keys.ToArray());
@@ -65,7 +66,6 @@ namespace DnevnikRada
         }
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
             materijalGrid.Columns[0].Visible = false;

@@ -13,11 +13,13 @@ namespace DnevnikRada
 {
     public partial class mjesta_dodaj : UIController
     {
+        DataTable dT = new DataTable();
         public mjesta_dodaj()
         {
             InitializeComponent();
             Show();
             selectButton = SelectButton;
+            dT.Columns.Add("Datumi", typeof(DateTime)).Unique = true;
         }
 
         public bool SelectButton(object sender)
@@ -25,13 +27,27 @@ namespace DnevnikRada
             var button = (Button)sender;
             switch (button.Name)
             {
+                case "Dodaj":
+                    object[] marks;
+                    marks = new object[] { metroDateTime1.Text };
+                    var rows = dT.Select(string.Format("Datumi = '{0}'", metroDateTime1.Text));
+                    if (rows.Length == 0)
+                        dT.LoadDataRow(marks, true);
+                    else
+                        MessageBox.Show("Datum već dodan.");
+                    kalendarGrid.DataSource = dT;
+                    break;
                 case "Potvrdi":
                     if (tb_adresa.Text == "" || tb_naziv_mjesta.Text == "")
                     {
                         MessageBox.Show("Adresa i Naziv mjesta ne mogu biti prazni");
                         break;
                     }
-                    Mjesta mjesta = new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, metroDateTime1.Checked ? metroDateTime1.Value : DateTime.MinValue, metroDateTime2.Checked ? metroDateTime2.Value : DateTime.MinValue);
+                    var n_temp = dT.AsEnumerable().Select(r => r.Field<DateTime>(0)).ToList();
+                    if (!n_temp.Any())
+                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+                    else
+                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, n_temp);               
                     break;
                 case "Home":
                     Home Home = new Home();

@@ -14,19 +14,28 @@ namespace DnevnikRada.Klase
         public string Adresa { get; }
         public DateTime Od_VrijemeRada { get; }
         public DateTime Do_VrijemeRada { get; }
+        public Kalendar Kalendar { get; }
 
-        public Mjesta(string _naziv_mjesta, string _adresa, DateTime _od_vrijemeRada, DateTime _do_vrijemeRada)
+        public Mjesta(string _naziv_mjesta, string _adresa, List<DateTime> _datumi)
         {
+            Kalendar = new Kalendar();
             Naziv_mjesta = _naziv_mjesta;
             Adresa = _adresa;
-            Od_VrijemeRada = _od_vrijemeRada;
-            Do_VrijemeRada = _do_vrijemeRada;
+            Kalendar.Datumi = _datumi;
+            Dodaj();
+        }
+
+        public Mjesta(string _naziv_mjesta, string _adresa)
+        {
+            Kalendar = new Kalendar();
+            Naziv_mjesta = _naziv_mjesta;
+            Adresa = _adresa;
             Dodaj();
         }
 
         public Mjesta()
         {
-
+            Kalendar = new Kalendar();
         }
 
         private void Dodaj()
@@ -34,11 +43,11 @@ namespace DnevnikRada.Klase
             Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
             {
                 {"NazivMjesta", Naziv_mjesta },
-                {"Adresa", Adresa },
-                {"VrijemeRadaOD", Od_VrijemeRada != DateTime.MinValue ? Od_VrijemeRada.ToString("yyyy-MM-dd HH:mm:ss"): null },
-                {"VrijemeRadaDO", Do_VrijemeRada != DateTime.MinValue ? Do_VrijemeRada.ToString("yyyy-MM-dd HH:mm:ss"): null }
+                {"Adresa", Adresa }
             };
-            Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
+            Kalendar.Id_mjesta = Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
+            if(Kalendar.Datumi.Any())
+                new Kalendar(Kalendar.Id_mjesta, Kalendar.Datumi);
         }
 
         public DataTable Ucitaj()
@@ -54,6 +63,11 @@ namespace DnevnikRada.Klase
         public DataTable Ucitaj(int trazi)
         {
             return Get("Mjesta", trazi);
+        }
+
+        public DataTable Ucitaj(int id, bool jeStrani)
+        {
+            return null;
         }
 
 

@@ -65,6 +65,11 @@ namespace DnevnikRada.Klase
             return Get("Evidencija", trazi);
         }
 
-        
+        public DataTable Ucitaj(int id, bool jeStrani)
+        {
+            return null;
+        }
+
+
     }
 }

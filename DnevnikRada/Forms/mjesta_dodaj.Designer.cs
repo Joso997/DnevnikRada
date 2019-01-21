@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_dodaj));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_vrijeme_rada = new MetroFramework.Controls.MetroLabel();
-            this.lbl_od = new MetroFramework.Controls.MetroLabel();
-            this.lbl_do = new MetroFramework.Controls.MetroLabel();
             this.tb_naziv_mjesta = new MetroFramework.Controls.MetroTextBox();
             this.Potvrdi = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.tb_adresa = new MetroFramework.Controls.MetroTextBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
+            this.kalendarGrid = new MetroFramework.Controls.MetroGrid();
+            this.Dodaj = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Home
@@ -68,31 +71,11 @@
             // 
             this.lbl_vrijeme_rada.AutoSize = true;
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_vrijeme_rada.Location = new System.Drawing.Point(373, 228);
+            this.lbl_vrijeme_rada.Location = new System.Drawing.Point(254, 265);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
-            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(217, 25);
+            this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
             this.lbl_vrijeme_rada.Text = "Vrijeme Rada (Opcionalno)";
-            // 
-            // lbl_od
-            // 
-            this.lbl_od.AutoSize = true;
-            this.lbl_od.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_od.Location = new System.Drawing.Point(373, 265);
-            this.lbl_od.Name = "lbl_od";
-            this.lbl_od.Size = new System.Drawing.Size(36, 25);
-            this.lbl_od.TabIndex = 4;
-            this.lbl_od.Text = "Od";
-            // 
-            // lbl_do
-            // 
-            this.lbl_do.AutoSize = true;
-            this.lbl_do.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_do.Location = new System.Drawing.Point(373, 302);
-            this.lbl_do.Name = "lbl_do";
-            this.lbl_do.Size = new System.Drawing.Size(34, 25);
-            this.lbl_do.TabIndex = 5;
-            this.lbl_do.Text = "Do";
             // 
             // tb_naziv_mjesta
             // 
@@ -126,7 +109,7 @@
             // 
             // Potvrdi
             // 
-            this.Potvrdi.Location = new System.Drawing.Point(463, 350);
+            this.Potvrdi.Location = new System.Drawing.Point(722, 339);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 100);
             this.Potvrdi.TabIndex = 10;
@@ -177,20 +160,68 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Checked = false;
-            this.metroDateTime1.Location = new System.Drawing.Point(415, 265);
+            this.metroDateTime1.Location = new System.Drawing.Point(512, 265);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 14;
             // 
-            // metroDateTime2
+            // materijalGrid
             // 
-            this.metroDateTime2.Checked = false;
-            this.metroDateTime2.Location = new System.Drawing.Point(415, 302);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime2.TabIndex = 15;
+            this.kalendarGrid.AllowUserToAddRows = false;
+            this.kalendarGrid.AllowUserToDeleteRows = false;
+            this.kalendarGrid.AllowUserToResizeRows = false;
+            this.kalendarGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.kalendarGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.kalendarGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.kalendarGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kalendarGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.kalendarGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kalendarGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.kalendarGrid.EnableHeadersVisualStyles = false;
+            this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.kalendarGrid.Location = new System.Drawing.Point(254, 300);
+            this.kalendarGrid.Name = "materijalGrid";
+            this.kalendarGrid.ReadOnly = true;
+            this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.kalendarGrid.Size = new System.Drawing.Size(462, 268);
+            this.kalendarGrid.TabIndex = 32;
+            // 
+            // Dodaj
+            // 
+            this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
+            this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Dodaj.Location = new System.Drawing.Point(722, 233);
+            this.Dodaj.Name = "Dodaj";
+            this.Dodaj.Size = new System.Drawing.Size(100, 100);
+            this.Dodaj.TabIndex = 33;
+            this.Dodaj.UseSelectable = true;
+            this.Dodaj.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // mjesta_dodaj
             // 
@@ -198,14 +229,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.metroDateTime2);
+            this.Controls.Add(this.Dodaj);
+            this.Controls.Add(this.kalendarGrid);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.tb_adresa);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.tb_naziv_mjesta);
-            this.Controls.Add(this.lbl_do);
-            this.Controls.Add(this.lbl_od);
             this.Controls.Add(this.lbl_vrijeme_rada);
             this.Controls.Add(this.lbl_naziv_mjesta);
             this.Controls.Add(this.Home);
@@ -213,6 +243,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_dodaj";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,13 +254,12 @@
         private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroLabel lbl_naziv_mjesta;
         private MetroFramework.Controls.MetroLabel lbl_vrijeme_rada;
-        private MetroFramework.Controls.MetroLabel lbl_od;
-        private MetroFramework.Controls.MetroLabel lbl_do;
         private MetroFramework.Controls.MetroTextBox tb_naziv_mjesta;
         private MetroFramework.Controls.MetroButton Potvrdi;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox tb_adresa;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
+        private MetroFramework.Controls.MetroGrid kalendarGrid;
+        private MetroFramework.Controls.MetroButton Dodaj;
     }
 }

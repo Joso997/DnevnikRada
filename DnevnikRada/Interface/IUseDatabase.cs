@@ -12,5 +12,6 @@ namespace DnevnikRada.Interface
         DataTable Ucitaj();
         DataTable Ucitaj(string naziv_stupca, string trazi);
         DataTable Ucitaj(int trazi);
+        DataTable Ucitaj(int trazi, bool jeStrani);
     }
 }
