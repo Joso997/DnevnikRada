@@ -38,11 +38,8 @@ namespace DnevnikRada
                     kalendarGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
-                    if (tb_adresa.Text == "" || tb_naziv_mjesta.Text == "")
-                    {
-                        MessageBox.Show("Adresa i Naziv mjesta ne mogu biti prazni");
+                    if (CheckInput(new Dictionary<string, string> { { tb_adresa.Name, tb_adresa.Text }, { tb_naziv_mjesta.Name, tb_naziv_mjesta.Text } }))
                         break;
-                    }
                     var n_temp = dT.AsEnumerable().Select(r => r.Field<DateTime>(0)).ToList();
                     if (!n_temp.Any())
                         new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);

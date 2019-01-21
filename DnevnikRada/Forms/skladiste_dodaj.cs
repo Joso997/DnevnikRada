@@ -26,11 +26,8 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    if(tb_kolicina.Text=="" || tb_naziv_materijala.Text=="")
-                    {
-                        MessageBox.Show("Kolicina i naziv materijala ne mogu biti prazni");
+                    if (CheckInput(new Dictionary<string, string> { { tb_kolicina.Name, tb_kolicina.Text }, { tb_naziv_materijala.Name, tb_naziv_materijala.Text } }))
                         break;
-                    }
                     int kol;
                     string lol = tb_kolicina.Text.ToString();
                     kol = Int32.Parse(lol);

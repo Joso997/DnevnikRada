@@ -31,11 +31,8 @@ namespace DnevnikRada
                     skladisteGrid.DataSource = skladiste.Ucitaj(filter_dic[Filters.Text], trazi);
                     break;
                 case "Edit":
-                    if (kolicinaBox.Text == "" || nazivBox.Text == "")
-                    {
-                        MessageBox.Show("Kolicina i Naziv ne mogu biti prazni");
+                    if (CheckInput(new Dictionary<string, string> { { kolicinaBox.Name, kolicinaBox.Text }, { nazivBox.Name, nazivBox.Text } }))
                         break;
-                    }
                     Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text), Int32.Parse(cijenaBox.Text));
                     skladisteGrid.DataSource = skladiste.Ucitaj();
                     Edit.Enabled = false;

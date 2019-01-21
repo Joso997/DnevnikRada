@@ -38,5 +38,22 @@ namespace DnevnikRada.Klase
                         e.Cancel = true;
                 }
         }
+
+        protected bool CheckInput(Dictionary<string, string> biblioteka)
+        {
+            string ispis = null;
+            foreach (var knjiga in biblioteka)
+            {
+                if(knjiga.Value == "")
+                {
+                    ispis += knjiga.Key + (knjiga.Key.Equals(biblioteka.Last().Key) ? "" : " i ");
+                }
+            }
+            if (ispis != null)
+                MessageBox.Show(ispis + " ne mogu biti prazni");
+            else
+                return false;
+            return true;
+        }
     }
 }

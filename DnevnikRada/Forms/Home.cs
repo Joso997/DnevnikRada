@@ -55,7 +55,7 @@ namespace DnevnikRada
                     new mjesta_dodaj();
                     break;
                 case "obavijest_gumb":
-                    new Evidencija_dodaj((DateTime)button.Tag);
+                    new Evidencija_dodaj((List<object>)button.Tag);
                     break;
             }
             return true;

@@ -98,7 +98,13 @@ namespace DnevnikRada.Kontrole
         {
             int top = 0;
             int left = 0;
-            DataTable dT_datum = mjesta.Kalendar.Ucitaj("Datum", _datum);
+            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                {"Datum", DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss") }
+            };
+            List<string> _operator = new List<string> {
+                {">"}
+            };
+            DataTable dT_datum = mjesta.Kalendar.Ucitaj(biblioteka, _operator);
             _tempDate = dT_datum.AsEnumerable().Select(r => r.Field<DateTime>("Datum")).ToList();
             foreach (var list in _tempDate)
             {
@@ -111,7 +117,8 @@ namespace DnevnikRada.Kontrole
                     TextAlign = ContentAlignment.MiddleCenter,
                     Text = list.ToShortDateString(),
                     TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
-                    Visible = true
+                    Visible = true,
+                    Enabled = false
                 };
                 metroEvents.Controls.Add(tile);
                 tile.BringToFront();
@@ -139,6 +146,12 @@ namespace DnevnikRada.Kontrole
                 foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
                 {
                     DateTime _date = (DateTime)dT_query.Rows[_query]["Datum"];
+                    DataTable dT_mjesta = mjesta.Ucitaj(int.Parse(dT_query.Rows[_query]["Id_Mjesta"].ToString()));
+                    List<object> tag = new List<object>
+                    {
+                        {_date },
+                        {dT_mjesta.Rows[0]["NazivMjesta"] }
+                    };
                     Dictionary<string, object> biblioteka_query = new Dictionary<string, object>
                     {
                         {"Datum", "%"+_date.ToString("yyyy-MM-dd")+"%" },
@@ -155,7 +168,7 @@ namespace DnevnikRada.Kontrole
                             Text = _date.ToShortDateString(),
                             TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
                             Visible = true,
-                            Tag = _date
+                            Tag = tag
                         };
                         metroObavijesti.Controls.Add(tile);
                         tile.Click += new System.EventHandler(Home.Click_Gumb);

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnevnikRada.Klase;
+using MetroFramework.Controls;
 
 namespace DnevnikRada
 {
@@ -25,13 +26,14 @@ namespace DnevnikRada
             dT.Columns.Add("Kolicina", typeof(Int32));
         }
 
-        public Evidencija_dodaj(DateTime date)
+        public Evidencija_dodaj(List<object> tag)
         {
             InitializeComponent();
             Show();
             selectButton = SelectButton;
             Fill();
-            metroDateTime1.Value = date;
+            metroDateTime1.Value = (DateTime)tag[0];
+            metroComboBox9.Text = (string)tag[1];
             dT.Columns.Add("NazivMaterijala").Unique = true;
             dT.Columns.Add("Kolicina", typeof(Int32));
         }
@@ -42,11 +44,8 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
-                    if (Kolicina.Text == "" || OdabirMaterijala.Text == "" || addUse.Text == "")
-                    {
-                        MessageBox.Show("Materijal i Kolicina ne mogu biti prazni\n" + "I odaberi jesi li kupio ili potrosio materijala");
+                    if(CheckInput(new Dictionary<string, string> { { Kolicina.Name, Kolicina.Text },{ OdabirMaterijala.Name, OdabirMaterijala.Text },{ addUse.Name, addUse.Text } }))
                         break;
-                    }
                     object[] marks;
                     if (addUse.Text == "-")
                     {
@@ -69,11 +68,8 @@ namespace DnevnikRada
                     materijalGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
-                    if(tb_opis_posla.Text=="" || tb_utroseno_vrijeme.Text=="")
-                    {
-                        MessageBox.Show("Utroseno vrijeme i upis posla ne mogu biti prazni");
+                    if(CheckInput(new Dictionary<string, string> { { tb_opis_posla.Name, tb_opis_posla.Text }, {tb_utroseno_vrijeme.Name, tb_utroseno_vrijeme.Text } }))
                         break;
-                    }
                     List<string> materijal_list = new List<string>();
                     List<int> kolicina_list = new List<int>();
                     var n_temp = dT.AsEnumerable().Select(r => r.Field<string>(0)).ToArray();

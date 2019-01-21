@@ -178,6 +178,7 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
+            this.metroTile2.Enabled = false;
             this.metroTile2.Location = new System.Drawing.Point(5, 270);
             this.metroTile2.Margin = new System.Windows.Forms.Padding(1);
             this.metroTile2.Name = "metroTile2";
@@ -199,6 +200,7 @@
             // Obavijesti
             // 
             this.Obavijesti.ActiveControl = null;
+            this.Obavijesti.Enabled = false;
             this.Obavijesti.Location = new System.Drawing.Point(5, 472);
             this.Obavijesti.Margin = new System.Windows.Forms.Padding(1);
             this.Obavijesti.Name = "Obavijesti";
@@ -211,9 +213,9 @@
             // metroObavijesti
             // 
             this.metroObavijesti.AutoScroll = true;
-            this.metroObavijesti.Location = new System.Drawing.Point(5, 504);
+            this.metroObavijesti.Location = new System.Drawing.Point(5, 511);
             this.metroObavijesti.Name = "metroObavijesti";
-            this.metroObavijesti.Size = new System.Drawing.Size(286, 73);
+            this.metroObavijesti.Size = new System.Drawing.Size(286, 66);
             this.metroObavijesti.TabIndex = 29;
             this.metroObavijesti.UseSelectable = true;
             // 
