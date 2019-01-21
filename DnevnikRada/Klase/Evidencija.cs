@@ -70,6 +70,11 @@ namespace DnevnikRada.Klase
             return null;
         }
 
+        public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
+        {
+            return Get("Evidencija", biblioteka, _operator);
+        }
+
 
     }
 }

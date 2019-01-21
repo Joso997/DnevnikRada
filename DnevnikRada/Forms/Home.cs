@@ -22,7 +22,7 @@ namespace DnevnikRada
             InitializeComponent();
             Show();
             selectButton = SelectButton;
-            UserKalendar userKalendar = new UserKalendar();
+            UserKalendar userKalendar = new UserKalendar(this);
             metroUserControl1.Controls.Add(userKalendar);
             userKalendar.Dock = DockStyle.Fill;
             userKalendar.BringToFront();

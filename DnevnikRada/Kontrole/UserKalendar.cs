@@ -14,39 +14,42 @@ namespace DnevnikRada.Kontrole
 {
     public partial class UserKalendar : UserControl
     {
-        Kalendar kalendar = new Kalendar();
+        public Home Home { get; set; }
+        Mjesta mjesta = new Mjesta();
         List<DateTime> _tempDate = new List<DateTime>();
         //List<MetroFramework.Controls.MetroLabel> lista = new List<MetroFramework.Controls.MetroLabel>();
-        public UserKalendar()
+        public UserKalendar(Home _home)
         {
+            Home = _home;
             InitializeComponent();
-            Osvjezi();   
+            Osvjezi();
+            GenerirajObavijesti();
         }
 
         private void Next_Click(object sender, EventArgs e)
         {
             OcistiKalendar();
-            kalendar.PromjeniDatum(1);
+            mjesta.Kalendar.PromjeniDatum(1);
             Osvjezi();
         }
 
         private void Previous_Click(object sender, EventArgs e)
         {
             OcistiKalendar();
-            kalendar.PromjeniDatum(-1);
+            mjesta.Kalendar.PromjeniDatum(-1);
             Osvjezi();
         }
 
         void Osvjezi()
         {
             int top = 40;
-            int left = 5 + kalendar.GetDayInWeek()*42;
-            Mjesec_Godina.Text = kalendar.Mjesec_Godina(" ", false);
-            int razmak = kalendar.GetDayInWeek();
-            Mjesta mjesta = new Mjesta();
+            int left = 5 + mjesta.Kalendar.GetDayInWeek()*42;
+            Mjesec_Godina.Text = mjesta.Kalendar.Mjesec_Godina(" ", false);
+            int razmak = mjesta.Kalendar.GetDayInWeek();
+            
             DataTable dT = new DataTable();
             dT = mjesta.Ucitaj();
-            for (int i = 1; i <= kalendar.GetNumOfDays(); i++)
+            for (int i = 1; i <= mjesta.Kalendar.GetNumOfDays(); i++)
             {
                 MetroFramework.Controls.MetroLabel label = new MetroFramework.Controls.MetroLabel
                 {
@@ -58,7 +61,7 @@ namespace DnevnikRada.Kontrole
                     Text = i.ToString(),
                     Visible = true
                 };
-                if (CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month) + " " + DateTime.Now.Year == kalendar.Mjesec_Godina(" ", false) && i == DateTime.Today.Day)
+                if (CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month) + " " + DateTime.Now.Year == mjesta.Kalendar.Mjesec_Godina(" ", false) && i == DateTime.Today.Day)
                 {
                     label.UseCustomBackColor = true;
                     label.FontWeight = (MetroFramework.MetroLabelWeight)FontStyle.Bold;
@@ -75,13 +78,13 @@ namespace DnevnikRada.Kontrole
                 else
                     razmak++;
             }
-            GetEvents(kalendar.Mjesec_Godina("-"));
+            GetEvents(mjesta.Kalendar.Mjesec_Godina("-"));
             //this.Controls.AddRange(lista.ToArray());
         }
 
         private void OcistiKalendar()
         {
-            for (int i = 1; i <= kalendar.GetNumOfDays(); i++)
+            for (int i = 1; i <= mjesta.Kalendar.GetNumOfDays(); i++)
             {
                 this.Controls.RemoveByKey("day" + i.ToString());
             }
@@ -95,7 +98,7 @@ namespace DnevnikRada.Kontrole
         {
             int top = 0;
             int left = 0;
-            DataTable dT_datum = kalendar.Ucitaj("Datum", _datum);
+            DataTable dT_datum = mjesta.Kalendar.Ucitaj("Datum", _datum);
             _tempDate = dT_datum.AsEnumerable().Select(r => r.Field<DateTime>("Datum")).ToList();
             foreach (var list in _tempDate)
             {
@@ -111,9 +114,55 @@ namespace DnevnikRada.Kontrole
                     Visible = true
                 };
                 metroEvents.Controls.Add(tile);
-                //tile.Dock = DockStyle.Fill;
                 tile.BringToFront();
                 top += tile.Height + tile.Margin.Top;
+            }
+        }
+
+        private void GenerirajObavijesti()
+        {
+            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                {"Datum", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") }
+            };
+            List<string> _operator = new List<string> {
+                {"<="}
+            };
+            DataTable dT_query = mjesta.Kalendar.Ucitaj(biblioteka, _operator);
+            if(dT_query != null)
+            {
+                int top = 0;
+                int left = 0;
+                List<string> _operator_query = new List<string>{
+                    {"like"},
+                    {"="}
+                };
+                foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
+                {
+                    DateTime _date = (DateTime)dT_query.Rows[_query]["Datum"];
+                    Dictionary<string, object> biblioteka_query = new Dictionary<string, object>
+                    {
+                        {"Datum", "%"+_date.ToString("yyyy-MM-dd")+"%" },
+                        {"Id_Mjesta", dT_query.Rows[_query]["Id_Mjesta"] }
+                    };
+                    if(new Evidencija().Ucitaj(biblioteka_query, _operator_query).Rows.Count > 0){
+                        MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
+                        {
+                            Location = new Point(left, top),
+                            Margin = new Padding(1, 1, 1, 1),
+                            Name = _date.ToShortDateString(),
+                            Size = new Size(285, 32),
+                            TextAlign = ContentAlignment.MiddleCenter,
+                            Text = _date.ToShortDateString(),
+                            TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
+                            Visible = true
+                        };
+                        metroObavijesti.Controls.Add(tile);
+                        tile.Click += new System.EventHandler(Home.SelectButton);
+                        
+                        tile.BringToFront();
+                        top += tile.Height + tile.Margin.Top;
+                    }
+                }
             }
         }
     }

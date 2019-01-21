@@ -12,7 +12,7 @@ namespace DnevnikRada.Baza
 {
     class DB 
     {
-        protected SQLiteConnection connection;
+        private SQLiteConnection connection;
         private SQLiteCommand command;
         private SQLiteDataAdapter db;
         private DataSet ds;
@@ -86,7 +86,7 @@ namespace DnevnikRada.Baza
         protected object Set(string naziv_tablice, Dictionary<string, object> stupci_vrijednost, bool IncludeUpdate)
         {
             string prviStupac = stupci_vrijednost.First().Key;
-            List<string> stupci = SetStupciVrij(stupci_vrijednost);
+            List<string> stupci = MakeReadyForInsert(stupci_vrijednost);
                 string insert = string.Format("insert into {3}" +
                 "({0}) values({1})" + (IncludeUpdate ? " ON CONFLICT({4}) do update set {2} " : ""),
              stupci[0], stupci[1], stupci[2], naziv_tablice, prviStupac);
@@ -95,7 +95,7 @@ namespace DnevnikRada.Baza
 
         protected object Set(string naziv_tablice, string constraint, Dictionary<string, object> stupci_vrijednost, bool IncludeUpdate)
         {
-            List<string> stupci = SetStupciVrij(stupci_vrijednost);
+            List<string> stupci = MakeReadyForInsert(stupci_vrijednost);
             string insert = string.Format("insert into {3}" +
             "({0}) values({1})" + (IncludeUpdate ? " ON CONFLICT({4}) do update set {2} " : ""),
          stupci[0], stupci[1], stupci[2], naziv_tablice, constraint);
@@ -115,6 +115,14 @@ namespace DnevnikRada.Baza
             return LoadDataBase(command);
         }
 
+        protected DataTable Get(string naziv_tablice, Dictionary<string, object> biblioteka, List<string> operatorUsporedbe)
+        {
+            string stupci = MakeReadyForQuery(biblioteka, operatorUsporedbe);
+            string command = string.Format("select * from {0} " +
+                "WHERE {1}", naziv_tablice, stupci);
+            return LoadDataBase(command);
+        }
+
         protected DataTable Get(string naziv_tablice, int id)
         {
             string command = string.Format("select * from {0} " +
@@ -129,7 +137,7 @@ namespace DnevnikRada.Baza
             return LoadDataBase(command);
         }
 
-        private List<string> SetStupciVrij(Dictionary<string, object> stupci)
+        private List<string> MakeReadyForInsert(Dictionary<string, object> stupci)
         {
             List<string> _temp = new List<string>();
             string stupac = null;
@@ -145,6 +153,16 @@ namespace DnevnikRada.Baza
             _temp.Add(value);
             _temp.Add(stupciValue);
             return _temp;
+        }
+
+        private string MakeReadyForQuery(Dictionary<string, object> stupci, List<string> _operatorUsporedbe)
+        {
+            string queryOne = null;
+            foreach (var pair in stupci.Zip(_operatorUsporedbe, (stupac, operatorUsporedbe) => (Stupac: stupac, OperatorUsporedbe: operatorUsporedbe)))
+            {
+                queryOne += pair.Stupac.Key + " " + pair.OperatorUsporedbe + " '" + pair.Stupac.Value + "'" + (pair.Stupac.Key.Equals(stupci.Last().Key) ? " " : " AND ");
+            }
+            return queryOne;
         }
 
         //////////////////////////////////// statistika

@@ -64,6 +64,11 @@ namespace DnevnikRada.Klase
             return Get("Kalendar", naziv_stupca, trazi);
         }
 
+        public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
+        {
+            return Get("Kalendar", biblioteka, _operator);
+        }
+
         public string Mjesec_Godina(string conWith, bool reverse)
         {
             if(reverse)
