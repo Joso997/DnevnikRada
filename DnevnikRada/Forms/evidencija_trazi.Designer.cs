@@ -62,17 +62,17 @@
             // 
             // opisPosla
             // 
-            this.opisPosla.Location = new System.Drawing.Point(21, 294);
+            this.opisPosla.Location = new System.Drawing.Point(6, 322);
             this.opisPosla.Name = "opisPosla";
             this.opisPosla.ReadOnly = true;
-            this.opisPosla.Size = new System.Drawing.Size(399, 262);
+            this.opisPosla.Size = new System.Drawing.Size(334, 250);
             this.opisPosla.TabIndex = 1;
             this.opisPosla.Text = "";
             // 
             // lbl_opis_posla
             // 
             this.lbl_opis_posla.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_opis_posla.Location = new System.Drawing.Point(21, 262);
+            this.lbl_opis_posla.Location = new System.Drawing.Point(125, 295);
             this.lbl_opis_posla.Name = "lbl_opis_posla";
             this.lbl_opis_posla.Size = new System.Drawing.Size(100, 23);
             this.lbl_opis_posla.TabIndex = 2;
@@ -107,7 +107,7 @@
             this.evidencijaGrid.EnableHeadersVisualStyles = false;
             this.evidencijaGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.evidencijaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.evidencijaGrid.Location = new System.Drawing.Point(21, 83);
+            this.evidencijaGrid.Location = new System.Drawing.Point(346, 10);
             this.evidencijaGrid.Name = "evidencijaGrid";
             this.evidencijaGrid.ReadOnly = true;
             this.evidencijaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -121,17 +121,17 @@
             this.evidencijaGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.evidencijaGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.evidencijaGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.evidencijaGrid.Size = new System.Drawing.Size(760, 176);
+            this.evidencijaGrid.Size = new System.Drawing.Size(445, 250);
             this.evidencijaGrid.TabIndex = 3;
             this.evidencijaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellClick);
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(512, 32);
+            this.Trazi.Location = new System.Drawing.Point(236, 210);
             this.Trazi.Name = "Trazi";
-            this.Trazi.Size = new System.Drawing.Size(150, 23);
+            this.Trazi.Size = new System.Drawing.Size(100, 50);
             this.Trazi.TabIndex = 4;
-            this.Trazi.Text = "Search";
+            this.Trazi.Text = "Traži";
             this.Trazi.UseSelectable = true;
             this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
@@ -141,16 +141,16 @@
             // 
             // 
             this.textTrazi.CustomButton.Image = null;
-            this.textTrazi.CustomButton.Location = new System.Drawing.Point(223, 1);
+            this.textTrazi.CustomButton.Location = new System.Drawing.Point(302, 2);
             this.textTrazi.CustomButton.Name = "";
-            this.textTrazi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textTrazi.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.textTrazi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.textTrazi.CustomButton.TabIndex = 1;
             this.textTrazi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.textTrazi.CustomButton.UseSelectable = true;
             this.textTrazi.CustomButton.Visible = false;
             this.textTrazi.Lines = new string[0];
-            this.textTrazi.Location = new System.Drawing.Point(21, 32);
+            this.textTrazi.Location = new System.Drawing.Point(6, 73);
             this.textTrazi.MaxLength = 32767;
             this.textTrazi.Name = "textTrazi";
             this.textTrazi.PasswordChar = '\0';
@@ -159,7 +159,7 @@
             this.textTrazi.SelectionLength = 0;
             this.textTrazi.SelectionStart = 0;
             this.textTrazi.ShortcutsEnabled = true;
-            this.textTrazi.Size = new System.Drawing.Size(245, 23);
+            this.textTrazi.Size = new System.Drawing.Size(330, 30);
             this.textTrazi.TabIndex = 5;
             this.textTrazi.UseSelectable = true;
             this.textTrazi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -168,9 +168,10 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(447, 266);
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(534, 293);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(77, 25);
             this.metroLabel1.TabIndex = 6;
             this.metroLabel1.Text = "Materijal";
             // 
@@ -203,7 +204,7 @@
             this.materijalGrid.EnableHeadersVisualStyles = false;
             this.materijalGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materijalGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materijalGrid.Location = new System.Drawing.Point(432, 294);
+            this.materijalGrid.Location = new System.Drawing.Point(346, 322);
             this.materijalGrid.Name = "materijalGrid";
             this.materijalGrid.ReadOnly = true;
             this.materijalGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -217,14 +218,14 @@
             this.materijalGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.materijalGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.materijalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.materijalGrid.Size = new System.Drawing.Size(349, 262);
+            this.materijalGrid.Size = new System.Drawing.Size(445, 250);
             this.materijalGrid.TabIndex = 7;
             // 
             // Filters
             // 
             this.Filters.FormattingEnabled = true;
             this.Filters.ItemHeight = 23;
-            this.Filters.Location = new System.Drawing.Point(311, 32);
+            this.Filters.Location = new System.Drawing.Point(6, 124);
             this.Filters.Name = "Filters";
             this.Filters.Size = new System.Drawing.Size(139, 29);
             this.Filters.TabIndex = 18;

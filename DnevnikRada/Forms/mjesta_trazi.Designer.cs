@@ -62,9 +62,9 @@
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(582, 48);
+            this.Trazi.Location = new System.Drawing.Point(581, 85);
             this.Trazi.Name = "Trazi";
-            this.Trazi.Size = new System.Drawing.Size(180, 23);
+            this.Trazi.Size = new System.Drawing.Size(139, 29);
             this.Trazi.TabIndex = 1;
             this.Trazi.Text = "Search";
             this.Trazi.UseSelectable = true;
@@ -76,17 +76,16 @@
             // 
             // 
             this.searchText.CustomButton.Image = null;
-            this.searchText.CustomButton.Location = new System.Drawing.Point(192, 1);
+            this.searchText.CustomButton.Location = new System.Drawing.Point(222, 1);
             this.searchText.CustomButton.Name = "";
-            this.searchText.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.searchText.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.searchText.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.searchText.CustomButton.TabIndex = 1;
             this.searchText.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.searchText.CustomButton.UseSelectable = true;
             this.searchText.CustomButton.Visible = false;
-            this.searchText.Lines = new string[] {
-        "WuuwuWUWUWUwuwuWU"};
-            this.searchText.Location = new System.Drawing.Point(176, 48);
+            this.searchText.Lines = new string[0];
+            this.searchText.Location = new System.Drawing.Point(180, 85);
             this.searchText.MaxLength = 32767;
             this.searchText.Name = "searchText";
             this.searchText.PasswordChar = '\0';
@@ -95,9 +94,8 @@
             this.searchText.SelectionLength = 0;
             this.searchText.SelectionStart = 0;
             this.searchText.ShortcutsEnabled = true;
-            this.searchText.Size = new System.Drawing.Size(214, 23);
+            this.searchText.Size = new System.Drawing.Size(250, 29);
             this.searchText.TabIndex = 2;
-            this.searchText.Text = "WuuwuWUWUWUwuwuWU";
             this.searchText.UseSelectable = true;
             this.searchText.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.searchText.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -131,7 +129,7 @@
             this.mjestoGrid.EnableHeadersVisualStyles = false;
             this.mjestoGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mjestoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mjestoGrid.Location = new System.Drawing.Point(176, 104);
+            this.mjestoGrid.Location = new System.Drawing.Point(216, 156);
             this.mjestoGrid.Name = "mjestoGrid";
             this.mjestoGrid.ReadOnly = true;
             this.mjestoGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -145,18 +143,20 @@
             this.mjestoGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.mjestoGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mjestoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mjestoGrid.Size = new System.Drawing.Size(214, 241);
+            this.mjestoGrid.Size = new System.Drawing.Size(250, 241);
             this.mjestoGrid.TabIndex = 3;
             this.mjestoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
             // Edit
             // 
+            this.Edit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
+            this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(650, 367);
+            this.Edit.Location = new System.Drawing.Point(600, 480);
             this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(114, 39);
+            this.Edit.Size = new System.Drawing.Size(100, 100);
             this.Edit.TabIndex = 12;
-            this.Edit.Text = "edit";
             this.Edit.UseSelectable = true;
             this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
@@ -164,7 +164,7 @@
             // 
             this.Filters.FormattingEnabled = true;
             this.Filters.ItemHeight = 23;
-            this.Filters.Location = new System.Drawing.Point(415, 48);
+            this.Filters.Location = new System.Drawing.Point(436, 85);
             this.Filters.Name = "Filters";
             this.Filters.Size = new System.Drawing.Size(139, 29);
             this.Filters.TabIndex = 17;
@@ -199,7 +199,7 @@
             this.kalendarGrid.EnableHeadersVisualStyles = false;
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kalendarGrid.Location = new System.Drawing.Point(415, 154);
+            this.kalendarGrid.Location = new System.Drawing.Point(507, 206);
             this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -213,15 +213,16 @@
             this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kalendarGrid.Size = new System.Drawing.Size(349, 191);
+            this.kalendarGrid.Size = new System.Drawing.Size(150, 191);
             this.kalendarGrid.TabIndex = 18;
             this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kalendarGrid_CellClick);
             // 
             // Dodaj
             // 
+            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
             this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Dodaj.Location = new System.Drawing.Point(772, 87);
+            this.Dodaj.Location = new System.Drawing.Point(700, 480);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(100, 100);
             this.Dodaj.TabIndex = 35;
@@ -231,7 +232,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Checked = false;
-            this.metroDateTime1.Location = new System.Drawing.Point(562, 119);
+            this.metroDateTime1.Location = new System.Drawing.Point(482, 171);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);

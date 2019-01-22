@@ -218,7 +218,7 @@ namespace DnevnikRada
             // 
             // metroUserControl1
             // 
-            this.metroUserControl1.BackColor = System.Drawing.Color.Maroon;
+            this.metroUserControl1.BackColor = System.Drawing.Color.White;
             this.metroUserControl1.Location = new System.Drawing.Point(606, 0);
             this.metroUserControl1.Name = "metroUserControl1";
             this.metroUserControl1.Size = new System.Drawing.Size(291, 580);

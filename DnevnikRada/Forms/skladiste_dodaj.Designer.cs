@@ -178,7 +178,7 @@
             // 
             // Potvrdi
             // 
-            this.Potvrdi.Location = new System.Drawing.Point(581, 416);
+            this.Potvrdi.Location = new System.Drawing.Point(581, 406);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 50);
             this.Potvrdi.TabIndex = 8;
