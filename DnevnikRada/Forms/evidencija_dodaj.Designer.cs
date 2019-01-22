@@ -47,7 +47,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.addUse = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox9 = new MetroFramework.Controls.MetroComboBox();
+            this.NazivMjesta = new MetroFramework.Controls.MetroComboBox();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
@@ -247,13 +247,13 @@
             // 
             // metroComboBox9
             // 
-            this.metroComboBox9.FormattingEnabled = true;
-            this.metroComboBox9.ItemHeight = 23;
-            this.metroComboBox9.Location = new System.Drawing.Point(168, 92);
-            this.metroComboBox9.Name = "metroComboBox9";
-            this.metroComboBox9.Size = new System.Drawing.Size(200, 29);
-            this.metroComboBox9.TabIndex = 30;
-            this.metroComboBox9.UseSelectable = true;
+            this.NazivMjesta.FormattingEnabled = true;
+            this.NazivMjesta.ItemHeight = 23;
+            this.NazivMjesta.Location = new System.Drawing.Point(168, 92);
+            this.NazivMjesta.Name = "metroComboBox9";
+            this.NazivMjesta.Size = new System.Drawing.Size(200, 29);
+            this.NazivMjesta.TabIndex = 30;
+            this.NazivMjesta.UseSelectable = true;
             // 
             // materijalGrid
             // 
@@ -329,7 +329,7 @@
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.materijalGrid);
-            this.Controls.Add(this.metroComboBox9);
+            this.Controls.Add(this.NazivMjesta);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.addUse);
             this.Controls.Add(this.metroLabel5);
@@ -374,7 +374,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroComboBox addUse;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroComboBox metroComboBox9;
+        private MetroFramework.Controls.MetroComboBox NazivMjesta;
         private MetroFramework.Controls.MetroGrid materijalGrid;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;

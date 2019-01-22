@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `Evidencija` (
 	`OpisPosla`	TEXT NOT NULL,
 	`UtrosenoVrijeme`	INTEGER NOT NULL,
 	`ID_mjesta` INTEGER ,
+	FOREIGN KEY(`NazivMjesta`) REFERENCES `Mjesta`(`ID`),
 	FOREIGN KEY(`ID_mjesta`) REFERENCES `Mjesta`(`ID`)
 ); 
 

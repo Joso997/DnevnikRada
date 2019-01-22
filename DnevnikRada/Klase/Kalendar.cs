@@ -11,8 +11,8 @@ namespace DnevnikRada.Klase
 {
     class Kalendar : Baza.DB, IUseDatabase
     {
-        int Godina { get; set; }
-        int Mjesec { get; set; }
+        public int Godina { get; private set; }
+        public int Mjesec { get; private set; }
         public object Id_mjesta { get; set; }
         public List<DateTime> Datumi { get; set; }
 

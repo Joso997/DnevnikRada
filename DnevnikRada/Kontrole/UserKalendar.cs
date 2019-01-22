@@ -54,7 +54,7 @@ namespace DnevnikRada.Kontrole
                 MetroFramework.Controls.MetroLabel label = new MetroFramework.Controls.MetroLabel
                 {
                     Location = new Point(left, top),
-                    Margin = new Padding(5, 10, 7, 0),
+                    Margin = new Padding(5, 8, 7, 0),
                     Name = "day" + i.ToString(),
                     Size = new Size(30, 30),
                     TextAlign = ContentAlignment.MiddleCenter,
@@ -99,10 +99,12 @@ namespace DnevnikRada.Kontrole
             int top = 0;
             int left = 0;
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Datum", DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss") }
+                {"Datum", new DateTime(mjesta.Kalendar.Godina, mjesta.Kalendar.Mjesec, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
+                {"Datum"+ " ", new DateTime(mjesta.Kalendar.Godina, mjesta.Kalendar.Mjesec, 1).AddMonths(1).ToString("yyyy-MM-dd HH:mm:ss") }
             };
             List<string> _operator = new List<string> {
-                {">"}
+                {">"},
+                {"<"}
             };
             DataTable dT_datum = mjesta.Kalendar.Ucitaj(biblioteka, _operator);
             _tempDate = dT_datum.AsEnumerable().Select(r => r.Field<DateTime>("Datum")).ToList();
@@ -141,7 +143,7 @@ namespace DnevnikRada.Kontrole
                 int left = 0;
                 List<string> _operator_query = new List<string>{
                     {"like"},
-                    {"="}
+                    {"!="}
                 };
                 foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
                 {
@@ -165,7 +167,7 @@ namespace DnevnikRada.Kontrole
                             Name = "obavijest_gumb",
                             Size = new Size(285, 32),
                             TextAlign = ContentAlignment.MiddleCenter,
-                            Text = _date.ToShortDateString(),
+                            Text = mjesta.Ucitaj(int.Parse(dT_query.Rows[_query]["Id_Mjesta"].ToString())).Rows[0]["NazivMjesta"] + " " + _date.ToShortDateString(),
                             TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
                             Visible = true,
                             Tag = tag

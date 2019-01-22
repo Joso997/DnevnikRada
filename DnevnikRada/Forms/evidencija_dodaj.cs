@@ -33,7 +33,7 @@ namespace DnevnikRada
             selectButton = SelectButton;
             Fill();
             metroDateTime1.Value = (DateTime)tag[0];
-            metroComboBox9.Text = (string)tag[1];
+            NazivMjesta.Text = (string)tag[1];
             dT.Columns.Add("NazivMaterijala").Unique = true;
             dT.Columns.Add("Kolicina", typeof(Int32));
         }
@@ -76,7 +76,7 @@ namespace DnevnikRada
                     materijal_list.AddRange(n_temp);
                     var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToArray();
                     kolicina_list.AddRange(_temp);
-                    Evidencija evidencija = new Evidencija(metroComboBox9.Text, DateTime.Now, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
+                    Evidencija evidencija = new Evidencija(NazivMjesta.Text, DateTime.Now, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -104,7 +104,7 @@ namespace DnevnikRada
             Mjesta mjesta = new Mjesta();
             DataTable dT_mjesta = new DataTable();
             dT_mjesta = mjesta.Ucitaj("NazivMjesta", null);
-            metroComboBox9.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
+            NazivMjesta.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
             addUse.Items.Add("+");;
             addUse.Items.Add("-");
         }

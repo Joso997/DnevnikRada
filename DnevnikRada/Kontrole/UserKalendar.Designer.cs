@@ -131,7 +131,7 @@
             // 
             // Mjesec_Godina
             // 
-            this.Mjesec_Godina.Location = new System.Drawing.Point(0, 236);
+            this.Mjesec_Godina.Location = new System.Drawing.Point(0, 266);
             this.Mjesec_Godina.Margin = new System.Windows.Forms.Padding(5, 10, 7, 0);
             this.Mjesec_Godina.Name = "Mjesec_Godina";
             this.Mjesec_Godina.Size = new System.Drawing.Size(208, 30);
@@ -142,7 +142,7 @@
             // Previous
             // 
             this.Previous.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.Previous.Location = new System.Drawing.Point(210, 236);
+            this.Previous.Location = new System.Drawing.Point(210, 266);
             this.Previous.Name = "Previous";
             this.Previous.Size = new System.Drawing.Size(40, 30);
             this.Previous.TabIndex = 21;
@@ -153,7 +153,7 @@
             // Next
             // 
             this.Next.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.Next.Location = new System.Drawing.Point(251, 236);
+            this.Next.Location = new System.Drawing.Point(251, 266);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(40, 30);
             this.Next.TabIndex = 22;
@@ -164,7 +164,7 @@
             // template_tile
             // 
             this.template_tile.ActiveControl = null;
-            this.template_tile.Location = new System.Drawing.Point(5, 307);
+            this.template_tile.Location = new System.Drawing.Point(5, 336);
             this.template_tile.Margin = new System.Windows.Forms.Padding(1);
             this.template_tile.Name = "template_tile";
             this.template_tile.Size = new System.Drawing.Size(285, 32);
@@ -179,7 +179,7 @@
             // 
             this.metroTile2.ActiveControl = null;
             this.metroTile2.Enabled = false;
-            this.metroTile2.Location = new System.Drawing.Point(5, 270);
+            this.metroTile2.Location = new System.Drawing.Point(5, 297);
             this.metroTile2.Margin = new System.Windows.Forms.Padding(1);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(285, 35);
@@ -191,9 +191,9 @@
             // metroEvents
             // 
             this.metroEvents.AutoScroll = true;
-            this.metroEvents.Location = new System.Drawing.Point(5, 307);
+            this.metroEvents.Location = new System.Drawing.Point(5, 336);
             this.metroEvents.Name = "metroEvents";
-            this.metroEvents.Size = new System.Drawing.Size(285, 161);
+            this.metroEvents.Size = new System.Drawing.Size(285, 132);
             this.metroEvents.TabIndex = 25;
             this.metroEvents.UseSelectable = true;
             // 
