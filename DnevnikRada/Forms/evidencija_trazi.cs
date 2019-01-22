@@ -72,5 +72,6 @@ namespace DnevnikRada
             materijalGrid.Columns["Id_Evidencija"].Visible = false;
         }
 
+        
     }
 }
