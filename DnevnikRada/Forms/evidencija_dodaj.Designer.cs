@@ -59,6 +59,7 @@
             this.Home.BackColor = System.Drawing.Color.RoyalBlue;
             this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
             this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Home.Location = new System.Drawing.Point(800, 480);
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(100, 100);
@@ -137,27 +138,35 @@
             // 
             // Potvrdi
             // 
+            this.Potvrdi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Potvrdi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Potvrdi.BackgroundImage")));
+            this.Potvrdi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Potvrdi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Potvrdi.Location = new System.Drawing.Point(701, 480);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 100);
             this.Potvrdi.TabIndex = 7;
-            this.Potvrdi.Text = "Potvrdi";
             this.Potvrdi.UseSelectable = true;
             this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // btn_trash
             // 
+            this.btn_trash.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_trash.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_trash.BackgroundImage")));
+            this.btn_trash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_trash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_trash.Location = new System.Drawing.Point(602, 480);
             this.btn_trash.Name = "btn_trash";
             this.btn_trash.Size = new System.Drawing.Size(100, 100);
             this.btn_trash.TabIndex = 8;
-            this.btn_trash.Text = "trash";
             this.btn_trash.UseSelectable = true;
             // 
             // Dodaj
             // 
+            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
             this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Dodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Dodaj.Location = new System.Drawing.Point(503, 480);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(100, 100);

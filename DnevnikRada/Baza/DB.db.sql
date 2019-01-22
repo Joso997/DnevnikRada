@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS `Evidencija` (
 	`Datum`	DATETIME NOT NULL,
 	`OpisPosla`	TEXT NOT NULL,
 	`UtrosenoVrijeme`	INTEGER NOT NULL,
-	`ID_mjesta` INTEGER ,
-	FOREIGN KEY(`ID_mjesta`) REFERENCES `Mjesta`(`ID`)
+	`ID_Mjesta` INTEGER ,
+	FOREIGN KEY(`ID_Mjesta`) REFERENCES `Mjesta`(`ID`)
 ); 
 
 CREATE TABLE IF NOT EXISTS `Poveznica` (
