@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skladiste_trazi));
-            this.label1 = new System.Windows.Forms.Label();
             this.Edit = new MetroFramework.Controls.MetroButton();
             this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
             this.mjLabel = new MetroFramework.Controls.MetroLabel();
@@ -51,17 +50,6 @@
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(339, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 24);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Pretraživanje Skladišta";
             // 
             // Edit
             // 
@@ -252,7 +240,7 @@
             this.search.CustomButton.UseSelectable = true;
             this.search.CustomButton.Visible = false;
             this.search.Lines = new string[0];
-            this.search.Location = new System.Drawing.Point(169, 102);
+            this.search.Location = new System.Drawing.Point(305, 75);
             this.search.MaxLength = 32767;
             this.search.Name = "search";
             this.search.PasswordChar = '\0';
@@ -395,7 +383,6 @@
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cijenaBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.kolicinaLabel);
             this.Controls.Add(this.mjLabel);
@@ -436,7 +423,6 @@
         private MetroFramework.Controls.MetroLabel mjLabel;
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroButton Edit;
-        private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox cijenaBox;
         private MetroFramework.Controls.MetroComboBox Filters;

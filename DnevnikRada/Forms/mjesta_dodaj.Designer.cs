@@ -61,7 +61,7 @@
             // 
             this.lbl_naziv_mjesta.AutoSize = true;
             this.lbl_naziv_mjesta.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_naziv_mjesta.Location = new System.Drawing.Point(302, 113);
+            this.lbl_naziv_mjesta.Location = new System.Drawing.Point(328, 52);
             this.lbl_naziv_mjesta.Name = "lbl_naziv_mjesta";
             this.lbl_naziv_mjesta.Size = new System.Drawing.Size(108, 25);
             this.lbl_naziv_mjesta.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lbl_vrijeme_rada.AutoSize = true;
             this.lbl_vrijeme_rada.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_vrijeme_rada.Location = new System.Drawing.Point(254, 265);
+            this.lbl_vrijeme_rada.Location = new System.Drawing.Point(220, 130);
             this.lbl_vrijeme_rada.Name = "lbl_vrijeme_rada";
             this.lbl_vrijeme_rada.Size = new System.Drawing.Size(216, 25);
             this.lbl_vrijeme_rada.TabIndex = 3;
@@ -83,16 +83,16 @@
             // 
             // 
             this.tb_naziv_mjesta.CustomButton.Image = null;
-            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tb_naziv_mjesta.CustomButton.Location = new System.Drawing.Point(213, 1);
             this.tb_naziv_mjesta.CustomButton.Name = "";
-            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_naziv_mjesta.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tb_naziv_mjesta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_naziv_mjesta.CustomButton.TabIndex = 1;
             this.tb_naziv_mjesta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_naziv_mjesta.CustomButton.UseSelectable = true;
             this.tb_naziv_mjesta.CustomButton.Visible = false;
             this.tb_naziv_mjesta.Lines = new string[0];
-            this.tb_naziv_mjesta.Location = new System.Drawing.Point(512, 115);
+            this.tb_naziv_mjesta.Location = new System.Drawing.Point(442, 48);
             this.tb_naziv_mjesta.MaxLength = 32767;
             this.tb_naziv_mjesta.Name = "tb_naziv_mjesta";
             this.tb_naziv_mjesta.PasswordChar = '\0';
@@ -101,7 +101,7 @@
             this.tb_naziv_mjesta.SelectionLength = 0;
             this.tb_naziv_mjesta.SelectionStart = 0;
             this.tb_naziv_mjesta.ShortcutsEnabled = true;
-            this.tb_naziv_mjesta.Size = new System.Drawing.Size(150, 23);
+            this.tb_naziv_mjesta.Size = new System.Drawing.Size(241, 29);
             this.tb_naziv_mjesta.TabIndex = 1;
             this.tb_naziv_mjesta.UseSelectable = true;
             this.tb_naziv_mjesta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -109,11 +109,13 @@
             // 
             // Potvrdi
             // 
-            this.Potvrdi.Location = new System.Drawing.Point(722, 339);
+            this.Potvrdi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Potvrdi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Potvrdi.BackgroundImage")));
+            this.Potvrdi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Potvrdi.Location = new System.Drawing.Point(700, 480);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 100);
             this.Potvrdi.TabIndex = 10;
-            this.Potvrdi.Text = "Potvrdi";
             this.Potvrdi.UseSelectable = true;
             this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
@@ -121,7 +123,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(302, 153);
+            this.metroLabel2.Location = new System.Drawing.Point(318, 91);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(118, 25);
             this.metroLabel2.TabIndex = 12;
@@ -133,16 +135,16 @@
             // 
             // 
             this.tb_adresa.CustomButton.Image = null;
-            this.tb_adresa.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.tb_adresa.CustomButton.Location = new System.Drawing.Point(213, 1);
             this.tb_adresa.CustomButton.Name = "";
-            this.tb_adresa.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_adresa.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tb_adresa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_adresa.CustomButton.TabIndex = 1;
             this.tb_adresa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_adresa.CustomButton.UseSelectable = true;
             this.tb_adresa.CustomButton.Visible = false;
             this.tb_adresa.Lines = new string[0];
-            this.tb_adresa.Location = new System.Drawing.Point(512, 155);
+            this.tb_adresa.Location = new System.Drawing.Point(442, 87);
             this.tb_adresa.MaxLength = 32767;
             this.tb_adresa.Name = "tb_adresa";
             this.tb_adresa.PasswordChar = '\0';
@@ -151,7 +153,7 @@
             this.tb_adresa.SelectionLength = 0;
             this.tb_adresa.SelectionStart = 0;
             this.tb_adresa.ShortcutsEnabled = true;
-            this.tb_adresa.Size = new System.Drawing.Size(150, 23);
+            this.tb_adresa.Size = new System.Drawing.Size(241, 29);
             this.tb_adresa.TabIndex = 2;
             this.tb_adresa.UseSelectable = true;
             this.tb_adresa.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -160,10 +162,10 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Checked = false;
-            this.metroDateTime1.Location = new System.Drawing.Point(512, 265);
+            this.metroDateTime1.Location = new System.Drawing.Point(442, 126);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.Size = new System.Drawing.Size(240, 29);
             this.metroDateTime1.TabIndex = 14;
             // 
             // kalendarGrid
@@ -195,7 +197,7 @@
             this.kalendarGrid.EnableHeadersVisualStyles = false;
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kalendarGrid.Location = new System.Drawing.Point(254, 300);
+            this.kalendarGrid.Location = new System.Drawing.Point(220, 165);
             this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -214,9 +216,10 @@
             // 
             // Dodaj
             // 
+            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
             this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
             this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Dodaj.Location = new System.Drawing.Point(722, 233);
+            this.Dodaj.Location = new System.Drawing.Point(600, 480);
             this.Dodaj.Name = "Dodaj";
             this.Dodaj.Size = new System.Drawing.Size(100, 100);
             this.Dodaj.TabIndex = 33;
