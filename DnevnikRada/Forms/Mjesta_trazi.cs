@@ -33,14 +33,14 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
-                    object[] marks;
+                    /*object[] marks;
                     marks = new object[] { metroDateTime1.Text };
                     var rows = dT.Select(string.Format("Datum = '{0}'", metroDateTime1.Text));
                     if (rows.Length == 0)
                         dT.LoadDataRow(marks, true);
                     else
                         MessageBox.Show("Datum već dodan.");
-                    kalendarGrid.DataSource = dT;
+                    kalendarGrid.DataSource = dT;*/
                     break;
                 case "Trazi":
                     string trazi = string.Format(searchText.Text);
@@ -86,10 +86,10 @@ namespace DnevnikRada
 
         private void kalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable dT_kalendar = new DataTable();
+            /*DataTable dT_kalendar = new DataTable();
             dT_kalendar = mjesto.Kalendar.Ucitaj(Int32.Parse(kalendarGrid.Rows[e.RowIndex].Cells["id"].Value.ToString()));
-            metroDateTime1.Value = (DateTime)dT_kalendar.Rows[0].ItemArray[2];
-            Edit.Enabled = true;
+            //metroDateTime1.Value = (DateTime)dT_kalendar.Rows[0].ItemArray[2];
+            Edit.Enabled = true;*/
             
         }
     }
