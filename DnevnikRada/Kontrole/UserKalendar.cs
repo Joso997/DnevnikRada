@@ -143,7 +143,7 @@ namespace DnevnikRada.Kontrole
                 int left = 0;
                 List<string> _operator_query = new List<string>{
                     {"like"},
-                    {"!="}
+                    {"="}
                 };
                 foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
                 {
@@ -159,7 +159,7 @@ namespace DnevnikRada.Kontrole
                         {"Datum", "%"+_date.ToString("yyyy-MM-dd")+"%" },
                         {"Id_Mjesta", dT_query.Rows[_query]["Id_Mjesta"] }
                     };
-                    if(new Evidencija().Ucitaj(biblioteka_query, _operator_query).Rows.Count > 0){
+                    if(new Evidencija().Ucitaj(biblioteka_query, _operator_query).Rows.Count <= 0){
                         MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
                         {
                             Location = new Point(left, top),
