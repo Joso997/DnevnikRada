@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skladiste_trazi));
-            this.Edit = new MetroFramework.Controls.MetroButton();
             this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
             this.mjLabel = new MetroFramework.Controls.MetroLabel();
             this.prodavacLabel = new MetroFramework.Controls.MetroLabel();
@@ -48,20 +47,10 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cijenaBox = new MetroFramework.Controls.MetroTextBox();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
+            this.Edit = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Edit
-            // 
-            this.Edit.BackColor = System.Drawing.Color.Aqua;
-            this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(631, 353);
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(100, 50);
-            this.Edit.TabIndex = 14;
-            this.Edit.Text = "Uredi";
-            this.Edit.UseSelectable = true;
-            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // kolicinaLabel
             // 
@@ -231,7 +220,7 @@
             // 
             // 
             this.search.CustomButton.Image = null;
-            this.search.CustomButton.Location = new System.Drawing.Point(289, 1);
+            this.search.CustomButton.Location = new System.Drawing.Point(136, 1);
             this.search.CustomButton.Name = "";
             this.search.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -240,7 +229,7 @@
             this.search.CustomButton.UseSelectable = true;
             this.search.CustomButton.Visible = false;
             this.search.Lines = new string[0];
-            this.search.Location = new System.Drawing.Point(305, 75);
+            this.search.Location = new System.Drawing.Point(169, 74);
             this.search.MaxLength = 32767;
             this.search.Name = "search";
             this.search.PasswordChar = '\0';
@@ -249,7 +238,7 @@
             this.search.SelectionLength = 0;
             this.search.SelectionStart = 0;
             this.search.ShortcutsEnabled = true;
-            this.search.Size = new System.Drawing.Size(311, 23);
+            this.search.Size = new System.Drawing.Size(158, 23);
             this.search.TabIndex = 5;
             this.search.UseSelectable = true;
             this.search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -369,11 +358,34 @@
             // 
             // Filters
             // 
-            this.Filters.Location = new System.Drawing.Point(0, 0);
+            this.Filters.FormattingEnabled = true;
+            this.Filters.ItemHeight = 23;
+            this.Filters.Location = new System.Drawing.Point(486, 74);
             this.Filters.Name = "Filters";
-            this.Filters.Size = new System.Drawing.Size(121, 21);
-            this.Filters.TabIndex = 0;
+            this.Filters.Size = new System.Drawing.Size(139, 29);
+            this.Filters.TabIndex = 19;
             this.Filters.UseSelectable = true;
+            // 
+            // Edit
+            // 
+            this.Edit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
+            this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Edit.Enabled = false;
+            this.Edit.Location = new System.Drawing.Point(694, 480);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(100, 100);
+            this.Edit.TabIndex = 18;
+            this.Edit.UseSelectable = true;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(364, 74);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(105, 23);
+            this.metroLabel2.TabIndex = 20;
+            this.metroLabel2.Text = "Filtrirati po: ";
             // 
             // skladiste_trazi
             // 
@@ -381,9 +393,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.Filters);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cijenaBox);
-            this.Controls.Add(this.Edit);
             this.Controls.Add(this.kolicinaLabel);
             this.Controls.Add(this.mjLabel);
             this.Controls.Add(this.prodavacLabel);
@@ -422,9 +436,10 @@
         private MetroFramework.Controls.MetroLabel prodavacLabel;
         private MetroFramework.Controls.MetroLabel mjLabel;
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
-        private MetroFramework.Controls.MetroButton Edit;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox cijenaBox;
         private MetroFramework.Controls.MetroComboBox Filters;
+        private MetroFramework.Controls.MetroButton Edit;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

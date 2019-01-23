@@ -112,7 +112,7 @@
             this.tb_utroseno_vrijeme.SelectionLength = 0;
             this.tb_utroseno_vrijeme.SelectionStart = 0;
             this.tb_utroseno_vrijeme.ShortcutsEnabled = true;
-            this.tb_utroseno_vrijeme.Size = new System.Drawing.Size(200, 29);
+            this.tb_utroseno_vrijeme.Size = new System.Drawing.Size(73, 29);
             this.tb_utroseno_vrijeme.TabIndex = 4;
             this.tb_utroseno_vrijeme.UseSelectable = true;
             this.tb_utroseno_vrijeme.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -161,6 +161,7 @@
             this.btn_trash.Size = new System.Drawing.Size(100, 100);
             this.btn_trash.TabIndex = 8;
             this.btn_trash.UseSelectable = true;
+            this.btn_trash.Visible = false;
             // 
             // Dodaj
             // 
@@ -255,13 +256,13 @@
             this.metroLabel6.Size = new System.Drawing.Size(0, 0);
             this.metroLabel6.TabIndex = 29;
             // 
-            // metroComboBox9
+            // NazivMjesta
             // 
             this.NazivMjesta.FormattingEnabled = true;
             this.NazivMjesta.ItemHeight = 23;
             this.NazivMjesta.Location = new System.Drawing.Point(223, 32);
-            this.NazivMjesta.Name = "metroComboBox9";
-            this.NazivMjesta.Size = new System.Drawing.Size(200, 29);
+            this.NazivMjesta.Name = "NazivMjesta";
+            this.NazivMjesta.Size = new System.Drawing.Size(220, 29);
             this.NazivMjesta.TabIndex = 30;
             this.NazivMjesta.UseSelectable = true;
             // 
@@ -327,7 +328,7 @@
             this.metroDateTime1.Location = new System.Drawing.Point(223, 77);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.Size = new System.Drawing.Size(220, 29);
             this.metroDateTime1.TabIndex = 33;
             // 
             // Evidencija_dodaj

@@ -44,6 +44,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
@@ -127,9 +128,9 @@
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(236, 210);
+            this.Trazi.Location = new System.Drawing.Point(270, 124);
             this.Trazi.Name = "Trazi";
-            this.Trazi.Size = new System.Drawing.Size(100, 50);
+            this.Trazi.Size = new System.Drawing.Size(70, 29);
             this.Trazi.TabIndex = 4;
             this.Trazi.Text = "Traži";
             this.Trazi.UseSelectable = true;
@@ -225,11 +226,20 @@
             // 
             this.Filters.FormattingEnabled = true;
             this.Filters.ItemHeight = 23;
-            this.Filters.Location = new System.Drawing.Point(6, 124);
+            this.Filters.Location = new System.Drawing.Point(125, 124);
             this.Filters.Name = "Filters";
             this.Filters.Size = new System.Drawing.Size(139, 29);
             this.Filters.TabIndex = 18;
             this.Filters.UseSelectable = true;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(6, 124);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(105, 23);
+            this.metroLabel2.TabIndex = 19;
+            this.metroLabel2.Text = "Filtrirati po: ";
             // 
             // evidencija_trazi
             // 
@@ -237,6 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.materijalGrid);
             this.Controls.Add(this.metroLabel1);
@@ -270,5 +281,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid materijalGrid;
         private MetroFramework.Controls.MetroComboBox Filters;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

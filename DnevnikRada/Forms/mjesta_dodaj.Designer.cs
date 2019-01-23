@@ -197,7 +197,7 @@
             this.kalendarGrid.EnableHeadersVisualStyles = false;
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kalendarGrid.Location = new System.Drawing.Point(220, 165);
+            this.kalendarGrid.Location = new System.Drawing.Point(442, 165);
             this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -211,7 +211,7 @@
             this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kalendarGrid.Size = new System.Drawing.Size(462, 268);
+            this.kalendarGrid.Size = new System.Drawing.Size(240, 268);
             this.kalendarGrid.TabIndex = 32;
             // 
             // Dodaj
