@@ -117,7 +117,7 @@ namespace DnevnikRada.Kontrole
                     Name = list.ToShortDateString(),
                     Size = new Size(285, 32),
                     TextAlign = ContentAlignment.MiddleCenter,
-                    Text = list.ToShortDateString(),
+                    Text = mjesta.Ucitaj(int.Parse(dT_datum.Rows[_tempDate.IndexOf(list)]["Id_Mjesta"].ToString())).Rows[0]["NazivMjesta"] + " " + list.ToShortDateString(),
                     TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
                     Visible = true,
                     Enabled = false
