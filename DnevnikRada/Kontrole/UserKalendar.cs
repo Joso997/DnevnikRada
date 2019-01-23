@@ -159,6 +159,7 @@ namespace DnevnikRada.Kontrole
                         {"Datum", "%"+_date.ToString("yyyy-MM-dd")+"%" },
                         {"Id_Mjesta", dT_query.Rows[_query]["Id_Mjesta"] }
                     };
+                    Console.WriteLine(_date.ToString("yyyy-MM-dd"));
                     if(new Evidencija().Ucitaj(biblioteka_query, _operator_query).Rows.Count <= 0){
                         MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
                         {

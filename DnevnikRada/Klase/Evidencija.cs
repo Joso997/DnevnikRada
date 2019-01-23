@@ -45,7 +45,7 @@ namespace DnevnikRada.Klase
                 {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme },
-                {"Id_Mjesta", new Mjesta().Ucitaj("ID", Naziv_Mjesta) }
+                {"Id_Mjesta", new Mjesta().Ucitaj("NazivMjesta", Naziv_Mjesta).Rows[0]["ID"] }
             };
             Poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
             new Poveznica(Poveznica.Id_evidencija, Poveznica.Naziv_materijala, Poveznica.Kolicina);

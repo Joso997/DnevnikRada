@@ -76,7 +76,7 @@ namespace DnevnikRada
                     materijal_list.AddRange(n_temp);
                     var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToArray();
                     kolicina_list.AddRange(_temp);
-                    Evidencija evidencija = new Evidencija(NazivMjesta.Text, DateTime.Now, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
+                    Evidencija evidencija = new Evidencija(NazivMjesta.Text, metroDateTime1.Value, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":
                     Home Home = new Home();
