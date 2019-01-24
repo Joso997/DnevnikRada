@@ -47,7 +47,9 @@ namespace DnevnikRada.Klase
                 {"UtrosenoVrijeme", Utroseno_Vrijeme },
                 {"Id_Mjesta", new Mjesta().Ucitaj("NazivMjesta", Naziv_Mjesta).Rows[0]["ID"] }
             };
+            Console.WriteLine("1");
             Poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
+            Console.WriteLine("2");
             new Poveznica(Poveznica.Id_evidencija, Poveznica.Naziv_materijala, Poveznica.Kolicina);
         }
 
@@ -76,6 +78,9 @@ namespace DnevnikRada.Klase
             return Get("Evidencija", biblioteka, _operator);
         }
 
-
+        public bool Provjera(string naziv, int kolicina)
+        {
+            return ProvjeraNegativnosti(naziv, kolicina);
+        }
     }
 }

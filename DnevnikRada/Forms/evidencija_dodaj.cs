@@ -16,6 +16,7 @@ namespace DnevnikRada
     public partial class Evidencija_dodaj : UIController
     {
         DataTable dT = new DataTable();
+        Baza.DB baza = new Baza.DB();
         public Evidencija_dodaj()
         {
             InitializeComponent();
@@ -49,8 +50,15 @@ namespace DnevnikRada
                     object[] marks;
                     if (addUse.Text == "-")
                     {
+
+                        if(baza.ProvjeraNegativnosti(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
+                        {
+                            MessageBox.Show("broj -" + Kolicina.Text + " je pre negativan nema dosta u skladistu");
+                            break;
+                        }
+
                         marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1 };
-                        MessageBox.Show("tu sam");
+                        
                     }
                     else
                     {
@@ -76,6 +84,7 @@ namespace DnevnikRada
                     materijal_list.AddRange(n_temp);
                     var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToArray();
                     kolicina_list.AddRange(_temp);
+
                     Evidencija evidencija = new Evidencija(NazivMjesta.Text, metroDateTime1.Value, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), 10f, materijal_list, kolicina_list);
                     break;
                 case "Home":

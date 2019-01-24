@@ -38,6 +38,7 @@ namespace DnevnikRada.Klase
                     {"Kolicina", pair.Kol }
                 };
                 Set("Poveznica", dictionary_stupci, false);
+                Update(pair.Naziv, pair.Kol);
             }
                    
         }

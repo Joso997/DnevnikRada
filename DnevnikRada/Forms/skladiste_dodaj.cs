@@ -31,7 +31,7 @@ namespace DnevnikRada
                     int kol;
                     string lol = tb_kolicina.Text.ToString();
                     kol = Int32.Parse(lol);
-                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, kol, Convert.ToInt32 (tb_Cijena.Text));
+                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, 0, Convert.ToInt32 (tb_Cijena.Text));
                     break;
                 case "Home":
                     Home Home = new Home();

@@ -102,6 +102,15 @@ namespace DnevnikRada.Baza
             return Query(insert);
         }
 
+        protected object Update(string nazivMaterijala, int kolicina)
+        {
+            
+            string update = string.Format("update skladiste set kolicina =kolicina+(1*{0}) " +
+                "where NazivMaterijala = " + '"' + "{1}" + '"' 
+                , kolicina,nazivMaterijala);
+            return Query(update);
+        }
+
         protected DataTable Get(string naziv_tablice)
         {
             string command = string.Format("select * from {0}", naziv_tablice);
@@ -163,6 +172,28 @@ namespace DnevnikRada.Baza
                 queryOne += pair.Stupac.Key + " " + pair.OperatorUsporedbe + " '" + pair.Stupac.Value + "'" + (pair.Stupac.Key.Equals(stupci.Last().Key) ? " " : " AND ");
             }
             return queryOne;
+        }
+
+        public bool ProvjeraNegativnosti(string naziv, int kolicina)
+        {
+            int read=0;
+            string all = string.Format("select Kolicina from Skladiste where NazivMaterijala=" + '"' + "{0}" + '"'
+                , naziv);
+            command = new SQLiteCommand(all, connection);
+            SQLiteDataReader readerKolicina = command.ExecuteReader();
+            while (readerKolicina.Read())
+            {
+                read = readerKolicina.GetInt32(0);
+            }
+            if ((read + kolicina) < 0)
+            {
+                MessageBox.Show(Convert.ToString(read + kolicina));
+                return false;
+            }
+            else
+
+                return true;
+            
         }
 
         //////////////////////////////////// statistika
