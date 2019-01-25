@@ -33,7 +33,7 @@ namespace DnevnikRada
                 case "Edit":
                     if (CheckInput(new Dictionary<string, string> { { kolicinaBox.Name, kolicinaBox.Text }, { nazivBox.Name, nazivBox.Text } }))
                         break;
-                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, 0, Int32.Parse(cijenaBox.Text));
+                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(kolicinaBox.Text), Int32.Parse(cijenaBox.Text));
                     skladisteGrid.DataSource = skladiste.Ucitaj();
                     Edit.Enabled = false;
                     break;

@@ -32,12 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skladiste_trazi));
-            this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
             this.mjLabel = new MetroFramework.Controls.MetroLabel();
             this.prodavacLabel = new MetroFramework.Controls.MetroLabel();
             this.nazivLabel = new MetroFramework.Controls.MetroLabel();
             this.mjBox = new MetroFramework.Controls.MetroTextBox();
-            this.kolicinaBox = new MetroFramework.Controls.MetroTextBox();
             this.nazivBox = new MetroFramework.Controls.MetroTextBox();
             this.prodavacBox = new MetroFramework.Controls.MetroTextBox();
             this.search = new MetroFramework.Controls.MetroTextBox();
@@ -49,18 +47,10 @@
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             this.Edit = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
+            this.kolicinaBox = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // kolicinaLabel
-            // 
-            this.kolicinaLabel.AutoSize = true;
-            this.kolicinaLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.kolicinaLabel.Location = new System.Drawing.Point(160, 477);
-            this.kolicinaLabel.Name = "kolicinaLabel";
-            this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
-            this.kolicinaLabel.TabIndex = 13;
-            this.kolicinaLabel.Text = "Količina";
             // 
             // mjLabel
             // 
@@ -121,37 +111,6 @@
             this.mjBox.UseSelectable = true;
             this.mjBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mjBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // kolicinaBox
-            // 
-            // 
-            // 
-            // 
-            this.kolicinaBox.CustomButton.Image = null;
-            this.kolicinaBox.CustomButton.Location = new System.Drawing.Point(298, 1);
-            this.kolicinaBox.CustomButton.Name = "";
-            this.kolicinaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.kolicinaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.kolicinaBox.CustomButton.TabIndex = 1;
-            this.kolicinaBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.kolicinaBox.CustomButton.UseSelectable = true;
-            this.kolicinaBox.CustomButton.Visible = false;
-            this.kolicinaBox.Lines = new string[0];
-            this.kolicinaBox.Location = new System.Drawing.Point(296, 479);
-            this.kolicinaBox.MaxLength = 32767;
-            this.kolicinaBox.Name = "kolicinaBox";
-            this.kolicinaBox.PasswordChar = '\0';
-            this.kolicinaBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.kolicinaBox.SelectedText = "";
-            this.kolicinaBox.SelectionLength = 0;
-            this.kolicinaBox.SelectionStart = 0;
-            this.kolicinaBox.ShortcutsEnabled = true;
-            this.kolicinaBox.Size = new System.Drawing.Size(320, 23);
-            this.kolicinaBox.TabIndex = 8;
-            this.kolicinaBox.UseSelectable = true;
-            this.kolicinaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.kolicinaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.kolicinaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kolicinaBox_KeyPress);
             // 
             // nazivBox
             // 
@@ -387,12 +346,54 @@
             this.metroLabel2.TabIndex = 20;
             this.metroLabel2.Text = "Filtrirati po: ";
             // 
+            // kolicinaLabel
+            // 
+            this.kolicinaLabel.AutoSize = true;
+            this.kolicinaLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.kolicinaLabel.Location = new System.Drawing.Point(160, 477);
+            this.kolicinaLabel.Name = "kolicinaLabel";
+            this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
+            this.kolicinaLabel.TabIndex = 13;
+            this.kolicinaLabel.Text = "Količina";
+            // 
+            // kolicinaBox
+            // 
+            // 
+            // 
+            // 
+            this.kolicinaBox.CustomButton.Image = null;
+            this.kolicinaBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.kolicinaBox.CustomButton.Name = "";
+            this.kolicinaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.kolicinaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.kolicinaBox.CustomButton.TabIndex = 1;
+            this.kolicinaBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.kolicinaBox.CustomButton.UseSelectable = true;
+            this.kolicinaBox.CustomButton.Visible = false;
+            this.kolicinaBox.Enabled = false;
+            this.kolicinaBox.Lines = new string[0];
+            this.kolicinaBox.Location = new System.Drawing.Point(296, 479);
+            this.kolicinaBox.MaxLength = 32767;
+            this.kolicinaBox.Name = "kolicinaBox";
+            this.kolicinaBox.PasswordChar = '\0';
+            this.kolicinaBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.kolicinaBox.SelectedText = "";
+            this.kolicinaBox.SelectionLength = 0;
+            this.kolicinaBox.SelectionStart = 0;
+            this.kolicinaBox.ShortcutsEnabled = true;
+            this.kolicinaBox.Size = new System.Drawing.Size(320, 23);
+            this.kolicinaBox.TabIndex = 8;
+            this.kolicinaBox.UseSelectable = true;
+            this.kolicinaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.kolicinaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.kolicinaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kolicinaBox_KeyPress);
+            // 
             // skladiste_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 580);
+            this.ClientSize = new System.Drawing.Size(900, 581);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.Edit);
@@ -430,16 +431,16 @@
         private MetroFramework.Controls.MetroTextBox search;
         private MetroFramework.Controls.MetroTextBox prodavacBox;
         private MetroFramework.Controls.MetroTextBox nazivBox;
-        private MetroFramework.Controls.MetroTextBox kolicinaBox;
         private MetroFramework.Controls.MetroTextBox mjBox;
         private MetroFramework.Controls.MetroLabel nazivLabel;
         private MetroFramework.Controls.MetroLabel prodavacLabel;
         private MetroFramework.Controls.MetroLabel mjLabel;
-        private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox cijenaBox;
         private MetroFramework.Controls.MetroComboBox Filters;
         private MetroFramework.Controls.MetroButton Edit;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel kolicinaLabel;
+        private MetroFramework.Controls.MetroTextBox kolicinaBox;
     }
 }
