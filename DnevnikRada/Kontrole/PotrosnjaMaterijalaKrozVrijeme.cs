@@ -41,7 +41,7 @@ namespace DnevnikRada
                 int  c=0;
                 Chart.Series.Add(nazivi.GetString(0));
                 string allData = string.Format ("select kolicina, date(datum),nazivmaterijala from Evidencija join Poveznica on Evidencija.ID=Poveznica.Id_Evidencija and Poveznica.NazivMaterijala="+'"'+"{0}"+'"', nazivi.GetString(0));
-                MessageBox.Show(allData);
+                //MessageBox.Show(allData);
                 SQLiteDataReader data = baza.GraphReaders(allData);
                 Chart.Series[i].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
                 Chart.Series[i].BorderWidth = 5;

@@ -32,7 +32,7 @@ namespace DnevnikRada
                 DateTime date = data.GetDateTime(0);
                 string brojZaOdređeniDatum = string.Format("select count (ID) from Evidencija where date(datum)=" + '"' + "{0}" + '"',data.GetString(0));
                 
-                MessageBox.Show(Convert.ToString(brojZaOdređeniDatum+"    "+ i));
+                //MessageBox.Show(Convert.ToString(brojZaOdređeniDatum+"    "+ i));
                 SQLiteDataReader count = baza.GraphReaders(brojZaOdređeniDatum);
                 while (count.Read())
                 {
