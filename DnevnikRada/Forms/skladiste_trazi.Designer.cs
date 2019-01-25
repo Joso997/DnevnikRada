@@ -38,7 +38,7 @@
             this.mjBox = new MetroFramework.Controls.MetroTextBox();
             this.nazivBox = new MetroFramework.Controls.MetroTextBox();
             this.prodavacBox = new MetroFramework.Controls.MetroTextBox();
-            this.search = new MetroFramework.Controls.MetroTextBox();
+            this.Search = new MetroFramework.Controls.MetroTextBox();
             this.Trazi = new MetroFramework.Controls.MetroButton();
             this.skladisteGrid = new MetroFramework.Controls.MetroGrid();
             this.Home = new MetroFramework.Controls.MetroButton();
@@ -178,30 +178,30 @@
             // 
             // 
             // 
-            this.search.CustomButton.Image = null;
-            this.search.CustomButton.Location = new System.Drawing.Point(136, 1);
-            this.search.CustomButton.Name = "";
-            this.search.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.search.CustomButton.TabIndex = 1;
-            this.search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.search.CustomButton.UseSelectable = true;
-            this.search.CustomButton.Visible = false;
-            this.search.Lines = new string[0];
-            this.search.Location = new System.Drawing.Point(169, 74);
-            this.search.MaxLength = 32767;
-            this.search.Name = "search";
-            this.search.PasswordChar = '\0';
-            this.search.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.search.SelectedText = "";
-            this.search.SelectionLength = 0;
-            this.search.SelectionStart = 0;
-            this.search.ShortcutsEnabled = true;
-            this.search.Size = new System.Drawing.Size(158, 23);
-            this.search.TabIndex = 5;
-            this.search.UseSelectable = true;
-            this.search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Search.CustomButton.Image = null;
+            this.Search.CustomButton.Location = new System.Drawing.Point(136, 1);
+            this.Search.CustomButton.Name = "";
+            this.Search.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Search.CustomButton.TabIndex = 1;
+            this.Search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Search.CustomButton.UseSelectable = true;
+            this.Search.CustomButton.Visible = false;
+            this.Search.Lines = new string[0];
+            this.Search.Location = new System.Drawing.Point(169, 74);
+            this.Search.MaxLength = 32767;
+            this.Search.Name = "search";
+            this.Search.PasswordChar = '\0';
+            this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Search.SelectedText = "";
+            this.Search.SelectionLength = 0;
+            this.Search.SelectionStart = 0;
+            this.Search.ShortcutsEnabled = true;
+            this.Search.Size = new System.Drawing.Size(158, 23);
+            this.Search.TabIndex = 5;
+            this.Search.UseSelectable = true;
+            this.Search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Trazi
             // 
@@ -407,7 +407,7 @@
             this.Controls.Add(this.kolicinaBox);
             this.Controls.Add(this.nazivBox);
             this.Controls.Add(this.prodavacBox);
-            this.Controls.Add(this.search);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.Trazi);
             this.Controls.Add(this.skladisteGrid);
             this.Controls.Add(this.Home);
@@ -428,7 +428,7 @@
         private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroGrid skladisteGrid;
         private MetroFramework.Controls.MetroButton Trazi;
-        private MetroFramework.Controls.MetroTextBox search;
+        private MetroFramework.Controls.MetroTextBox Search;
         private MetroFramework.Controls.MetroTextBox prodavacBox;
         private MetroFramework.Controls.MetroTextBox nazivBox;
         private MetroFramework.Controls.MetroTextBox mjBox;

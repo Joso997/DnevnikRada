@@ -46,7 +46,7 @@ namespace DnevnikRada
                     Dictionary<string, object> biblioteka = new Dictionary<string, object>{
                         {filter_dic[Filters.Text], "%"+Search.Text+"%" }
                     };
-                    mjestoGrid.DataSource = mjesto.Ucitaj(biblioteka, new List<string> {{"like"}});
+                    mjestoGrid.DataSource = mjesto.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
                 case "Edit":
                     kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj();
@@ -61,13 +61,7 @@ namespace DnevnikRada
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"ID", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
-            };
-            List<string> _operator = new List<string> {
-                {"="}
-            };
-            kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj(biblioteka, _operator);
+            kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["id"].Value.ToString()));
             kalendarGrid.Columns[0].Visible = false;
             kalendarGrid.Columns[1].Visible = false;
         }

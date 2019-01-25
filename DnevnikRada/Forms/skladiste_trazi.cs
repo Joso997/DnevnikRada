@@ -28,7 +28,7 @@ namespace DnevnikRada
             {
                 case "Trazi":
                     Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                        {filter_dic[Filters.Text], "%"+search.Text+"%" }
+                        {filter_dic[Filters.Text], "%"+Search.Text+"%" }
                     };
                     skladisteGrid.DataSource = skladiste.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
