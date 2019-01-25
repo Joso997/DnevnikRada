@@ -35,7 +35,8 @@ namespace DnevnikRada.Klase
                 {
                     {"Id_evidencija", Id_evidencija },
                     {"NazivMaterijala", pair.Naziv },
-                    {"Kolicina", pair.Kol }
+                    {"Kolicina", pair.Kol },
+                    {"Id_Materijala", new Skladiste().Ucitaj(new Dictionary<string, object>{{ "NazivMaterijala", pair.Naziv } }, new List<string> {{"="}}).Rows[0]["ID"] }
                 };
                 Set("Poveznica", dictionary_stupci, false);
                 Update(pair.Naziv, pair.Kol);
@@ -55,7 +56,7 @@ namespace DnevnikRada.Klase
 
         public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
         {
-            throw new NotImplementedException();
+            return Get("Poveznica", biblioteka, _operator);
         }
 
     }

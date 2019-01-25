@@ -61,7 +61,10 @@ namespace DnevnikRada
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj(Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["id"].Value.ToString()));
+            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                {"Id_Mjesta", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
+            };
+            kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj(biblioteka, new List<string> { { "=" } });
             kalendarGrid.Columns[0].Visible = false;
             kalendarGrid.Columns[1].Visible = false;
         }

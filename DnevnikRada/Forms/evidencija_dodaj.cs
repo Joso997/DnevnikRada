@@ -106,10 +106,10 @@ namespace DnevnikRada
         void Fill()
         {
             Dictionary<string, object> biblioteka_skladiste = new Dictionary<string, object>{
-                {"NazivMaterijala", null }
+                {"NazivMaterijala", "%%" }
             };
             Dictionary<string, object> biblioteka_mjesta = new Dictionary<string, object>{
-                {"NazivMjesta", null }
+                {"NazivMjesta", "%%" }
             };
             List<string> _operator = new List<string> {
                 {"like"}

@@ -68,7 +68,10 @@ namespace DnevnikRada
         }
         private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
+            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                {"Id_Evidencija", Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
+            };
+            materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(biblioteka, new List<string> { { "=" } });
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
             materijalGrid.Columns[0].Visible = false;
             materijalGrid.Columns["Id_Evidencija"].Visible = false;
