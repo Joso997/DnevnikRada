@@ -117,32 +117,11 @@ namespace DnevnikRada.Baza
             return LoadDataBase(command);
         }
 
-        protected DataTable Get(string naziv_tablice, string naziv_stupca, string trazi)
-        {
-            string command = string.Format("select * from {0} " +
-                "WHERE {1} like '%{2}%'", naziv_tablice, naziv_stupca, trazi);
-            return LoadDataBase(command);
-        }
-
         protected DataTable Get(string naziv_tablice, Dictionary<string, object> biblioteka, List<string> operatorUsporedbe)
         {
             string stupci = MakeReadyForQuery(biblioteka, operatorUsporedbe);
             string command = string.Format("select * from {0} " +
                 "WHERE {1}", naziv_tablice, stupci);
-            return LoadDataBase(command);
-        }
-
-        protected DataTable Get(string naziv_tablice, int id)
-        {
-            string command = string.Format("select * from {0} " +
-                "WHERE ID = '{1}'", naziv_tablice, id);
-            return LoadDataBase(command);
-        }
-
-        protected DataTable Get(string naziv_tablice, string naziv_stupca, int strani_id)
-        {
-            string command = string.Format("select * from {0} " +
-                "WHERE {1} = '{2}'", naziv_tablice, naziv_stupca, strani_id);
             return LoadDataBase(command);
         }
 

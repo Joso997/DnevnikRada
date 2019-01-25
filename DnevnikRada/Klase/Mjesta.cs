@@ -55,19 +55,15 @@ namespace DnevnikRada.Klase
             return Get("Mjesta");
         }
 
-        public DataTable Ucitaj(string naziv_stupca, string trazi)
+        public DataTable Ucitaj(int _id)
         {
-            return Get("Mjesta", naziv_stupca, trazi);
+            
+            return Get("Mjesta", new Dictionary<string, object>{{"ID", _id }}, new List<string> { { "=" } });
         }
 
-        public DataTable Ucitaj(int trazi)
+        public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
         {
-            return Get("Mjesta", trazi);
-        }
-
-        public DataTable Ucitaj(int id, bool jeStrani)
-        {
-            return null;
+            return Get("Mjesta", biblioteka, _operator);
         }
 
 

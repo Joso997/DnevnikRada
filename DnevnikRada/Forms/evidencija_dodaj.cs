@@ -25,6 +25,7 @@ namespace DnevnikRada
             Fill();
             dT.Columns.Add("NazivMaterijala").Unique = true;
             dT.Columns.Add("Kolicina", typeof(Int32));
+            metroDateTime1.MaxDate = DateTime.Now.Date;
         }
 
         public Evidencija_dodaj(List<object> tag)
@@ -45,7 +46,7 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Dodaj":
-                    if(CheckInput(new Dictionary<string, string> { { Kolicina.Name, Kolicina.Text },{ OdabirMaterijala.Name, OdabirMaterijala.Text },{ addUse.Name, addUse.Text } }))
+                    if(CheckInput(new Dictionary<string, string> { { "Kolicina", Kolicina.Text },{ "Materijal", OdabirMaterijala.Text },{ "Operator(+ ili -)", addUse.Text } }))
                         break;
                     object[] marks;
                     if (addUse.Text == "-")
@@ -63,8 +64,7 @@ namespace DnevnikRada
                     else
                     {
                         marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text)  };
-                    }
-                        
+                    }  
                     var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", OdabirMaterijala.Text));
                     if(rows.Length == 0)
                         dT.LoadDataRow(marks, true);
@@ -76,7 +76,7 @@ namespace DnevnikRada
                     materijalGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
-                    if(CheckInput(new Dictionary<string, string> { { tb_opis_posla.Name, tb_opis_posla.Text }, {tb_utroseno_vrijeme.Name, tb_utroseno_vrijeme.Text } }))
+                    if(CheckInput(new Dictionary<string, string> { { "Opis Posla", tb_opis_posla.Text }, {"Utrošeno Vrijeme", tb_utroseno_vrijeme.Text } }))
                         break;
                     List<string> materijal_list = new List<string>();
                     List<int> kolicina_list = new List<int>();
@@ -105,16 +105,18 @@ namespace DnevnikRada
 
         void Fill()
         {
-            Skladiste skladiste = new Skladiste();
-            DataTable dT_skladiste = new DataTable();
-            dT_skladiste = skladiste.Ucitaj("NazivMaterijala", null);
-            var _temp = dT_skladiste.AsEnumerable().Select(r => r.Field<string>("NazivMaterijala")).ToArray();
-            OdabirMaterijala.Items.AddRange(_temp);
-            Mjesta mjesta = new Mjesta();
-            DataTable dT_mjesta = new DataTable();
-            dT_mjesta = mjesta.Ucitaj("NazivMjesta", null);
-            NazivMjesta.Items.AddRange(dT_mjesta.AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
-            addUse.Items.Add("+");;
+            Dictionary<string, object> biblioteka_skladiste = new Dictionary<string, object>{
+                {"NazivMaterijala", null }
+            };
+            Dictionary<string, object> biblioteka_mjesta = new Dictionary<string, object>{
+                {"NazivMjesta", null }
+            };
+            List<string> _operator = new List<string> {
+                {"like"}
+            };
+            OdabirMaterijala.Items.AddRange(new Skladiste().Ucitaj(biblioteka_skladiste, _operator).AsEnumerable().Select(r => r.Field<string>("NazivMaterijala")).ToArray());
+            NazivMjesta.Items.AddRange(new Mjesta().Ucitaj(biblioteka_mjesta, _operator).AsEnumerable().Select(r => r.Field<string>("NazivMjesta")).ToArray());
+            addUse.Items.Add("+");
             addUse.Items.Add("-");
         }
 

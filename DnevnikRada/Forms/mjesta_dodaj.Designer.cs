@@ -161,7 +161,6 @@
             // 
             // metroDateTime1
             // 
-            this.metroDateTime1.Checked = false;
             this.metroDateTime1.Location = new System.Drawing.Point(442, 126);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";

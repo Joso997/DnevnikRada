@@ -11,10 +11,9 @@ namespace DnevnikRada.Klase
 {
     class Kalendar : Baza.DB, IUseDatabase
     {
-        public int Godina { get; private set; }
-        public int Mjesec { get; private set; }
         public object Id_mjesta { get; set; }
         public List<DateTime> Datumi { get; set; }
+        public DateTime Datum { get; private set; }
 
         public Kalendar(object _id_mjesta, List<DateTime> _datumi)
         {
@@ -25,9 +24,7 @@ namespace DnevnikRada.Klase
 
         public Kalendar()
         {
-            Godina = Convert.ToInt32(DateTime.Now.Year);
-            Mjesec = Convert.ToInt32(DateTime.Now.Month);
-            Mjesec_Godina(" ", false);
+            Datum = DateTime.Now;
         }
 
         private void Dodaj()
@@ -49,19 +46,9 @@ namespace DnevnikRada.Klase
             return Get("Kalendar");
         }
 
-        public DataTable Ucitaj(int id)
+        public DataTable Ucitaj(int _id)
         {
-            return Get("Kalendar", id);
-        }
-
-        public DataTable Ucitaj(int id, bool jeStrani)
-        {
-            return Get("Kalendar", "Id_Mjesta", id);
-        }
-
-        public DataTable Ucitaj(string naziv_stupca, string trazi)
-        {
-            return Get("Kalendar", naziv_stupca, trazi);
+            return Get("Kalendar", new Dictionary<string, object> { { "ID", _id } }, new List<string> { { "=" } });
         }
 
         public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
@@ -69,40 +56,27 @@ namespace DnevnikRada.Klase
             return Get("Kalendar", biblioteka, _operator);
         }
 
-        public string Mjesec_Godina(string conWith, bool reverse)
-        {
-            if(reverse)
-                return Godina + conWith + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Mjesec);
-            else
-                return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Mjesec) + conWith + Godina;
-        }
-
         public string Mjesec_Godina(string conWith)
         {
-           return Godina + conWith + Mjesec.ToString().PadLeft(2, '0');
+           return Datum.Year + conWith + Datum.Month.ToString().PadLeft(2, '0');
         }
 
         public void PromjeniDatum(int _mjesec)
         {  
-            if (_mjesec == 1 && Mjesec == 12)
-            {
-                Godina += 1;
-                Mjesec = 1;
-            }
-            else if(_mjesec == -1 && Mjesec == 1)
-            {
-                Godina -= 1;
-                Mjesec = 12;
-            }else    
-                Mjesec += _mjesec;
+            if (_mjesec == 1 && Datum.Month == 12)
+                Datum = new DateTime(Datum.Year+1, 1, Datum.Day);
+            else if(_mjesec == -1 && Datum.Month == 1)
+                Datum = new DateTime(Datum.Year-1, 12, Datum.Day);
+            else
+                Datum = new DateTime(Datum.Year, Datum.Month+_mjesec, Datum.Day);
         }
         public int GetNumOfDays()
         {
-            return Convert.ToInt32(DateTime.DaysInMonth(Godina, Mjesec));
+            return Convert.ToInt32(DateTime.DaysInMonth(Datum.Year, Datum.Month));
         }
         public int GetDayInWeek()
         {
-            return Convert.ToInt32(new DateTime(Godina, Mjesec, 1).DayOfWeek)-1 != -1? Convert.ToInt32(new DateTime(Godina, Mjesec, 1).DayOfWeek) - 1: 6;
+            return Convert.ToInt32(new DateTime(Datum.Year, Datum.Month, 1).DayOfWeek)-1 != -1? Convert.ToInt32(new DateTime(Datum.Year, Datum.Month, 1).DayOfWeek) - 1: 6;
         }
 
     }

@@ -26,12 +26,9 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Potvrdi":
-                    if (CheckInput(new Dictionary<string, string> {{ tb_naziv_materijala.Name, tb_naziv_materijala.Text } }))
+                    if (CheckInput(new Dictionary<string, string> {{ "Naziv Materijala", tb_naziv_materijala.Text } }))
                         break;
-                    
-                    
-                    
-                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, 0, Convert.ToInt32 (tb_Cijena.Text));
+                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, Convert.ToInt32 (tb_Cijena.Text));
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -47,11 +44,6 @@ namespace DnevnikRada
         public override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void tb_kolicina_KeyPress(object sender, KeyPressEventArgs e)

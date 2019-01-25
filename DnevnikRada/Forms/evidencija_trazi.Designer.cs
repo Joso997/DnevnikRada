@@ -40,7 +40,7 @@
             this.lbl_opis_posla = new MetroFramework.Controls.MetroLabel();
             this.evidencijaGrid = new MetroFramework.Controls.MetroGrid();
             this.Trazi = new MetroFramework.Controls.MetroButton();
-            this.textTrazi = new MetroFramework.Controls.MetroTextBox();
+            this.Search = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
@@ -141,30 +141,30 @@
             // 
             // 
             // 
-            this.textTrazi.CustomButton.Image = null;
-            this.textTrazi.CustomButton.Location = new System.Drawing.Point(302, 2);
-            this.textTrazi.CustomButton.Name = "";
-            this.textTrazi.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.textTrazi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.textTrazi.CustomButton.TabIndex = 1;
-            this.textTrazi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textTrazi.CustomButton.UseSelectable = true;
-            this.textTrazi.CustomButton.Visible = false;
-            this.textTrazi.Lines = new string[0];
-            this.textTrazi.Location = new System.Drawing.Point(6, 73);
-            this.textTrazi.MaxLength = 32767;
-            this.textTrazi.Name = "textTrazi";
-            this.textTrazi.PasswordChar = '\0';
-            this.textTrazi.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textTrazi.SelectedText = "";
-            this.textTrazi.SelectionLength = 0;
-            this.textTrazi.SelectionStart = 0;
-            this.textTrazi.ShortcutsEnabled = true;
-            this.textTrazi.Size = new System.Drawing.Size(330, 30);
-            this.textTrazi.TabIndex = 5;
-            this.textTrazi.UseSelectable = true;
-            this.textTrazi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textTrazi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Search.CustomButton.Image = null;
+            this.Search.CustomButton.Location = new System.Drawing.Point(302, 2);
+            this.Search.CustomButton.Name = "";
+            this.Search.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.Search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Search.CustomButton.TabIndex = 1;
+            this.Search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Search.CustomButton.UseSelectable = true;
+            this.Search.CustomButton.Visible = false;
+            this.Search.Lines = new string[0];
+            this.Search.Location = new System.Drawing.Point(6, 73);
+            this.Search.MaxLength = 32767;
+            this.Search.Name = "textTrazi";
+            this.Search.PasswordChar = '\0';
+            this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Search.SelectedText = "";
+            this.Search.SelectionLength = 0;
+            this.Search.SelectionStart = 0;
+            this.Search.ShortcutsEnabled = true;
+            this.Search.Size = new System.Drawing.Size(330, 30);
+            this.Search.TabIndex = 5;
+            this.Search.UseSelectable = true;
+            this.Search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel1
             // 
@@ -251,7 +251,7 @@
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.materijalGrid);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.textTrazi);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.Trazi);
             this.Controls.Add(this.evidencijaGrid);
             this.Controls.Add(this.lbl_opis_posla);
@@ -277,7 +277,7 @@
         private MetroFramework.Controls.MetroLabel lbl_opis_posla;
         private MetroFramework.Controls.MetroGrid evidencijaGrid;
         private MetroFramework.Controls.MetroButton Trazi;
-        private MetroFramework.Controls.MetroTextBox textTrazi;
+        private MetroFramework.Controls.MetroTextBox Search;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroGrid materijalGrid;
         private MetroFramework.Controls.MetroComboBox Filters;

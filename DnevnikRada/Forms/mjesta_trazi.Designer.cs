@@ -37,7 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Home = new MetroFramework.Controls.MetroButton();
             this.Trazi = new MetroFramework.Controls.MetroButton();
-            this.searchText = new MetroFramework.Controls.MetroTextBox();
+            this.Search = new MetroFramework.Controls.MetroTextBox();
             this.mjestoGrid = new MetroFramework.Controls.MetroGrid();
             this.Edit = new MetroFramework.Controls.MetroButton();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
@@ -75,30 +75,30 @@
             // 
             // 
             // 
-            this.searchText.CustomButton.Image = null;
-            this.searchText.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.searchText.CustomButton.Name = "";
-            this.searchText.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.searchText.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.searchText.CustomButton.TabIndex = 1;
-            this.searchText.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.searchText.CustomButton.UseSelectable = true;
-            this.searchText.CustomButton.Visible = false;
-            this.searchText.Lines = new string[0];
-            this.searchText.Location = new System.Drawing.Point(160, 85);
-            this.searchText.MaxLength = 32767;
-            this.searchText.Name = "searchText";
-            this.searchText.PasswordChar = '\0';
-            this.searchText.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.searchText.SelectedText = "";
-            this.searchText.SelectionLength = 0;
-            this.searchText.SelectionStart = 0;
-            this.searchText.ShortcutsEnabled = true;
-            this.searchText.Size = new System.Drawing.Size(159, 29);
-            this.searchText.TabIndex = 2;
-            this.searchText.UseSelectable = true;
-            this.searchText.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.searchText.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Search.CustomButton.Image = null;
+            this.Search.CustomButton.Location = new System.Drawing.Point(131, 1);
+            this.Search.CustomButton.Name = "";
+            this.Search.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.Search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Search.CustomButton.TabIndex = 1;
+            this.Search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Search.CustomButton.UseSelectable = true;
+            this.Search.CustomButton.Visible = false;
+            this.Search.Lines = new string[0];
+            this.Search.Location = new System.Drawing.Point(160, 85);
+            this.Search.MaxLength = 32767;
+            this.Search.Name = "searchText";
+            this.Search.PasswordChar = '\0';
+            this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Search.SelectedText = "";
+            this.Search.SelectionLength = 0;
+            this.Search.SelectionStart = 0;
+            this.Search.ShortcutsEnabled = true;
+            this.Search.Size = new System.Drawing.Size(159, 29);
+            this.Search.TabIndex = 2;
+            this.Search.UseSelectable = true;
+            this.Search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Search.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // mjestoGrid
             // 
@@ -251,7 +251,7 @@
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.mjestoGrid);
-            this.Controls.Add(this.searchText);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.Trazi);
             this.Controls.Add(this.Home);
             this.MaximumSize = new System.Drawing.Size(916, 619);
@@ -270,7 +270,7 @@
 
         private MetroFramework.Controls.MetroButton Home;
         private MetroFramework.Controls.MetroButton Trazi;
-        private MetroFramework.Controls.MetroTextBox searchText;
+        private MetroFramework.Controls.MetroTextBox Search;
         private MetroFramework.Controls.MetroGrid mjestoGrid;
         private MetroFramework.Controls.MetroButton Edit;
         private MetroFramework.Controls.MetroComboBox Filters;

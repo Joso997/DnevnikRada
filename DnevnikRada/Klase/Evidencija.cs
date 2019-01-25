@@ -45,11 +45,9 @@ namespace DnevnikRada.Klase
                 {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme },
-                {"Id_Mjesta", new Mjesta().Ucitaj("NazivMjesta", Naziv_Mjesta).Rows[0]["ID"] }
+                {"Id_Mjesta", new Mjesta().Ucitaj(new Dictionary<string, object>{{"NazivMjesta", Naziv_Mjesta }}, new List<string> {{"="}}).Rows[0]["ID"] }
             };
-            Console.WriteLine("1");
             Poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
-            Console.WriteLine("2");
             new Poveznica(Poveznica.Id_evidencija, Poveznica.Naziv_materijala, Poveznica.Kolicina);
         }
 
@@ -58,19 +56,9 @@ namespace DnevnikRada.Klase
             return Get("Evidencija");
         }
 
-        public DataTable Ucitaj(string naziv_stupca, string trazi)
+        public DataTable Ucitaj(int _id)
         {
-            return Get("Evidencija", naziv_stupca, trazi);
-        }
-
-        public DataTable Ucitaj(int trazi)
-        {
-            return Get("Evidencija", trazi);
-        }
-
-        public DataTable Ucitaj(int id, bool jeStrani)
-        {
-            return null;
+            return Get("Evidencija", new Dictionary<string, object> { { "ID", _id } }, new List<string> { { "=" } });
         }
 
         public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)

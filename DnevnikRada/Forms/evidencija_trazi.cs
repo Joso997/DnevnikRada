@@ -32,9 +32,11 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "Trazi":
-                    string trazi = textTrazi.Text;
-                    evidencijaGrid.DataSource = evidencija.Ucitaj(filter_dic[Filters.Text], trazi);
-
+                    string trazi = Search.Text;
+                    Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                        {filter_dic[Filters.Text], "%"+Search.Text+"%" }
+                    };
+                    evidencijaGrid.DataSource = evidencija.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
                 case "Home":
                     Home Home = new Home();

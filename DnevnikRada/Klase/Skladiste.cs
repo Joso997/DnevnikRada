@@ -15,17 +15,15 @@ namespace DnevnikRada.Klase
         public string Naziv_materijala{ get;}
         public string Proizvodac { get; }
         public string Mjerna_jedinica { get; }
-        public int Kolicina { get; }
         public int Cijena { get; }
 
 
         // mozda bi trebalo u konstruktor stavit samo ono sto je obavezno? recimo d su 
-        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica, int _kolicina, int _cijena)
+        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica, int _cijena)
         {
             Naziv_materijala = _naziv_materijala;
             Proizvodac = _proizvodac;
             Mjerna_jedinica = _mjerna_jedinica;
-            Kolicina = _kolicina;
             Cijena = _cijena;
             Dodaj();
         }
@@ -42,7 +40,6 @@ namespace DnevnikRada.Klase
                 {"NazivMaterijala", Naziv_materijala },
                 {"Prodavac", Proizvodac },
                 {"MjernaJedinica", Mjerna_jedinica },
-                {"Kolicina", Kolicina },
                 {"Cijena", Cijena }
             };
             Set("Skladiste", dictionary_stupci, true);
@@ -53,19 +50,15 @@ namespace DnevnikRada.Klase
             return Get("Skladiste");
         }
 
-        public DataTable Ucitaj(string naziv_stupca, string trazi)
+        public DataTable Ucitaj(int _id)
         {
-            return Get("Skladiste", naziv_stupca, trazi);
+
+            return Get("Skladiste", new Dictionary<string, object> { { "ID", _id } }, new List<string> { { "=" } });
         }
 
-        public DataTable Ucitaj(int trazi)
+        public DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator)
         {
-            return Get("Skladiste", trazi);
-        }
-
-        public DataTable Ucitaj(int trazi, bool jeStrani)
-        {
-            return Get("Skladiste", trazi);
+            return Get("Skladiste", biblioteka, _operator);
         }
     }
 }

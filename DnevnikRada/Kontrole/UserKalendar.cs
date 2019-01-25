@@ -17,7 +17,6 @@ namespace DnevnikRada.Kontrole
         public Home Home { get; set; }
         Mjesta mjesta = new Mjesta();
         List<DateTime> _tempDate = new List<DateTime>();
-        //List<MetroFramework.Controls.MetroLabel> lista = new List<MetroFramework.Controls.MetroLabel>();
         public UserKalendar(Home _home)
         {
             Home = _home;
@@ -44,12 +43,13 @@ namespace DnevnikRada.Kontrole
         {
             int top = 40;
             int left = 5 + mjesta.Kalendar.GetDayInWeek()*42;
-            Mjesec_Godina.Text = mjesta.Kalendar.Mjesec_Godina(" ", false);
+            Mjesec_Godina.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mjesta.Kalendar.Datum.Month) + " " + mjesta.Kalendar.Datum.Year;
             int razmak = mjesta.Kalendar.GetDayInWeek();
             
             DataTable dT = new DataTable();
             dT = mjesta.Ucitaj();
-            for (int i = 1; i <= mjesta.Kalendar.GetNumOfDays(); i++)
+            Console.WriteLine();
+            foreach (int i in Enumerable.Range(1, mjesta.Kalendar.GetNumOfDays()))
             {
                 MetroFramework.Controls.MetroLabel label = new MetroFramework.Controls.MetroLabel
                 {
@@ -61,7 +61,7 @@ namespace DnevnikRada.Kontrole
                     Text = i.ToString(),
                     Visible = true
                 };
-                if (CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Month) + " " + DateTime.Now.Year == mjesta.Kalendar.Mjesec_Godina(" ", false) && i == DateTime.Today.Day)
+                if (mjesta.Kalendar.Datum.Date == DateTime.Now.Date && i == DateTime.Today.Day)
                 {
                     label.UseCustomBackColor = true;
                     label.FontWeight = (MetroFramework.MetroLabelWeight)FontStyle.Bold;
@@ -84,7 +84,7 @@ namespace DnevnikRada.Kontrole
 
         private void OcistiKalendar()
         {
-            for (int i = 1; i <= mjesta.Kalendar.GetNumOfDays(); i++)
+            foreach (int i in Enumerable.Range(1, mjesta.Kalendar.GetNumOfDays()))
             {
                 this.Controls.RemoveByKey("day" + i.ToString());
             }
@@ -99,8 +99,8 @@ namespace DnevnikRada.Kontrole
             int top = 0;
             int left = 0;
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Datum", new DateTime(mjesta.Kalendar.Godina, mjesta.Kalendar.Mjesec, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
-                {"Datum"+ " ", new DateTime(mjesta.Kalendar.Godina, mjesta.Kalendar.Mjesec, 1).AddMonths(1).ToString("yyyy-MM-dd HH:mm:ss") }
+                {"Datum", new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
+                {"Datum"+ " ", new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, 1).AddMonths(1).ToString("yyyy-MM-dd HH:mm:ss") }
             };
             List<string> _operator = new List<string> {
                 {">"},
@@ -148,18 +148,16 @@ namespace DnevnikRada.Kontrole
                 foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
                 {
                     DateTime _date = (DateTime)dT_query.Rows[_query]["Datum"];
-                    DataTable dT_mjesta = mjesta.Ucitaj(int.Parse(dT_query.Rows[_query]["Id_Mjesta"].ToString()));
                     List<object> tag = new List<object>
                     {
                         {_date },
-                        {dT_mjesta.Rows[0]["NazivMjesta"] }
+                        {mjesta.Ucitaj(int.Parse(dT_query.Rows[_query]["Id_Mjesta"].ToString())).Rows[0]["NazivMjesta"] }
                     };
                     Dictionary<string, object> biblioteka_query = new Dictionary<string, object>
                     {
                         {"Datum", "%"+_date.ToString("yyyy-MM-dd")+"%" },
                         {"Id_Mjesta", dT_query.Rows[_query]["Id_Mjesta"] }
                     };
-                    Console.WriteLine(_date.ToString("yyyy-MM-dd"));
                     if(new Evidencija().Ucitaj(biblioteka_query, _operator_query).Rows.Count <= 0){
                         MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
                         {

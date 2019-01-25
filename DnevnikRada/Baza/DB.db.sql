@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `Skladiste` (
 	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`NazivMaterijala`	TEXT NOT NULL UNIQUE,
 	`Prodavac`	TEXT,
-	`Kolicina`	INTEGER NOT NULL,
+	`Kolicina`	INTEGER NOT NULL DEFAULT (0),
 	`MjernaJedinica`	TEXT,
 	`Cijena`	FLOAT
 );

@@ -10,8 +10,7 @@ namespace DnevnikRada.Interface
     interface IUseDatabase
     {
         DataTable Ucitaj();
-        DataTable Ucitaj(string naziv_stupca, string trazi);
-        DataTable Ucitaj(int trazi);
-        DataTable Ucitaj(int trazi, bool jeStrani);
+        DataTable Ucitaj(int _id);
+        DataTable Ucitaj(Dictionary<string, object> biblioteka, List<string> _operator);
     }
 }

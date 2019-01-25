@@ -194,7 +194,6 @@
             this.label1.Size = new System.Drawing.Size(230, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Dodavanje U Skladište";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tb_Cijena
             // 

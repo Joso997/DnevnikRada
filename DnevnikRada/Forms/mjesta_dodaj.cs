@@ -20,6 +20,7 @@ namespace DnevnikRada
             Show();
             selectButton = SelectButton;
             dT.Columns.Add("Datumi", typeof(DateTime)).Unique = true;
+            metroDateTime1.MinDate = DateTime.Now.Date.AddDays(1);
         }
 
         public bool SelectButton(object sender)
@@ -38,7 +39,7 @@ namespace DnevnikRada
                     kalendarGrid.DataSource = dT;
                     break;
                 case "Potvrdi":
-                    if (CheckInput(new Dictionary<string, string> { { tb_adresa.Name, tb_adresa.Text }, { tb_naziv_mjesta.Name, tb_naziv_mjesta.Text } }))
+                    if (CheckInput(new Dictionary<string, string> { { "Adresa", tb_adresa.Text }, { "Naziv Mjesta", tb_naziv_mjesta.Text } }))
                         break;
                     var n_temp = dT.AsEnumerable().Select(r => r.Field<DateTime>(0)).ToList();
                     if (!n_temp.Any())
