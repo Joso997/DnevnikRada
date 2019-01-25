@@ -52,7 +52,7 @@ namespace DnevnikRada
                 }
                 Chart.Series[i].Points.AddXY(now, c);
                 i++;
-
+                #region nebitno
                 /*
                 data.Read();
                 while (date2 <= now)
@@ -75,12 +75,8 @@ namespace DnevnikRada
                     date2=date2.AddDays(1);
                 }
                 */
+                #endregion
             }
-
-            
-
-            
-
         }
     }
 }
