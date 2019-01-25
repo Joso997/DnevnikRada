@@ -281,9 +281,12 @@ namespace DnevnikRada.Baza
 
         public SQLiteDataReader GraphReaders(string read)
         {
+            
             command = new SQLiteCommand(read, connection);
             SQLiteDataReader reader = command.ExecuteReader();
             return reader;
+
+            
         }
 
     }
