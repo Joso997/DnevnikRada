@@ -5,7 +5,9 @@ CREATE TABLE IF NOT EXISTS `Skladiste` (
 	`Prodavac`	TEXT,
 	`Kolicina`	INTEGER NOT NULL DEFAULT (0),
 	`MjernaJedinica`	TEXT,
-	`Cijena`	FLOAT
+	`Cijena`	FLOAT,
+	`Sifra`	INTEGER  check(sifra between 1000 and 9999),
+	`Link` TEXT
 );
 
 CREATE TABLE IF NOT EXISTS `Mjesta` (
@@ -22,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `Evidencija` (
 	`OpisPosla`	TEXT NOT NULL,
 	`UtrosenoVrijeme`	INTEGER NOT NULL,
 	`ID_mjesta` INTEGER ,
+	`Sifra`	INTEGER  check(sifra between 1000 and 9999),
 	FOREIGN KEY(`NazivMjesta`) REFERENCES `Mjesta`(`ID`),
 	FOREIGN KEY(`ID_mjesta`) REFERENCES `Mjesta`(`ID`)
 ); 
