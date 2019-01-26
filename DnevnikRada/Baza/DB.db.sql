@@ -5,13 +5,15 @@ CREATE TABLE IF NOT EXISTS `Skladiste` (
 	`Prodavac`	TEXT,
 	`Kolicina`	INTEGER NOT NULL DEFAULT (0),
 	`MjernaJedinica`	TEXT,
-	`Cijena`	FLOAT
+	`Cijena`	FLOAT,
+	Sakriveno BOOLEAN  DEFAULT (0)
 );
 
 CREATE TABLE IF NOT EXISTS `Mjesta` (
 	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`NazivMjesta`	TEXT NOT NULL,
 	`Adresa`	TEXT NOT NULL,
+	Sakriveno BOOLEAN  DEFAULT (0),
 	CONSTRAINT `Naziv_Adresa` UNIQUE(`NazivMjesta`,`Adresa`)
 ); 
 
@@ -22,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `Evidencija` (
 	`OpisPosla`	TEXT NOT NULL,
 	`UtrosenoVrijeme`	INTEGER NOT NULL,
 	`ID_mjesta` INTEGER ,
+	Sakriveno BOOLEAN  DEFAULT (0),
 	FOREIGN KEY(`NazivMjesta`) REFERENCES `Mjesta`(`ID`),
 	FOREIGN KEY(`ID_mjesta`) REFERENCES `Mjesta`(`ID`)
 ); 
@@ -33,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `Poveznica` (
 	`Kolicina`	INTEGER,
 	`Cijena`	FLOAT,
 	`Id_Materijala`	INTEGER,
+	Sakriveno BOOLEAN  DEFAULT (0),
 	FOREIGN KEY(`Id_Evidencija`) REFERENCES `Evidencija`(`ID`),
 	FOREIGN KEY(`Id_Materijala`) REFERENCES `Skladiste`(`ID`),
 	FOREIGN KEY(`NazivMaterijala`) REFERENCES `Skladiste`(`NazivMaterijala`)
@@ -44,6 +48,7 @@ CREATE TABLE Kalendar (
                        UNIQUE,
     Id_Mjesta INTEGER  NOT NULL,
     Datum     DATETIME NOT NULL,
+	Sakriveno BOOLEAN  DEFAULT (0),
     FOREIGN KEY (
         Id_Mjesta
     )
