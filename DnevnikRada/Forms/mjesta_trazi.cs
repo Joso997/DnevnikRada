@@ -16,6 +16,8 @@ namespace DnevnikRada
         Mjesta mjesto = new Mjesta();
         DataTable dT = new DataTable();
         Dictionary<string, string> filter_dic;
+        private int row;
+        private int row_kalendar;
         public Mjesta_trazi()
         {
             InitializeComponent();
@@ -32,25 +34,35 @@ namespace DnevnikRada
             var button = (Button)sender;
             switch (button.Name)
             {
-                case "Dodaj":
-                    /*object[] marks;
-                    marks = new object[] { metroDateTime1.Text };
-                    var rows = dT.Select(string.Format("Datum = '{0}'", metroDateTime1.Text));
-                    if (rows.Length == 0)
-                        dT.LoadDataRow(marks, true);
-                    else
-                        MessageBox.Show("Datum već dodan.");
-                    kalendarGrid.DataSource = dT;*/
-                    break;
                 case "Trazi":
                     Dictionary<string, object> biblioteka = new Dictionary<string, object>{
                         {filter_dic[Filters.Text], "%"+Search.Text+"%" }
                     };
                     mjestoGrid.DataSource = mjesto.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
-                case "Edit":
-                    kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj();
-                    Edit.Enabled = false;
+                case "Dodaj":
+                    object[] marks;
+                    marks = new object[] { metroDateTime1.Text };
+                    var rows = dT.Select(string.Format("Datum = '{0}'", metroDateTime1.Value));
+                    dT.Rows.Add(dT.NewRow());
+                    if (rows.Length == 0)
+                        dT.Rows[dT.Rows.Count-1]["Datum"] = metroDateTime1.Value;
+                    else
+                        MessageBox.Show("Datum već dodan.");
+                    kalendarGrid.DataSource = dT;
+                    break;
+                case "Oduzmi":
+                    DataTable dT_temp_2 = new DataTable();
+                    Console.WriteLine(Int32.Parse(kalendarGrid.Rows[row_kalendar].Cells["ID"].Value.ToString()));
+                    dT_temp_2 = mjesto.Kalendar.Ucitaj(Int32.Parse(kalendarGrid.Rows[row_kalendar].Cells["ID"].Value.ToString()));
+                    new Kalendar(dT_temp_2.Rows[0]["Id_Mjesta"], new List<DateTime> { { (DateTime)dT_temp_2.Rows[0]["Datum"] } }, true);
+                    Osvjezi();
+                    break;
+                case "Sakri":
+                    DataTable dT_temp = new DataTable();
+                    dT_temp = mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[row].Cells["Id"].Value.ToString()));
+                    new Mjesta(dT_temp.Rows[0].ItemArray[1].ToString(), dT_temp.Rows[0].ItemArray[2].ToString(), true);
+                    Osvjezi();
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -62,11 +74,15 @@ namespace DnevnikRada
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Id_Mjesta", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
+            {"Id_Mjesta", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
             };
-            kalendarGrid.DataSource = mjesto.Kalendar.Ucitaj(biblioteka, new List<string> { { "=" } });
+            dT = mjesto.Kalendar.Ucitaj(biblioteka, new List<string> { { "=" } });
+            kalendarGrid.DataSource = dT;
             kalendarGrid.Columns[0].Visible = false;
             kalendarGrid.Columns[1].Visible = false;
+            row = e.RowIndex;
+            Sakri.Enabled = true;
+            Dodaj.Enabled = true;
         }
 
         private void SetFilter()
@@ -80,6 +96,15 @@ namespace DnevnikRada
             Filters.Text = filter_dic.Keys.First();
         }
 
+        void Osvjezi()
+        {
+            mjestoGrid.DataSource = mjesto.Ucitaj();
+            kalendarGrid.DataSource = null;
+            Sakri.Enabled = false;
+            Dodaj.Enabled = false;
+            Oduzmi.Enabled = false;
+        }
+
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
             base.This_FormClosing(sender, e);
@@ -91,11 +116,9 @@ namespace DnevnikRada
 
         private void kalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*DataTable dT_kalendar = new DataTable();
-            dT_kalendar = mjesto.Kalendar.Ucitaj(Int32.Parse(kalendarGrid.Rows[e.RowIndex].Cells["id"].Value.ToString()));
-            //metroDateTime1.Value = (DateTime)dT_kalendar.Rows[0].ItemArray[2];
-            Edit.Enabled = true;*/
-            
+            DataTable dT_kalendar = new DataTable();
+            row_kalendar = e.RowIndex;
+            Oduzmi.Enabled = true;
         }
     }
 }
