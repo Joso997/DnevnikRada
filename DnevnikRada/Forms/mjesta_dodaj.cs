@@ -43,9 +43,9 @@ namespace DnevnikRada
                         break;
                     var n_temp = dT.AsEnumerable().Select(r => r.Field<DateTime>(0)).ToList();
                     if (!n_temp.Any())
-                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text);
+                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, false);
                     else
-                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, n_temp);               
+                        new Mjesta(tb_naziv_mjesta.Text, tb_adresa.Text, n_temp, false);               
                     break;
                 case "Home":
                     Home Home = new Home();

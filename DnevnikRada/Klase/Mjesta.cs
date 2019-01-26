@@ -15,21 +15,24 @@ namespace DnevnikRada.Klase
         public DateTime Od_VrijemeRada { get; }
         public DateTime Do_VrijemeRada { get; }
         public Kalendar Kalendar { get; }
+        public bool Hide { get; }
 
-        public Mjesta(string _naziv_mjesta, string _adresa, List<DateTime> _datumi)
+        public Mjesta(string _naziv_mjesta, string _adresa, List<DateTime> _datumi, bool _hide)
         {
             Kalendar = new Kalendar();
             Naziv_mjesta = _naziv_mjesta;
             Adresa = _adresa;
             Kalendar.Datumi = _datumi;
+            Hide = _hide;
             Dodaj();
         }
 
-        public Mjesta(string _naziv_mjesta, string _adresa)
+        public Mjesta(string _naziv_mjesta, string _adresa, bool _hide)
         {
             Kalendar = new Kalendar();
             Naziv_mjesta = _naziv_mjesta;
             Adresa = _adresa;
+            Hide = _hide;
             Dodaj();
         }
 
@@ -43,11 +46,13 @@ namespace DnevnikRada.Klase
             Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
             {
                 {"NazivMjesta", Naziv_mjesta },
-                {"Adresa", Adresa }
+                {"Adresa", Adresa },
+                {"Sakriveno", Hide }
             };
             Kalendar.Id_mjesta = Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
-            if(Kalendar.Datumi.Any())
-                new Kalendar(Kalendar.Id_mjesta, Kalendar.Datumi);
+            if(Kalendar.Datumi != null)
+                if(Kalendar.Datumi.Any())
+                new Kalendar(Kalendar.Id_mjesta, Kalendar.Datumi, false);
         }
 
         public DataTable Ucitaj()

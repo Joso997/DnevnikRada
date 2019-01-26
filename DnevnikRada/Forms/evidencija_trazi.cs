@@ -15,6 +15,7 @@ namespace DnevnikRada
     {
         Evidencija evidencija = new Evidencija();
         Dictionary<string, string> filter_dic;
+        private int row;
         public evidencija_trazi()
         {
             InitializeComponent();
@@ -38,6 +39,12 @@ namespace DnevnikRada
                     };
                     evidencijaGrid.DataSource = evidencija.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
+                case "Sakri":
+                    DataTable dT = new DataTable();
+                    dT = evidencija.Ucitaj(Int32.Parse(evidencijaGrid.Rows[row].Cells["Id"].Value.ToString()));
+                    new Evidencija(dT.Rows[0].ItemArray[1].ToString(), (DateTime)dT.Rows[0].ItemArray[2], dT.Rows[0].ItemArray[3].ToString(), int.Parse(dT.Rows[0].ItemArray[4].ToString()), new List<string>(), new List<int>(), true);
+                    Osvjezi();
+                    break;
                 case "Home":
                     Home Home = new Home();
                     return true;
@@ -58,6 +65,12 @@ namespace DnevnikRada
             Filters.Text = filter_dic.Keys.First();
         }
 
+        void Osvjezi() {
+            evidencijaGrid.DataSource = evidencija.Ucitaj();
+            materijalGrid.DataSource = null;
+            Sakri.Enabled = false;
+        }
+
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
         {
             base.This_FormClosing(sender, e);
@@ -75,6 +88,8 @@ namespace DnevnikRada
             opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
             materijalGrid.Columns[0].Visible = false;
             materijalGrid.Columns["Id_Evidencija"].Visible = false;
+            row = e.RowIndex;
+            Sakri.Enabled = true;
         }
     }
 }

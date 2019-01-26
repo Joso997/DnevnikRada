@@ -14,11 +14,13 @@ namespace DnevnikRada.Klase
         public object Id_mjesta { get; set; }
         public List<DateTime> Datumi { get; set; }
         public DateTime Datum { get; private set; }
+        public bool Hide { get; private set; }
 
-        public Kalendar(object _id_mjesta, List<DateTime> _datumi)
+        public Kalendar(object _id_mjesta, List<DateTime> _datumi, bool _hide)
         {
             Id_mjesta = _id_mjesta;
             Datumi = _datumi;
+            Hide = _hide;
             Dodaj();
         }
 
@@ -34,9 +36,10 @@ namespace DnevnikRada.Klase
                 Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
                 {
                     {"Id_Mjesta", Id_mjesta },
-                    {"Datum", datum.ToString("yyyy-MM-dd HH:mm:ss") }
+                    {"Datum", datum.ToString("yyyy-MM-dd HH:mm:ss") },
+                    {"Sakriveno", Hide }
                 };
-                Set("Kalendar", dictionary_stupci, false);
+                Set("Kalendar", "Id_Mjesta, Datum", dictionary_stupci, true);
             }
 
         }

@@ -39,11 +39,13 @@
             this.Trazi = new MetroFramework.Controls.MetroButton();
             this.Search = new MetroFramework.Controls.MetroTextBox();
             this.mjestoGrid = new MetroFramework.Controls.MetroGrid();
-            this.Edit = new MetroFramework.Controls.MetroButton();
+            this.Dodaj = new MetroFramework.Controls.MetroButton();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             this.kalendarGrid = new MetroFramework.Controls.MetroGrid();
-            this.Dodaj = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.Sakri = new MetroFramework.Controls.MetroButton();
+            this.Oduzmi = new MetroFramework.Controls.MetroButton();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,7 @@
             this.Trazi.UseSelectable = true;
             this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // searchText
+            // Search
             // 
             // 
             // 
@@ -87,7 +89,7 @@
             this.Search.Lines = new string[0];
             this.Search.Location = new System.Drawing.Point(160, 85);
             this.Search.MaxLength = 32767;
-            this.Search.Name = "searchText";
+            this.Search.Name = "Search";
             this.Search.PasswordChar = '\0';
             this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Search.SelectedText = "";
@@ -147,19 +149,18 @@
             this.mjestoGrid.TabIndex = 3;
             this.mjestoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
-            // Edit
+            // Dodaj
             // 
-            this.Edit.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
-            this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(600, 480);
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(100, 100);
-            this.Edit.TabIndex = 12;
-            this.Edit.UseSelectable = true;
-            this.Edit.Visible = false;
-            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
+            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
+            this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Dodaj.Enabled = false;
+            this.Dodaj.Location = new System.Drawing.Point(581, 480);
+            this.Dodaj.Name = "Dodaj";
+            this.Dodaj.Size = new System.Drawing.Size(100, 100);
+            this.Dodaj.TabIndex = 12;
+            this.Dodaj.UseSelectable = true;
+            this.Dodaj.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Filters
             // 
@@ -200,7 +201,7 @@
             this.kalendarGrid.EnableHeadersVisualStyles = false;
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kalendarGrid.Location = new System.Drawing.Point(507, 156);
+            this.kalendarGrid.Location = new System.Drawing.Point(507, 208);
             this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -214,21 +215,9 @@
             this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kalendarGrid.Size = new System.Drawing.Size(150, 241);
+            this.kalendarGrid.Size = new System.Drawing.Size(150, 189);
             this.kalendarGrid.TabIndex = 18;
             this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kalendarGrid_CellClick);
-            // 
-            // Dodaj
-            // 
-            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
-            this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Dodaj.Location = new System.Drawing.Point(700, 480);
-            this.Dodaj.Name = "Dodaj";
-            this.Dodaj.Size = new System.Drawing.Size(100, 100);
-            this.Dodaj.TabIndex = 35;
-            this.Dodaj.UseSelectable = true;
-            this.Dodaj.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroLabel2
             // 
@@ -239,17 +228,52 @@
             this.metroLabel2.TabIndex = 36;
             this.metroLabel2.Text = "Filtrirati po: ";
             // 
+            // Sakri
+            // 
+            this.Sakri.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Sakri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Sakri.Enabled = false;
+            this.Sakri.Location = new System.Drawing.Point(694, 480);
+            this.Sakri.Name = "Sakri";
+            this.Sakri.Size = new System.Drawing.Size(100, 100);
+            this.Sakri.TabIndex = 37;
+            this.Sakri.UseSelectable = true;
+            this.Sakri.Click += new System.EventHandler(this.Click_Gumb);
+            // 
+            // Oduzmi
+            // 
+            this.Oduzmi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Oduzmi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Oduzmi.BackgroundImage")));
+            this.Oduzmi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Oduzmi.Enabled = false;
+            this.Oduzmi.Location = new System.Drawing.Point(457, 480);
+            this.Oduzmi.Name = "Oduzmi";
+            this.Oduzmi.Size = new System.Drawing.Size(100, 100);
+            this.Oduzmi.TabIndex = 38;
+            this.Oduzmi.UseSelectable = true;
+            this.Oduzmi.Click += new System.EventHandler(this.Click_Gumb);
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(507, 156);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(240, 29);
+            this.metroDateTime1.TabIndex = 39;
+            // 
             // Mjesta_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroDateTime1);
+            this.Controls.Add(this.Oduzmi);
+            this.Controls.Add(this.Sakri);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.Dodaj);
             this.Controls.Add(this.kalendarGrid);
             this.Controls.Add(this.Filters);
-            this.Controls.Add(this.Edit);
+            this.Controls.Add(this.Dodaj);
             this.Controls.Add(this.mjestoGrid);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Trazi);
@@ -272,10 +296,12 @@
         private MetroFramework.Controls.MetroButton Trazi;
         private MetroFramework.Controls.MetroTextBox Search;
         private MetroFramework.Controls.MetroGrid mjestoGrid;
-        private MetroFramework.Controls.MetroButton Edit;
+        private MetroFramework.Controls.MetroButton Dodaj;
         private MetroFramework.Controls.MetroComboBox Filters;
         private MetroFramework.Controls.MetroGrid kalendarGrid;
-        private MetroFramework.Controls.MetroButton Dodaj;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton Sakri;
+        private MetroFramework.Controls.MetroButton Oduzmi;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }

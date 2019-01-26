@@ -113,7 +113,7 @@ namespace DnevnikRada.Baza
 
         protected DataTable Get(string naziv_tablice)
         {
-            string command = string.Format("select * from {0}", naziv_tablice);
+            string command = string.Format("select * from {0} WHERE Sakriveno = 0 OR Sakriveno = 'False'", naziv_tablice);
             return LoadDataBase(command);
         }
 
@@ -121,7 +121,7 @@ namespace DnevnikRada.Baza
         {
             string stupci = MakeReadyForQuery(biblioteka, operatorUsporedbe);
             string command = string.Format("select * from {0} " +
-                "WHERE {1}", naziv_tablice, stupci);
+                "WHERE {1} AND (Sakriveno = 0 OR Sakriveno = 'False')", naziv_tablice, stupci);
             return LoadDataBase(command);
         }
 

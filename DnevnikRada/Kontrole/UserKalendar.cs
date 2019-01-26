@@ -99,7 +99,7 @@ namespace DnevnikRada.Kontrole
             int top = 0;
             int left = 0;
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Datum", new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
+                {"Datum", new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
                 {"Datum"+ " ", new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, 1).AddMonths(1).ToString("yyyy-MM-dd HH:mm:ss") }
             };
             List<string> _operator = new List<string> {
@@ -110,21 +110,24 @@ namespace DnevnikRada.Kontrole
             _tempDate = dT_datum.AsEnumerable().Select(r => r.Field<DateTime>("Datum")).ToList();
             foreach (var list in _tempDate)
             {
-                MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
-                {
-                    Location = new Point(left, top),
-                    Margin = new Padding(1, 1, 1, 1),
-                    Name = list.ToShortDateString(),
-                    Size = new Size(285, 32),
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    Text = mjesta.Ucitaj(int.Parse(dT_datum.Rows[_tempDate.IndexOf(list)]["Id_Mjesta"].ToString())).Rows[0]["NazivMjesta"] + " " + list.ToShortDateString(),
-                    TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
-                    Visible = true,
-                    Enabled = false
-                };
-                metroEvents.Controls.Add(tile);
-                tile.BringToFront();
-                top += tile.Height + tile.Margin.Top;
+                if (mjesta.Ucitaj(int.Parse(dT_datum.Rows[_tempDate.IndexOf(list)]["Id_Mjesta"].ToString())).Rows.Count == 0)
+                    continue;
+                    MetroFramework.Controls.MetroTile tile = new MetroFramework.Controls.MetroTile
+                    {
+                        Location = new Point(left, top),
+                        Margin = new Padding(1, 1, 1, 1),
+                        Name = list.ToShortDateString(),
+                        Size = new Size(285, 32),
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Text = mjesta.Ucitaj(int.Parse(dT_datum.Rows[_tempDate.IndexOf(list)]["Id_Mjesta"].ToString())).Rows[0]["NazivMjesta"] + " " + list.ToShortDateString(),
+                        TileTextFontSize = MetroFramework.MetroTileTextSize.Small,
+                        Visible = true,
+                        Enabled = false
+                    };
+                    metroEvents.Controls.Add(tile);
+                    tile.BringToFront();
+                    top += tile.Height + tile.Margin.Top;
+                
             }
         }
 
@@ -137,7 +140,7 @@ namespace DnevnikRada.Kontrole
                 {"<="}
             };
             DataTable dT_query = mjesta.Kalendar.Ucitaj(biblioteka, _operator);
-            if(dT_query != null)
+            if(dT_query.Rows.Count != 0)
             {
                 int top = 0;
                 int left = 0;
@@ -147,6 +150,8 @@ namespace DnevnikRada.Kontrole
                 };
                 foreach (int _query in Enumerable.Range(0, dT_query.Rows.Count))
                 {
+                    if (mjesta.Ucitaj(int.Parse(dT_query.Rows[_query]["Id_Mjesta"].ToString())).Rows.Count == 0)
+                        continue;
                     DateTime _date = (DateTime)dT_query.Rows[_query]["Datum"];
                     List<object> tag = new List<object>
                     {

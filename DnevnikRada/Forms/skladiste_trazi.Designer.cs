@@ -49,6 +49,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
             this.kolicinaBox = new MetroFramework.Controls.MetroTextBox();
+            this.Sakri = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             // 
             // 
             this.mjBox.CustomButton.Image = null;
-            this.mjBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.mjBox.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.mjBox.CustomButton.Name = "";
             this.mjBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mjBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -106,7 +107,7 @@
             this.mjBox.SelectionLength = 0;
             this.mjBox.SelectionStart = 0;
             this.mjBox.ShortcutsEnabled = true;
-            this.mjBox.Size = new System.Drawing.Size(320, 23);
+            this.mjBox.Size = new System.Drawing.Size(234, 23);
             this.mjBox.TabIndex = 9;
             this.mjBox.UseSelectable = true;
             this.mjBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -118,7 +119,7 @@
             // 
             // 
             this.nazivBox.CustomButton.Image = null;
-            this.nazivBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.nazivBox.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.nazivBox.CustomButton.Name = "";
             this.nazivBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.nazivBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -137,7 +138,7 @@
             this.nazivBox.SelectionLength = 0;
             this.nazivBox.SelectionStart = 0;
             this.nazivBox.ShortcutsEnabled = true;
-            this.nazivBox.Size = new System.Drawing.Size(320, 23);
+            this.nazivBox.Size = new System.Drawing.Size(234, 23);
             this.nazivBox.TabIndex = 7;
             this.nazivBox.UseSelectable = true;
             this.nazivBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -149,7 +150,7 @@
             // 
             // 
             this.prodavacBox.CustomButton.Image = null;
-            this.prodavacBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.prodavacBox.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.prodavacBox.CustomButton.Name = "";
             this.prodavacBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.prodavacBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -167,13 +168,13 @@
             this.prodavacBox.SelectionLength = 0;
             this.prodavacBox.SelectionStart = 0;
             this.prodavacBox.ShortcutsEnabled = true;
-            this.prodavacBox.Size = new System.Drawing.Size(320, 23);
+            this.prodavacBox.Size = new System.Drawing.Size(234, 23);
             this.prodavacBox.TabIndex = 6;
             this.prodavacBox.UseSelectable = true;
             this.prodavacBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.prodavacBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // search
+            // Search
             // 
             // 
             // 
@@ -190,7 +191,7 @@
             this.Search.Lines = new string[0];
             this.Search.Location = new System.Drawing.Point(169, 74);
             this.Search.MaxLength = 32767;
-            this.Search.Name = "search";
+            this.Search.Name = "Search";
             this.Search.PasswordChar = '\0';
             this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Search.SelectedText = "";
@@ -290,7 +291,7 @@
             // 
             // 
             this.cijenaBox.CustomButton.Image = null;
-            this.cijenaBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.cijenaBox.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.cijenaBox.CustomButton.Name = "";
             this.cijenaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.cijenaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -308,7 +309,7 @@
             this.cijenaBox.SelectionLength = 0;
             this.cijenaBox.SelectionStart = 0;
             this.cijenaBox.ShortcutsEnabled = true;
-            this.cijenaBox.Size = new System.Drawing.Size(320, 23);
+            this.cijenaBox.Size = new System.Drawing.Size(234, 23);
             this.cijenaBox.TabIndex = 16;
             this.cijenaBox.UseSelectable = true;
             this.cijenaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -331,11 +332,12 @@
             this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
             this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(694, 480);
+            this.Edit.Location = new System.Drawing.Point(588, 480);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(100, 100);
             this.Edit.TabIndex = 18;
             this.Edit.UseSelectable = true;
+            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroLabel2
             // 
@@ -362,7 +364,7 @@
             // 
             // 
             this.kolicinaBox.CustomButton.Image = null;
-            this.kolicinaBox.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.kolicinaBox.CustomButton.Location = new System.Drawing.Point(212, 1);
             this.kolicinaBox.CustomButton.Name = "";
             this.kolicinaBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.kolicinaBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -381,19 +383,32 @@
             this.kolicinaBox.SelectionLength = 0;
             this.kolicinaBox.SelectionStart = 0;
             this.kolicinaBox.ShortcutsEnabled = true;
-            this.kolicinaBox.Size = new System.Drawing.Size(320, 23);
+            this.kolicinaBox.Size = new System.Drawing.Size(234, 23);
             this.kolicinaBox.TabIndex = 8;
             this.kolicinaBox.UseSelectable = true;
             this.kolicinaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.kolicinaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.kolicinaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kolicinaBox_KeyPress);
             // 
+            // Sakri
+            // 
+            this.Sakri.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Sakri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Sakri.Enabled = false;
+            this.Sakri.Location = new System.Drawing.Point(694, 480);
+            this.Sakri.Name = "Sakri";
+            this.Sakri.Size = new System.Drawing.Size(100, 100);
+            this.Sakri.TabIndex = 21;
+            this.Sakri.UseSelectable = true;
+            this.Sakri.Click += new System.EventHandler(this.Click_Gumb);
+            // 
             // skladiste_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 581);
+            this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Sakri);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.Edit);
@@ -442,5 +457,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroTextBox kolicinaBox;
+        private MetroFramework.Controls.MetroButton Sakri;
     }
 }

@@ -16,15 +16,17 @@ namespace DnevnikRada.Klase
         public string Proizvodac { get; }
         public string Mjerna_jedinica { get; }
         public int Cijena { get; }
+        public bool Hide { get; }
 
 
         // mozda bi trebalo u konstruktor stavit samo ono sto je obavezno? recimo d su 
-        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica, int _cijena)
+        public Skladiste(string _naziv_materijala, string _proizvodac, string _mjerna_jedinica, int _cijena, bool _hide)
         {
             Naziv_materijala = _naziv_materijala;
             Proizvodac = _proizvodac;
             Mjerna_jedinica = _mjerna_jedinica;
             Cijena = _cijena;
+            Hide = _hide;
             Dodaj();
         }
 
@@ -40,7 +42,8 @@ namespace DnevnikRada.Klase
                 {"NazivMaterijala", Naziv_materijala },
                 {"Prodavac", Proizvodac },
                 {"MjernaJedinica", Mjerna_jedinica },
-                {"Cijena", Cijena }
+                {"Cijena", Cijena },
+                {"Sakriveno", Hide }
             };
             Set("Skladiste", dictionary_stupci, true);
         }

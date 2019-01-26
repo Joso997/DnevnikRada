@@ -45,6 +45,7 @@
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.Sakri = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +137,7 @@
             this.Trazi.UseSelectable = true;
             this.Trazi.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // textTrazi
+            // Search
             // 
             // 
             // 
@@ -153,7 +154,7 @@
             this.Search.Lines = new string[0];
             this.Search.Location = new System.Drawing.Point(6, 73);
             this.Search.MaxLength = 32767;
-            this.Search.Name = "textTrazi";
+            this.Search.Name = "Search";
             this.Search.PasswordChar = '\0';
             this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Search.SelectedText = "";
@@ -241,12 +242,25 @@
             this.metroLabel2.TabIndex = 19;
             this.metroLabel2.Text = "Filtrirati po: ";
             // 
+            // Sakri
+            // 
+            this.Sakri.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Sakri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Sakri.Enabled = false;
+            this.Sakri.Location = new System.Drawing.Point(800, 374);
+            this.Sakri.Name = "Sakri";
+            this.Sakri.Size = new System.Drawing.Size(100, 100);
+            this.Sakri.TabIndex = 38;
+            this.Sakri.UseSelectable = true;
+            this.Sakri.Click += new System.EventHandler(this.Click_Gumb);
+            // 
             // evidencija_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.Sakri);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Filters);
             this.Controls.Add(this.materijalGrid);
@@ -282,5 +296,6 @@
         private MetroFramework.Controls.MetroGrid materijalGrid;
         private MetroFramework.Controls.MetroComboBox Filters;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton Sakri;
     }
 }

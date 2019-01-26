@@ -35,9 +35,12 @@ namespace DnevnikRada
                 case "Edit":
                     if (CheckInput(new Dictionary<string, string> { { kolicinaBox.Name, kolicinaBox.Text }, { nazivBox.Name, nazivBox.Text } }))
                         break;
-                    Skladiste _skladiste = new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text));
-                    skladisteGrid.DataSource = skladiste.Ucitaj();
-                    Edit.Enabled = false;
+                    new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), false);
+                    Osvjezi();
+                    break;
+                case "Sakri":
+                    new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), true);
+                    Osvjezi();
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -55,6 +58,7 @@ namespace DnevnikRada
             kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
             mjBox.Text = dT.Rows[0].ItemArray[4].ToString();
             cijenaBox.Text = dT.Rows[0].ItemArray[5].ToString();
+            Sakri.Enabled = true;
             Edit.Enabled = true;
         }
 
@@ -69,6 +73,13 @@ namespace DnevnikRada
             };
             Filters.Items.AddRange(filter_dic.Keys.ToArray());
             Filters.Text = filter_dic.Keys.First();
+        }
+
+        void Osvjezi()
+        {
+            skladisteGrid.DataSource = skladiste.Ucitaj();
+            Sakri.Enabled = false;
+            Edit.Enabled = false;
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
