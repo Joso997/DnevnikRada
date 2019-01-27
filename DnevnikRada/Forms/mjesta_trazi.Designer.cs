@@ -45,6 +45,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Sakri = new MetroFramework.Controls.MetroButton();
             this.Oduzmi = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             // 
             // Trazi
             // 
-            this.Trazi.Location = new System.Drawing.Point(581, 85);
+            this.Trazi.Location = new System.Drawing.Point(595, 85);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(139, 29);
             this.Trazi.TabIndex = 1;
@@ -86,7 +87,7 @@
             this.Search.CustomButton.UseSelectable = true;
             this.Search.CustomButton.Visible = false;
             this.Search.Lines = new string[0];
-            this.Search.Location = new System.Drawing.Point(160, 85);
+            this.Search.Location = new System.Drawing.Point(162, 85);
             this.Search.MaxLength = 32767;
             this.Search.Name = "Search";
             this.Search.PasswordChar = '\0';
@@ -154,7 +155,7 @@
             this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
             this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Edit.Enabled = false;
-            this.Edit.Location = new System.Drawing.Point(581, 480);
+            this.Edit.Location = new System.Drawing.Point(600, 480);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(100, 100);
             this.Edit.TabIndex = 12;
@@ -221,18 +222,19 @@
             // metroLabel2
             // 
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(325, 85);
+            this.metroLabel2.Location = new System.Drawing.Point(329, 87);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(105, 23);
+            this.metroLabel2.Size = new System.Drawing.Size(102, 23);
             this.metroLabel2.TabIndex = 36;
             this.metroLabel2.Text = "Filtrirati po: ";
             // 
             // Sakri
             // 
             this.Sakri.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Sakri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sakri.BackgroundImage")));
             this.Sakri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Sakri.Enabled = false;
-            this.Sakri.Location = new System.Drawing.Point(694, 480);
+            this.Sakri.Location = new System.Drawing.Point(700, 480);
             this.Sakri.Name = "Sakri";
             this.Sakri.Size = new System.Drawing.Size(100, 100);
             this.Sakri.TabIndex = 37;
@@ -245,7 +247,7 @@
             this.Oduzmi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Oduzmi.BackgroundImage")));
             this.Oduzmi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Oduzmi.Enabled = false;
-            this.Oduzmi.Location = new System.Drawing.Point(457, 480);
+            this.Oduzmi.Location = new System.Drawing.Point(500, 480);
             this.Oduzmi.Name = "Oduzmi";
             this.Oduzmi.Size = new System.Drawing.Size(100, 100);
             this.Oduzmi.TabIndex = 38;
@@ -274,6 +276,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_trazi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).EndInit();
             this.ResumeLayout(false);

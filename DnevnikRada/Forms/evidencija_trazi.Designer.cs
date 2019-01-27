@@ -46,6 +46,7 @@
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Sakri = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
@@ -245,9 +246,10 @@
             // Sakri
             // 
             this.Sakri.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Sakri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sakri.BackgroundImage")));
             this.Sakri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Sakri.Enabled = false;
-            this.Sakri.Location = new System.Drawing.Point(800, 374);
+            this.Sakri.Location = new System.Drawing.Point(800, 380);
             this.Sakri.Name = "Sakri";
             this.Sakri.Size = new System.Drawing.Size(100, 100);
             this.Sakri.TabIndex = 38;
@@ -277,6 +279,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_trazi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).EndInit();
             this.ResumeLayout(false);
