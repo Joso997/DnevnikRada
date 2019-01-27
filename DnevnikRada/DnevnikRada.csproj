@@ -142,7 +142,6 @@
     <Compile Include="Klase\Poveznica.cs" />
     <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Skladiste.cs" />
-    <Compile Include="Klase\Statistika.cs" />
     <Compile Include="Klase\UIController.cs">
       <SubType>Form</SubType>
     </Compile>
