@@ -16,11 +16,14 @@ namespace DnevnikRada
         public ucModule1()
         {
             InitializeComponent();
-            
+            Load2();
+        }
+        private void Load2()
+        {
             brojEvidencija.Text = Convert.ToString(statistika.Evidencija_C_S(true));
             VrijednostMaterijala.Text = Convert.ToString(statistika.CijenaMaterijala());
             RadniSati.Text = Convert.ToString(statistika.Evidencija_C_S(false));
-            postotakZauzeca.Text = Convert.ToString(Math.Round((statistika.Postotak()),2)+"%");
+            postotakZauzeca.Text = Convert.ToString(Math.Round((statistika.Postotak()), 2) + "%");
         }
     }
 }

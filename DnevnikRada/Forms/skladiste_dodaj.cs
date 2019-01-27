@@ -29,6 +29,7 @@ namespace DnevnikRada
                     if (CheckInput(new Dictionary<string, string> {{ "Naziv Materijala", tb_naziv_materijala.Text } }))
                         break;
                     Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, Convert.ToInt32 (tb_Cijena.Text), false);
+
                     break;
                 case "Home":
                     Home Home = new Home();
@@ -55,6 +56,14 @@ namespace DnevnikRada
         }
 
         private void Skladiste_dodaj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Cijena_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
