@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Cijena = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             this.SuspendLayout();
             // 
             // Home
@@ -224,6 +225,7 @@
             this.tb_Cijena.UseSelectable = true;
             this.tb_Cijena.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_Cijena.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_Cijena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Cijena_KeyPress);
             // 
             // metroLabel1
             // 
@@ -258,6 +260,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Skladiste_dodaj_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

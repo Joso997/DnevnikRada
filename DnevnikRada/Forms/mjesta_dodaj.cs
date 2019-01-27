@@ -50,6 +50,7 @@ namespace DnevnikRada
                     else
                         MessageBox.Show("Datum već dodan.");
                     Osvjezi();
+                    
                     break;
                 case "Oduzmi":
                     if (int.Parse(dT.Rows[row]["Sifra"].ToString()) > 1000)
@@ -57,6 +58,7 @@ namespace DnevnikRada
                     Oduzmi.Enabled = false;
                     dT.Rows.RemoveAt(row);
                     Osvjezi();
+                    
                     break;
                 case "Potvrdi":
                     if (CheckInput(new Dictionary<string, string> { { "Adresa", tb_adresa.Text }, { "Naziv Mjesta", tb_naziv_mjesta.Text } }))
