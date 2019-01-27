@@ -27,12 +27,13 @@ namespace DnevnikRada.Baza
             //
             //
             //za testiranje tjekom rada s aplikacijom
+            
             string workingDirectory = Environment.CurrentDirectory;
             string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
             
 
-            /* // za publishanje
+            /*
             string sqlDBTables = string.Format(@".\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(@".\Baza\DB2.db.sql");
             */
@@ -185,10 +186,13 @@ namespace DnevnikRada.Baza
             int count=0;
             command = new SQLiteCommand(all,connection);
             SQLiteDataReader reader = command.ExecuteReader();
-            if (!reader.Read().Equals(DBNull.Value))
+            while (reader.Read())
             {
-                while (reader.Read())
+                if (!(reader.GetValue(0) is DBNull))
+                {
+
                     count = Convert.ToInt32(reader.GetValue(0));
+                }
             }
             return count;
             
