@@ -257,7 +257,6 @@
             this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Skladiste_dodaj_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -249,7 +249,6 @@ namespace DnevnikRada
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

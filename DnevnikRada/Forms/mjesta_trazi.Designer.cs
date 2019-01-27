@@ -275,7 +275,6 @@
             this.Name = "Mjesta_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mjesta_trazi";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).EndInit();

@@ -362,7 +362,6 @@
             this.Name = "Evidencija_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_dodaj";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -94,10 +94,7 @@ namespace DnevnikRada
             Edit.Enabled = false;
         }
 
-        protected override void This_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            base.This_FormClosing(sender, e);
-        }
+       
         public override void Click_Gumb(object sender, EventArgs e)
         {
             base.Click_Gumb(sender, e);
