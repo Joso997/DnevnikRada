@@ -12,34 +12,32 @@ namespace DnevnikRada.Klase
     class Poveznica : Baza.DB, IUseDatabase
     {
         public object Id_evidencija { get; set; }
-        public List<string> Naziv_materijala { get; set; }
-        public List<int> Kolicina { get; set; }
+        public Dictionary<string, int> Informacije { get; set; }
 
         public Poveznica()
         {
 
         }
-        public Poveznica(object _id_evidencija, List<string> _naziv_Materijala, List<int> _kolicina)
+        public Poveznica(object _id_evidencija, Dictionary<string, int> _informacije)
         {
             Id_evidencija = _id_evidencija;
-            Naziv_materijala = _naziv_Materijala;
-            Kolicina = _kolicina;
+            Informacije = _informacije;
             Dodaj();
         }
 
         private void Dodaj()
         {
-            foreach (var pair in Naziv_materijala.Zip(Kolicina, (naziv, kolicina) => (Naziv: naziv, Kol: kolicina)))
+            foreach (KeyValuePair<string,int> info in Informacije)
             {
                 Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
                 {
                     {"Id_evidencija", Id_evidencija },
-                    {"NazivMaterijala", pair.Naziv },
-                    {"Kolicina", pair.Kol },
-                    {"Id_Materijala", new Skladiste().Ucitaj(new Dictionary<string, object>{{ "NazivMaterijala", pair.Naziv } }, new List<string> {{"="}}).Rows[0]["ID"] }
+                    {"NazivMaterijala", info.Key },
+                    {"Kolicina", info.Value },
+                    {"Id_Materijala", new Skladiste().Ucitaj(new Dictionary<string, object>{{ "NazivMaterijala", info.Key } }, new List<string> {{"="}}).Rows[0]["ID"] }
                 };
                 Set("Poveznica", dictionary_stupci, false);
-                Update(pair.Naziv, pair.Kol);
+                Update(info.Key, info.Value);
             }
                    
         }

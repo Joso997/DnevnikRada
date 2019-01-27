@@ -15,29 +15,17 @@ namespace DnevnikRada
 {
     public partial class Evidencija_dodaj : UIController
     {
-        DataTable dT = new DataTable();
         Baza.DB baza = new Baza.DB();
         public Evidencija_dodaj()
         {
-            InitializeComponent();
-            Show();
-            selectButton = SelectButton;
-            Fill();
-            dT.Columns.Add("NazivMaterijala").Unique = true;
-            dT.Columns.Add("Kolicina", typeof(Int32));
-            metroDateTime1.MaxDate = DateTime.Now.Date;
+            Ucitaj();
         }
 
         public Evidencija_dodaj(List<object> tag)
         {
-            InitializeComponent();
-            Show();
-            selectButton = SelectButton;
-            Fill();
+            Ucitaj();
             metroDateTime1.Value = (DateTime)tag[0];
             NazivMjesta.Text = (string)tag[1];
-            dT.Columns.Add("NazivMaterijala").Unique = true;
-            dT.Columns.Add("Kolicina", typeof(Int32));
         }
 
         public bool SelectButton(object sender)
@@ -51,47 +39,58 @@ namespace DnevnikRada
                     object[] marks;
                     if (addUse.Text == "-")
                     {
-
                         if(baza.ProvjeraNegativnosti(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
                         {
                             MessageBox.Show("broj -" + Kolicina.Text + " je pre negativan nema dosta u skladistu");
                             break;
                         }
-
-                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1 };
-                        
+                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1 };  
                     }
                     else
-                    {
-                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text)  };
-                    }  
+                        marks = new object[] { OdabirMaterijala.Text, int.Parse(Kolicina.Text)  }; 
                     var rows = dT.Select(string.Format("NazivMaterijala = '{0}'", OdabirMaterijala.Text));
                     if(rows.Length == 0)
                         dT.LoadDataRow(marks, true);
                     else 
-
                         rows[0]["Kolicina"] = int.Parse(Kolicina.Text);
-                    
-                        
-                    materijalGrid.DataSource = dT;
+                    Osvjezi();
+                    break;
+                case "Oduzmi":
+                    dT.Rows.RemoveAt(row);
+                    Osvjezi();
                     break;
                 case "Potvrdi":
                     if(CheckInput(new Dictionary<string, string> { { "Opis Posla", tb_opis_posla.Text }, {"Utrošeno Vrijeme", tb_utroseno_vrijeme.Text } }))
                         break;
-                    List<string> materijal_list = new List<string>();
-                    List<int> kolicina_list = new List<int>();
-                    var n_temp = dT.AsEnumerable().Select(r => r.Field<string>(0)).ToArray();
-                    materijal_list.AddRange(n_temp);
-                    var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToArray();
-                    kolicina_list.AddRange(_temp);
-
-                    Evidencija evidencija = new Evidencija(NazivMjesta.Text, metroDateTime1.Value, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), materijal_list, kolicina_list, false);
+                    var n_temp = dT.AsEnumerable().Select(r => r.Field<string>(0)).ToList();
+                    var _temp = dT.AsEnumerable().Select(r => r.Field<Int32>(1)).ToList();
+                    Dictionary<string, int> informacije = n_temp.Zip(_temp, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
+                    Evidencija evidencija = new Evidencija(NazivMjesta.Text, metroDateTime1.Value, tb_opis_posla.Text, int.Parse(tb_utroseno_vrijeme.Text), informacije, false);
+                    dT.Clear();
+                    Osvjezi();
                     break;
                 case "Home":
                     Home Home = new Home();
                     return true;
             }
             return false;
+        }
+
+        void Ucitaj()
+        {
+            InitializeComponent();
+            Show();
+            selectButton = SelectButton;
+            Fill();
+            dT.Columns.Add("NazivMaterijala").Unique = true;
+            dT.Columns.Add("Kolicina", typeof(Int32));
+            metroDateTime1.MaxDate = DateTime.Now.Date;
+        }
+
+        void Osvjezi()
+        {
+            materijalGrid.DataSource = dT;
+            Oduzmi.Enabled = false;
         }
 
         protected override void This_FormClosing(object sender, FormClosingEventArgs e)
@@ -124,6 +123,8 @@ namespace DnevnikRada
         {
             OdabirMaterijala.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
             Kolicina.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
+            row = e.RowIndex;
+            Oduzmi.Enabled = true;
         }
 
         private void tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)

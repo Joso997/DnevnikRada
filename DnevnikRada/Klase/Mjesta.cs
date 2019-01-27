@@ -17,9 +17,10 @@ namespace DnevnikRada.Klase
         public Kalendar Kalendar { get; }
         public bool Hide { get; }
 
-        public Mjesta(string _naziv_mjesta, string _adresa, List<DateTime> _datumi, bool _hide)
+        public Mjesta(int _id_mjesta, string _naziv_mjesta, string _adresa, List<DateTime> _datumi, bool _hide)
         {
             Kalendar = new Kalendar();
+            Kalendar.Id_mjesta = _id_mjesta;
             Naziv_mjesta = _naziv_mjesta;
             Adresa = _adresa;
             Kalendar.Datumi = _datumi;
@@ -49,8 +50,11 @@ namespace DnevnikRada.Klase
                 {"Adresa", Adresa },
                 {"Sakriveno", Hide }
             };
-            Kalendar.Id_mjesta = Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
-            if(Kalendar.Datumi != null)
+            if((int)Kalendar.Id_mjesta <=0)
+                Kalendar.Id_mjesta = Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
+            else
+                Set("Mjesta", "NazivMjesta,Adresa", dictionary_stupci, true);
+            if (Kalendar.Datumi != null)
                 if(Kalendar.Datumi.Any())
                 new Kalendar(Kalendar.Id_mjesta, Kalendar.Datumi, false);
         }

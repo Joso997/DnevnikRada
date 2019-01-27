@@ -14,8 +14,6 @@ namespace DnevnikRada
     public partial class evidencija_trazi : UIController
     {
         Evidencija evidencija = new Evidencija();
-        Dictionary<string, string> filter_dic;
-        private int row;
         public evidencija_trazi()
         {
             InitializeComponent();
@@ -42,7 +40,7 @@ namespace DnevnikRada
                 case "Sakri":
                     DataTable dT = new DataTable();
                     dT = evidencija.Ucitaj(Int32.Parse(evidencijaGrid.Rows[row].Cells["Id"].Value.ToString()));
-                    new Evidencija(dT.Rows[0].ItemArray[1].ToString(), (DateTime)dT.Rows[0].ItemArray[2], dT.Rows[0].ItemArray[3].ToString(), int.Parse(dT.Rows[0].ItemArray[4].ToString()), new List<string>(), new List<int>(), true);
+                    new Evidencija(int.Parse(dT.Rows[0].ItemArray[0].ToString())+1000, dT.Rows[0].ItemArray[1].ToString(), (DateTime)dT.Rows[0].ItemArray[2], dT.Rows[0].ItemArray[3].ToString(), int.Parse(dT.Rows[0].ItemArray[4].ToString()), true);
                     Osvjezi();
                     break;
                 case "Home":

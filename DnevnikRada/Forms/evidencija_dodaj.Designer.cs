@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evidencija_dodaj));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Home = new MetroFramework.Controls.MetroButton();
             this.lbl_naziv_mjesta = new MetroFramework.Controls.MetroLabel();
             this.lbl_utroseno_vrijeme = new MetroFramework.Controls.MetroLabel();
@@ -39,7 +39,7 @@
             this.tb_opis_posla = new System.Windows.Forms.RichTextBox();
             this.lbl_opis_posla = new MetroFramework.Controls.MetroLabel();
             this.Potvrdi = new MetroFramework.Controls.MetroButton();
-            this.btn_trash = new MetroFramework.Controls.MetroButton();
+            this.Oduzmi = new MetroFramework.Controls.MetroButton();
             this.Dodaj = new MetroFramework.Controls.MetroButton();
             this.Kolicina = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -93,7 +93,7 @@
             // 
             // 
             this.tb_utroseno_vrijeme.CustomButton.Image = null;
-            this.tb_utroseno_vrijeme.CustomButton.Location = new System.Drawing.Point(172, 1);
+            this.tb_utroseno_vrijeme.CustomButton.Location = new System.Drawing.Point(45, 1);
             this.tb_utroseno_vrijeme.CustomButton.Name = "";
             this.tb_utroseno_vrijeme.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.tb_utroseno_vrijeme.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -150,18 +150,19 @@
             this.Potvrdi.UseSelectable = true;
             this.Potvrdi.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // btn_trash
+            // Oduzmi
             // 
-            this.btn_trash.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_trash.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_trash.BackgroundImage")));
-            this.btn_trash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_trash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_trash.Location = new System.Drawing.Point(600, 480);
-            this.btn_trash.Name = "btn_trash";
-            this.btn_trash.Size = new System.Drawing.Size(100, 100);
-            this.btn_trash.TabIndex = 8;
-            this.btn_trash.UseSelectable = true;
-            this.btn_trash.Visible = false;
+            this.Oduzmi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Oduzmi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Oduzmi.BackgroundImage")));
+            this.Oduzmi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Oduzmi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Oduzmi.Enabled = false;
+            this.Oduzmi.Location = new System.Drawing.Point(600, 480);
+            this.Oduzmi.Name = "Oduzmi";
+            this.Oduzmi.Size = new System.Drawing.Size(100, 100);
+            this.Oduzmi.TabIndex = 8;
+            this.Oduzmi.UseSelectable = true;
+            this.Oduzmi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Dodaj
             // 
@@ -275,23 +276,23 @@
             this.materijalGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.materijalGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.materijalGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.materijalGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.materijalGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.materijalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.materijalGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.materijalGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.materijalGrid.EnableHeadersVisualStyles = false;
             this.materijalGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materijalGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -299,14 +300,14 @@
             this.materijalGrid.Name = "materijalGrid";
             this.materijalGrid.ReadOnly = true;
             this.materijalGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.materijalGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.materijalGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.materijalGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.materijalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.materijalGrid.Size = new System.Drawing.Size(400, 380);
@@ -348,7 +349,7 @@
             this.Controls.Add(this.Kolicina);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.Dodaj);
-            this.Controls.Add(this.btn_trash);
+            this.Controls.Add(this.Oduzmi);
             this.Controls.Add(this.Potvrdi);
             this.Controls.Add(this.lbl_opis_posla);
             this.Controls.Add(this.tb_opis_posla);
@@ -377,7 +378,7 @@
         private System.Windows.Forms.RichTextBox tb_opis_posla;
         private MetroFramework.Controls.MetroLabel lbl_opis_posla;
         private MetroFramework.Controls.MetroButton Potvrdi;
-        private MetroFramework.Controls.MetroButton btn_trash;
+        private MetroFramework.Controls.MetroButton Oduzmi;
         private MetroFramework.Controls.MetroButton Dodaj;
         private MetroFramework.Controls.MetroTextBox Kolicina;
         private MetroFramework.Controls.MetroLabel metroLabel1;

@@ -11,7 +11,7 @@ namespace DnevnikRada.Klase
 {
     class Evidencija : Baza.DB, IUseDatabase
     {
-        public int ID { get; }
+        public int Sifra { get; }
         public string Naziv_Mjesta { get; }
         public DateTime Datum { get; }
         public double Cijena { get; }
@@ -22,17 +22,30 @@ namespace DnevnikRada.Klase
 
         //ono sto je potrebno u evidenciji <<datum, opis posla, utroseno vrijeme>> ostalo moze bit null
         //materijal i kolicina prebacena u poveznicu jer nije potrebno ovdje
-        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, List<string> _naziv_Materijala, List<int> _kolicina, bool _hide)
+        public Evidencija(string _nazivMjesta, DateTime _datum, string  _opisPosla, int _utrosenoVrijeme, Dictionary<string,int> _informacije, bool _hide)
         {
             Poveznica = new Poveznica();
+            Sifra = -1;
             Naziv_Mjesta = _nazivMjesta;
             Datum = _datum;
             Opis_Posla = _opisPosla;
             Utroseno_Vrijeme = _utrosenoVrijeme;
-            Poveznica.Naziv_materijala = _naziv_Materijala;
-            Poveznica.Kolicina = _kolicina;
+            Poveznica.Informacije = _informacije;
             Hide = _hide;
-            Dodaj(true);
+            Dodaj();
+        }
+
+        public Evidencija(int _sifra, string _nazivMjesta, DateTime _datum, string _opisPosla, int _utrosenoVrijeme, bool _hide)
+        {
+            Poveznica = new Poveznica();
+            Sifra = _sifra;
+            Naziv_Mjesta = _nazivMjesta;
+            Datum = _datum;
+            Opis_Posla = _opisPosla;
+            Utroseno_Vrijeme = _utrosenoVrijeme;
+            Poveznica.Informacije = new Dictionary<string, int>();
+            Hide = _hide;
+            Dodaj();
         }
 
         public Evidencija()
@@ -40,19 +53,28 @@ namespace DnevnikRada.Klase
             Poveznica = new Poveznica();
         }
 
-        private void Dodaj(bool includeUpdate)
+        private void Dodaj()
         {
-                Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
-                {
-                    {"NazivMjesta", Naziv_Mjesta },
-                    {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
-                    {"OpisPosla", Opis_Posla },
-                    {"UtrosenoVrijeme", Utroseno_Vrijeme },
-                    {"Id_Mjesta", new Mjesta().Ucitaj(new Dictionary<string, object>{{"NazivMjesta", Naziv_Mjesta }}, new List<string> {{"="}}).Rows[0]["ID"] },
-                    {"Sakriveno", Hide }
-                };
-            Poveznica.Id_evidencija = Set("Evidencija", "Evidencija.Datum, Evidencija.OpisPosla, Evidencija.UtrosenoVrijeme", dictionary_stupci, includeUpdate);
-            new Poveznica(Poveznica.Id_evidencija, Poveznica.Naziv_materijala, Poveznica.Kolicina);   
+            Dictionary<string, object> dictionary_stupci = new Dictionary<string, object>
+            {
+                {"NazivMjesta", Naziv_Mjesta },
+                {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
+                {"OpisPosla", Opis_Posla },
+                {"UtrosenoVrijeme", Utroseno_Vrijeme },
+                {"Id_Mjesta", new Mjesta().Ucitaj(new Dictionary<string, object>{{"NazivMjesta", Naziv_Mjesta }}, new List<string> {{"="}}).Rows[0]["ID"] },
+                {"Sakriveno", Hide }
+            };
+            if(Poveznica.Informacije.Count != 0 || Sifra == -1)
+            {
+                Poveznica.Id_evidencija = Set("Evidencija", dictionary_stupci, false);
+                new Poveznica(Poveznica.Id_evidencija, Poveznica.Informacije);
+            }
+            else
+            {
+                dictionary_stupci.Add("Sifra", Sifra);
+                Set("Evidencija", "Sifra", dictionary_stupci, true);
+            }
+                   
         }
 
         public DataTable Ucitaj()

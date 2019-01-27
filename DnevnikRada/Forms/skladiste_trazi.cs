@@ -10,7 +10,6 @@ namespace DnevnikRada
     public partial class skladiste_trazi : UIController
     {
         Skladiste skladiste = new Skladiste();
-        Dictionary<string, string> filter_dic;
         public skladiste_trazi()
         {          
             InitializeComponent();

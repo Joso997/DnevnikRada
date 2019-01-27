@@ -15,6 +15,10 @@ namespace DnevnikRada.Klase
         private bool UserClosing { get; set; }
         protected delegate bool SelectButtonDelagate(object sender);
         protected SelectButtonDelagate selectButton;
+        protected DataTable dT = new DataTable();
+        protected int ID { get; set; }
+        protected int row;
+        protected Dictionary<string, string> filter_dic;
 
         public virtual void Click_Gumb(object sender, EventArgs e)
         {

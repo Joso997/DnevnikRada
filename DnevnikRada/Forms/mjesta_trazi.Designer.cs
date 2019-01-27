@@ -39,13 +39,12 @@
             this.Trazi = new MetroFramework.Controls.MetroButton();
             this.Search = new MetroFramework.Controls.MetroTextBox();
             this.mjestoGrid = new MetroFramework.Controls.MetroGrid();
-            this.Dodaj = new MetroFramework.Controls.MetroButton();
+            this.Edit = new MetroFramework.Controls.MetroButton();
             this.Filters = new MetroFramework.Controls.MetroComboBox();
             this.kalendarGrid = new MetroFramework.Controls.MetroGrid();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.Sakri = new MetroFramework.Controls.MetroButton();
             this.Oduzmi = new MetroFramework.Controls.MetroButton();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.mjestoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalendarGrid)).BeginInit();
             this.SuspendLayout();
@@ -149,18 +148,18 @@
             this.mjestoGrid.TabIndex = 3;
             this.mjestoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
-            // Dodaj
+            // Edit
             // 
-            this.Dodaj.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Dodaj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Dodaj.BackgroundImage")));
-            this.Dodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Dodaj.Enabled = false;
-            this.Dodaj.Location = new System.Drawing.Point(581, 480);
-            this.Dodaj.Name = "Dodaj";
-            this.Dodaj.Size = new System.Drawing.Size(100, 100);
-            this.Dodaj.TabIndex = 12;
-            this.Dodaj.UseSelectable = true;
-            this.Dodaj.Click += new System.EventHandler(this.Click_Gumb);
+            this.Edit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Edit.BackgroundImage")));
+            this.Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Edit.Enabled = false;
+            this.Edit.Location = new System.Drawing.Point(581, 480);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(100, 100);
+            this.Edit.TabIndex = 12;
+            this.Edit.UseSelectable = true;
+            this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Filters
             // 
@@ -201,7 +200,7 @@
             this.kalendarGrid.EnableHeadersVisualStyles = false;
             this.kalendarGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.kalendarGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kalendarGrid.Location = new System.Drawing.Point(507, 208);
+            this.kalendarGrid.Location = new System.Drawing.Point(507, 156);
             this.kalendarGrid.Name = "kalendarGrid";
             this.kalendarGrid.ReadOnly = true;
             this.kalendarGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -215,7 +214,7 @@
             this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kalendarGrid.Size = new System.Drawing.Size(150, 189);
+            this.kalendarGrid.Size = new System.Drawing.Size(150, 241);
             this.kalendarGrid.TabIndex = 18;
             this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kalendarGrid_CellClick);
             // 
@@ -253,27 +252,18 @@
             this.Oduzmi.UseSelectable = true;
             this.Oduzmi.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // metroDateTime1
-            // 
-            this.metroDateTime1.Location = new System.Drawing.Point(507, 156);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(240, 29);
-            this.metroDateTime1.TabIndex = 39;
-            // 
             // Mjesta_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
-            this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.Oduzmi);
             this.Controls.Add(this.Sakri);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.kalendarGrid);
             this.Controls.Add(this.Filters);
-            this.Controls.Add(this.Dodaj);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.mjestoGrid);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Trazi);
@@ -296,12 +286,11 @@
         private MetroFramework.Controls.MetroButton Trazi;
         private MetroFramework.Controls.MetroTextBox Search;
         private MetroFramework.Controls.MetroGrid mjestoGrid;
-        private MetroFramework.Controls.MetroButton Dodaj;
+        private MetroFramework.Controls.MetroButton Edit;
         private MetroFramework.Controls.MetroComboBox Filters;
         private MetroFramework.Controls.MetroGrid kalendarGrid;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton Sakri;
         private MetroFramework.Controls.MetroButton Oduzmi;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }

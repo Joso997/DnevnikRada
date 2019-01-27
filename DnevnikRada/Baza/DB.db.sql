@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `Skladiste` (
 	`Kolicina`	INTEGER NOT NULL DEFAULT (0),
 	`MjernaJedinica`	TEXT,
 	`Cijena`	FLOAT,
-	`Sifra`	INTEGER  check(sifra between 1000 and 9999),
+	`Sifra`	INTEGER UNIQUE  check(Sifra between 1000 and 9999),
 	`Link` TEXT,
 	Sakriveno BOOLEAN  DEFAULT (0)
 );
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `Evidencija` (
 	`OpisPosla`	TEXT NOT NULL,
 	`UtrosenoVrijeme`	INTEGER NOT NULL,
 	`ID_mjesta` INTEGER ,
-	`Sifra`	INTEGER  check(sifra between 1000 and 9999),
+	`Sifra`	INTEGER UNIQUE check(Sifra between 1000 and 9999),
 	Sakriveno BOOLEAN  DEFAULT (0),
 	FOREIGN KEY(`NazivMjesta`) REFERENCES `Mjesta`(`ID`),
 	FOREIGN KEY(`ID_mjesta`) REFERENCES `Mjesta`(`ID`)
@@ -51,22 +51,34 @@ CREATE TABLE Kalendar (
                        UNIQUE,
     Id_Mjesta INTEGER  NOT NULL,
     Datum     DATETIME NOT NULL,
-	Sakriveno BOOLEAN  DEFAULT (0),
+    Sakriveno BOOLEAN  DEFAULT (0),
+    Sifra     INTEGER  CHECK (Sifra BETWEEN 1000 AND 9999) 
+                       UNIQUE,
     FOREIGN KEY (
         Id_Mjesta
     )
-    REFERENCES Mjesta (ID),
-    CONSTRAINT [ID_mjesta, Datum] UNIQUE (
-        Id_Mjesta,
-        Datum
-    )
+    REFERENCES Mjesta (ID) 
 );
 
 
-/*CREATE TRIGGER PromjeniUpdate AFTER UPDATE ON Mjesta FOR EACH ROW BEGIN UPDATE Mjesta 
-SET VrijemeRadaOD = NULLIF(VrijemeRadaOD, ''),
-VrijemeRadaDO = NULLIF(VrijemeRadaDO, ''); END;
-CREATE TRIGGER PromjeniInsert AFTER INSERT ON Mjesta FOR EACH ROW BEGIN UPDATE Mjesta 
-SET VrijemeRadaOD = NULLIF(VrijemeRadaOD, ''),
-VrijemeRadaDO = NULLIF(VrijemeRadaDO, ''); END;*/
+
+CREATE TRIGGER Nadopuni_Sifru
+         AFTER INSERT
+            ON Evidencija
+      FOR EACH ROW
+BEGIN
+    UPDATE Evidencija
+       SET Sifra = new.ID + 1000
+     WHERE ID = new.ID;
+END;
+CREATE TRIGGER Nadopuni_Sifru_Kalendar
+         AFTER INSERT
+            ON Kalendar
+      FOR EACH ROW
+BEGIN
+    UPDATE Kalendar
+       SET Sifra = new.ID + 1000
+     WHERE ID = new.ID;
+END;
+
 COMMIT;

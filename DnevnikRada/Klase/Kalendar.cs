@@ -15,9 +15,20 @@ namespace DnevnikRada.Klase
         public List<DateTime> Datumi { get; set; }
         public DateTime Datum { get; private set; }
         public bool Hide { get; private set; }
+        public int Sifra { get; private set; }
+
+        public Kalendar(int _sifra, List<DateTime> _datumi, bool _hide)
+        {
+            Sifra = _sifra;
+            Id_mjesta = 0;
+            Datumi = _datumi;
+            Hide = _hide;
+            Dodaj();
+        }
 
         public Kalendar(object _id_mjesta, List<DateTime> _datumi, bool _hide)
         {
+            Sifra = -1;
             Id_mjesta = _id_mjesta;
             Datumi = _datumi;
             Hide = _hide;
@@ -26,6 +37,7 @@ namespace DnevnikRada.Klase
 
         public Kalendar()
         {
+            Id_mjesta = -1;
             Datum = DateTime.Now;
         }
 
@@ -39,7 +51,13 @@ namespace DnevnikRada.Klase
                     {"Datum", datum.ToString("yyyy-MM-dd HH:mm:ss") },
                     {"Sakriveno", Hide }
                 };
-                Set("Kalendar", "Id_Mjesta, Datum", dictionary_stupci, true);
+                if(Sifra != -1)
+                {
+                    dictionary_stupci.Add("Sifra", Sifra);
+                    Set("Kalendar", "Sifra", dictionary_stupci, true);
+                }  
+                else
+                    Set("Kalendar", dictionary_stupci, false);
             }
 
         }
