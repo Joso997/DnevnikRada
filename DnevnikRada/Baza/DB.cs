@@ -265,9 +265,36 @@ namespace DnevnikRada.Baza
             command = new SQLiteCommand(read, connection);
             SQLiteDataReader reader = command.ExecuteReader();
             return reader;
-
             
         }
 
+        public bool ProvjeraPrijasnjihDatuma(string naziv, DateTime datum, int trenutniMinus)
+        {
+            
+            string sum = string.Format("select sum ( kolicina) from Evidencija join Poveznica on Evidencija.ID=Poveznica.Id_Evidencija and Poveznica.NazivMaterijala='{0}' where Evidencija.Datum<'{1}'",
+                naziv, datum.ToString("yyyy-MM-dd"));
+            MessageBox.Show(sum);
+            int count=0;
+            command = new SQLiteCommand(sum, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            
+                while (reader.Read())
+            {
+                if(!(reader.GetValue(0) is DBNull))
+                {
+                    count = Convert.ToInt32(reader.GetValue(0));
+                }
+
+            }
+                    
+            
+            
+            if (count - trenutniMinus < 0)
+            {
+                MessageBox.Show("Prijasnji datumi su " + count + " ti si -" + trenutniMinus);
+                return true;
+            }
+            else return false;
+        }
     }
 }
