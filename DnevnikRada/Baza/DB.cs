@@ -68,8 +68,9 @@ namespace DnevnikRada.Baza
         {
             command = connection.CreateCommand();
             command.CommandText = sqlCode;
-            MessageBox.Show(sqlCode);
+            //MessageBox.Show(sqlCode);
             command.ExecuteNonQuery();
+            MessageBox.Show("Done");
             return connection.LastInsertRowId;
         } 
 
@@ -167,7 +168,7 @@ namespace DnevnikRada.Baza
             }
             if ((read + kolicina) < 0)
             {
-                MessageBox.Show(Convert.ToString(read + kolicina));
+                //MessageBox.Show(Convert.ToString(read + kolicina));
                 return false;
             }
             else
@@ -277,7 +278,7 @@ namespace DnevnikRada.Baza
             
             string sum = string.Format("select sum ( kolicina) from Evidencija join Poveznica on Evidencija.ID=Poveznica.Id_Evidencija and Poveznica.NazivMaterijala='{0}' where Evidencija.Datum<'{1}'",
                 naziv, datum.ToString("yyyy-MM-dd"));
-            MessageBox.Show(sum);
+            //MessageBox.Show(sum);
             int count=0;
             command = new SQLiteCommand(sum, connection);
             SQLiteDataReader reader = command.ExecuteReader();
