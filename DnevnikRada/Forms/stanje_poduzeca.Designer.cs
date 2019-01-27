@@ -110,6 +110,7 @@
             this.Name = "Stanje_Poduzeca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StanjePoduzecaBase";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             this.ResumeLayout(false);
 

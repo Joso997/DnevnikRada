@@ -51,6 +51,7 @@
             this.materijalGrid = new MetroFramework.Controls.MetroGrid();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -362,6 +363,8 @@
             this.Name = "Evidencija_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_dodaj";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -44,6 +44,7 @@ namespace DnevnikRada
             this.lbl_mjesta = new System.Windows.Forms.Label();
             this.panel_zadaci_aktivnog_tjedna_i_obavijesti = new MetroFramework.Controls.MetroPanel();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             this.SuspendLayout();
             // 
             // EvidencijaTrazi
@@ -249,6 +250,8 @@ namespace DnevnikRada
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

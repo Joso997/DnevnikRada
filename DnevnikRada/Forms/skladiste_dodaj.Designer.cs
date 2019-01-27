@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 581);
+            this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.tb_Cijena);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.label1);
@@ -259,6 +259,7 @@
             this.Name = "Skladiste_dodaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_dodaj";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Skladiste_dodaj_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             this.ResumeLayout(false);

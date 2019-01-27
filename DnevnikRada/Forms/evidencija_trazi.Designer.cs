@@ -278,6 +278,7 @@
             this.Name = "evidencija_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_trazi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evidencijaGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalGrid)).EndInit();
