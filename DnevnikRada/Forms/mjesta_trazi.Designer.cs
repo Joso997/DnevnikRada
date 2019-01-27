@@ -160,6 +160,7 @@
             this.Edit.Size = new System.Drawing.Size(100, 100);
             this.Edit.TabIndex = 12;
             this.Edit.UseSelectable = true;
+            this.Edit.Visible = false;
             this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Filters
@@ -217,7 +218,7 @@
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.kalendarGrid.Size = new System.Drawing.Size(150, 241);
             this.kalendarGrid.TabIndex = 18;
-            this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kalendarGrid_CellClick);
+            this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KalendarGrid_CellClick);
             // 
             // metroLabel2
             // 

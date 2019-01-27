@@ -78,8 +78,7 @@ namespace DnevnikRada.Kontrole
                 else
                     razmak++;
             }
-            GetEvents(mjesta.Kalendar.Mjesec_Godina("-"));
-            //this.Controls.AddRange(lista.ToArray());
+            GetEvents();
         }
 
         private void OcistiKalendar()
@@ -94,7 +93,7 @@ namespace DnevnikRada.Kontrole
             }
         }
 
-        private void GetEvents(string _datum)
+        private void GetEvents()
         {
             int top = 0;
             int left = 0;

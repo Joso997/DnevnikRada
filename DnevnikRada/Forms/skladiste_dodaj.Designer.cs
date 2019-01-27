@@ -225,7 +225,7 @@
             this.tb_Cijena.UseSelectable = true;
             this.tb_Cijena.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_Cijena.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_Cijena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Cijena_KeyPress);
+            this.tb_Cijena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_Cijena_KeyPress);
             // 
             // metroLabel1
             // 

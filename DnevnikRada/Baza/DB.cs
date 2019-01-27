@@ -153,7 +153,7 @@ namespace DnevnikRada.Baza
             return queryOne;
         }
 
-        public bool ProvjeraNegativnosti(string naziv, int kolicina)
+        protected bool ProvjeraNegativnosti(string naziv, int kolicina)
         {
             int read=0;
             string all = string.Format("select Kolicina from Skladiste where NazivMaterijala=" + '"' + "{0}" + '"'

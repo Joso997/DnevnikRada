@@ -118,7 +118,7 @@
             this.tb_utroseno_vrijeme.UseSelectable = true;
             this.tb_utroseno_vrijeme.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_utroseno_vrijeme.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_utroseno_vrijeme.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_utroseno_vrijeme_KeyPress);
+            this.tb_utroseno_vrijeme.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_utroseno_vrijeme_KeyPress);
             // 
             // tb_opis_posla
             // 
@@ -207,7 +207,7 @@
             this.Kolicina.UseSelectable = true;
             this.Kolicina.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Kolicina.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.Kolicina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox1_KeyPress);
+            this.Kolicina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MetroTextBox1_KeyPress);
             // 
             // metroLabel1
             // 
@@ -313,7 +313,7 @@
             this.materijalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.materijalGrid.Size = new System.Drawing.Size(400, 380);
             this.materijalGrid.TabIndex = 31;
-            this.materijalGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellClick);
+            this.materijalGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EvidencijaGrid_CellClick);
             // 
             // metroLabel2
             // 

@@ -49,7 +49,7 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        private void tb_kolicina_KeyPress(object sender, KeyPressEventArgs e)
+        private void Tb_kolicina_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
@@ -65,7 +65,7 @@ namespace DnevnikRada
             }
         }
 
-        private void tb_Cijena_KeyPress(object sender, KeyPressEventArgs e)
+        private void Tb_Cijena_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class skladiste_trazi
+    partial class Skladiste_trazi
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(skladiste_trazi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Skladiste_trazi));
             this.mjLabel = new MetroFramework.Controls.MetroLabel();
             this.prodavacLabel = new MetroFramework.Controls.MetroLabel();
             this.nazivLabel = new MetroFramework.Controls.MetroLabel();
@@ -315,7 +315,7 @@
             this.cijenaBox.UseSelectable = true;
             this.cijenaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.cijenaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.cijenaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cijenaBox_KeyPress);
+            this.cijenaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CijenaBox_KeyPress);
             // 
             // Filters
             // 
@@ -389,7 +389,6 @@
             this.kolicinaBox.UseSelectable = true;
             this.kolicinaBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.kolicinaBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.kolicinaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kolicinaBox_KeyPress);
             // 
             // Sakri
             // 

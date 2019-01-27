@@ -15,7 +15,6 @@ namespace DnevnikRada
 {
     public partial class Evidencija_dodaj : UIController
     {
-        Baza.DB baza = new Baza.DB();
         public Evidencija_dodaj()
         {
             Ucitaj();
@@ -39,7 +38,7 @@ namespace DnevnikRada
                     object[] marks;
                     if (addUse.Text == "-")
                     {
-                        if(baza.ProvjeraNegativnosti(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
+                        if(new Evidencija().Provjera(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
                         {
                             MessageBox.Show("broj -" + Kolicina.Text + " je pre negativan nema dosta u skladistu");
                             break;
@@ -121,7 +120,7 @@ namespace DnevnikRada
             addUse.Items.Add("-");
         }
 
-        private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void EvidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             OdabirMaterijala.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
             Kolicina.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
@@ -129,7 +128,7 @@ namespace DnevnikRada
             Oduzmi.Enabled = true;
         }
 
-        private void tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)
+        private void Tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
@@ -137,7 +136,7 @@ namespace DnevnikRada
             }
         }
 
-        private void metroTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void MetroTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

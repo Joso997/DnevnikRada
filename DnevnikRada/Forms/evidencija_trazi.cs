@@ -11,10 +11,10 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class evidencija_trazi : UIController
+    public partial class Evidencija_trazi : UIController
     {
         Evidencija evidencija = new Evidencija();
-        public evidencija_trazi()
+        public Evidencija_trazi()
         {
             InitializeComponent();
             evidencijaGrid.DataSource = evidencija.Ucitaj();
@@ -80,7 +80,7 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        private void evidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void EvidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
                 {"Id_Evidencija", Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }

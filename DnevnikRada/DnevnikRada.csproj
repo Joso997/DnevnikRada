@@ -134,7 +134,6 @@
     <Compile Include="Forms\Stanje_Poduzeca.Designer.cs">
       <DependentUpon>Stanje_Poduzeca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IFormReq.cs" />
     <Compile Include="Interface\IUseDatabase.cs" />
     <Compile Include="Klase\Evidencija.cs" />
     <Compile Include="Klase\Kalendar.cs" />

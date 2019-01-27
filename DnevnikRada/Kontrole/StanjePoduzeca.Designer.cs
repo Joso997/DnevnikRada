@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class ucModule1
+    partial class Stanje
     {
         /// <summary> 
         /// Required designer variable.

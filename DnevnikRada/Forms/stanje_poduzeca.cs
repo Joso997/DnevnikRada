@@ -18,7 +18,7 @@ namespace DnevnikRada.Forms
             InitializeComponent();
             Show();
             selectButton = SelectButton;
-            ucModule1 ucModule1 = new ucModule1();
+            Stanje ucModule1 = new Stanje();
             metroPanel1.Controls.Add(ucModule1);
             ucModule1.Dock = DockStyle.Fill;
             ucModule1.BringToFront();
@@ -30,24 +30,23 @@ namespace DnevnikRada.Forms
             switch (button.Name)
             {
                 case "btnStanjePoduzeca":
-                    ucModule1 ucModule1 = new ucModule1();
+                    Stanje ucModule1 = new Stanje();
                     metroPanel1.Controls.Add(ucModule1);
                     ucModule1.Dock = DockStyle.Fill;
                     ucModule1.BringToFront();
                     break;
                 case "btnPotrosnjaMaterijalaKrozVrijeme":
-                    ucModule2 ucModule2 = new ucModule2();
+                    PotrosnjaMaterijalaKrozVrijeme ucModule2 = new PotrosnjaMaterijalaKrozVrijeme();
                     metroPanel1.Controls.Add(ucModule2);
                     ucModule2.Dock = DockStyle.Fill;
                     ucModule2.BringToFront();
                     break;
                 case "btnBrojOdrzavanjaKrozVrijeme":
-                    ucModule3 ucModule3 = new ucModule3();
+                    BrojOdrzavanjaKrozVrijeme ucModule3 = new BrojOdrzavanjaKrozVrijeme();
                     metroPanel1.Controls.Add(ucModule3);
                     ucModule3.Dock = DockStyle.Fill;
                     ucModule3.BringToFront();
                     break;
-                
                 case "Home":
                     Home Home = new Home();
                     return true;

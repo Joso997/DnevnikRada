@@ -34,7 +34,7 @@ namespace DnevnikRada
             switch (button.Name)
             {
                 case "EvidencijaTrazi":
-                    new evidencija_trazi();
+                    new Evidencija_trazi();
                     break;
                 case "EvidencijaDodaj":
                     new Evidencija_dodaj();
@@ -43,7 +43,7 @@ namespace DnevnikRada
                     new Stanje_Poduzeca();
                     break;
                 case "SkladisteTrazi":
-                    new skladiste_trazi();
+                    new Skladiste_trazi();
                     break;
                 case "SkladisteDodaj":
                     new Skladiste_dodaj();
@@ -52,7 +52,7 @@ namespace DnevnikRada
                     new Mjesta_trazi();
                     break;
                 case "MjestaDodaj":
-                    new mjesta_dodaj();
+                    new Mjesta_dodaj();
                     break;
                 case "obavijest_gumb":
                     new Evidencija_dodaj((List<object>)button.Tag);

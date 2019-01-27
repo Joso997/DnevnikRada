@@ -11,16 +11,16 @@ using System.Data.SQLite;
 
 namespace DnevnikRada
 {
-    public partial class ucModule3 : UserControl
+    public partial class BrojOdrzavanjaKrozVrijeme : UserControl
     {
         Baza.DB baza = new Baza.DB();
-        public ucModule3()
+        public BrojOdrzavanjaKrozVrijeme()
         {
             InitializeComponent();
             ChartLoad();
         }
 
-        public void ChartLoad()
+        private void ChartLoad()
         {
             int i = 0;
             string SveEvidencije = "select DISTINCT  date(Datum) from Evidencija";

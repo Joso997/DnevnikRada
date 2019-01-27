@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class evidencija_trazi
+    partial class Evidencija_trazi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(evidencija_trazi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evidencija_trazi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -126,7 +126,7 @@
             this.evidencijaGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.evidencijaGrid.Size = new System.Drawing.Size(445, 250);
             this.evidencijaGrid.TabIndex = 3;
-            this.evidencijaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.evidencijaGrid_CellClick);
+            this.evidencijaGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EvidencijaGrid_CellClick);
             // 
             // Trazi
             // 

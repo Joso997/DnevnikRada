@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class ucModule3
+    partial class BrojOdrzavanjaKrozVrijeme
     {
         /// <summary> 
         /// Required designer variable.

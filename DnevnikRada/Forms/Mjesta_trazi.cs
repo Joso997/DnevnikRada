@@ -39,14 +39,14 @@ namespace DnevnikRada
                     mjestoGrid.DataSource = mjesto.Ucitaj(biblioteka, new List<string> { { "like" } });
                     break;
                 case "Edit":
-                    new mjesta_dodaj(mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[row].Cells["ID"].Value.ToString())));
+                    new Mjesta_dodaj(mjesto.Ucitaj(Int32.Parse(mjestoGrid.Rows[row].Cells["ID"].Value.ToString())));
                     Osvjezi();
                     return true;
                 case "Oduzmi":
-                    DataTable dT_temp_2 = new DataTable();
+                    /*DataTable dT_temp_2 = new DataTable();
                     dT_temp_2 = mjesto.Kalendar.Ucitaj(Int32.Parse(kalendarGrid.Rows[row_kalendar].Cells["ID"].Value.ToString()));
-                    new Kalendar(dT_temp_2.Rows[0]["Id_Mjesta"], new List<DateTime> { { (DateTime)dT_temp_2.Rows[0]["Datum"] } }, true);
-                    Osvjezi();
+                    new Kalendar(int.Parse(dT.Rows[row_kalendar]["Sifra"].ToString()), new List<DateTime> { { (DateTime)dT.Rows[row_kalendar]["Datum"] } }, true);
+                    Osvjezi();*/
                     break;
                 case "Sakri":
                     DataTable dT_temp = new DataTable();
@@ -105,11 +105,11 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        private void kalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void KalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dT_kalendar = new DataTable();
             row_kalendar = e.RowIndex;
-            Oduzmi.Enabled = true;
+            //Oduzmi.Enabled = true;
         }
     }
 }

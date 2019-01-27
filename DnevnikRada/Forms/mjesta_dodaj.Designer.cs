@@ -1,6 +1,6 @@
 ﻿namespace DnevnikRada
 {
-    partial class mjesta_dodaj
+    partial class Mjesta_dodaj
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mjesta_dodaj));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mjesta_dodaj));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -214,7 +214,7 @@
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.kalendarGrid.Size = new System.Drawing.Size(240, 268);
             this.kalendarGrid.TabIndex = 32;
-            this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kalendarGrid_CellClick);
+            this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KalendarGrid_CellClick);
             // 
             // Dodaj
             // 

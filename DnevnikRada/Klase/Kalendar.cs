@@ -77,7 +77,7 @@ namespace DnevnikRada.Klase
             return Get("Kalendar", biblioteka, _operator);
         }
 
-        public string Mjesec_Godina(string conWith)
+        public string Godina_Mjesec(string conWith)
         {
            return Datum.Year + conWith + Datum.Month.ToString().PadLeft(2, '0');
         }

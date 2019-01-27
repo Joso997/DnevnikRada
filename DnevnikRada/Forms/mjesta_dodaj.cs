@@ -11,17 +11,17 @@ using DnevnikRada.Klase;
 
 namespace DnevnikRada
 {
-    public partial class mjesta_dodaj : UIController
+    public partial class Mjesta_dodaj : UIController
     {
         DataTable dT_Kalendar = new DataTable();
-        public mjesta_dodaj()
+        public Mjesta_dodaj()
         {
             Ucitaj();
             ID = -1;
             Osvjezi();
         }
 
-        public mjesta_dodaj(DataTable _temp)
+        public Mjesta_dodaj(DataTable _temp)
         {
             Ucitaj();
             tb_naziv_mjesta.Text = _temp.Rows[0]["NazivMjesta"].ToString();
@@ -108,7 +108,7 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        private void kalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void KalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = e.RowIndex;
             Oduzmi.Enabled = true;

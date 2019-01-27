@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace DnevnikRada
 {
-    public partial class ucModule1 : UserControl
+    public partial class Stanje : UserControl
     {
         Baza.DB statistika = new Baza.DB();
-        public ucModule1()
+        public Stanje()
         {
             InitializeComponent();
-            Load2();
+            Ucitaj();
         }
-        private void Load2()
+        private void Ucitaj()
         {
             brojEvidencija.Text = Convert.ToString(statistika.Evidencija_C_S(true));
             VrijednostMaterijala.Text = Convert.ToString(statistika.CijenaMaterijala());

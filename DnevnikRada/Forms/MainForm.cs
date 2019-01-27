@@ -14,16 +14,12 @@ namespace DnevnikRada.Forms
     {
         public MainForm()
         {
-            //Everyone eveywhere in the app should know me as Form1.Form1Instance
-
-            //Make sure I am kept hidden
             WindowState = FormWindowState.Minimized;
             ShowInTaskbar = false;
             Visible = false;
 
             InitializeComponent();
 
-            //Open a managed form - the one the user sees..
             var Home = new Home();
         }
     }

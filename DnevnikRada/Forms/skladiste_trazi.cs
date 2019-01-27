@@ -7,10 +7,10 @@ using System.Linq;
 
 namespace DnevnikRada
 {
-    public partial class skladiste_trazi : UIController
+    public partial class Skladiste_trazi : UIController
     {
         Skladiste skladiste = new Skladiste();
-        public skladiste_trazi()
+        public Skladiste_trazi()
         {          
             InitializeComponent();
             skladisteGrid.DataSource = skladiste.Ucitaj();
@@ -92,15 +92,7 @@ namespace DnevnikRada
             base.This_FormClosing(sender, e);
         }
 
-        private void kolicinaBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cijenaBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void CijenaBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {

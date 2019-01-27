@@ -11,16 +11,16 @@ using System.Data.SQLite;
 
 namespace DnevnikRada
 {
-    public partial class ucModule2 : UserControl
+    public partial class PotrosnjaMaterijalaKrozVrijeme : UserControl
     {
         
-        public ucModule2()
+        public PotrosnjaMaterijalaKrozVrijeme()
         {
             
             InitializeComponent();
             ChartLoad();
         }
-        public void ChartLoad()
+        private void ChartLoad()
         {
             Chart.Series.Clear();
             Baza.DB baza = new Baza.DB();
