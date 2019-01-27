@@ -47,12 +47,7 @@ namespace DnevnikRada.Forms
                     ucModule3.Dock = DockStyle.Fill;
                     ucModule3.BringToFront();
                     break;
-                case "btnOdstupanjeOdNormale":
-                    ucModule4 ucModule4 = new ucModule4();
-                    metroPanel1.Controls.Add(ucModule4);
-                    ucModule4.Dock = DockStyle.Fill;
-                    ucModule4.BringToFront();
-                    break;
+                
                 case "Home":
                     Home Home = new Home();
                     return true;

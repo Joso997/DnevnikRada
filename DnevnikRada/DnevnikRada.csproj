@@ -170,12 +170,6 @@
     <Compile Include="Kontrole\BrojOdrzavanjaKrozVrijeme.Designer.cs">
       <DependentUpon>BrojOdrzavanjaKrozVrijeme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kontrole\OdstupanjeOdNormale.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Kontrole\OdstupanjeOdNormale.Designer.cs">
-      <DependentUpon>OdstupanjeOdNormale.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\Evidencija_dodaj.resx">
       <DependentUpon>Evidencija_dodaj.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kontrole\BrojOdrzavanjaKrozVrijeme.resx">
       <DependentUpon>BrojOdrzavanjaKrozVrijeme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Kontrole\OdstupanjeOdNormale.resx">
-      <DependentUpon>OdstupanjeOdNormale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DnevnikRada_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

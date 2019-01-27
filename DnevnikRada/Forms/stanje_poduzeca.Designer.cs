@@ -32,9 +32,9 @@
             this.btnStanjePoduzeca = new MetroFramework.Controls.MetroButton();
             this.btnPotrosnjaMaterijalaKrozVrijeme = new MetroFramework.Controls.MetroButton();
             this.btnBrojOdrzavanjaKrozVrijeme = new MetroFramework.Controls.MetroButton();
-            this.btnOdstupanjeOdNormale = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.Home = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStanjePoduzeca
@@ -66,16 +66,6 @@
             this.btnBrojOdrzavanjaKrozVrijeme.Text = "Broj Održavanja Kroz Vrijeme";
             this.btnBrojOdrzavanjaKrozVrijeme.UseSelectable = true;
             this.btnBrojOdrzavanjaKrozVrijeme.Click += new System.EventHandler(this.Click_Gumb);
-            // 
-            // btnOdstupanjeOdNormale
-            // 
-            this.btnOdstupanjeOdNormale.Location = new System.Drawing.Point(632, 353);
-            this.btnOdstupanjeOdNormale.Name = "btnOdstupanjeOdNormale";
-            this.btnOdstupanjeOdNormale.Size = new System.Drawing.Size(266, 100);
-            this.btnOdstupanjeOdNormale.TabIndex = 21;
-            this.btnOdstupanjeOdNormale.Text = "Odstupanje Od Normale";
-            this.btnOdstupanjeOdNormale.UseSelectable = true;
-            this.btnOdstupanjeOdNormale.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // metroPanel1
             // 
@@ -111,7 +101,6 @@
             this.ClientSize = new System.Drawing.Size(900, 580);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.metroPanel1);
-            this.Controls.Add(this.btnOdstupanjeOdNormale);
             this.Controls.Add(this.btnBrojOdrzavanjaKrozVrijeme);
             this.Controls.Add(this.btnPotrosnjaMaterijalaKrozVrijeme);
             this.Controls.Add(this.btnStanjePoduzeca);
@@ -122,6 +111,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StanjePoduzecaBase";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dT)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,7 +121,6 @@
         private MetroFramework.Controls.MetroButton btnStanjePoduzeca;
         private MetroFramework.Controls.MetroButton btnPotrosnjaMaterijalaKrozVrijeme;
         private MetroFramework.Controls.MetroButton btnBrojOdrzavanjaKrozVrijeme;
-        private MetroFramework.Controls.MetroButton btnOdstupanjeOdNormale;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton Home;
     }
