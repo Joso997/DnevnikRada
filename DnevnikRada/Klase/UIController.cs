@@ -30,7 +30,18 @@ namespace DnevnikRada.Klase
             }
         }
 
-        
+        protected virtual void This_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                if (!UserClosing)
+                {
+                    DialogResult Result = MessageBox.Show("Dajte Nam PET!", "Error Closing Application", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (Result == DialogResult.Yes)
+                        Application.Exit();
+                    else
+                        e.Cancel = true;
+                }
+        }
 
         protected bool CheckInput(Dictionary<string, string> biblioteka)
         {
