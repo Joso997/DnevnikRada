@@ -98,8 +98,13 @@ namespace DnevnikRada.Kontrole
         {
             int top = 0;
             int left = 0;
+            DateTime _dayinMonth;
+            if (mjesta.Kalendar.Datum.Year == DateTime.Today.Year && mjesta.Kalendar.Datum.Month == DateTime.Today.Month)
+                _dayinMonth = new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, mjesta.Kalendar.Datum.Day);
+            else
+                _dayinMonth = new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, 1).AddDays(-1);
             Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Datum", new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day).ToString("yyyy-MM-dd HH:mm:ss") },
+                {"Datum", _dayinMonth.ToString("yyyy-MM-dd HH:mm:ss") },
                 {"Datum"+ " ", new DateTime(mjesta.Kalendar.Datum.Year, mjesta.Kalendar.Datum.Month, 1).AddMonths(1).ToString("yyyy-MM-dd HH:mm:ss") }
             };
             List<string> _operator = new List<string> {

@@ -61,7 +61,7 @@ namespace DnevnikRada.Klase
                 {"Datum", Datum.ToString("yyyy-MM-dd HH:mm:ss") },
                 {"OpisPosla", Opis_Posla },
                 {"UtrosenoVrijeme", Utroseno_Vrijeme },
-                {"Id_Mjesta", new Mjesta().Ucitaj(new Dictionary<string, object>{{"NazivMjesta", Naziv_Mjesta }}, new List<string> {{"="}}).Rows[0]["ID"] },
+                {"Id_Mjesta", Naziv_Mjesta != ""?new Mjesta().Ucitaj(new Dictionary<string, object>{{"NazivMjesta", Naziv_Mjesta }}, new List<string> {{"="}}).Rows[0]["ID"]:"" },
                 {"Sakriveno", Hide }
             };
             if(Poveznica.Informacije.Count != 0 || Sifra == -1)

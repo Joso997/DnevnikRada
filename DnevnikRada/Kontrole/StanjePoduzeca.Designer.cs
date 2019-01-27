@@ -42,10 +42,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 44);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(103, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 41);
+            this.label1.Size = new System.Drawing.Size(125, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Radni Sati";
             // 
@@ -53,10 +53,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 155);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(103, 224);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(462, 41);
+            this.label2.Size = new System.Drawing.Size(322, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ukupna Vrijednost Materijala";
             // 
@@ -64,10 +64,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 279);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 282);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(249, 41);
+            this.label3.Size = new System.Drawing.Size(176, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Broj Evidencija";
             // 
@@ -75,10 +75,10 @@
             // 
             this.RadniSati.AutoSize = true;
             this.RadniSati.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.RadniSati.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadniSati.Location = new System.Drawing.Point(274, 99);
+            this.RadniSati.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadniSati.Location = new System.Drawing.Point(457, 160);
             this.RadniSati.Name = "RadniSati";
-            this.RadniSati.Size = new System.Drawing.Size(38, 41);
+            this.RadniSati.Size = new System.Drawing.Size(28, 31);
             this.RadniSati.TabIndex = 3;
             this.RadniSati.Text = "0";
             // 
@@ -86,10 +86,10 @@
             // 
             this.VrijednostMaterijala.AutoSize = true;
             this.VrijednostMaterijala.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.VrijednostMaterijala.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VrijednostMaterijala.Location = new System.Drawing.Point(273, 220);
+            this.VrijednostMaterijala.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VrijednostMaterijala.Location = new System.Drawing.Point(457, 224);
             this.VrijednostMaterijala.Name = "VrijednostMaterijala";
-            this.VrijednostMaterijala.Size = new System.Drawing.Size(38, 41);
+            this.VrijednostMaterijala.Size = new System.Drawing.Size(28, 31);
             this.VrijednostMaterijala.TabIndex = 4;
             this.VrijednostMaterijala.Text = "0";
             // 
@@ -97,10 +97,10 @@
             // 
             this.brojEvidencija.AutoSize = true;
             this.brojEvidencija.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.brojEvidencija.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brojEvidencija.Location = new System.Drawing.Point(271, 342);
+            this.brojEvidencija.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojEvidencija.Location = new System.Drawing.Point(457, 282);
             this.brojEvidencija.Name = "brojEvidencija";
-            this.brojEvidencija.Size = new System.Drawing.Size(38, 41);
+            this.brojEvidencija.Size = new System.Drawing.Size(28, 31);
             this.brojEvidencija.TabIndex = 5;
             this.brojEvidencija.Text = "0";
             // 
@@ -108,10 +108,10 @@
             // 
             this.postotakZauzeca.AutoSize = true;
             this.postotakZauzeca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.postotakZauzeca.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postotakZauzeca.Location = new System.Drawing.Point(271, 479);
+            this.postotakZauzeca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postotakZauzeca.Location = new System.Drawing.Point(457, 344);
             this.postotakZauzeca.Name = "postotakZauzeca";
-            this.postotakZauzeca.Size = new System.Drawing.Size(38, 41);
+            this.postotakZauzeca.Size = new System.Drawing.Size(28, 31);
             this.postotakZauzeca.TabIndex = 7;
             this.postotakZauzeca.Text = "0";
             // 
@@ -119,10 +119,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(145, 411);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(103, 344);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 41);
+            this.label5.Size = new System.Drawing.Size(204, 31);
             this.label5.TabIndex = 6;
             this.label5.Text = "Postotak Zauzeća";
             // 

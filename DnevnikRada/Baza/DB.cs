@@ -185,9 +185,10 @@ namespace DnevnikRada.Baza
             int count=0;
             command = new SQLiteCommand(all,connection);
             SQLiteDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            if (!reader.Read().Equals(DBNull.Value))
             {
-                count = Convert.ToInt32 (reader.GetValue(0));
+                while (reader.Read())
+                    count = Convert.ToInt32(reader.GetValue(0));
             }
             return count;
             
