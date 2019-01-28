@@ -8,9 +8,9 @@ INSERT INTO `Skladiste` (NazivMaterijala, Prodavac, MjernaJedinica, Kolicina, Ci
 
 INSERT INTO `Mjesta` (NazivMjesta,Adresa) VALUES ('Rijeka','Nojev2 36');
 INSERT INTO `Mjesta` (NazivMjesta,Adresa) VALUES ('Pula','Kebab 77');
-INSERT INTO `Kalendar` (Id_Mjesta,Datum,Sakriveno,) VALUES (1,'2018-12-01 11:09:08',5,10.0,2);
-INSERT INTO `Kalendar` (Id_Mjesta, Datum,Sakriveno,) VALUES (2,'2019-02-01 11:09:08',5,10.0,2);
-INSERT INTO `Kalendar` (Id_Mjesta, Datum,Sakriveno,) VALUES (2,'2019-01-29 11:09:08',5,10.0,2);
+INSERT INTO `Kalendar` (Id_Mjesta,Datum) VALUES (1,'2018-12-01 11:09:08');
+INSERT INTO `Kalendar` (Id_Mjesta, Datum) VALUES (2,'2019-02-01 11:09:08');
+INSERT INTO `Kalendar` (Id_Mjesta, Datum) VALUES (2,'2019-01-29 11:09:08');
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta,Sifra) VALUES ('Rijeka','2018-12-01 11:09:08','Samo za dodavanje svih materijala',10,2,5874);
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta,Sifra) VALUES ('Rijeka','2019-01-10 11:09:08','Prodano kupljeno nabavljeno nije bitno nesto sam radio',10,2,5858);
 INSERT INTO `Evidencija` (NazivMjesta, Datum, OpisPOsla, UtrosenoVrijeme, ID_Mjesta,Sifra) VALUES ('Rijek2','2019-01-15 11:15:12','Opis posla je jako bitan da bi firma radila pravilno i da se vidi potrosnja',12,1,5845);
