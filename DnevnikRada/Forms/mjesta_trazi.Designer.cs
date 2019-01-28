@@ -160,7 +160,6 @@
             this.Edit.Size = new System.Drawing.Size(100, 100);
             this.Edit.TabIndex = 12;
             this.Edit.UseSelectable = true;
-            this.Edit.Visible = false;
             this.Edit.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Filters
@@ -253,6 +252,7 @@
             this.Oduzmi.Size = new System.Drawing.Size(100, 100);
             this.Oduzmi.TabIndex = 38;
             this.Oduzmi.UseSelectable = true;
+            this.Oduzmi.Visible = false;
             this.Oduzmi.Click += new System.EventHandler(this.Click_Gumb);
             // 
             // Mjesta_trazi
