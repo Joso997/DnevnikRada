@@ -39,7 +39,7 @@ namespace DnevnikRada
                     if (addUse.Text == "-")
                     {
 
-                        if (baza.ProvjeraPrijasnjihDatuma(OdabirMaterijala.Text, metroDateTime1.Value, Convert.ToInt32(Kolicina.Text)))
+                        if (new Evidencija().Provjera(OdabirMaterijala.Text, metroDateTime1.Value, Convert.ToInt32(Kolicina.Text)))
                         {
                             break;
                         }

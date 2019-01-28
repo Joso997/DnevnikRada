@@ -96,5 +96,10 @@ namespace DnevnikRada.Klase
         {
             return ProvjeraNegativnosti(naziv, kolicina);
         }
+
+        public bool Provjera(string naziv, DateTime datum, int trenutniMinus)
+        {
+            return ProvjeraPrijasnjihDatuma(naziv, datum, trenutniMinus);
+        }
     }
 }
