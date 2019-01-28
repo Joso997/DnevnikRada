@@ -27,12 +27,13 @@ namespace DnevnikRada.Baza
             //
             //
             //za testiranje tjekom rada s aplikacijom
+            
             string workingDirectory = Environment.CurrentDirectory;
             string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
             
 
-            /* // za publishanje
+            /*
             string sqlDBTables = string.Format(@".\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(@".\Baza\DB2.db.sql");
             */
@@ -67,8 +68,9 @@ namespace DnevnikRada.Baza
         {
             command = connection.CreateCommand();
             command.CommandText = sqlCode;
-            MessageBox.Show(sqlCode);
+            //MessageBox.Show(sqlCode);
             command.ExecuteNonQuery();
+            MessageBox.Show("Done");
             return connection.LastInsertRowId;
         } 
 
@@ -166,7 +168,7 @@ namespace DnevnikRada.Baza
             }
             if ((read + kolicina) < 0)
             {
-                MessageBox.Show(Convert.ToString(read + kolicina));
+                //MessageBox.Show(Convert.ToString(read + kolicina));
                 return false;
             }
             else
@@ -185,10 +187,13 @@ namespace DnevnikRada.Baza
             int count=0;
             command = new SQLiteCommand(all,connection);
             SQLiteDataReader reader = command.ExecuteReader();
-            if (!reader.Read().Equals(DBNull.Value))
+            while (reader.Read())
             {
-                while (reader.Read())
+                if (!(reader.GetValue(0) is DBNull))
+                {
+
                     count = Convert.ToInt32(reader.GetValue(0));
+                }
             }
             return count;
             
@@ -265,9 +270,36 @@ namespace DnevnikRada.Baza
             command = new SQLiteCommand(read, connection);
             SQLiteDataReader reader = command.ExecuteReader();
             return reader;
-
             
         }
 
+        public bool ProvjeraPrijasnjihDatuma(string naziv, DateTime datum, int trenutniMinus)
+        {
+            
+            string sum = string.Format("select sum ( kolicina) from Evidencija join Poveznica on Evidencija.ID=Poveznica.Id_Evidencija and Poveznica.NazivMaterijala='{0}' where Evidencija.Datum<'{1}'",
+                naziv, datum.ToString("yyyy-MM-dd"));
+            //MessageBox.Show(sum);
+            int count=0;
+            command = new SQLiteCommand(sum, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            
+                while (reader.Read())
+            {
+                if(!(reader.GetValue(0) is DBNull))
+                {
+                    count = Convert.ToInt32(reader.GetValue(0));
+                }
+
+            }
+                    
+            
+            
+            if (count - trenutniMinus < 0)
+            {
+                MessageBox.Show("Prijasnji datumi su " + count + " ti si -" + trenutniMinus);
+                return true;
+            }
+            else return false;
+        }
     }
 }

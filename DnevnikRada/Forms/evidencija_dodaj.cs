@@ -38,7 +38,13 @@ namespace DnevnikRada
                     object[] marks;
                     if (addUse.Text == "-")
                     {
-                        if(new Evidencija().Provjera(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
+
+                        if (baza.ProvjeraPrijasnjihDatuma(OdabirMaterijala.Text, metroDateTime1.Value, Convert.ToInt32(Kolicina.Text)))
+                        {
+                            break;
+                        }
+
+                        if (new Evidencija().Provjera(OdabirMaterijala.Text, int.Parse(Kolicina.Text) * -1) == false)
                         {
                             MessageBox.Show("broj -" + Kolicina.Text + " je pre negativan nema dosta u skladistu");
                             break;

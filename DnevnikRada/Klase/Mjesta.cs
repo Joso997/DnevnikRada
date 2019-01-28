@@ -12,8 +12,6 @@ namespace DnevnikRada.Klase
     {
         public string Naziv_mjesta { get; }
         public string Adresa { get; }
-        public DateTime Od_VrijemeRada { get; }
-        public DateTime Do_VrijemeRada { get; }
         public Kalendar Kalendar { get; }
         public bool Hide { get; }
 
