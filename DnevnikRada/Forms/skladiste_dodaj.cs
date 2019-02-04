@@ -28,7 +28,7 @@ namespace DnevnikRada
                 case "Potvrdi":
                     if (CheckInput(new Dictionary<string, string> {{ "Naziv Materijala", tb_naziv_materijala.Text } }))
                         break;
-                    Skladiste skladiste = new Skladiste(tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, Convert.ToInt32 (tb_Cijena.Text), false);
+                    Skladiste skladiste = new Skladiste(int.Parse(tb_Sifra.Text), tb_naziv_materijala.Text, tb_proizvodac.Text, tb_mjerna_jedinica.Text, Convert.ToInt32 (tb_Cijena.Text), tb_Link.Text, false);
 
                     break;
                 case "Home":

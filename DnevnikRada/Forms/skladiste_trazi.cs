@@ -16,6 +16,7 @@ namespace DnevnikRada
             skladisteGrid.DataSource = skladiste.Ucitaj();
             selectButton = SelectButton;
             skladisteGrid.Columns["id"].Visible = false;
+            skladisteGrid.Columns["Sakriveno"].Visible = false;
             Show();
             SetFilter();
         }
@@ -34,11 +35,11 @@ namespace DnevnikRada
                 case "Edit":
                     if (CheckInput(new Dictionary<string, string> { { kolicinaBox.Name, kolicinaBox.Text }, { nazivBox.Name, nazivBox.Text } }))
                         break;
-                    new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), false);
+                    new Skladiste(int.Parse(tb_Sifra.Text), nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), tb_Link.Text, false);
                     Osvjezi();
                     break;
                 case "Sakri":
-                    new Skladiste(nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), true);
+                    new Skladiste(int.Parse(tb_Sifra.Text), nazivBox.Text, prodavacBox.Text, mjBox.Text, Int32.Parse(cijenaBox.Text), tb_Link.Text, true);
                     Osvjezi();
                     break;
                 case "Home":
@@ -50,21 +51,27 @@ namespace DnevnikRada
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable dT = new DataTable();
-            dT = skladiste.Ucitaj(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
-            nazivBox.Text = dT.Rows[0].ItemArray[1].ToString();
-            prodavacBox.Text = dT.Rows[0].ItemArray[2].ToString();
-            kolicinaBox.Text = dT.Rows[0].ItemArray[3].ToString();
-            mjBox.Text = dT.Rows[0].ItemArray[4].ToString();
-            cijenaBox.Text = dT.Rows[0].ItemArray[5].ToString();
-            Sakri.Enabled = true;
-            Edit.Enabled = true;
+            if(e.RowIndex >= 0)
+            {
+                DataTable dT = new DataTable();
+                dT = skladiste.Ucitaj(Int32.Parse(skladisteGrid.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                tb_Sifra.Text = dT.Rows[0].ItemArray[1].ToString();
+                nazivBox.Text = dT.Rows[0].ItemArray[2].ToString();
+                prodavacBox.Text = dT.Rows[0].ItemArray[3].ToString();
+                kolicinaBox.Text = dT.Rows[0].ItemArray[4].ToString();
+                mjBox.Text = dT.Rows[0].ItemArray[5].ToString();
+                cijenaBox.Text = dT.Rows[0].ItemArray[6].ToString();
+                tb_Link.Text = dT.Rows[0].ItemArray[7].ToString();
+                Sakri.Enabled = true;
+                Edit.Enabled = true;
+            }     
         }
 
         private void SetFilter()
         {
             filter_dic = new Dictionary<string, string>
             {
+                {"Šifra", "Sifra" },
                 {"Naziv Materijala", "NazivMaterijala" },
                 {"Prodavac", "Prodavac" },
                 {"Mjerna Jedinica", "MjernaJedinica" },

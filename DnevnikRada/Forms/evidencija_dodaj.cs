@@ -128,10 +128,13 @@ namespace DnevnikRada
 
         private void EvidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            OdabirMaterijala.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
-            Kolicina.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
-            row = e.RowIndex;
-            Oduzmi.Enabled = true;
+            if (e.RowIndex >= 0)
+            {
+                OdabirMaterijala.Text = materijalGrid.Rows[e.RowIndex].Cells["NazivMaterijala"].Value.ToString();
+                Kolicina.Text = materijalGrid.Rows[e.RowIndex].Cells["Kolicina"].Value.ToString();
+                row = e.RowIndex;
+                Oduzmi.Enabled = true;
+            }
         }
 
         private void Tb_utroseno_vrijeme_KeyPress(object sender, KeyPressEventArgs e)

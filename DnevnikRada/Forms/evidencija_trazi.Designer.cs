@@ -68,7 +68,7 @@
             this.opisPosla.Location = new System.Drawing.Point(6, 322);
             this.opisPosla.Name = "opisPosla";
             this.opisPosla.ReadOnly = true;
-            this.opisPosla.Size = new System.Drawing.Size(334, 250);
+            this.opisPosla.Size = new System.Drawing.Size(522, 250);
             this.opisPosla.TabIndex = 1;
             this.opisPosla.Text = "";
             // 
@@ -207,7 +207,7 @@
             this.materijalGrid.EnableHeadersVisualStyles = false;
             this.materijalGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materijalGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materijalGrid.Location = new System.Drawing.Point(346, 322);
+            this.materijalGrid.Location = new System.Drawing.Point(534, 322);
             this.materijalGrid.Name = "materijalGrid";
             this.materijalGrid.ReadOnly = true;
             this.materijalGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -221,7 +221,7 @@
             this.materijalGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.materijalGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.materijalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.materijalGrid.Size = new System.Drawing.Size(445, 250);
+            this.materijalGrid.Size = new System.Drawing.Size(257, 250);
             this.materijalGrid.TabIndex = 7;
             // 
             // Filters
@@ -256,7 +256,7 @@
             this.Sakri.UseSelectable = true;
             this.Sakri.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // evidencija_trazi
+            // Evidencija_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.Home);
             this.MaximumSize = new System.Drawing.Size(916, 619);
             this.MinimumSize = new System.Drawing.Size(916, 619);
-            this.Name = "evidencija_trazi";
+            this.Name = "Evidencija_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "evidencija_trazi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);

@@ -22,6 +22,7 @@ namespace DnevnikRada
             mjestoGrid.DataSource = mjesto.Ucitaj();
             selectButton = SelectButton;
             mjestoGrid.Columns["id"].Visible = false;
+            mjestoGrid.Columns["sakriveno"].Visible = false;
             dT.Columns.Add("Datum", typeof(DateTime)).Unique = true;
             Show();
             SetFilter();
@@ -63,16 +64,21 @@ namespace DnevnikRada
 
         private void Grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Id_Mjesta", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
-            };
-            dT = mjesto.Kalendar.Ucitaj(biblioteka, new List<string> { { "=" } });
-            kalendarGrid.DataSource = dT;
-            kalendarGrid.Columns[0].Visible = false;
-            kalendarGrid.Columns[1].Visible = false;
-            row = e.RowIndex;
-            Sakri.Enabled = true;
-            Edit.Enabled = true;
+            if (e.RowIndex >= 0)
+            {
+                Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                    {"Id_Mjesta", Int32.Parse(mjestoGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
+                };
+                dT = mjesto.Kalendar.Ucitaj(biblioteka, new List<string> { { "=" } });
+                kalendarGrid.DataSource = dT;
+                kalendarGrid.Columns[0].Visible = false;
+                kalendarGrid.Columns[1].Visible = false;
+                kalendarGrid.Columns["sakriveno"].Visible = false;
+                kalendarGrid.Columns["sifra"].Visible = false;
+                row = e.RowIndex;
+                Sakri.Enabled = true;
+                Edit.Enabled = true;
+            }
         }
 
         private void SetFilter()
@@ -107,8 +113,11 @@ namespace DnevnikRada
 
         private void KalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable dT_kalendar = new DataTable();
-            row_kalendar = e.RowIndex;
+            if(e.RowIndex >= 0)
+            {
+                DataTable dT_kalendar = new DataTable();
+                row_kalendar = e.RowIndex;
+            }
             //Oduzmi.Enabled = true;
         }
     }

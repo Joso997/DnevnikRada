@@ -20,6 +20,8 @@ namespace DnevnikRada
             evidencijaGrid.DataSource = evidencija.Ucitaj();
             evidencijaGrid.Columns["id"].Visible = false;
             evidencijaGrid.Columns["opisposla"].Visible = false;
+            evidencijaGrid.Columns["Sakriveno"].Visible = false;
+            evidencijaGrid.Columns["ID_mjesta"].Visible = false;
             selectButton = SelectButton;
             Show();
             SetFilter();
@@ -54,6 +56,7 @@ namespace DnevnikRada
         {
             filter_dic = new Dictionary<string, string>
             {
+                {"Šifra", "Sifra" },
                 {"Naziv Mjesta", "NazivMjesta" },
                 {"Opis Posla", "OpisPosla" },
                 {"Datum", "Datum" },
@@ -82,15 +85,20 @@ namespace DnevnikRada
 
         private void EvidencijaGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Dictionary<string, object> biblioteka = new Dictionary<string, object>{
-                {"Id_Evidencija", Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
-            };
-            materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(biblioteka, new List<string> { { "=" } });
-            opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
-            materijalGrid.Columns[0].Visible = false;
-            materijalGrid.Columns["Id_Evidencija"].Visible = false;
-            row = e.RowIndex;
-            Sakri.Enabled = true;
+            if (e.RowIndex >= 0) { 
+                Dictionary<string, object> biblioteka = new Dictionary<string, object>{
+                    {"Id_Evidencija", Int32.Parse(evidencijaGrid.Rows[e.RowIndex].Cells["ID"].Value.ToString()) }
+                };
+                materijalGrid.DataSource = evidencija.Poveznica.Ucitaj(biblioteka, new List<string> { { "=" } });
+                opisPosla.Text = evidencijaGrid.Rows[e.RowIndex].Cells["OpisPosla"].Value.ToString();
+                materijalGrid.Columns[0].Visible = false;
+                materijalGrid.Columns["Id_Evidencija"].Visible = false;
+                materijalGrid.Columns["Id_Materijala"].Visible = false;
+                materijalGrid.Columns["Sakriveno"].Visible = false;
+                materijalGrid.Columns["Cijena"].Visible = false;
+                row = e.RowIndex;
+                Sakri.Enabled = true;
+            }
         }
     }
 }

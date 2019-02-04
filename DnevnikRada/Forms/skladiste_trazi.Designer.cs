@@ -50,6 +50,10 @@
             this.kolicinaLabel = new MetroFramework.Controls.MetroLabel();
             this.kolicinaBox = new MetroFramework.Controls.MetroTextBox();
             this.Sakri = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.tb_Sifra = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.tb_Link = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteGrid)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +62,7 @@
             // 
             this.mjLabel.AutoSize = true;
             this.mjLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.mjLabel.Location = new System.Drawing.Point(160, 435);
+            this.mjLabel.Location = new System.Drawing.Point(28, 392);
             this.mjLabel.Name = "mjLabel";
             this.mjLabel.Size = new System.Drawing.Size(130, 25);
             this.mjLabel.TabIndex = 12;
@@ -68,7 +72,7 @@
             // 
             this.prodavacLabel.AutoSize = true;
             this.prodavacLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.prodavacLabel.Location = new System.Drawing.Point(160, 393);
+            this.prodavacLabel.Location = new System.Drawing.Point(28, 350);
             this.prodavacLabel.Name = "prodavacLabel";
             this.prodavacLabel.Size = new System.Drawing.Size(82, 25);
             this.prodavacLabel.TabIndex = 11;
@@ -78,7 +82,7 @@
             // 
             this.nazivLabel.AutoSize = true;
             this.nazivLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.nazivLabel.Location = new System.Drawing.Point(160, 351);
+            this.nazivLabel.Location = new System.Drawing.Point(464, 386);
             this.nazivLabel.Name = "nazivLabel";
             this.nazivLabel.Size = new System.Drawing.Size(54, 25);
             this.nazivLabel.TabIndex = 10;
@@ -99,7 +103,7 @@
             this.mjBox.CustomButton.UseSelectable = true;
             this.mjBox.CustomButton.Visible = false;
             this.mjBox.Lines = new string[0];
-            this.mjBox.Location = new System.Drawing.Point(296, 437);
+            this.mjBox.Location = new System.Drawing.Point(164, 394);
             this.mjBox.MaxLength = 32767;
             this.mjBox.Name = "mjBox";
             this.mjBox.PasswordChar = '\0';
@@ -130,7 +134,7 @@
             this.nazivBox.CustomButton.Visible = false;
             this.nazivBox.Enabled = false;
             this.nazivBox.Lines = new string[0];
-            this.nazivBox.Location = new System.Drawing.Point(296, 353);
+            this.nazivBox.Location = new System.Drawing.Point(600, 388);
             this.nazivBox.MaxLength = 32767;
             this.nazivBox.Name = "nazivBox";
             this.nazivBox.PasswordChar = '\0';
@@ -160,7 +164,7 @@
             this.prodavacBox.CustomButton.UseSelectable = true;
             this.prodavacBox.CustomButton.Visible = false;
             this.prodavacBox.Lines = new string[0];
-            this.prodavacBox.Location = new System.Drawing.Point(296, 395);
+            this.prodavacBox.Location = new System.Drawing.Point(164, 352);
             this.prodavacBox.MaxLength = 32767;
             this.prodavacBox.Name = "prodavacBox";
             this.prodavacBox.PasswordChar = '\0';
@@ -190,7 +194,7 @@
             this.Search.CustomButton.UseSelectable = true;
             this.Search.CustomButton.Visible = false;
             this.Search.Lines = new string[0];
-            this.Search.Location = new System.Drawing.Point(171, 76);
+            this.Search.Location = new System.Drawing.Point(172, 12);
             this.Search.MaxLength = 32767;
             this.Search.Name = "Search";
             this.Search.PasswordChar = '\0';
@@ -208,7 +212,7 @@
             // Trazi
             // 
             this.Trazi.BackColor = System.Drawing.Color.Aqua;
-            this.Trazi.Location = new System.Drawing.Point(631, 63);
+            this.Trazi.Location = new System.Drawing.Point(660, 12);
             this.Trazi.Name = "Trazi";
             this.Trazi.Size = new System.Drawing.Size(100, 50);
             this.Trazi.TabIndex = 4;
@@ -245,7 +249,7 @@
             this.skladisteGrid.EnableHeadersVisualStyles = false;
             this.skladisteGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.skladisteGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skladisteGrid.Location = new System.Drawing.Point(169, 133);
+            this.skladisteGrid.Location = new System.Drawing.Point(78, 68);
             this.skladisteGrid.MultiSelect = false;
             this.skladisteGrid.Name = "skladisteGrid";
             this.skladisteGrid.ReadOnly = true;
@@ -260,7 +264,7 @@
             this.skladisteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.skladisteGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.skladisteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.skladisteGrid.Size = new System.Drawing.Size(562, 200);
+            this.skladisteGrid.Size = new System.Drawing.Size(758, 263);
             this.skladisteGrid.TabIndex = 3;
             this.skladisteGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
@@ -280,7 +284,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(160, 519);
+            this.metroLabel1.Location = new System.Drawing.Point(28, 427);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(59, 25);
             this.metroLabel1.TabIndex = 17;
@@ -301,7 +305,7 @@
             this.cijenaBox.CustomButton.UseSelectable = true;
             this.cijenaBox.CustomButton.Visible = false;
             this.cijenaBox.Lines = new string[0];
-            this.cijenaBox.Location = new System.Drawing.Point(296, 521);
+            this.cijenaBox.Location = new System.Drawing.Point(164, 429);
             this.cijenaBox.MaxLength = 32767;
             this.cijenaBox.Name = "cijenaBox";
             this.cijenaBox.PasswordChar = '\0';
@@ -321,7 +325,7 @@
             // 
             this.Filters.FormattingEnabled = true;
             this.Filters.ItemHeight = 23;
-            this.Filters.Location = new System.Drawing.Point(486, 74);
+            this.Filters.Location = new System.Drawing.Point(491, 12);
             this.Filters.Name = "Filters";
             this.Filters.Size = new System.Drawing.Size(139, 29);
             this.Filters.TabIndex = 19;
@@ -343,7 +347,7 @@
             // metroLabel2
             // 
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(379, 75);
+            this.metroLabel2.Location = new System.Drawing.Point(380, 12);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(105, 23);
             this.metroLabel2.TabIndex = 20;
@@ -353,7 +357,7 @@
             // 
             this.kolicinaLabel.AutoSize = true;
             this.kolicinaLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.kolicinaLabel.Location = new System.Drawing.Point(160, 477);
+            this.kolicinaLabel.Location = new System.Drawing.Point(464, 427);
             this.kolicinaLabel.Name = "kolicinaLabel";
             this.kolicinaLabel.Size = new System.Drawing.Size(70, 25);
             this.kolicinaLabel.TabIndex = 13;
@@ -375,7 +379,7 @@
             this.kolicinaBox.CustomButton.Visible = false;
             this.kolicinaBox.Enabled = false;
             this.kolicinaBox.Lines = new string[0];
-            this.kolicinaBox.Location = new System.Drawing.Point(296, 479);
+            this.kolicinaBox.Location = new System.Drawing.Point(600, 429);
             this.kolicinaBox.MaxLength = 32767;
             this.kolicinaBox.Name = "kolicinaBox";
             this.kolicinaBox.PasswordChar = '\0';
@@ -403,12 +407,97 @@
             this.Sakri.UseSelectable = true;
             this.Sakri.Click += new System.EventHandler(this.Click_Gumb);
             // 
-            // skladiste_trazi
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(464, 348);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(45, 25);
+            this.metroLabel3.TabIndex = 23;
+            this.metroLabel3.Text = "Sifra";
+            // 
+            // tb_Sifra
+            // 
+            // 
+            // 
+            // 
+            this.tb_Sifra.CustomButton.Image = null;
+            this.tb_Sifra.CustomButton.Location = new System.Drawing.Point(212, 1);
+            this.tb_Sifra.CustomButton.Name = "";
+            this.tb_Sifra.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Sifra.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Sifra.CustomButton.TabIndex = 1;
+            this.tb_Sifra.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Sifra.CustomButton.UseSelectable = true;
+            this.tb_Sifra.CustomButton.Visible = false;
+            this.tb_Sifra.Enabled = false;
+            this.tb_Sifra.Lines = new string[0];
+            this.tb_Sifra.Location = new System.Drawing.Point(600, 350);
+            this.tb_Sifra.MaxLength = 32767;
+            this.tb_Sifra.Name = "tb_Sifra";
+            this.tb_Sifra.PasswordChar = '\0';
+            this.tb_Sifra.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Sifra.SelectedText = "";
+            this.tb_Sifra.SelectionLength = 0;
+            this.tb_Sifra.SelectionStart = 0;
+            this.tb_Sifra.ShortcutsEnabled = true;
+            this.tb_Sifra.Size = new System.Drawing.Size(234, 23);
+            this.tb_Sifra.TabIndex = 22;
+            this.tb_Sifra.UseSelectable = true;
+            this.tb_Sifra.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Sifra.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.Location = new System.Drawing.Point(28, 465);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(42, 25);
+            this.metroLabel4.TabIndex = 25;
+            this.metroLabel4.Text = "Link";
+            // 
+            // tb_Link
+            // 
+            // 
+            // 
+            // 
+            this.tb_Link.CustomButton.Image = null;
+            this.tb_Link.CustomButton.Location = new System.Drawing.Point(212, 1);
+            this.tb_Link.CustomButton.Name = "";
+            this.tb_Link.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Link.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Link.CustomButton.TabIndex = 1;
+            this.tb_Link.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Link.CustomButton.UseSelectable = true;
+            this.tb_Link.CustomButton.Visible = false;
+            this.tb_Link.Lines = new string[0];
+            this.tb_Link.Location = new System.Drawing.Point(164, 467);
+            this.tb_Link.MaxLength = 32767;
+            this.tb_Link.Name = "tb_Link";
+            this.tb_Link.PasswordChar = '\0';
+            this.tb_Link.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Link.SelectedText = "";
+            this.tb_Link.SelectionLength = 0;
+            this.tb_Link.SelectionStart = 0;
+            this.tb_Link.ShortcutsEnabled = true;
+            this.tb_Link.Size = new System.Drawing.Size(234, 23);
+            this.tb_Link.TabIndex = 24;
+            this.tb_Link.UseSelectable = true;
+            this.tb_Link.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Link.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Skladiste_trazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.tb_Link);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.tb_Sifra);
             this.Controls.Add(this.Sakri);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Filters);
@@ -429,7 +518,7 @@
             this.Controls.Add(this.Home);
             this.MaximumSize = new System.Drawing.Size(916, 619);
             this.MinimumSize = new System.Drawing.Size(916, 619);
-            this.Name = "skladiste_trazi";
+            this.Name = "Skladiste_trazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "skladiste_trazi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.This_FormClosing);
@@ -460,5 +549,9 @@
         private MetroFramework.Controls.MetroLabel kolicinaLabel;
         private MetroFramework.Controls.MetroTextBox kolicinaBox;
         private MetroFramework.Controls.MetroButton Sakri;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox tb_Sifra;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroTextBox tb_Link;
     }
 }

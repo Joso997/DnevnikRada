@@ -29,14 +29,13 @@ namespace DnevnikRada.Baza
             //za testiranje tjekom rada s aplikacijom
             
             string workingDirectory = Environment.CurrentDirectory;
+#if (DEBUG)
             string sqlDBTables = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(Directory.GetParent(workingDirectory).Parent.FullName + @"\Baza\DB2.db.sql");
-            
-
-            /*
+#else       
             string sqlDBTables = string.Format(@".\Baza\DB.db.sql");
             string sqlDBInsert = string.Format(@".\Baza\DB2.db.sql");
-            */
+#endif
             if (!File.Exists("DB.db"))
             {
                 MessageBox.Show("Baza ne postoji");
@@ -46,7 +45,7 @@ namespace DnevnikRada.Baza
 
                 string createTables = File.ReadAllText(sqlDBTables);
                 Query(createTables);
-                DialogResult result = MessageBox.Show("Hoces li da ti popunim tablice?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                DialogResult result = MessageBox.Show("Hoces li da ti popunim tablice? (DEMO VERZIJA)", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                 if (result == DialogResult.Yes)
                 {
                     string insertIntoTables = File.ReadAllText(sqlDBInsert);
@@ -59,7 +58,6 @@ namespace DnevnikRada.Baza
                 //MessageBox.Show("DB EXISTS!!!");
                 connection.Open();
             }
-            //connection = new SQLiteConnection("URI = file:DB.db");
           
         }
 

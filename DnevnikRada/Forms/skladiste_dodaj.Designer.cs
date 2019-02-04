@@ -40,6 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Cijena = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Linktext = new MetroFramework.Controls.MetroLabel();
+            this.tb_Link = new MetroFramework.Controls.MetroTextBox();
+            this.tb_Sifra = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +63,7 @@
             // 
             this.lbl_naziv_materijala.AutoSize = true;
             this.lbl_naziv_materijala.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_naziv_materijala.Location = new System.Drawing.Point(219, 196);
+            this.lbl_naziv_materijala.Location = new System.Drawing.Point(222, 229);
             this.lbl_naziv_materijala.Name = "lbl_naziv_materijala";
             this.lbl_naziv_materijala.Size = new System.Drawing.Size(133, 25);
             this.lbl_naziv_materijala.TabIndex = 2;
@@ -69,7 +73,7 @@
             // 
             this.lbl_proizvodac.AutoSize = true;
             this.lbl_proizvodac.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_proizvodac.Location = new System.Drawing.Point(219, 238);
+            this.lbl_proizvodac.Location = new System.Drawing.Point(222, 271);
             this.lbl_proizvodac.Name = "lbl_proizvodac";
             this.lbl_proizvodac.Size = new System.Drawing.Size(95, 25);
             this.lbl_proizvodac.TabIndex = 3;
@@ -79,7 +83,7 @@
             // 
             this.lbl_mjerna_jedinica.AutoSize = true;
             this.lbl_mjerna_jedinica.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_mjerna_jedinica.Location = new System.Drawing.Point(219, 281);
+            this.lbl_mjerna_jedinica.Location = new System.Drawing.Point(222, 314);
             this.lbl_mjerna_jedinica.Name = "lbl_mjerna_jedinica";
             this.lbl_mjerna_jedinica.Size = new System.Drawing.Size(130, 25);
             this.lbl_mjerna_jedinica.TabIndex = 4;
@@ -100,7 +104,7 @@
             this.tb_naziv_materijala.CustomButton.UseSelectable = true;
             this.tb_naziv_materijala.CustomButton.Visible = false;
             this.tb_naziv_materijala.Lines = new string[0];
-            this.tb_naziv_materijala.Location = new System.Drawing.Point(362, 198);
+            this.tb_naziv_materijala.Location = new System.Drawing.Point(365, 231);
             this.tb_naziv_materijala.MaxLength = 32767;
             this.tb_naziv_materijala.Name = "tb_naziv_materijala";
             this.tb_naziv_materijala.PasswordChar = '\0';
@@ -130,7 +134,7 @@
             this.tb_proizvodac.CustomButton.UseSelectable = true;
             this.tb_proizvodac.CustomButton.Visible = false;
             this.tb_proizvodac.Lines = new string[0];
-            this.tb_proizvodac.Location = new System.Drawing.Point(362, 240);
+            this.tb_proizvodac.Location = new System.Drawing.Point(365, 273);
             this.tb_proizvodac.MaxLength = 32767;
             this.tb_proizvodac.Name = "tb_proizvodac";
             this.tb_proizvodac.PasswordChar = '\0';
@@ -160,7 +164,7 @@
             this.tb_mjerna_jedinica.CustomButton.UseSelectable = true;
             this.tb_mjerna_jedinica.CustomButton.Visible = false;
             this.tb_mjerna_jedinica.Lines = new string[0];
-            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(361, 283);
+            this.tb_mjerna_jedinica.Location = new System.Drawing.Point(364, 316);
             this.tb_mjerna_jedinica.MaxLength = 32767;
             this.tb_mjerna_jedinica.Name = "tb_mjerna_jedinica";
             this.tb_mjerna_jedinica.PasswordChar = '\0';
@@ -177,7 +181,7 @@
             // 
             // Potvrdi
             // 
-            this.Potvrdi.Location = new System.Drawing.Point(581, 406);
+            this.Potvrdi.Location = new System.Drawing.Point(584, 480);
             this.Potvrdi.Name = "Potvrdi";
             this.Potvrdi.Size = new System.Drawing.Size(100, 50);
             this.Potvrdi.TabIndex = 8;
@@ -211,7 +215,7 @@
             this.tb_Cijena.CustomButton.UseSelectable = true;
             this.tb_Cijena.CustomButton.Visible = false;
             this.tb_Cijena.Lines = new string[0];
-            this.tb_Cijena.Location = new System.Drawing.Point(361, 334);
+            this.tb_Cijena.Location = new System.Drawing.Point(364, 367);
             this.tb_Cijena.MaxLength = 32767;
             this.tb_Cijena.Name = "tb_Cijena";
             this.tb_Cijena.PasswordChar = '\0';
@@ -231,11 +235,91 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(218, 332);
+            this.metroLabel1.Location = new System.Drawing.Point(221, 365);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(59, 25);
             this.metroLabel1.TabIndex = 17;
             this.metroLabel1.Text = "Cijena";
+            // 
+            // Linktext
+            // 
+            this.Linktext.AutoSize = true;
+            this.Linktext.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Linktext.Location = new System.Drawing.Point(221, 424);
+            this.Linktext.Name = "Linktext";
+            this.Linktext.Size = new System.Drawing.Size(42, 25);
+            this.Linktext.TabIndex = 19;
+            this.Linktext.Text = "Link";
+            // 
+            // tb_Link
+            // 
+            // 
+            // 
+            // 
+            this.tb_Link.CustomButton.Image = null;
+            this.tb_Link.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.tb_Link.CustomButton.Name = "";
+            this.tb_Link.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Link.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Link.CustomButton.TabIndex = 1;
+            this.tb_Link.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Link.CustomButton.UseSelectable = true;
+            this.tb_Link.CustomButton.Visible = false;
+            this.tb_Link.Lines = new string[0];
+            this.tb_Link.Location = new System.Drawing.Point(364, 424);
+            this.tb_Link.MaxLength = 32767;
+            this.tb_Link.Name = "tb_Link";
+            this.tb_Link.PasswordChar = '\0';
+            this.tb_Link.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Link.SelectedText = "";
+            this.tb_Link.SelectionLength = 0;
+            this.tb_Link.SelectionStart = 0;
+            this.tb_Link.ShortcutsEnabled = true;
+            this.tb_Link.Size = new System.Drawing.Size(320, 23);
+            this.tb_Link.TabIndex = 20;
+            this.tb_Link.UseSelectable = true;
+            this.tb_Link.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Link.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // tb_Sifra
+            // 
+            // 
+            // 
+            // 
+            this.tb_Sifra.CustomButton.Image = null;
+            this.tb_Sifra.CustomButton.Location = new System.Drawing.Point(298, 1);
+            this.tb_Sifra.CustomButton.Name = "";
+            this.tb_Sifra.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_Sifra.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Sifra.CustomButton.TabIndex = 1;
+            this.tb_Sifra.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Sifra.CustomButton.UseSelectable = true;
+            this.tb_Sifra.CustomButton.Visible = false;
+            this.tb_Sifra.Lines = new string[0];
+            this.tb_Sifra.Location = new System.Drawing.Point(364, 191);
+            this.tb_Sifra.MaxLength = 32767;
+            this.tb_Sifra.Name = "tb_Sifra";
+            this.tb_Sifra.PasswordChar = '\0';
+            this.tb_Sifra.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Sifra.SelectedText = "";
+            this.tb_Sifra.SelectionLength = 0;
+            this.tb_Sifra.SelectionStart = 0;
+            this.tb_Sifra.ShortcutsEnabled = true;
+            this.tb_Sifra.Size = new System.Drawing.Size(320, 23);
+            this.tb_Sifra.TabIndex = 22;
+            this.tb_Sifra.UseSelectable = true;
+            this.tb_Sifra.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Sifra.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(221, 189);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(45, 25);
+            this.metroLabel2.TabIndex = 21;
+            this.metroLabel2.Text = "Šifra";
             // 
             // Skladiste_dodaj
             // 
@@ -243,6 +327,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 580);
+            this.Controls.Add(this.tb_Sifra);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.tb_Link);
+            this.Controls.Add(this.Linktext);
             this.Controls.Add(this.tb_Cijena);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.label1);
@@ -280,5 +368,9 @@
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTextBox tb_Cijena;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel Linktext;
+        private MetroFramework.Controls.MetroTextBox tb_Link;
+        private MetroFramework.Controls.MetroTextBox tb_Sifra;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }

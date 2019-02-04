@@ -110,8 +110,11 @@ namespace DnevnikRada
 
         private void KalendarGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            row = e.RowIndex;
-            Oduzmi.Enabled = true;
+            if(e.RowIndex >= 0)
+            {
+                row = e.RowIndex;
+                Oduzmi.Enabled = true;
+            }
         }
     }
 }

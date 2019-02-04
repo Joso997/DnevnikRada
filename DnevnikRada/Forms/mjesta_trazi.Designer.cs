@@ -131,7 +131,7 @@
             this.mjestoGrid.EnableHeadersVisualStyles = false;
             this.mjestoGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mjestoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mjestoGrid.Location = new System.Drawing.Point(216, 156);
+            this.mjestoGrid.Location = new System.Drawing.Point(162, 156);
             this.mjestoGrid.Name = "mjestoGrid";
             this.mjestoGrid.ReadOnly = true;
             this.mjestoGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -145,7 +145,7 @@
             this.mjestoGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.mjestoGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.mjestoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mjestoGrid.Size = new System.Drawing.Size(250, 241);
+            this.mjestoGrid.Size = new System.Drawing.Size(304, 241);
             this.mjestoGrid.TabIndex = 3;
             this.mjestoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellClick);
             // 
@@ -215,7 +215,7 @@
             this.kalendarGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.kalendarGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.kalendarGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kalendarGrid.Size = new System.Drawing.Size(150, 241);
+            this.kalendarGrid.Size = new System.Drawing.Size(227, 241);
             this.kalendarGrid.TabIndex = 18;
             this.kalendarGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KalendarGrid_CellClick);
             // 
